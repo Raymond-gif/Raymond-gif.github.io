@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Raymond Dunn / Personal Website Portfolio"
+title                    : "Raymond Dunn / Fluid Dynamics"
 title_separator          : "-"
 name                     : &name "Raymond Dunn"
 description              : &description "Aerospace Engineer B.S. / UCI "
