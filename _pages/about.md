@@ -12,5 +12,3 @@ My name is Raymond Dunn. I recently received my B.S. in Aerospace Engineering du
 I have also done work in compressible flow, in particular using the Method of Characteristics to analyze 2D flow through an arbitrary diverging channel. In the future, I hope to dive more in Computational Fluid Dynamics (CFD).
 
 This website serves as the documentation of my work, as I research and learn more about fluid dynamics. 
-
-I am merely testing this feature. haha

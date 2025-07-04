@@ -25,6 +25,9 @@ main:
     
   - title: "Resume"
     url: /resume/
+
+  - title: "Formula"
+    url: /formula/
     
   # - title: "CV"
   #   url: /cv-json/
