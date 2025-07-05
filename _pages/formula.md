@@ -4,6 +4,7 @@ title: "Formula Sheet"
 author_profile: true
 
 ---
+{% include base_path %}
 
 ## Integral Equations of Motion 
 
