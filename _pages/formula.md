@@ -1,9 +1,10 @@
 ---
-permalink: /formula
+layout: single
 title: "Formula Sheet"
+permalink: /formula/
 author_profile: true
-
 ---
+
 {% include base_path %}
 
 ## Integral Equations of Motion 
