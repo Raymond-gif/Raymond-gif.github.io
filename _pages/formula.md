@@ -99,4 +99,20 @@ $$
 c_v=\left[\frac{\partial e}{\partial T}\right]_v, \quad c_p =\left[\frac{\partial h}{\partial T}\right]_p \notag
 $$
 
+### Equations for Perfect Gas 
+
+$$
+R=c_p-c_v,\quad \gamma=\frac{c_p}{c_v},\quad c_p=\frac{\gamma R}{\gamma-1},\quad c_v=\frac{R}{\gamma-1}
+\notag
+$$
+
+$$
+pv= RT \rightarrow \frac{dp}{p}=\frac{d\rho}{\rho}+\frac{dT}{T},\quad de=c_v dT,\quad dh = c_pdT
+\notag
+$$
+
+$$
+ds=c_p \frac{dT}{T}-R\frac{dp}{p}=c_v \frac{dT}{T}+R\frac{dv}{v}, \quad a^2=\left( \frac{\partial p}{\partial\rho}\right)_s,\quad a^2=\gamma RT=\gamma \frac{p}{\rho},\quad u^2= \gamma M^2\frac{p}{\rho}
+\notag
+$$
 
