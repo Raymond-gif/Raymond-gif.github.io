@@ -2,10 +2,8 @@
 layout: single
 title: "Formula Sheet"
 permalink: /formula/
-author_profile: true
+author_profile: false
 ---
-
-{% include base_path %}
 
 ## Integral Equations of Motion 
 
@@ -29,12 +27,14 @@ $$
 ### Conservation of Energy
 
 $$
-\frac{D}{Dt}\int\limits_{\text{CM}} \rho e_0 \, dV
-= \frac{\partial}{\partial t}\int\limits_{\text{CV}} \rho e_0 \, dV 
-+ \int\limits_{\text{CS}} \rho e_0 (\mathbf{u} \cdot \mathbf{n}) \, dS
-= - \int\limits_{ \text{CS}} p (\mathbf{u} \cdot \mathbf{n}) \, dS 
-+ \int\limits_{\text{CS}} \boldsymbol{\underline{\underline{\tau}}} \cdot \mathbf{n} \cdot \mathbf{u} \, dS 
-+ \int\limits_{\text{CV}} \nabla \cdot \mathbf{q} \, dV \notag
+\begin{align*}
+    \frac{D}{Dt}\int\limits_{\text{CM}} \rho e_0 \, dV
+    = \frac{\partial}{\partial t}\int\limits_{\text{CV}} \rho e_0 \, dV 
+    + \int\limits_{\text{CS}} \rho e_0 (\mathbf{u} \cdot \mathbf{n}) \, dS
+    = - \int\limits_{ \text{CS}} p (\mathbf{u} \cdot \mathbf{n}) \, dS 
+    &+ \int\limits_{\text{CS}} \boldsymbol{\underline{\underline{\tau}}} \cdot \mathbf{n} \cdot \mathbf{u} \, dS \\
+    &+ \int\limits_{\text{CV}} \nabla \cdot \mathbf{q} \, dV 
+\end{align*}
 $$
 
 ## Differential Equations of Motion 
@@ -72,6 +72,8 @@ $$
 \rho T \frac{Ds}{Dt} = \boldsymbol{\underline{\underline{\tau}}} : \nabla \boldsymbol{u}-\nabla \cdot \mathbf{q}
 \notag
 $$
+
+<hr style="border: 2px solid black;">
 
 ## Thermodynamics
 
@@ -133,7 +135,9 @@ $$
 {\frac{T_0}{T}}=1+\frac{\gamma-1}{2}M^2, \quad {\frac{p_0}{p}}=\left[ 1+\frac{\gamma-1}{2}M^2\right]^{\frac{\gamma}{\gamma-1}},\quad {\frac{\rho_0}{\rho}}=\left[ 1+\frac{\gamma-1}{2}M^2\right]^{\frac{1}{\gamma-1}}\notag 
 $$
 
-### Q1D Flow (steady, adiabatic, no viscous effects, isentropic):  \\( dT_0=0, \quad dp_0=0,\quad d\rho_0=0 \\)
+<hr style="border: 2px solid black;">
+
+## Q1D Flow (steady, adiabatic, no viscous effects, isentropic):  \\( dT_0=0, \quad dp_0=0,\quad d\rho_0=0 \\)
 
 $$
 \mathbf{M < 1:}
@@ -164,24 +168,39 @@ $$
 $$
 
 $$
-\text{Adia Energy: 
+\text{Adiabatic Energy Equation: 
 }
-a_*^2 = \frac{2(\gamma - 1)}{\gamma + 1} \left[ \frac{a^2}{\gamma - 1} + \frac{u^2}{2} \right],\quad \text{Identities: }\frac{du^2}{u^2}=\frac{dM^2}{M^2}+\frac{dT}{T},\quad \frac{du}{u}=\frac{1}{2}\frac{du^2}{u^2},\quad \text{Cramer: } x_i = \frac{\det(A_i(\mathbf{b}))}{\det(A)}\notag 
+a_*^2 = \frac{2(\gamma - 1)}{\gamma + 1} \left[ \frac{a^2}{\gamma - 1} + \frac{u^2}{2} \right] \notag
 $$
 
 $$
-\text{M def: } \frac{dV}{V}=\frac{dM}{M}+\frac{1}{2}\frac{dT}{T}\notag 
+\text{Differential Identities: }\frac{du^2}{u^2}=\frac{dM^2}{M^2}+\frac{dT}{T},\quad \frac{du}{u}=\frac{1}{2}\frac{du^2}{u^2} \notag 
 $$
 
-### Fanno Flow: 1D-Adiabatic Flow w/ Irreversibilities (Non-Isentropic):  \\(dT_0=0 \\)
-
 $$
-\mathbf{M < 1} \colon (ds, \, du, \, dM) \, +, \quad (dT, \, dp, \, d\rho, \, dp_0) \, -, \quad \mathbf{M > 1} \colon (ds, \, dT, \, dp, \, d\rho) \, +, \quad (dp_0, \, du, \, dM) \, -
+\text{Mach Number definition: } \frac{dV}{V}=\frac{dM}{M}+\frac{1}{2}\frac{dT}{T}\notag 
+$$
+
+<hr style="border: 2px solid black;">
+
+## Fanno Flow: 1D-Adiabatic Flow w/ Irreversibilities (Non-Isentropic):  \\(dT_0=0 \\)
+
+### General Trends 
+$$
+\boxed{\mathbf{M < 1} \colon (ds, \, du, \, dM) \, +, \quad (dT, \, dp, \, d\rho, \, dp_0) \, -, \quad \mathbf{M > 1} \colon (ds, \, dT, \, dp, \, d\rho) \, +, \quad (dp_0, \, du, \, dM) \, -}
 \notag 
 $$
 
+### Differential Equations of Motion
+
 $$
-\frac{d\rho}{\rho}+\frac{du}{u}=0, \quad dp+\rho udu =-\rho T ds,\quad dh+udu=0,\quad \rho_1u_1=\rho_2u_2,\quad p_1+\rho_1u_1^2=p_2+\rho_2u_2^2+\text{?}, \quad h_1+\frac{u_1^2}{2}=h_2+\frac{u_2^2}{2} \notag 
+\frac{d\rho}{\rho}+\frac{du}{u}=0, \quad dp+\rho udu =-\rho T ds,\quad dh+udu=0 \notag
+$$
+
+### Integral Equations of Motion
+
+$$
+\rho_1u_1=\rho_2u_2,\quad p_1+\rho_1u_1^2=p_2+\rho_2u_2^2+\text{?}, \quad h_1+\frac{u_1^2}{2}=h_2+\frac{u_2^2}{2} \notag 
 $$
 
 $$
@@ -196,7 +215,11 @@ $$
 \frac{T}{T_*}=\frac{\gamma+1}{2+(\gamma-1)M^2},\quad \frac{p}{p_*}=\frac{1}{M}\left[ \frac{\gamma+1}{2+(\gamma-1)M^2}\right]^{1/2},\quad \frac{\rho}{\rho_*}=\frac{1}{M}\left[\frac{2+(\gamma-1)M^2}{\gamma+1}\right]^{1/2},\quad \frac{p_{0}}{p_{0_*}}=\frac{1}{M} \left[ \frac{2+(\gamma-1)M^2}{\gamma+1}\right]^{\frac{\gamma+1}{2(\gamma-1)}}\notag 
 $$
 
-### 1-D Rayleigh Flow:  (Reversible Heat Addition, Non-adiabatic + Non-Isentropic)
+<hr style="border: 2px solid black;">
+
+## 1-D Rayleigh Flow:  (Reversible Heat Addition, Non-adiabatic + Non-Isentropic)
+
+### General Trends
 
 $$
 \mathbf{M < 1:}
@@ -212,9 +235,16 @@ $$
 \notag 
 $$
 
+### Differential Equations of Motion
+
 $$
-\frac{d\rho}{\rho}+\frac{du}{u}=0, \quad dp+\rho u du =0, \quad dh + udu=\delta q,\quad \rho_1u_1 =\rho_2 u_2, \quad p_1+\rho_1u_1^2=p_2+\rho_2u_2^2, \quad h_1 +\frac{u_1^2}{2}+q=h_2+\frac{u_2^2}{2}
-\notag 
+\frac{d\rho}{\rho}+\frac{du}{u}=0, \quad dp+\rho u du =0, \quad dh + udu=\delta q \notag 
+$$ 
+
+### Integral Equations of Motion
+
+$$
+\rho_1u_1 =\rho_2 u_2, \quad p_1+\rho_1u_1^2=p_2+\rho_2u_2^2, \quad h_1 +\frac{u_1^2}{2}+q=h_2+\frac{u_2^2}{2} \notag 
 $$
 
 $$
@@ -231,8 +261,14 @@ $$
 \frac{T_0}{T_{0*}}=\frac{M^2(\gamma+1)}{(1+\gamma M^2)^2} \left[2+(\gamma-1)M^2 \right],\quad \frac{s - s_*}{c_p} = \ln \left[ M^2 \left( \frac{\gamma + 1}{1 + \gamma M^2} \right)^{\frac{\gamma+1}{\gamma}} \right]\notag 
 $$
 
+<hr style="border: 2px solid black;">
+
+## Shock Theory
+
+### General Trends for Stationary Adiabatic Normal Shocks
+
 $$
-\text{Stationary Normal Shocks (Adiabatic): } \Delta\rho +,\Delta p+,\Delta T+, \Delta T_0= 0,\Delta u-,\Delta M-,\Delta p_0   -\notag 
+\Delta\rho +,\Delta p+,\Delta T+, \Delta T_0= 0,\Delta u-,\Delta M-,\Delta p_0 - \notag 
 $$
 
 $$
@@ -240,8 +276,16 @@ $$
 \notag 
 $$
 
+### Rankine-Hugoniot Relation for any gas
+
 $$
-\text{any gas: }h_2 - h_1 = \frac{1}{2} \left( p_2 - p_1 \right) \left( \frac{1}{\rho_1} + \frac{1}{\rho_2} \right), \quad e_2-e_1=\frac{p_2+p_1}{2}\left(v_1-v_2 \right),\quad CPG \ \frac{\rho_2}{\rho_1}=\frac{1+\frac{\gamma+1}{\gamma-1}\frac{p_2}{p_1}}{\frac{\gamma+1}{\gamma-1}+\frac{p_2}{p_1}}, \quad \frac{T_2}{T_1}=\frac{p_2}{p_1}\left[\frac{\frac{\gamma+1}{\gamma-1}+\frac{p_2}{p_1}}{1+\frac{\gamma+1}{\gamma-1}\frac{p_2}{p_1}}\right]\notag 
+h_2 - h_1 = \frac{1}{2} \left( p_2 - p_1 \right) \left( \frac{1}{\rho_1} + \frac{1}{\rho_2} \right), \quad e_2-e_1=\frac{p_2+p_1}{2}\left(v_1-v_2 \right) \notag
+$$ 
+
+### Property Ratios for Calorically Perfect Gas
+
+$$
+\frac{\rho_2}{\rho_1}=\frac{1+\frac{\gamma+1}{\gamma-1}\frac{p_2}{p_1}}{\frac{\gamma+1}{\gamma-1}+\frac{p_2}{p_1}}, \quad \frac{T_2}{T_1}=\frac{p_2}{p_1}\left[\frac{\frac{\gamma+1}{\gamma-1}+\frac{p_2}{p_1}}{1+\frac{\gamma+1}{\gamma-1}\frac{p_2}{p_1}}\right]\notag 
 $$
 
 $$M_2^2=\frac{1+\frac{\gamma-1}{2}M_1^2}{\gamma M_1^2-\frac{\gamma-1}{2}},\quad \frac{T_2}{T_1}=\left[\frac{2+(\gamma-1)M_1^2}{(\gamma+1)M_1^2}\right] \left[1+\frac{2\gamma}{\gamma+1}(M_1^2-1) \right], \quad \frac{\rho_2}{\rho_1}=\frac{(\gamma+1)M_1^2}{2+(\gamma-1)M_1^2},\quad \frac{p_2}{p_1}=1+\frac{2\gamma}{\gamma+1}\left(M_1^2-1 \right)\notag 
@@ -258,6 +302,8 @@ $$
 $$
 \frac{\Delta u}{a_1}=\frac{2}{\gamma+1}\left[ M_s-\frac{1}{M_s}\right]=\frac{1}{\gamma}\left[ \frac{p_2}{p_1}-1\right] \left[ \frac{\frac{2\gamma}{\gamma+1}}{\frac{p_2}{p_1}+\frac{\gamma-1}{\gamma+1}} \right]^{\frac{1}{2}},\enspace M_s^2=1+{\frac{\gamma+1}{2\gamma}} \left[ \frac{p_2}{p_1}-1 \right]\notag 
 $$
+
+<hr style="border: 2px solid black; width: 100%; margin: 0;">
 
 ### Finite Waves (Isentropic Equations of Motion)
 
@@ -430,4 +476,8 @@ $$
 
 $$
 \phi(x,y)=\frac{1}{\sqrt{1-M_1^2}} \frac{U_1}{U_i} \frac{\tau_1}{\tau_i} \Phi \left(x,y \sqrt{1-M_1^2} \right), \quad C_p(x,y)=\frac{1}{\sqrt{1-M_1^2}} \frac{\tau_1}{\tau_i}C_{pi} \left( x,y\sqrt{1-M_1^2} \right) \notag 
+$$
+
+$$ 
+\quad \text{Cramer: } x_i = \frac{\det(A_i(\mathbf{b}))}{\det(A)} \notag 
 $$
