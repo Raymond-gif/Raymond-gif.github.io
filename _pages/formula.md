@@ -73,7 +73,7 @@ $$
 \notag
 $$
 
-<hr style="border: 2px solid black; width: 100vw; margin: 0;">
+<hr style="border: 2px solid black; width: 100vw; margin: 0; position: relative; left: 50%; right: 50%; transform: translateX(-50%);">
 
 ## Thermodynamics
 
