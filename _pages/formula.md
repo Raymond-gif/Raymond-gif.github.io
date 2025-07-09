@@ -120,8 +120,21 @@ $$
 
 ### Calorically Perfect Gas
 
+#### Internal Energy and Enthalpy for Calorically Perfect Gas
+
+$$
+e=c_vT, \quad h=c_pT \notag
+$$
+
+#### Entropy Relations
+
 $$ 
-\frac{T_2}{T_1} = \left(\frac{\rho_2}{\rho_1}\right)^{\gamma - 1} = \left(\frac{p_2}{p_1}\right)^{\frac{\gamma - 1}{\gamma}},\quad s_2-s_1=c_p\ln\left(\frac{T_2}{T_1}\right)-R\ln{\left(\frac{p_2}{p_1}\right)}=c_v \ln{\left( \frac{T_2}{T_1}\right)} + R\ln{\left(\frac{v_2}{v_1}\right)}, \quad e=c_vT, \quad h=c_pT
+\frac{T_2}{T_1} = \left(\frac{\rho_2}{\rho_1}\right)^{\gamma - 1} = \left(\frac{p_2}{p_1}\right)^{\frac{\gamma - 1}{\gamma}}
+\notag
+$$
+
+$$
+s_2-s_1=c_p\ln\left(\frac{T_2}{T_1}\right)-R\ln{\left(\frac{p_2}{p_1}\right)}=c_v \ln{\left( \frac{T_2}{T_1}\right)} + R\ln{\left(\frac{v_2}{v_1}\right)}
 \notag
 $$
 
@@ -186,8 +199,12 @@ $$
 ## Fanno Flow: 1D-Adiabatic Flow w/ Irreversibilities (Non-Isentropic):  \\(dT_0=0 \\)
 
 ### General Trends 
+
 $$
-\boxed{\mathbf{M < 1} \colon (ds, \, du, \, dM) \, +, \quad (dT, \, dp, \, d\rho, \, dp_0) \, -, \quad \mathbf{M > 1} \colon (ds, \, dT, \, dp, \, d\rho) \, +, \quad (dp_0, \, du, \, dM) \, -}
+\boxed{\mathbf{M < 1} \colon (ds, \, du, \, dM) \, +, \quad (dT, \, dp, \, d\rho, \, dp_0) \, -} \notag $$
+
+$$
+\boxed{\mathbf{M > 1} \colon (ds, \, dT, \, dp, \, d\rho) \, +, \quad (dp_0, \, du, \, dM) \, -}
 \notag 
 $$
 
@@ -204,15 +221,27 @@ $$
 $$
 
 $$
-\frac{dT}{T}+(\gamma-1)M^2 \frac{du}{u}=0,\enspace \frac{dT}{ds}=-\frac{T}{c_v}\left( \frac{M^2}{1-M^2}\right), \enspace \frac{ds}{R}=\left( 1 - M^2 \right)\frac{du}{u}, \enspace \frac{s- s_*}{c_p}=\ln\left[M^{\frac{\gamma-1}{\gamma}} \left(\left[\frac{2}{\gamma+1} \right]\left[1+\frac{\gamma-1}{2}M^2\right] \right)^{-\frac{\gamma+1}{2\gamma}} \right]\notag 
+\frac{dT}{T}+(\gamma-1)M^2 \frac{du}{u}=0,\enspace \frac{dT}{ds}=-\frac{T}{c_v}\left( \frac{M^2}{1-M^2}\right), \enspace \frac{ds}{R}=\left( 1 - M^2 \right)\frac{du}{u} \notag
 $$
 
 $$
-\frac{T_2}{T_1}=\frac{2+(\gamma-1) M_1^2}{2+(\gamma-1) M_2^2},\enspace \frac{\rho_2}{\rho_1}=\frac{M_1}{M_2} \left[\frac{2+(\gamma-1)M_2^2}{2+(\gamma-1)M_1^2} \right]^{\frac{1}{2}},\enspace \frac{p_2}{p_1}=\frac{M_1}{M_2} \left[ \frac{2+(\gamma -1)M_1^2}{2+(\gamma -1)M_2^2} \right]^{\frac{1}{2}},\enspace \frac{p_{02}}{p_{01}}=\frac{M_1}{M_2}\left[\frac{2+(\gamma -1)M_2^2}{2+(\gamma -1)M_1^2} \right]^{\frac{\gamma+1}{2(\gamma -1)}}\notag 
+\frac{s- s_*}{c_p}=\ln\left[M^{\frac{\gamma-1}{\gamma}} \left(\left[\frac{2}{\gamma+1} \right]\left[1+\frac{\gamma-1}{2}M^2\right] \right)^{-\frac{\gamma+1}{2\gamma}} \right]\notag 
 $$
 
 $$
-\frac{T}{T_*}=\frac{\gamma+1}{2+(\gamma-1)M^2},\quad \frac{p}{p_*}=\frac{1}{M}\left[ \frac{\gamma+1}{2+(\gamma-1)M^2}\right]^{1/2},\quad \frac{\rho}{\rho_*}=\frac{1}{M}\left[\frac{2+(\gamma-1)M^2}{\gamma+1}\right]^{1/2},\quad \frac{p_{0}}{p_{0_*}}=\frac{1}{M} \left[ \frac{2+(\gamma-1)M^2}{\gamma+1}\right]^{\frac{\gamma+1}{2(\gamma-1)}}\notag 
+\frac{T_2}{T_1}=\frac{2+(\gamma-1) M_1^2}{2+(\gamma-1) M_2^2},\enspace \frac{\rho_2}{\rho_1}=\frac{M_1}{M_2} \left[\frac{2+(\gamma-1)M_2^2}{2+(\gamma-1)M_1^2} \right]^{\frac{1}{2}} \notag
+$$
+
+$$
+\enspace \frac{p_2}{p_1}=\frac{M_1}{M_2} \left[ \frac{2+(\gamma -1)M_1^2}{2+(\gamma -1)M_2^2} \right]^{\frac{1}{2}},\enspace \frac{p_{02}}{p_{01}}=\frac{M_1}{M_2}\left[\frac{2+(\gamma -1)M_2^2}{2+(\gamma -1)M_1^2} \right]^{\frac{\gamma+1}{2(\gamma -1)}}\notag 
+$$
+
+$$
+\frac{T}{T_*}=\frac{\gamma+1}{2+(\gamma-1)M^2},\quad \frac{p}{p_*}=\frac{1}{M}\left[ \frac{\gamma+1}{2+(\gamma-1)M^2}\right]^{1/2} \notag
+$$
+
+$$
+\frac{\rho}{\rho_*}=\frac{1}{M}\left[\frac{2+(\gamma-1)M^2}{\gamma+1}\right]^{1/2},\quad \frac{p_{0}}{p_{0_*}}=\frac{1}{M} \left[ \frac{2+(\gamma-1)M^2}{\gamma+1}\right]^{\frac{\gamma+1}{2(\gamma-1)}}\notag 
 $$
 
 <hr style="border: 2px solid black;">
@@ -222,17 +251,20 @@ $$
 ### General Trends
 
 $$
-\mathbf{M < 1:}
-\, \boldsymbol{\delta q +}: \, (ds, \, du, \, dM, \,dT_0) +, \, (dp, \, d\rho, \, dp_0) -\,, \, dT \pm (M=\gamma^{-1/2})
-\: \boldsymbol{\delta q -}: \, (ds, \, du, \, dM, \, dT_0) -, \, (dp, \, d\rho, \, dp_0)+, \, dT \mp
-\notag 
+\begin{align*}
+    \mathbf{M < 1:}
+    \quad & \boldsymbol{\delta q +}: \, (ds, \, du, \, dM, \,dT_0) +, \quad (dp, \, d\rho, \, dp_0) -, \quad dT \pm (M=\gamma^{-1/2}) \\
+    & \boldsymbol{\delta q -}: \, (ds, \, du, \, dM, \, dT_0) -, \quad (dp, \, d\rho, \, dp_0)+, \quad dT \mp
+\end{align*}
 $$
 
 $$
-\mathbf{M > 1:}
-\, \boldsymbol{\delta q +}: \, (ds  \, , dp \,, d\rho \,, dT_0,  \, dT ) +
-\, (dp_0  \,, du, \, dM ) -, \:  \boldsymbol{\delta q -}: \, (ds , \, dp,  \, d\rho , \, dT_0 , \, dT )- (dp_0 , \, du, \, dM)+
-\notag 
+\begin{align*}
+    \mathbf{M > 1:}
+    \quad & \boldsymbol{\delta q +}: \quad (ds  \, , dp \,, d\rho \,, dT_0,  \, dT ) +,
+    \quad (dp_0  \,, du, \, dM ) - \\
+    & \boldsymbol{\delta q -}: \quad (ds , \, dp,  \, d\rho , \, dT_0 , \, dT )-, \quad (dp_0 , \, du, \, dM)+
+\end{align*}
 $$
 
 ### Differential Equations of Motion
@@ -254,7 +286,11 @@ $$
 $$
 
 $$
-\frac{p}{p_*}=\frac{1+\gamma}{1+\gamma M^2}, \quad \frac{T}{T_*}=M^2 \left(\frac{\gamma+1}{1+\gamma M^2} \right)^2,\quad \frac{\rho}{\rho_*}=\frac{1}{M^2}\left(\frac{1+\gamma M^2}{\gamma+1} \right), \quad \frac{p_0}{p_{0*}}= \left[\frac{1}{\gamma+1}\bigg(2+(\gamma-1)M^2 \bigg) \right]^{\frac{\gamma}{\gamma-1}}\left( \frac{\gamma+1}{1+\gamma M^2}\right) \notag 
+\frac{p}{p_*}=\frac{1+\gamma}{1+\gamma M^2}, \quad \frac{T}{T_*}=M^2 \left(\frac{\gamma+1}{1+\gamma M^2} \right)^2,\quad \frac{\rho}{\rho_*}=\frac{1}{M^2}\left(\frac{1+\gamma M^2}{\gamma+1} \right) \notag
+$$
+
+$$
+\frac{p_0}{p_{0*}}= \left[\frac{1}{\gamma+1}\bigg(2+(\gamma-1)M^2 \bigg) \right]^{\frac{\gamma}{\gamma-1}}\left( \frac{\gamma+1}{1+\gamma M^2}\right) \notag 
 $$
 
 $$
@@ -288,7 +324,12 @@ $$
 \frac{\rho_2}{\rho_1}=\frac{1+\frac{\gamma+1}{\gamma-1}\frac{p_2}{p_1}}{\frac{\gamma+1}{\gamma-1}+\frac{p_2}{p_1}}, \quad \frac{T_2}{T_1}=\frac{p_2}{p_1}\left[\frac{\frac{\gamma+1}{\gamma-1}+\frac{p_2}{p_1}}{1+\frac{\gamma+1}{\gamma-1}\frac{p_2}{p_1}}\right]\notag 
 $$
 
-$$M_2^2=\frac{1+\frac{\gamma-1}{2}M_1^2}{\gamma M_1^2-\frac{\gamma-1}{2}},\quad \frac{T_2}{T_1}=\left[\frac{2+(\gamma-1)M_1^2}{(\gamma+1)M_1^2}\right] \left[1+\frac{2\gamma}{\gamma+1}(M_1^2-1) \right], \quad \frac{\rho_2}{\rho_1}=\frac{(\gamma+1)M_1^2}{2+(\gamma-1)M_1^2},\quad \frac{p_2}{p_1}=1+\frac{2\gamma}{\gamma+1}\left(M_1^2-1 \right)\notag 
+$$
+M_2^2=\frac{1+\frac{\gamma-1}{2}M_1^2}{\gamma M_1^2-\frac{\gamma-1}{2}},\quad \frac{T_2}{T_1}=\left[\frac{2+(\gamma-1)M_1^2}{(\gamma+1)M_1^2}\right] \left[1+\frac{2\gamma}{\gamma+1}(M_1^2-1) \right] \notag
+$$
+
+$$
+\frac{\rho_2}{\rho_1}=\frac{(\gamma+1)M_1^2}{2+(\gamma-1)M_1^2},\quad \frac{p_2}{p_1}=1+\frac{2\gamma}{\gamma+1}\left(M_1^2-1 \right)\notag 
 $$
 
 $$
@@ -315,16 +356,32 @@ $$
 
 ### One-Dimensional Specialization
 
+In terms of density and velocity,
+
 $$
-\text{mass: } \frac{1}{a^2} \left( \frac{\partial p}{\partial t} + u \frac{\partial p}{\partial x} \right) + \rho \frac{\partial u}{\partial x} = 0, \enspace \frac{\partial \rho}{\partial t} +u \frac{\partial \rho}{\partial x} + \rho \frac{\partial u}{\partial x} =0, \quad \text{mom: } \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + \frac{1}{\rho} \frac{\partial p}{\partial x} = 0, \enspace \frac{\partial u}{\partial t}+ u \frac{\partial u}{\partial x} + \frac{a^2}{\rho} \frac{\partial \rho}{\partial x}=0\notag 
+\text{mass: } \frac{1}{a^2} \left( \frac{\partial p}{\partial t} + u \frac{\partial p}{\partial x} \right) + \rho \frac{\partial u}{\partial x} = 0, \quad \frac{\partial \rho}{\partial t} +u \frac{\partial \rho}{\partial x} + \rho \frac{\partial u}{\partial x} =0 \notag 
 $$
 
 $$
-\text{mass: } \rho_1 \frac{\partial \tilde{s}}{\partial t}+ \rho_1 \left( \frac{\partial u }{\partial x}+\tilde{s} \frac{\partial u}{\partial x} \right) +\rho_1u \frac{\partial \tilde{s}}{\partial x}=0, \quad \text{mom: } \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x}+\frac{a^2}{\tilde{s}+1} \frac{\partial \tilde{s}}{\partial x}=0\notag 
+\text{momentum: } \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + \frac{1}{\rho} \frac{\partial p}{\partial x} = 0, \quad \frac{\partial u}{\partial t}+ u \frac{\partial u}{\partial x} + \frac{a^2}{\rho} \frac{\partial \rho}{\partial x}=0 \notag 
+$$
+
+In terms of condensation and velocity,
+
+$$
+\text{mass: } \rho_1 \frac{\partial \tilde{s}}{\partial t}+ \rho_1 \left( \frac{\partial u }{\partial x}+\tilde{s} \frac{\partial u}{\partial x} \right) +\rho_1u \frac{\partial \tilde{s}}{\partial x}=0 \notag
 $$
 
 $$
-\frac{dx}{dt}= u \pm a, \quad du = \pm \frac{dp}{\rho a }, \quad J_{\pm}= u \pm \frac{2 a}{\gamma - 1}, \quad a=\frac{\gamma-1}{4}(J_+ -J_-), \quad u=\frac{1}{2}(J_+ + J_-), \quad \tilde{s}=\frac{\rho'}{\rho_1}=\frac{\rho-\rho_1}{\rho_1}\notag 
+\text{momentum: } \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x}+\frac{a^2}{\tilde{s}+1} \frac{\partial \tilde{s}}{\partial x}=0\notag 
+$$
+
+$$
+\frac{dx}{dt}= u \pm a, \quad du = \pm \frac{dp}{\rho a }, \quad J_{\pm}= u \pm \frac{2 a}{\gamma - 1} \notag 
+$$
+
+$$
+a=\frac{\gamma-1}{4}(J_+ -J_-), \quad u=\frac{1}{2}(J_+ + J_-), \quad \tilde{s}=\frac{\rho'}{\rho_1}=\frac{\rho-\rho_1}{\rho_1}\notag 
 $$
 
 $$
@@ -334,22 +391,29 @@ $$
 ### Left-Facing, Simple-Centered Expansion Wave 
 
 $$
-\frac{a}{a_1}=1-{\frac{\gamma-1}{2}}\left( \frac{u}{a_1} \right) , \quad \frac{T}{T_1}=\left[ 1-{\frac{\gamma-1}{2}} \left( \frac{u}{a_1} \right) \right]^2, \quad \frac{p}{p_1}=\left[1-{\frac{\gamma-1}{2}} \left( \frac{u}{a_1} \right) \right]^{\frac{2\gamma}{\gamma-1}}, \quad \frac{\rho}{\rho_1}
-=\left[  1-{\frac{\gamma-1}{2}} \left( \frac{u}{a_1} \right) \right] ^{\frac{2}{\gamma-1}}\notag 
+\frac{a}{a_1}=1-{\frac{\gamma-1}{2}}\left( \frac{u}{a_1} \right) , \quad \frac{T}{T_1}=\left[ 1-{\frac{\gamma-1}{2}} \left( \frac{u}{a_1} \right) \right]^2, \quad \frac{p}{p_1}=\left[1-{\frac{\gamma-1}{2}} \left( \frac{u}{a_1} \right) \right]^{\frac{2\gamma}{\gamma-1}} \notag
 $$
 
 $$
+\frac{\rho}{\rho_1}
+=\left[  1-{\frac{\gamma-1}{2}} \left( \frac{u}{a_1} \right) \right] ^{\frac{2}{\gamma-1}}, \quad
 u=\frac{2}{\gamma+1} \left(a_1+\frac{x}{t} \right) \notag 
 $$
 
 ### Right-Facing, Isentropic Compression Wave 
 
 $$
-\frac{a}{a_1}=1+{\frac{\gamma-1}{2}}\left( \frac{u}{a_1} \right) , \quad \frac{T}{T_1}=\left[ 1+{\frac{\gamma-1}{2}} \left( \frac{u}{a_1} \right) \right] ^2, \quad \frac{p}{p_1}= \left[  1+{\frac{\gamma-1}{2}} \left( \frac{u}{a_1} \right) \right]^{\frac{2\gamma}{\gamma-1}}, \quad \frac{\rho}{\rho_1}= \left[ 1+{\frac{\gamma-1}{2}} \left( \frac{u}{a_1} \right) \right]^{\frac{2}{\gamma-1}}\notag 
+\frac{a}{a_1}=1+{\frac{\gamma-1}{2}}\left( \frac{u}{a_1} \right) , \quad \frac{T}{T_1}=\left[ 1+{\frac{\gamma-1}{2}} \left( \frac{u}{a_1} \right) \right] ^2 \notag
 $$
 
 $$
-\text{Shock Tube: } \frac{p_4}{p_1}=\frac{1+\frac{2\gamma_1}{\gamma_1+1} \left(M_s^2-1 \right)}{\left[1-\frac{a_1}{a_4}\frac{\gamma_4-1}{\gamma_1+1}
+\frac{p}{p_1}= \left[  1+{\frac{\gamma-1}{2}} \left( \frac{u}{a_1} \right) \right]^{\frac{2\gamma}{\gamma-1}}, \quad \frac{\rho}{\rho_1}= \left[ 1+{\frac{\gamma-1}{2}} \left( \frac{u}{a_1} \right) \right]^{\frac{2}{\gamma-1}} \notag 
+$$
+
+Shock Tube Equation: 
+
+$$
+\frac{p_4}{p_1}=\frac{1+\frac{2\gamma_1}{\gamma_1+1} \left(M_s^2-1 \right)}{\left[1-\frac{a_1}{a_4}\frac{\gamma_4-1}{\gamma_1+1}
 \left(M_s-\dfrac{1}{M_s}\right)\right]^{\frac{2\gamma_4}{\gamma_4 - 1}}}= \frac{p_2}{p_1} \left[ 1 - \frac{(\gamma_4 - 1) \left( \frac{a_1}{a_4} \right) \left( \frac{p_2}{p_1} - 1 \right)}
 {\sqrt{2 \gamma_1 \left[ 2 \gamma_1 + (\gamma_1 + 1) \left( \frac{p_2}{p_1} - 1 \right) \right] }} \right]^{\frac{-2 \gamma_4}{\gamma_4 - 1}}
 \notag 
@@ -378,24 +442,38 @@ $$
 
 $$
 \tilde{s} = F(\xi)  + G(\eta), \enspace  u' = f(\xi) + g(\eta), \enspace
-\xi = x - a_{1} t, \enspace \eta = x + a_{1} t,\enspace f=a_1 F ,\enspace g=-a_1 G,\enspace u' = \pm a_1 \tilde{s}= \pm \frac{p'}{\rho_1a_1}, \enspace p'=\pm \gamma p_1 \tilde{s}
-\notag 
+\xi = x - a_{1} t, \enspace \eta = x + a_{1} t
+\notag
 $$
 
 $$
-\text{Linearized Isentropic: } \frac{p}{p_1}=1+\gamma \tilde{s}, \quad \frac{T}{T_1}=1+(\gamma-1) \tilde{s}, \quad u'=a_1[F(\xi)-G(\eta)], \quad p'=\gamma p_1[F(\xi) + G(\eta)]\notag 
+f=a_1 F ,\enspace g=-a_1 G,\enspace u' = \pm a_1 \tilde{s}= \pm \frac{p'}{\rho_1a_1}, \enspace p'=\pm \gamma p_1 \tilde{s}
+\notag 
+$$
+
+Linearized Isentropic: 
+
+$$
+\frac{p}{p_1}=1+\gamma \tilde{s}, \quad \frac{T}{T_1}=1+(\gamma-1) \tilde{s}, \quad u'=a_1[F(\xi)-G(\eta)], \quad p'=\gamma p_1[F(\xi) + G(\eta)]\notag 
 $$
 
 ### Spherical Acoustics 
 
 $$
-\frac{\partial^2(r \tilde{s})}{\partial t^2}-a_1^2 \frac{\partial^2(r \tilde{s})}{\partial r^2}=0, \quad \tilde{s}=\frac{1}{r} \mathcal{F}(r-a_1 t)+\frac{1}{r}\mathcal{G}(r+a_1t)=\frac{1}{r} F\left(t-\frac{r}{a_1}\right)+\frac{1}{r}G\left(t+\frac{r}{a_1}\right)\notag 
+\frac{\partial^2(r \tilde{s})}{\partial t^2}-a_1^2 \frac{\partial^2(r \tilde{s})}{\partial r^2}=0 \notag
+$$
+
+$$
+\tilde{s}=\frac{1}{r} \mathcal{F}(r-a_1 t)+\frac{1}{r}\mathcal{G}(r+a_1t)=\frac{1}{r} F\left(t-\frac{r}{a_1}\right)+\frac{1}{r}G\left(t+\frac{r}{a_1}\right)\notag 
 $$
 
 ### Oblique Shock Theory 
 
 $$
-M_{n1}=M_1 \sin{(\beta)}, \quad M_2=\frac{M_{n2}}{\sin{(\beta-\theta)}}, \quad
+M_{n1}=M_1 \sin{(\beta)}, \quad M_2=\frac{M_{n2}}{\sin{(\beta-\theta)}}, \notag
+$$
+
+$$
 \tan(\theta) = 2 \cot(\beta) \left[ \frac{M_1^2 \sin^2(\beta) - 1}{M_1^2 (\gamma + \cos(2\beta)) + 2} \right], \quad M_1^2 \sin^2{\beta} -1=\frac{\gamma +1}{2} M_1^2 \frac{\sin{\beta}\sin{\theta}}{\cos (\beta-\theta)}
 \notag 
 $$
@@ -413,11 +491,19 @@ $$
 ### 2D Specialization
 
 $$
-\left[ u^2 - a^2 \right]\frac{\partial u}{\partial x}+ \left[ v^2 - a^2 \right] \frac{\partial v}{\partial y}+ uv \left[\frac{\partial u}{\partial y}+ \frac{\partial v}{\partial x} \right]=0, \enspace [u^2 - a^2] {\phi_{xx}} + 2uv {\phi_{xy}} + [v^2 - a^2] \phi_{yy} = 0, \enspace \frac{dy}{dx}=\frac{\frac{uv}{a^2}\pm \sqrt{M^2-1}}{\frac{u^2}{a^2}-1}=\tan{[\theta \pm \mu]}\notag 
+\left[ u^2 - a^2 \right]\frac{\partial u}{\partial x}+ \left[ v^2 - a^2 \right] \frac{\partial v}{\partial y}+ uv \left[\frac{\partial u}{\partial y}+ \frac{\partial v}{\partial x} \right]=0 \notag 
 $$
 
 $$
-\frac{dn}{ds}=\pm \frac{1}{\sqrt{M^2-1}}= \tan(\pm \mu), \quad d \theta \mp \sqrt{M^2-1}\frac{dV}{V}=0, \quad d\nu=\frac{\sqrt{M^2-1}}{1+\frac{\gamma-1}{2}M^2} \frac{dM}{M}, \quad \theta \mp \nu=C,\quad\notag 
+[u^2 - a^2] {\phi_{xx}} + 2uv {\phi_{xy}} + [v^2 - a^2] \phi_{yy} = 0, \enspace \frac{dy}{dx}=\frac{\frac{uv}{a^2}\pm \sqrt{M^2-1}}{\frac{u^2}{a^2}-1}=\tan{[\theta \pm \mu]}\notag 
+$$
+
+$$
+\frac{dn}{ds}=\pm \frac{1}{\sqrt{M^2-1}}= \tan(\pm \mu), \quad d \theta \mp \sqrt{M^2-1}\frac{dV}{V}=0 \notag
+$$
+
+$$
+d\nu=\frac{\sqrt{M^2-1}}{1+\frac{\gamma-1}{2}M^2} \frac{dM}{M}, \quad \theta \mp \nu=C \notag 
 $$
 
 $$
@@ -428,10 +514,11 @@ $$
 ### Perturbation Theory (Subsonic + Supersonic)
 
 $$
-\left( 1-M_{\infty}^2 \right) \frac{\partial u'}{\partial x} + \frac{\partial v'}{\partial y} + \frac{\partial w'}{\partial z}=0, \quad (1-M_{\infty}^2) \frac{\partial^2 \phi'}{\partial x^2}+\frac{\partial^2 \phi'}{\partial y^2}+ \frac{\partial^2 \phi'}{\partial z^2}=0, \quad c_p=\frac{2}{\gamma M_{\infty}^2} \left[\frac{p}{p_{\infty}}-1 \right]\notag 
+\left( 1-M_{\infty}^2 \right) \frac{\partial u'}{\partial x} + \frac{\partial v'}{\partial y} + \frac{\partial w'}{\partial z}=0, \quad (1-M_{\infty}^2) \frac{\partial^2 \phi'}{\partial x^2}+\frac{\partial^2 \phi'}{\partial y^2}+ \frac{\partial^2 \phi'}{\partial z^2}=0 \notag
 $$
 
 $$
+c_p=\frac{2}{\gamma M_{\infty}^2} \left[\frac{p}{p_{\infty}}-1 \right], \quad
 c_p = \frac{2}{\gamma M_{\infty}^2} 
 \Bigg[ 
 \left[1+ \frac{\gamma - 1}{2} M_{\infty}^2 \left( 1 - \frac{\mathbf{u} \cdot \mathbf{u}}{U_{\infty}^2} \right)  \right]^{\frac{\gamma}{\gamma - 1}} - 1
