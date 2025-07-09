@@ -73,7 +73,7 @@ $$
 \notag
 $$
 
-<hr style="border: 2px solid black;">
+<hr style="border: 2px solid black; width: 100vw; margin: 0; position: relative; left: 50%; right: 50%; transform: translateX(-50%);">
 
 ## Thermodynamics
 
@@ -148,7 +148,7 @@ $$
 {\frac{T_0}{T}}=1+\frac{\gamma-1}{2}M^2, \quad {\frac{p_0}{p}}=\left[ 1+\frac{\gamma-1}{2}M^2\right]^{\frac{\gamma}{\gamma-1}},\quad {\frac{\rho_0}{\rho}}=\left[ 1+\frac{\gamma-1}{2}M^2\right]^{\frac{1}{\gamma-1}}\notag 
 $$
 
-<hr style="border: 2px solid black;">
+<hr style="border: 2px solid black; width: 100vw; margin: 0; position: relative; left: 50%; right: 50%; transform: translateX(-50%);">
 
 ## Q1D Flow (steady, adiabatic, no viscous effects, isentropic):  \\( dT_0=0, \quad dp_0=0,\quad d\rho_0=0 \\)
 
@@ -194,7 +194,7 @@ $$
 \text{Mach Number definition: } \frac{dV}{V}=\frac{dM}{M}+\frac{1}{2}\frac{dT}{T}\notag 
 $$
 
-<hr style="border: 2px solid black;">
+<hr style="border: 2px solid black; width: 100vw; margin: 0; position: relative; left: 50%; right: 50%; transform: translateX(-50%);">
 
 ## Fanno Flow: 1D-Adiabatic Flow w/ Irreversibilities (Non-Isentropic):  \\(dT_0=0 \\)
 
@@ -244,7 +244,7 @@ $$
 \frac{\rho}{\rho_*}=\frac{1}{M}\left[\frac{2+(\gamma-1)M^2}{\gamma+1}\right]^{1/2},\quad \frac{p_{0}}{p_{0_*}}=\frac{1}{M} \left[ \frac{2+(\gamma-1)M^2}{\gamma+1}\right]^{\frac{\gamma+1}{2(\gamma-1)}}\notag 
 $$
 
-<hr style="border: 2px solid black;">
+<hr style="border: 2px solid black; width: 100vw; margin: 0; position: relative; left: 50%; right: 50%; transform: translateX(-50%);">
 
 ## 1-D Rayleigh Flow:  (Reversible Heat Addition, Non-adiabatic + Non-Isentropic)
 
@@ -297,7 +297,7 @@ $$
 \frac{T_0}{T_{0*}}=\frac{M^2(\gamma+1)}{(1+\gamma M^2)^2} \left[2+(\gamma-1)M^2 \right],\quad \frac{s - s_*}{c_p} = \ln \left[ M^2 \left( \frac{\gamma + 1}{1 + \gamma M^2} \right)^{\frac{\gamma+1}{\gamma}} \right]\notag 
 $$
 
-<hr style="border: 2px solid black;">
+<hr style="border: 2px solid black; width: 100vw; margin: 0; position: relative; left: 50%; right: 50%; transform: translateX(-50%);">
 
 ## Shock Theory
 
@@ -344,7 +344,7 @@ $$
 \frac{\Delta u}{a_1}=\frac{2}{\gamma+1}\left[ M_s-\frac{1}{M_s}\right]=\frac{1}{\gamma}\left[ \frac{p_2}{p_1}-1\right] \left[ \frac{\frac{2\gamma}{\gamma+1}}{\frac{p_2}{p_1}+\frac{\gamma-1}{\gamma+1}} \right]^{\frac{1}{2}},\enspace M_s^2=1+{\frac{\gamma+1}{2\gamma}} \left[ \frac{p_2}{p_1}-1 \right]\notag 
 $$
 
-<hr style="border: 2px solid black; width: 100%; margin: 0;">
+<hr style="border: 2px solid black; width: 100vw; margin: 0; position: relative; left: 50%; right: 50%; transform: translateX(-50%);">
 
 ### Finite Waves (Isentropic Equations of Motion)
 
