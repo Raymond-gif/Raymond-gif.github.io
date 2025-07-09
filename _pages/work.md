@@ -16,7 +16,7 @@ To find the equations of motion for flow across an oblique shock, we construct a
   </figcaption>
 </figure>
 
-<div style="background-color: #e6f0ff; border: 2px solid #2a4d8f; padding: 1em; border-radius: 8px; max-width: 700px; margin: 1em auto;">
+<div style="background-color: #e6f0ff; border: 2px solid #2a4d8f; padding: 1em; border-radius: 8px; max-width: 700px; margin: 1em auto; overflow-x: auto; word-wrap: break-word;">
   <h3 style="color: #2a4d8f; margin-top: 0;">Governing Equations</h3>
   <p>
   $$ 
