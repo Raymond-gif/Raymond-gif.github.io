@@ -9,10 +9,10 @@ author_profile: false
 
 To find the equations of motion for flow across an oblique shock, we construct a fixed control volume around the shock and apply the conservation equations. We then decompose the velocity vectors into tangential and normal components with respect to the oblique shock. 
 
-<figure style="width: 40%; max-width: 500px; margin: 0 auto; text-align: center;">
+<figure id="fig-obliqueshock" style="width: 40%; max-width: 500px; margin: 0 auto; text-align: center; display: block;">
   <img src="/images/obliqueshock.png" alt="Oblique Shock" style="width: 100%; height: auto;">
   <figcaption style="margin-top: 0.5em;">
-   Geometric Diagram of Oblique Shock
+    <strong>Figure 1:</strong> Geometric Diagram of Oblique Shock
   </figcaption>
 </figure>
 
@@ -20,14 +20,52 @@ To find the equations of motion for flow across an oblique shock, we construct a
   <h3 style="color: #2a4d8f; margin-top: 0;">Governing Equations</h3>
   <p>
   $$ 
-  \begin{aligned}
-  \text{Continuity: } \quad \rho_1 u_1 &= \rho_2 u_2  \\  
-  \text{Momentum: } \quad p_1+ \rho_1u_1^2 &=p_2+\rho_2 u_2^2, \quad w_1=w_2 \\
-  \text{Energy: } \quad  h_1 + \dfrac{u_1^2}{2} &=h_2+\dfrac{u_2^2}{2} \\
-  \text{Geometry (see fig.): } \quad u_1 &= V_1 \sin(\beta) , \quad u_2=V_2 \sin(\beta-\theta) \\  
-  w_1&=V_1 \cos (\beta), \quad w_2 = V_2 \cos(\beta - \theta)
-  \end{aligned}
+  \begin{align*}
+      \text{Continuity: } \quad \rho_1 u_1 &= \rho_2 u_2  \label{continuity} \\  
+      \text{Momentum: } \quad p_1+ \rho_1u_1^2 &=p_2+\rho_2 u_2^2, \quad w_1=w_2 \label{momentum}\\
+      \text{Energy: } \quad  h_1 + \dfrac{u_1^2}{2} &=h_2+\dfrac{u_2^2}{2} \label{energy}\\
+      \text{Geometry (see fig. 1): } \quad u_1 &= V_1 \sin(\beta) , \quad u_2=V_2 \sin(\beta-\theta) \label{geometry}\\  w_1&=V_1 \cos (\beta), \quad w_2 = V_2 \cos(\beta - \theta) \notag
+  \end{align*}
   $$
   </p>
 </div>
+
+Do these equations look familiar? Yes! They are exactly the governing equations for the normal shock, except \\(u_1, u_2 \\) stands for the normal component of the velocity with respect to the oblique shock. 
+
+Therefore, we can apply the normal shock relations, making sure to use the normal component of the velocity. It is then useful to define the normal Mach number. 
+
+$$
+M_{n1}=\dfrac{u_1}{a_1}=\dfrac{V_1 \sin \beta}{a_1}=M_1 \sin \beta \notag
+$$
+
+By using \\(M_{n1}\\) in place of \\(M_1\\) in the normal shock relations, we get, 
+
+$$
+\begin{align}
+    \dfrac{T_2}{T_1}&=\left[\dfrac{2+(\gamma-1)M_{n1}^2}{(\gamma+1)M_{n1}^2}\right] \left[1+\dfrac{2\gamma}{\gamma+1}(M_{n1}^2-1) \right] \label{temperatureratio} \\ \dfrac{\rho_2}{\rho_1}&=\dfrac{(\gamma+1)M_{n1}^2}{2+(\gamma-1)M_{n1}^2} \label{densityratio} \\  \dfrac{p_2}{p_1}&=1+\dfrac{2\gamma}{\gamma+1}\left(M_{n1}^2-1 \right) \label{pressureratio}
+\end{align}
+$$
+
+Manipulating Eqs. \ref{continuity} and \ref{geometry}, 
+
+$$
+\dfrac{\rho_2}{\rho_1}=\dfrac{u_1}{u_2}=\dfrac{V_1}{V_2} \dfrac{ \sin \beta}{\sin (\beta - \theta)}= \dfrac{\cos(\beta - \theta)}{\cos \beta} \dfrac{\sin \beta}{\sin (\beta -\theta)}=\dfrac{\tan \beta}{\tan (\beta - \theta)} 
+$$
+
+Plugging in Eq. \ref{densityratio}, I obtain, 
+
+<div style="background-color: #ebf4ff; border: 2px solid #2c5282; padding: 12px; border-radius: 6px; max-width: 600px; margin: 1em auto;">
+  <strong>Theta-Beta-M Relation: </strong>
+  
+  <p style="text-align: center; font-size: 1.1em; margin-top: 0.5em;">
+
+  $$\dfrac{\tan \beta}{\tan (\beta - \theta)} = \dfrac{(\gamma+1)M_1^2 \sin^2\beta}{2+(\gamma-1)M_1^2 \sin^2\beta}
+  \label{tantan sinsin} $$
+
+  </p>
+</div>
+
+This equation is also presented equivalently in various forms in textbooks. For example, 
+
+
 
