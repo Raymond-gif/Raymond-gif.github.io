@@ -75,8 +75,9 @@ $$
 \boxed{M_1^2 \sin^2 \beta -1 = \dfrac{\gamma+1}{2} M_1^2 \dfrac{\sin \beta \sin \theta}{\cos(\beta-\theta)}} \label{m1squared-1}
 $$
 
-<details>
+<details class="custom-collapse">
   <summary><strong>Show Derivation for Eqs. \ref{theta beta M} and \ref{m1squared-1}</strong></summary>
+  <div class = "collapse-content">
   <br>
 
 Let's define a shorthand notation, \( \{\sin \beta, \enspace \cos \beta, \enspace \tan \beta, \enspace \sin \theta, \enspace \cos \theta, \enspace \tan \theta, \enspace \cos 2 \beta\} \equiv \{s_\beta, \enspace c_\beta, \enspace t_\beta, \enspace s_\theta, \enspace c_\theta, \enspace t_\theta, \enspace c_{2\beta}\} \)
@@ -133,6 +134,7 @@ $$
 \boxed{M_1^2 \sin^2 \beta -1 = \dfrac{\gamma+1}{2} M_1^2 \dfrac{\sin \beta \sin \theta}{\cos(\beta-\theta)}} \label{m1squared-1}
 $$
 
+</div>
 </details>
 
 ##  Infinitely Weak Oblique Shock Approaching Mach Line
