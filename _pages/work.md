@@ -16,9 +16,9 @@ To find the equations of motion for flow across an oblique shock, we construct a
   </figcaption>
 </figure>
 
-<div style="background-color: #e6f0ff; border: 2px solid #2a4d8f; padding: 1em; border-radius: 8px; max-width: 700px; margin: 1em auto; overflow-x: auto; word-wrap: break-word;">
-  <h3 style="color: #2a4d8f; margin-top: 0;">Governing Equations</h3>
-  <p>
+<div class="equation-box">
+  <h3>Governing Equations</h3>
+  <div>
   $$ 
   \begin{align*}
       \text{Continuity: } \quad \rho_1 u_1 &= \rho_2 u_2  \label{continuity} \\  
@@ -27,7 +27,7 @@ To find the equations of motion for flow across an oblique shock, we construct a
       \text{Geometry (see fig. 1): } \quad u_1 &= V_1 \sin(\beta) , \quad u_2=V_2 \sin(\beta-\theta) \label{geometry}\\  w_1&=V_1 \cos (\beta), \quad w_2 = V_2 \cos(\beta - \theta) \notag
   \end{align*}
   $$
-  </p>
+  </div>
 </div>
 
 Do these equations look familiar? Yes! They are exactly the governing equations for the normal shock, except \\(u_1, u_2 \\) stands for the normal component of the velocity with respect to the oblique shock. 
@@ -54,15 +54,12 @@ $$
 
 Plugging in Eq. \ref{densityratio}, I obtain, 
 
-<div style="background-color: #ebf4ff; border: 2px solid #2c5282; padding: 12px; border-radius: 6px; max-width: 600px; margin: 1em auto;">
-  <strong>Theta-Beta-M Relation: </strong>
-  
-  <p style="text-align: center; font-size: 1.1em; margin-top: 0.5em;">
-
+<div class= "equation-box">
+  <h3><strong>Theta-Beta-M Relation: </strong></h3>
+  <div>
   $$\dfrac{\tan \beta}{\tan (\beta - \theta)} = \dfrac{(\gamma+1)M_1^2 \sin^2\beta}{2+(\gamma-1)M_1^2 \sin^2\beta}
   \label{tantan sinsin} $$
-
-  </p>
+  </div>
 </div>
 
 This equation is also presented equivalently in various forms in textbooks. For example, 
@@ -131,7 +128,7 @@ $$
 $$
 
 $$
-\boxed{M_1^2 \sin^2 \beta -1 = \dfrac{\gamma+1}{2} M_1^2 \dfrac{\sin \beta \sin \theta}{\cos(\beta-\theta)}} \label{m1squared-1}
+\boxed{M_1^2 \sin^2 \beta -1 = \dfrac{\gamma+1}{2} M_1^2 \dfrac{\sin \beta \sin \theta}{\cos(\beta-\theta)}} 
 $$
 
 </div>
@@ -139,7 +136,7 @@ $$
 
 ##  Infinitely Weak Oblique Shock Approaching Mach Line
 
-For small deflection angles \(\theta\), Eq. \ref{m1squared-1} approximately becomes,
+For small deflection angles \\( \theta \\), Eq. \ref{m1squared-1} approximately becomes,
 
 $$
 \begin{equation}
@@ -153,19 +150,19 @@ $$\begin{equation}
 \dfrac{p_2}{p_1}\approx 1 + (\gamma M_1^2 \tan \beta) \theta \label{weakpressureratio}
 \end{equation}$$
 
-As the flow deflection becomes smaller, \(\beta\) approaches the Mach angle, \(\mu\). Therefore, \(\tan \beta \approx \tan \mu=1/\sqrt{M_1^2-1}\). 
+As the flow deflection becomes smaller, \\( \beta \\) approaches the Mach angle, \\( \mu \\). Therefore, \\( \tan \beta \approx \tan \mu=1/\sqrt{M_1^2-1} \\). 
 
-<div style="background-color: #ebf4ff; border: 2px solid #2c5282; padding: 12px; border-radius: 6px; max-width: 600px; margin: 1em auto;">
-  <strong>Pressure Ratio Across an Infinitely Weak Oblique Shock: </strong>
-  
-  <p style="text-align: center; font-size: 1.1em; margin-top: 0.5em;">
-
+<div class="equation-box">
+  <h3><strong>Pressure Ratio Across an Infinitely Weak Oblique Shock: </strong></h3>
+  <div>
 $$\begin{equation}
-    \boxed{\dfrac{p_2}{p_1}=1+\dfrac{\gamma M_1^2}{\sqrt{M_1^2-1}} \theta, \quad \dfrac{\Delta p}{p_1}=\dfrac{\gamma M_1^2}{\sqrt{M_1^2-1}} \theta}, \text{ for small perturbations (small \theta)}  
+    \dfrac{p_2}{p_1}=1+\dfrac{\gamma M_1^2}{\sqrt{M_1^2-1}} \theta, \quad \dfrac{\Delta p}{p_1}=\dfrac{\gamma M_1^2}{\sqrt{M_1^2-1}} \theta
     \label{weakpressureratiofinal}
 \end{equation}
 $$
-  </p>
+
+For small perturbations, so small \(\theta \)
+  </div>
 </div>
 
 \begin{figure}[htbp]
@@ -175,84 +172,98 @@ $$
     \label{fig:machobliqueshock}
 \end{figure}
 
-\begin{tcolorbox}[
-  colback=yellow!10!white,  % Pale yellow background
-  colframe=yellow!80!black, % Dark yellowish frame for contrast
-  title=\raggedright{Relationship Between $\epsilon$ and $\theta$}, % Title of the section
-  sharp corners,             % Sharp corners for the box
-  boxrule=0.8mm,             % Thin frame
-  fonttitle=\bfseries\LARGE, % Bold and large title
-  coltitle=black,   
-  breakable 
-]
-\small
-Looking at fig. \ref{fig:machobliqueshock}, we define the difference between the oblique and Mach angle as $\epsilon$.
-\[\beta = \mu + \epsilon\]
+<details class="custom-collapse">
+  <summary><strong>Show relationship between epsilon and theta</strong></summary>
+  <div class = "collapse-content">
+
+Looking at fig. \ref{fig:machobliqueshock}, we define the difference between the oblique and Mach angle as \( \epsilon \).
+
+$$\beta = \mu + \epsilon
+\notag
+$$
+
+$$
 \begin{align*}
-\sin \beta = \sin (\mu + \epsilon)= \sin \mu \cos \epsilon + \cos \mu \sin \epsilon &\approx \sin \mu + \epsilon \cos \mu \\ & \approx \dfrac{1}{M_1}+\dfrac{\epsilon}{M_1} \sqrt{M_1^2-1}
+  \sin \beta = \sin (\mu + \epsilon)= \sin \mu \cos \epsilon + \cos \mu \sin \epsilon &\approx \sin \mu + \epsilon \cos \mu \\ & \approx \dfrac{1}{M_1}+\dfrac{\epsilon}{M_1} \sqrt{M_1^2-1}
 \end{align*}
+$$
+
+$$
 \begin{align}
     M_1 \sin \beta &\approx 1+ \epsilon \sqrt{M_1^2-1} \nonumber\\
     M_1^2 \sin^2 \beta &\approx 1+2\epsilon \sqrt{M_1^2-1} + \cancel{\epsilon^2 (M_1^2-1)} \nonumber \\
-    \Aboxed{M_1^2 \sin^2 \beta -1 &= 2 \epsilon \sqrt{M_1^2-1}}, \text{ for small perturbations} \label{M1^2epsilon}
+    M_1^2 \sin^2 \beta -1 &= 2 \epsilon \sqrt{M_1^2-1}, \text{ for small perturbations} \label{M1^2epsilon}
 \end{align}
+$$
 
 Setting the right hand sides of Eqs. \ref{M1^2approx} and \ref{M1^2epsilon} equal to each other, I obtain 
 
+$$
 \begin{align}
     2\epsilon \sqrt{M_1^2-1}&=\dfrac{\gamma+1}{2} \dfrac{M_1^2}{\sqrt{M_1^2-1}} \theta \\
-    \Aboxed{\epsilon&= \dfrac{\gamma+1}{4}\dfrac{M_1^2}{M_1^2-1} \theta} \label{epsilontheta}
+    \epsilon&= \dfrac{\gamma+1}{4}\dfrac{M_1^2}{M_1^2-1} \theta \label{epsilontheta}
 \end{align}
-\end{tcolorbox}
+$$
 
-Eq. \ref{epsilontheta} leads us to conclude that $\epsilon$ is proportional to (on the same order of) $\theta$. That is, for an infinitely weak oblique shock, the difference in the shock and Mach angle is on the same order of the flow deflection angle. 
+</div>
+</details>
+
+Eq. \ref{epsilontheta} leads us to conclude that \\(\epsilon\\) is proportional to (on the same order of) \\(\theta\\). That is, for an infinitely weak oblique shock, the difference in the shock and Mach angle is on the same order of the flow deflection angle. 
 
 Recall from the geometry of oblique shock theory (Eqs. \ref{momentum}, \ref{geometry}),
-\begin{equation}
+
+$$\begin{equation}
 \boxed{\dfrac{V_2^2}{V_1^2}= \dfrac{\cos^2 \beta}{\cos^2 (\beta-\theta)}} \label{v2/v1 squared relation}
-\end{equation}
+\end{equation}$$
 
 Rearranging Eq. \ref{M1^2epsilon},
-\begin{align}
+$$\begin{align}
     \sin^2 \beta&=\dfrac{1+ 2\epsilon \sqrt{M_1^2-1}}{M_1^2} \nonumber \\
     \cos^2 \beta &= 1-\sin^2 \beta=1-\dfrac{1}{M_1^2} \left[1+2\epsilon\sqrt{M_1^2-1}\right] \nonumber \\
     \cos^2 \beta &= \dfrac{M_1^2-1}{M_1^2} \left[ 1- \dfrac{2 \epsilon}{\sqrt{M_1^2-1}}\right]
     \label{cos2beta}
-\end{align}
+\end{align}$$
 
-Now, we solved for the numerator of Eq. \ref{v2/v1 squared relation}. What remains is to solve for the denominator. I follow a similar procedure in determining $\cos^2 (\beta-\theta)$ as $\cos^2 \beta$. 
-\[\sin (\beta -\theta)= \sin[\mu + (\epsilon-\theta)]= \sin \mu \cos (\epsilon - \theta) + \cos \mu \sin (\epsilon -\theta)\]
+Now, we solved for the numerator of Eq. \ref{v2/v1 squared relation}. What remains is to solve for the denominator. I follow a similar procedure in determining \\(\cos^2 (\beta-\theta)\\) as \\(\cos^2 \beta\\). 
 
-In the small angle approximation, $\cos (\epsilon-\theta) = 1$ and $\sin (\epsilon - \theta) = \epsilon -\theta$, 
-\[\sin(\beta-\theta) = \sin \mu + (\epsilon-\theta) \cos \mu = \dfrac{1}{M_1}+(\epsilon-\theta)\dfrac{\sqrt{M_1^2-1}}{M_1}\]
+$$\sin (\beta -\theta)= \sin[\mu + (\epsilon-\theta)]= \sin \mu \cos (\epsilon - \theta) + \cos \mu \sin (\epsilon -\theta) \notag$$
+
+In the small angle approximation, \\(\cos (\epsilon-\theta) = 1\\) and \\(\sin (\epsilon - \theta) = \epsilon -\theta\\), 
+
+$$\sin(\beta-\theta) = \sin \mu + (\epsilon-\theta) \cos \mu = \dfrac{1}{M_1}+(\epsilon-\theta)\dfrac{\sqrt{M_1^2-1}}{M_1} \notag
+$$
 
 Squaring and ignoring all higher order terms,
-\begin{align}
+
+$$\begin{align}
     \sin^2 (\beta-\theta) &= \dfrac{1}{M_1^2}\left[ 1+ 2(\epsilon - \theta) \sqrt{M_1^2-1}\right] \nonumber \\
     \cos^2 (\beta -\theta) &=1-\sin^2(\beta -\theta)=1-\dfrac{1}{M_1^2} \left[ 1+ 2 (\epsilon - \theta) \sqrt{M_1^2-1}\right] \nonumber \\
     \cos ^2 (\beta - \theta) &= \dfrac{M_1^2-1}{M_1^2} \left[ 1-\dfrac{2(\epsilon - \theta)}{\sqrt{M_1^2-1}}\right]
     \label{cos^2 beta -theta}
-\end{align}
+\end{align}$$
 
-Substituting Eqs. \ref{cos2beta} and \ref{cos^2 beta -theta} into Eq. \ref{v2/v1 squared relation}, and using Eq. \ref{epsilontheta} to express $\epsilon$ in terms of $\theta$, we obtain $V_2/V_1$ as a function of $\theta$.
+Substituting Eqs. \ref{cos2beta} and \ref{cos^2 beta -theta} into Eq. \ref{v2/v1 squared relation}, and using Eq. \ref{epsilontheta} to express \\(\epsilon\\) in terms of \\(\theta\\), we obtain \\(V_2/V_1\\) as a function of \\(\theta\\).
 
-\begin{equation}
+$$\begin{equation}
     \boxed{\dfrac{V_2}{V_1}=\sqrt{\dfrac{1-\dfrac{\gamma+1}{2} \dfrac{M_1^2}{(M_1^2-1)^{3/2}}\theta}{1-\dfrac{2\theta}{\sqrt{M_1^2-1}} \left[ \dfrac{\gamma + 1}{4} \dfrac{M_1^2}{M_1^2-1}-1\right]}}}
     \label{V2V1functiontheta}
-\end{equation}
+\end{equation}$$
 
-Eq. \ref{V2V1functiontheta} is of the form $f(\theta) = \sqrt{\dfrac{1+A \theta}{1+B \theta}}$, where $A= - \dfrac{\gamma+1}{2} \dfrac{M_1^2}{(M_1^2-1)^{3/2}}$ 
+Eq. \ref{V2V1functiontheta} is of the form \\(f(\theta) = \sqrt{\dfrac{1+A \theta}{1+B \theta}}\\), where \\(A= - \dfrac{\gamma+1}{2} \dfrac{M_1^2}{(M_1^2-1)^{3/2}}\\) 
 
-and $B=\dfrac{-2}{\sqrt{M_1^2-1}} \left[ \dfrac{\gamma+1}{4}\dfrac{M_1^2}{M_1^2-1}-1\right]$.
+and \\(B=\dfrac{-2}{\sqrt{M_1^2-1}} \left[ \dfrac{\gamma+1}{4}\dfrac{M_1^2}{M_1^2-1}-1\right]\\).
 
 If we do a Taylor expansion and neglect all higher order terms, we obtain the velocity ratio across an infinitely weak oblique shock. 
 
-\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title=Velocity Ratio Across an Infinitely Weak Oblique Shock]
-\begin{equation}
-    \boxed{\dfrac{V_2}{V_1}=1-\dfrac{\theta}{\sqrt{M_1^2-1}}, \quad \dfrac{\Delta V}{V_1}=-\dfrac{\theta}{\sqrt{M_1^2-1}}}
-    \label{velocityratioveryweakobliqueshock}
-\end{equation}
-\end{tcolorbox}
+<div class="equation-box">
+  <h3><strong> Velocity Ratio Across an Infinitely Weak Oblique Shock: </strong></h3>
+  <div>
+  $$\begin{equation}
+      \boxed{\dfrac{V_2}{V_1}=1-\dfrac{\theta}{\sqrt{M_1^2-1}}, \quad \dfrac{\Delta V}{V_1}=-\dfrac{\theta}{\sqrt{M_1^2-1}}}
+      \label{velocityratioveryweakobliqueshock}
+  \end{equation}$$
+  </div>
+</div>
 
 What does this tell us? For a very small flow deflection angle $\theta$, we see that the oblique shock approaches the Mach wave, and we can calculate the velocity and pressure change from Eqs. \ref{weakpressureratiofinal} and \ref{velocityratioveryweakobliqueshock}. 
 
