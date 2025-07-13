@@ -265,11 +265,11 @@ If we do a Taylor expansion and neglect all higher order terms, we obtain the ve
   </div>
 </div>
 
-What does this tell us? For a very small flow deflection angle $\theta$, we see that the oblique shock approaches the Mach wave, and we can calculate the velocity and pressure change from Eqs. \ref{weakpressureratiofinal} and \ref{velocityratioveryweakobliqueshock}. 
+What does this tell us? For a very small flow deflection angle \\(\theta\\), we see that the oblique shock approaches the Mach wave, and we can calculate the velocity and pressure change from Eqs. \ref{weakpressureratiofinal} and \ref{velocityratioveryweakobliqueshock}. 
 
-It can be shown that $\Delta s \sim ({\Delta p}/{p_1})^3\sim\theta^3$, but I will omit the proof here. You can derive it by doing a Taylor expansion on the entropy change across a shock. Notice that if the flow deflection is small, the change in entropy is even smaller, so the flow can be considered nearly isentropic. 
+It can be shown that \\(\Delta s \sim ({\Delta p}/{p_1})^3\sim\theta^3\\), but I will omit the proof here. You can derive it by doing a Taylor expansion on the entropy change across a shock. Notice that if the flow deflection is small, the change in entropy is even smaller, so the flow can be considered nearly isentropic. 
 
-Imagine that instead of turning the flow abruptly from $0^\circ$ to $\theta^\circ$ via an oblique shock, we turn the flow gradually through a series of very weak, nearly isentropic Mach waves.
+Imagine that instead of turning the flow abruptly from \\(0^\circ \\) to \\( \theta^\circ \\) via an oblique shock, we turn the flow gradually through a series of very weak, nearly isentropic Mach waves.
 
 \begin{figure}[htbp]
     \centering
@@ -280,40 +280,451 @@ Imagine that instead of turning the flow abruptly from $0^\circ$ to $\theta^\cir
 
 We can solve for the flowfield properties of an isentropic compression caused by a smooth, continuous boundary by approximating the boundary with straight line segments, with infinitely weak oblique shocks at each ``corner". 
 
-This sensation should be familiar! Yes, this should remind you of Calculus, approximating a continuous curve with discrete line segments! As $n\to\infty$, $\Delta \theta \to d\theta$, and $\Delta \theta \to d \theta$, so that Eq. \ref{velocityratioveryweakobliqueshock} becomes a differential equation, 
+This sensation should be familiar! Yes, this should remind you of Calculus, approximating a continuous curve with discrete line segments! As \\( n\to\infty \\), \\( \Delta \theta \to d\theta \\), and \\( \Delta \theta \to d \theta \\), so that Eq. \ref{velocityratioveryweakobliqueshock} becomes a differential equation, 
 
-\begin{equation}
+$$\begin{equation}
     \dfrac{dV}{V}=-\dfrac{d\theta}{\sqrt{M^2-1}}
     \label{diffeqn_prandtl_meyer}
-\end{equation}
+\end{equation}$$
 
-It is useful to rewrite Eq. \ref{diffeqn_prandtl_meyer} in terms of Mach number. I do this by differentiating $M=V/a$ to obtain Eq. \ref{Mach number definition}. By manipulating the differential adiabatic energy equation $c_p dT + V dV =0$, I also obtain Eq. \ref{differentialadiabaticenergyeqn}.
+It is useful to rewrite Eq. \ref{diffeqn_prandtl_meyer} in terms of Mach number. I do this by differentiating \\( M=V/a \\) to obtain Eq. \ref{Mach number definition}. By manipulating the differential adiabatic energy equation \\( c_p dT + V dV =0 \\), I also obtain Eq. \ref{differentialadiabaticenergyeqn}.
 
-\begin{equation}
+$$\begin{equation}
     \dfrac{dV}{V}=\dfrac{dM}{M} + \dfrac{1}{2} \dfrac{dT}{T}
     \label{Mach number definition}
 \end{equation}
+$$
 
-\begin{equation}
+$$\begin{equation}
     \dfrac{dT}{T}+(\gamma-1)M^2 \dfrac{dV}{V}=0
     \label{differentialadiabaticenergyeqn}
-\end{equation}
+\end{equation}$$
 
 Eqs. \ref{Mach number definition}-\ref{differentialadiabaticenergyeqn} together yield, 
 
-\begin{equation}
+$$\begin{equation}
     \dfrac{dV}{V}=\dfrac{1}{1+\dfrac{\gamma-1}{2}M^2} \dfrac{dM}{M}
     \label{dVV=dMM}
-\end{equation}
+\end{equation}$$
 
 Plug Eq. \ref{dVV=dMM} into Eq. \ref{diffeqn_prandtl_meyer},
 
-\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title=Differential Form of Prandtl-Meyer Function]
-\begin{equation}
-    \boxed{d\nu =-d\theta = \dfrac{\sqrt{M^2-1}}{1+\dfrac{\gamma-1}{2}M^2 } \dfrac{dM}{M}} 
-    \label{PrandtlMeyerFinal}
-\end{equation}
+<div class="equation-box">
+  <h3><strong> Differential Form of Prandtl-Meyer Function </strong></h3>
+  <div>
+  $$
+  \begin{equation}
+      d\nu =-d\theta = \dfrac{\sqrt{M^2-1}}{1+\dfrac{\gamma-1}{2}M^2 } \dfrac{dM}{M} 
+      \label{PrandtlMeyerFinal}
+  \end{equation}
+  $$
+  </div>
+  </div>
+
+## Integrating to Obtain the Prandtl-Meyer Function 
+
+Integrating Eq. \ref{PrandtlMeyerFinal} is an arduous task, the solution of which is called the Prandtl-Meyer function. 
+
+$$\begin{align*}
+    d\nu &= \dfrac{\sqrt{M^2-1}}{1+\dfrac{\gamma-1}{2}M^2 } \dfrac{dM}{M} \\
+    \int_{\nu(1)}^{\nu(M)} \, d\nu &= \int_{1}^{M} \dfrac{\sqrt{\overline{M^2}-1}}{1+\dfrac{\gamma-1}{2}\overline{M^2}} \, \dfrac{d\overline{M}}{\overline{M}}, \quad \text{where $\overline{M}$ is a dummy variable} 
+\end{align*}$$
+
+If we make the following change of variables, 
+$$ z^2=\overline{M}^2-1 , \quad \dfrac{d\overline{M}}{\overline{M}}=\dfrac{z}{z^2+1} \, dz $$
+
+$$\begin{equation}
+\nu(M)-\nu(1)= \int_{0}^{\sqrt{M^2-1}}  \left[\dfrac{z^2}{1+ \dfrac{\gamma-1}{2} (z^2+1)} \right] \left[\dfrac{1}{z^2+1}\right] \, dz
+\label{prandtlmeyerintegral}
+\end{equation}$$
+
+We can perform partial fraction decomposition on the integrand and then find the antiderivative, with the help of the identity \\( \int \dfrac{1}{1+(az)^2} \, dz = \dfrac{1}{a} \tan^{-1} (az) + C \\). 
+
+$$\begin{align*}
+ \int \dfrac{z^2}{1+ \dfrac{\gamma-1}{2} (z^2+1)}  \dfrac{1}{z^2+1} \, dz &= \int \left[\dfrac{1}{1+\dfrac{\gamma-1}{\gamma+1} z^2}-\dfrac{1}{z^2+1} \right] \, dz  \\
+ &= \sqrt{\dfrac{\gamma+1}{\gamma-1}}\tan^{-1} \left(z \sqrt{\dfrac{\gamma-1}{\gamma+1}}\right)-\tan^{-1} (z) + C
+\end{align*}$$
+
+The limits of integration is arbitrary. To obtain a neat form, let's set \\( \nu(1) =0 \\). Eq. \ref{prandtlmeyerintegral} reduces to, 
+
+$$\nu(M) = \left[\sqrt{\dfrac{\gamma+1}{\gamma-1}}\tan^{-1} \left(z \sqrt{\dfrac{\gamma-1}{\gamma+1}}\right)-\tan^{-1} (z) \right]_{z=0}^{z=\sqrt{M^2-1}}
+$$
+
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title= Prandtl-Meyer Function]
+    \begin{equation}
+    \nu(M) = \sqrt{\dfrac{\gamma+1}{\gamma-1}} \tan^{-1} \left[\sqrt{\dfrac{\gamma-1}{\gamma+1} (M^2-1)} \right]- \tan^{-1} (\sqrt{M^2-1})
+    \label{Prandtl-Meyer Function}
+    \end{equation}
 \end{tcolorbox}
 
+The Prandtl-Meyer function reaches an asymptote as \\( M \to \infty \\).
+
+$$\nu(\infty)=\dfrac{\pi}{2} \left( \sqrt{\dfrac{\gamma + 1}{\gamma - 1}}-1\right)=130.45 ^ \circ \text{ for } \gamma=1.4
+$$
+
+It is often useful to define the characteristic Mach number, \\( M_\star=V/a_\star \\), where \\( a_\star \\) is the hypothetical speed of sound when we imagine accelerating/decelerating the particle to sonic state \\( (M=1) \\). Then, we can express the Prandtl-Meyer equation as a function of the characteristic Mach number instead. See below for a derivation to relate \\( M \\) to \\( M_\star \\).
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{PM_vs_M.png}
+        \caption{Prandtl-Meyer function vs Mach number \(M\)}
+        \label{fig:PM_vs_M}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{PM_vs_Mstar.png}
+        \caption{Prandtl-Meyer function vs characteristic Mach number \(M^*\)}
+        \label{fig:PM_vs_Mstar}
+    \end{subfigure}
+    \caption{Prandtl-Meyer function with respect to \(M\) and \(M^*\).}
+    \label{fig:PM_comparison}
+\end{figure}
+
+<details class="custom-collapse">
+  <summary><strong> Relating \( M \) and \( M_\star \) </strong></summary>
+  <div class = "collapse-content">
+
+Start with the adiabatic energy equation, 
+$$c_p T_1 + \dfrac{V_1^2}{2}=c_p T_2 + \dfrac{V_2^2}{2} \notag$$
+$$\dfrac{a_1^2}{\gamma-1}+\dfrac{V_1^2}{2}=\dfrac{a_2^2}{\gamma-1}+\dfrac{V_2^2}{2} \notag $$
+
+Let's drop the subscript for state 1 and have state 2 be the sonic state.
+$$\dfrac{a^2}{\gamma-1}+\dfrac{V^2}{2}=\dfrac{a_\star^2}{\gamma-1}+\dfrac{V_\star^2}{2}, \quad (a_\star =V_\star) \notag$$
+$$a_\star^2 = \dfrac{2(\gamma-1)}{\gamma+1} \left[ \dfrac{a^2}{\gamma-1}+\dfrac{V^2}{2} \right] \notag
+$$
+
+Divide by \( V^2 \) and let \( M_\star=\dfrac{V}{a_\star} \),
+
+$$\dfrac{1}{M_\star^2}=\dfrac{2(\gamma-1)}{\gamma + 1} \left[ \dfrac{1}{\gamma-1} \dfrac{1}{M^2}+\dfrac{1}{2} \right] \notag
+$$
+
+$$\begin{equation}
+    \boxed{M_\star^2 = \dfrac{(\gamma+1) M^2}{2 + (\gamma-1  )M^2}, \quad M^2 = \dfrac{2}{\gamma+1} \left[\dfrac{M_\star^2}{1-\dfrac{\gamma-1}{\gamma+1}M_\star^2} \right]}
+    \label{M_vs_Mstar_relation}
+\end{equation}$$
+
+The advantage of using \( M_\star \) instead of M is because as \( M \to \infty, \ \  M_\star \to \sqrt{\dfrac{\gamma+1}{\gamma-1}} \)
+</div>
+</details>
+
+## Theory of Method of Characteristics
+
+Earlier above, I derived the Prandtl-Meyer function from the infinitely weak limiting case of an oblique shock. There is an alternative method of deriving the Prandtl-Meyer function using a more generic technique for solving hyperbolic partial differential equations -- the method of characteristics. 
+
+We start with the governing equation of motion for steady, homentropic, homenthalpic flow. 
+$${\mathbf{u} \cdot [\mathbf{u} \cdot \nabla \mathbf{u}] - a^2 \nabla \cdot \mathbf{u}=0} \notag
+$$
+Specializing to the 2D case,
+
+$${(u^2 -a^2) \dfrac{\partial u}{\partial x} + (v^2-a^2) \dfrac{\partial v}{\partial y} + uv \left( \dfrac{\partial u}{\partial y} + \dfrac{\partial v}{\partial x}\right) = 0} \notag$$
+
+Substitute in velocity potential, \\( \quad u = \phi_x, \quad v = \phi_y \\),  
+
+$$(u^2-a^2) \phi_{xx} + (v^2-a^2) \phi_{yy} + 2uv \phi_{xy}=0 \notag$$
+
+To make the equation simpler, let's define  \\( A=u^2-a^2, \enspace B=uv, \enspace C=v^2-a^2 \\).
+$${A\phi_{xx}+2B \phi_{xy} + C \phi_{yy}=0} \notag
+$$
+
+Since \\( u=u(x,y) \\) and \\( v=v(x,y) \\), then we have by the multivariable chain rule, 
+
+$$\begin{align*}
+    du = \dfrac{\partial u}{\partial x} dx + \dfrac{\partial u}{\partial y} dy=\phi_{xx} dx + \phi_{xy} dy \\ 
+    dv = \dfrac{\partial v }{\partial x} dx + \dfrac{\partial v }{\partial y} dy = \phi_{xy} dx + \phi_{yy} dy
+\end{align*}$$
+
+Putting it all together, the system of equations is formed. 
+
+$$\left\{
+\begin{aligned}
+    A \phi_{xx} + 2B \phi_{xy} + C \phi_{yy} &= 0 \\
+    dx \, \phi_{xx}  + dy \, \phi_{xy} + 0 \, \phi_{yy} &= du \\
+    0 \, \phi_{xx} + dx \, \phi_{xy} + dy \, \phi_{yy} &= dv
+\end{aligned}
+\right\}$$
+
+In matrix form, 
+
+$$
+\begin{equation}
+\begin{bmatrix}
+A & 2B & C \\
+dx & dy & 0 \\
+0 & dx & dy
+\end{bmatrix}
+\begin{bmatrix}
+\phi_{xx} \\
+\phi_{xy} \\
+\phi_{yy}
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\
+du \\
+dv
+\end{bmatrix}
+\label{methodofcharacteristicsmatrix}
+\end{equation}$$
+
+To understand the method of characteristics, let's imagine the velocity flowfield, $u=u(x,y), \enspace v=v(x,y)$. Physically, we know that the velocities must be continuous. There are no abrupt shocks or discontinuities in the velocity variables since the flow is isentropic. However, the first derivative of the velocities $\dfrac{\partial u}{\partial x}, \dfrac{\partial u}{\partial y}, \dfrac{\partial v}{\partial x}, \dfrac{\partial v}{\partial y}$ can be discontinuous but finite. In the method of characteristics, the goal is to find the lines in the flowfield along which the  first derivative of the velocities is indeterminate and across which it can be discontinuous.  
+
+As an example, we use Cramer's rule to solve for $\phi_{xx}= \dfrac{\partial u }{\partial x}$ in the system of equations Eq. \ref{methodofcharacteristicsmatrix}.
+
+$$\begin{equation}
+\phi_{xx} = \dfrac{N}{D} = \dfrac{\begin{vmatrix}
+    0 & 2B & C \\
+    du & dy & 0 \\ 
+    dv & dx & dy
+\end{vmatrix}}{\begin{vmatrix}
+    A & 2B & C \\
+    dx & dy & 0 \\
+    0 & dx &dy
+\end{vmatrix}}=\dfrac{0}{0}
+\label{numerator-denominator}
+\end{equation}$$
+
+First, let's focus on D = 0 in Eq. \ref{numerator-denominator}.
+
+$$\boxed{\dfrac{dy}{dx}=\dfrac{B \pm \sqrt{B^2-AC}}{A}=\dfrac{\dfrac{uv}{a^2}\pm \sqrt{\dfrac{u^2+v^2}{a^2}-1}}{\dfrac{u^2}{a^2}-1}} \notag
+$$
+
+Using polar coordinates, \\( u = V\cos\theta, \enspace v=V \sin \theta \\), and \\( \sin \mu = 1/M \\), 
+
+$$\begin{align}
+\dfrac{dy}{dx} &=\dfrac{\cos \theta \sin \theta \pm \cos \mu \sin \mu}{\cos^2 \theta - \sin^2 \mu } \nonumber \\
+&= \dfrac{\dfrac{1}{2}\left( \sin2\theta\pm \sin 2\mu\right)}{\cos^2 \theta - \sin^2 \mu} 
+\label{trigintermediate}
+\end{align}$$
+
+The following trig identities are useful in transforming Eq. \ref{trigintermediate}. 
+$$\begin{align*}
+    \sin 2\theta &= \dfrac{2 \tan \theta}{1+ \tan^2 \theta} \\ 
+    \cos^2 \theta &= \dfrac{1}{1+\tan^2 \theta} \\ 
+    \sin^2 \theta &= \dfrac{\tan^2 \theta}{1+\tan^2 \theta} 
+\end{align*}$$
+
+Eq. \ref{trigintermediate} transforms to, using the shorthand notation defined above, 
+$$\begin{align*}
+    \dfrac{dy}{dx}=\dfrac{\dfrac{t_\theta}{1+ t_\theta^2} \pm \dfrac{t_\mu}{1+t_\mu^2}}{\dfrac{1}{1+t_\theta^2}-\dfrac{t_\mu^2}{1+t_\mu^2}} &=\dfrac{(t_\theta \pm t_\mu) + (t_\mu \pm t_\theta) t_\theta t_\mu}{(1-t_\theta t_u)(1+t_\theta t_\mu)} \\ 
+    &= \dfrac{\mathcal{A}}{1-t_\theta t_\mu} + \dfrac{\mathcal{B}}{1+t_\theta t_\mu}
+\end{align*}$$
+
+After performing the partial fraction decomposition, I obtain 
+
+$$\mathcal{A} = \dfrac{(t_\theta \pm t_\mu) + (t_\mu \pm t_\theta)}{2}, \quad \mathcal{B} = \dfrac{(t_\theta \pm t_\mu)-(t_\mu \pm t_\theta)}{2} \notag
+$$
+
+There are only two possibilities. 
+
+$$+ : \quad \mathcal{A} = t_\mu + t_\theta, \quad \mathcal{B} =0 \notag$$
+$$- : \quad \mathcal{A} =0, \quad \mathcal{B} = t_\theta - t_\mu \notag
+$$
+
+Therefore,
+$$\boxed{\dfrac{dy}{dx}= \dfrac{\tan\theta\pm \tan\mu}{1\mp \tan \theta \tan\mu}=\tan(\theta \pm \mu)} \notag
+$$
+
+<div class="equation-box">
+  <h3><strong> Physical Characteristic Equation </strong></h3>
+  <div>
+  $$
+  \begin{equation}
+  \dfrac{dy}{dx}=\tan(\theta \pm \mu)=\dfrac{\dfrac{uv}{a^2}\pm \sqrt{\dfrac{u^2+v^2}{a^2}-1}}{\dfrac{u^2}{a^2}-1}
+  \label{characteristicequationfinal}
+  \end{equation}
+  $$
+  $$
+  \left( \dfrac{dy}{dx} \right)_{C_{+}}=\tan(\theta + \mu), \quad  \left( \dfrac{dy}{dx} \right)_{C_{-}} = \tan(\theta - \mu)
+  $$
+  </div>
+</div>
+
+Importantly, Eq. \ref{characteristicequationfinal} shows that the physical characteristics represent Mach lines. 
+
+Now, let's go to N = 0 in Eq. \ref{numerator-denominator}.
+
+$$
+\begin{align}
+    \dfrac{dv}{du} &=\dfrac{1}{dy/dx}-\dfrac{2B}{C} \nonumber \\ 
+    &= \dfrac{\dfrac{u^2}{a^2}-1}{\dfrac{uv}{a^2}\pm \sqrt{\dfrac{u^2 + v^2}{a^2}-1}}+\dfrac{\dfrac{2uv}{a^2}}{1-\dfrac{v^2}{a^2}} = \dfrac{\left(\dfrac{u^2}{a^2}-1 \right) \left(1-\dfrac{v^2}{a^2} \right)+\dfrac{2uv}{a^2} \left( \dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2+v^2}{a^2}-1}\right)}{\left( \dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2 +v^2}{a^2}-1} \right) \left(1-\dfrac{v^2}{a^2} \right)} \nonumber \\ 
+    &= \dfrac{\left(\dfrac{u v}{a^2}\right)^2 \pm \dfrac{2uv}{a^2}\sqrt{\dfrac{u^2+v^2}{a^2}-1} + \left(\dfrac{u^2 +v^2}{a^2}-1 \right)}{\left( \dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2 +v^2}{a^2}-1} \right) \left(1-\dfrac{v^2}{a^2} \right)}= \dfrac{\left[\dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2+v^2}{a^2}-1} \right]^2}{\left( \dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2 +v^2}{a^2}-1} \right) \left(1-\dfrac{v^2}{a^2} \right)} \nonumber 
+\end{align}
+$$
+
+$$\begin{equation*}
+\boxed{\dfrac{dv}{du} = \dfrac{-\dfrac{uv}{a^2}\mp \sqrt{\dfrac{u^2+v^2}{a^2}-1}}{\dfrac{v^2}{a^2}-1}}
+\end{equation*}$$
+
+Converting to polar coordinates, 
+$$\dfrac{dv}{du}=\dfrac{d(V \sin \theta)}{d(V \cos \theta)}= \dfrac{s_\theta dV + Vc_\theta d\theta}{c_\theta dV - V s_\theta d \theta} = \dfrac{-M^2 c_\theta s_\theta \mp \sqrt{M^2-1}}{M^2 s_\theta ^2 -1 } \notag$$
+
+After some algebraic manipulations, 
+$$d\theta \mp \sqrt{M^2-1} \dfrac{dV}{V}=0 \notag
+$$
+Using Eq. \ref{dVV=dMM} to rewrite in terms of Mach number, 
+
+$$\begin{equation*}
+d \theta \mp \dfrac{\sqrt{M^2-1}}{1+ \dfrac{\gamma-1}{2}M^2} \dfrac{dM}{M}=0
+\end{equation*}$$
+
+Noting the similarity to the Prandtl-Meyer differential equation, we can transform the above into,
+$$\boxed{d(\theta \mp \nu)=0}
+$$
+
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title= Hodograph Characteristics / Riemann Invariants]
+\begin{equation}
+    \dfrac{dv}{du} = \dfrac{-\dfrac{uv}{a^2}\mp \sqrt{\dfrac{u^2+v^2}{a^2}-1}}{\dfrac{v^2}{a^2}-1}, \quad d(\theta \mp \nu) = 0
+    \label{riemanninvariants}
+\end{equation}
+    \begin{align}
+    \theta -\nu &= C_+ \nonumber \\
+    \theta + \nu &= C_- \nonumber
+\end{align}
+\end{tcolorbox}
+
+The Riemann invariants (Eq. \ref{riemanninvariants}) relate flow direction $\theta$ to Mach number $M$. If we instead use the characteristic Mach number $M_\star$, we can graph all possible hodograph characteristic curves in the $(u/a_\star, v/a_\star)$ Cartesian plane, or equivalently, the $(M_\star,\theta)$ polar plane. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{hodograph.png}
+    \caption{Hodograph Characteristics}
+    \label{fig:hodographcharacteristics}
+\end{figure}
+
+To graph fig. \ref{fig:hodographcharacteristics}, we use a polar plot. The theta coordinate is given by \\( \theta=\pm \nu (M_\star) + \text{const.} \\) The radial coordinate is given by \\( r=M_\star \\). We vary the constant term to obtain different characteristic curves. In addition, \\( 1< M_\star < \sqrt{(\gamma+1)/(\gamma-1)} \\) which corresponds to \\( 1 < M < \infty \\). Below is the matlab code used, 
+
+\begin{lstlisting}[
+frame=single,
+numbers=left,
+style=Matlab-Pyglike]
+
+g = 1.4 ; %specific heat ratio 
+Cvec = 0:deg2rad(5):2*pi; %constant
+figure(1);
+pax = polaraxes;
+hold(pax,'on')
+
+for i = 1:length(Cvec)
+
+    C = Cvec(i);
+    Ms = linspace(1,sqrt( (g+1)/(g-1) )) ;
+    M = sqrt( 2/(g+1) * Ms.^2 ./(1 - (g-1)/(g+1) * Ms.^2) ) ;
+    nu = sqrt( (g+1)/(g-1) ) * atan( sqrt((g-1)/(g+1)*(M.^2-1)) ) - atan( sqrt(M.^2-1) ) ;
+
+    thetaII = C + nu;
+    thetaI = C - nu ;
+
+    polarplot(thetaII,Ms,'k')
+    polarplot(thetaI,Ms,'k')
+
+end
+
+\end{lstlisting}
+
+The relationship between the physical characteristics and the hodograph characteristics is important. 
+
+$$\begin{align*}
+    \left( \dfrac{dv}{du}\right)_{C_+} \left( \dfrac{dy}{dx} \right)_{C_-} &= \left[ \dfrac{-\dfrac{uv}{a^2}-\sqrt{\dfrac{u^2 +v^2}{a^2}-1}}{\dfrac{v^2}{a^2}-1}\right] \left[ \dfrac{\dfrac{uv}{a^2}-\sqrt{\dfrac{u^2+v^2}{a^2}-1}}{\dfrac{u^2}{a^2}-1}\right] \\
+    &=-1
+\end{align*}$$
+
+Similarly, 
+$$\left( \dfrac{dv}{du}\right)_{C_-} \left( \dfrac{dy}{dx} \right)_{C_+} = -1 \notag$$
+
+Therefore, we conclude that the hodograph characteristics are orthogonal to the physical characteristics of the opposite family. 
+
+## Method of Characteristics Numeric Method
+
+### Comparison with Quasi-One-Dimensional Model
+
+Let's compare the results with quasi-one-dimensional flow. Starting with three-point division,
+
+$$\begin{align*}
+    \underline{\text{Three-Point Division}} \\
+    \dfrac{A_{10}}{A_1}=\dfrac{A_{10}}{A_\star} \dfrac{A_\star}{A_1} &=2.1369 \\
+    \dfrac{A_{10}}{A_\star} &= 2.1369 \dfrac{A_1}{A_\star} = (2.1369)(1.1349)=2.4252 \\
+    \text{Q1D Result:} \quad \boxed{M_{10} &= 2.4099} \\
+    \text{MOC Result:} \quad \boxed{M_{10} &= 2.4104}
+\end{align*}$$
+
+We repeat this same process for the higher point divisions. 
+$$\begin{align*}
+    \underline{\text{Four-Point Division}} \\
+    \text{Q1D Result: } \quad \boxed{M_{13} =2.0589} \\
+    \text{MOC Result: } \quad \boxed{M_{13}=2.0592}
+\end{align*}$$
+$$\begin{align*}
+    \underline{\text{Seven-Point Division}} \\
+    \text{Q1D Result: } \quad \boxed{M_{18} =1.7406} \\
+    \text{MOC Result: } \quad \boxed{M_{18}=1.7406}
+\end{align*}$$
+
+Therefore, we have come to the rather obvious conclusion that finer characteristic grids (more point divisions) lead to more accuracy. 
+
+<details class="custom-collapse">
+  <summary><strong> Aside: Quasi-One-Dimensional Flow </strong></summary>
+  <div class = "collapse-content">
+
+$$\begin{align}
+     \quad \dfrac{d \rho}{\rho}+\dfrac{du}{u}+ \dfrac{dA}{A}&=0 \tag{mass} \label{masseqnQ1D}\\
+     \quad dp + \rho u du &=0 \tag{momentum} \label{momentumeqnQ1D}\\
+    \quad c_p dT + udu &=0 \tag{energy} \label{energyeqnQ1D} \\
+    \dfrac{dM}{M} &=\dfrac{du}{u}-\dfrac{1}{2} \dfrac{dT}{T} \tag{mach $\#$ differential relation} \label{machdiffQ1D} \\
+    a^2 &= \dfrac{dp}{d\rho} \tag{sound speed isentropic}
+\end{align}$$
+
+Let's start with the mass and momentum equation to get a relationship between the velocity and area. I replace \( dp \) in the momentum equation with \( a^2 d \rho \) and obtain, 
+
+$$\begin{align}
+    a^2 d\rho + \rho u du &= 0 \notag\\
+    \dfrac{d\rho}{\rho} &=-M^2 \dfrac{du}{u} \tag{$\rho-u$ relation} \label{rhourelation}
+\end{align}$$
+
+If I then plug the \ref{rhourelation} into the mass equation and rearrange, I get, 
+
+$$\begin{equation}
+    \boxed{\dfrac{dA}{A}=(M^2-1) \dfrac{du}{u}}  \tag{A-u relation}\label{A-u relation}
+\end{equation}$$
+
+My goal is to express \( du/u \) in terms of \( dM/M \). The key to doing this is to use the energy equation combined with the differential Mach relation. Dividing the energy equation by \( a^2=\gamma R T \) and rearranging, 
+
+$$\begin{equation}
+    \dfrac{dT}{T}=-(\gamma-1) M^2  \dfrac{du}{u} \tag{T-u relation} \label{T-u relation}
+\end{equation}$$
+
+Now, I use the \ref{T-u relation} in the mach number differential relation to express \( du/u \) in terms of  \( dM/M\)
+
+$$\begin{equation}
+    \dfrac{du}{u}=\dfrac{1}{1+\dfrac{1}{2}(\gamma-1) M^2} \dfrac{dM}{M} \tag{u-M relation} \label{u-M relation}
+\end{equation}$$
+
+Plug \ref{u-M relation} into \ref{A-u relation} and simplify,
+$$\begin{equation}
+    \boxed{\dfrac{dA}{A}=\dfrac{M^2-1}{1+\dfrac{\gamma-1}{2}M^2} \dfrac{dM}{M}} \tag{A-M relation} \label{A-M relation}
+\end{equation}$$
+
+This equation is to be integrated. Perform partial fraction decomposition and obtain, 
+$$\begin{align*}
+    \dfrac{dA}{A} &= \left[ \dfrac{\dfrac{\gamma+1}{2}M}{1+ \dfrac{\gamma-1}{2}M^2} - \dfrac{1}{M} \right] dM=f(M) \ dM \\
+    &= \dfrac{1}{2}\dfrac{\gamma+1}{\gamma-1} d\left[\ln \left( 1+\dfrac{\gamma-1}{2}M^2\right)\right] - d \left[ \ln (M) \right] \\
+    &= d \left\{ \ln \left[ \dfrac{1}{M} \left( 1+\dfrac{\gamma-1}{2}M^2\right)^{\frac{1}{2}\frac{\gamma+1}{\gamma-1}}\right] \right\}
+\end{align*}$$
+I call the term in the curly braces as \( F(M) \) and note that it is an anti-derivative of \( f(M) \). 
+$$\begin{align*}
+    F(M) = \ln \left[ \dfrac{1}{M} \left( 1+\dfrac{\gamma-1}{2}M^2\right)^{\frac{1}{2}\frac{\gamma+1}{\gamma-1}}\right] + C 
+\end{align*}$$
+
+Integrating,
+$$\begin{align}
+    \int_{A_\star}^{A} \dfrac{d \bar{A}}{\bar{A}} &= \int_{1}^{M} f(\bar{M}) \ d \bar{M} = F(M)-F(1) \notag \\
+    \ln \dfrac{A}{A_\star} &= \ln \left[\dfrac{1}{M} \left(1+\dfrac{\gamma-1}{2}M^2 \right)^{\frac{1}{2} \frac{\gamma+1}{\gamma-1}} \right] -\ln \left[ \left(1+\dfrac{\gamma-1}{2} \right)^{\frac{1}{2}\frac{\gamma+1}{\gamma-1}} \right] \notag \\
+    \dfrac{A}{A_\star}&=\dfrac{1}{M} \left[\dfrac{2}{\gamma+1} \left( 1+\dfrac{\gamma-1}{2}M^2\right) \right]^{\frac{1}{2} \frac{\gamma+1}{\gamma-1}} \notag
+\end{align}$$
+
+</div>
+</details>
 
 
