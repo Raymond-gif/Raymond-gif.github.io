@@ -259,7 +259,7 @@ If we do a Taylor expansion and neglect all higher order terms, we obtain the ve
   <h3><strong> Velocity Ratio Across an Infinitely Weak Oblique Shock: </strong></h3>
   <div>
   $$\begin{equation}
-      \boxed{\dfrac{V_2}{V_1}=1-\dfrac{\theta}{\sqrt{M_1^2-1}}, \quad \dfrac{\Delta V}{V_1}=-\dfrac{\theta}{\sqrt{M_1^2-1}}}
+      \dfrac{V_2}{V_1}=1-\dfrac{\theta}{\sqrt{M_1^2-1}}, \quad \dfrac{\Delta V}{V_1}=-\dfrac{\theta}{\sqrt{M_1^2-1}}
       \label{velocityratioveryweakobliqueshock}
   \end{equation}$$
   </div>
@@ -469,9 +469,9 @@ dv
 \label{methodofcharacteristicsmatrix}
 \end{equation}$$
 
-To understand the method of characteristics, let's imagine the velocity flowfield, $u=u(x,y), \enspace v=v(x,y)$. Physically, we know that the velocities must be continuous. There are no abrupt shocks or discontinuities in the velocity variables since the flow is isentropic. However, the first derivative of the velocities $\dfrac{\partial u}{\partial x}, \dfrac{\partial u}{\partial y}, \dfrac{\partial v}{\partial x}, \dfrac{\partial v}{\partial y}$ can be discontinuous but finite. In the method of characteristics, the goal is to find the lines in the flowfield along which the  first derivative of the velocities is indeterminate and across which it can be discontinuous.  
+To understand the method of characteristics, let's imagine the velocity flowfield,  \\( u=u(x,y), \enspace v=v(x,y) \\). Physically, we know that the velocities must be continuous. There are no abrupt shocks or discontinuities in the velocity variables since the flow is isentropic. However, the first derivative of the velocities \\( \dfrac{\partial u}{\partial x}, \dfrac{\partial u}{\partial y}, \dfrac{\partial v}{\partial x}, \dfrac{\partial v}{\partial y} \\) can be discontinuous but finite. In the method of characteristics, the goal is to find the lines in the flowfield along which the  first derivative of the velocities is indeterminate and across which it can be discontinuous.  
 
-As an example, we use Cramer's rule to solve for $\phi_{xx}= \dfrac{\partial u }{\partial x}$ in the system of equations Eq. \ref{methodofcharacteristicsmatrix}.
+As an example, we use Cramer's rule to solve for \\( \phi_{xx}= \dfrac{\partial u }{\partial x} \\) in the system of equations Eq. \ref{methodofcharacteristicsmatrix}.
 
 $$\begin{equation}
 \phi_{xx} = \dfrac{N}{D} = \dfrac{\begin{vmatrix}
@@ -574,18 +574,26 @@ Noting the similarity to the Prandtl-Meyer differential equation, we can transfo
 $$\boxed{d(\theta \mp \nu)=0}
 $$
 
-\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title= Hodograph Characteristics / Riemann Invariants]
-\begin{equation}
+<div class="equation-box">
+  <h3><strong> Hodograph Characteristics / Riemann Invariants</strong></h3>
+  <div>
+
+$$\begin{equation}
     \dfrac{dv}{du} = \dfrac{-\dfrac{uv}{a^2}\mp \sqrt{\dfrac{u^2+v^2}{a^2}-1}}{\dfrac{v^2}{a^2}-1}, \quad d(\theta \mp \nu) = 0
     \label{riemanninvariants}
 \end{equation}
-    \begin{align}
-    \theta -\nu &= C_+ \nonumber \\
-    \theta + \nu &= C_- \nonumber
-\end{align}
-\end{tcolorbox}
+$$
 
-The Riemann invariants (Eq. \ref{riemanninvariants}) relate flow direction $\theta$ to Mach number $M$. If we instead use the characteristic Mach number $M_\star$, we can graph all possible hodograph characteristic curves in the $(u/a_\star, v/a_\star)$ Cartesian plane, or equivalently, the $(M_\star,\theta)$ polar plane. 
+$$ 
+\begin{align*}
+    \theta -\nu &= C_+ \\
+    \theta + \nu &= C_- 
+\end{align*}
+$$
+</div>
+</div>
+
+The Riemann invariants (Eq. \ref{riemanninvariants}) relate flow direction \\( \theta \\) to Mach number  \\( M \\). If we instead use the characteristic Mach number \\( M_\star \\), we can graph all possible hodograph characteristic curves in the \\( (u/a_\star, v/a_\star) \\) Cartesian plane, or equivalently, the \\( (M_\star,\theta) \\) polar plane. 
 
 \begin{figure}[H]
     \centering
@@ -596,33 +604,34 @@ The Riemann invariants (Eq. \ref{riemanninvariants}) relate flow direction $\the
 
 To graph fig. \ref{fig:hodographcharacteristics}, we use a polar plot. The theta coordinate is given by \\( \theta=\pm \nu (M_\star) + \text{const.} \\) The radial coordinate is given by \\( r=M_\star \\). We vary the constant term to obtain different characteristic curves. In addition, \\( 1< M_\star < \sqrt{(\gamma+1)/(\gamma-1)} \\) which corresponds to \\( 1 < M < \infty \\). Below is the matlab code used, 
 
-\begin{lstlisting}[
-frame=single,
-numbers=left,
-style=Matlab-Pyglike]
+<details class="custom-collapse">
+  <summary><strong>Click to expand MATLAB code</strong></summary>
+  
+    <pre><code>
 
-g = 1.4 ; %specific heat ratio 
-Cvec = 0:deg2rad(5):2*pi; %constant
-figure(1);
-pax = polaraxes;
-hold(pax,'on')
+    g = 1.4 ; %specific heat ratio 
+    Cvec = 0:deg2rad(5):2*pi; %constant
+    figure(1);
+    pax = polaraxes;
+    hold(pax,'on')
 
-for i = 1:length(Cvec)
+    for i = 1:length(Cvec)
 
-    C = Cvec(i);
-    Ms = linspace(1,sqrt( (g+1)/(g-1) )) ;
-    M = sqrt( 2/(g+1) * Ms.^2 ./(1 - (g-1)/(g+1) * Ms.^2) ) ;
-    nu = sqrt( (g+1)/(g-1) ) * atan( sqrt((g-1)/(g+1)*(M.^2-1)) ) - atan( sqrt(M.^2-1) ) ;
+        C = Cvec(i);
+        Ms = linspace(1,sqrt( (g+1)/(g-1) )) ;
+        M = sqrt( 2/(g+1) * Ms.^2 ./(1 - (g-1)/(g+1) * Ms.^2) ) ;
+        nu = sqrt( (g+1)/(g-1) ) * atan( sqrt((g-1)/(g+1)*(M.^2-1)) ) - atan( sqrt(M.^2-1) ) ;
 
-    thetaII = C + nu;
-    thetaI = C - nu ;
+        thetaII = C + nu;
+        thetaI = C - nu ;
 
-    polarplot(thetaII,Ms,'k')
-    polarplot(thetaI,Ms,'k')
+        polarplot(thetaII,Ms,'k')
+        polarplot(thetaI,Ms,'k')
 
-end
+    end 
 
-\end{lstlisting}
+    </code></pre>   
+</details>
 
 The relationship between the physical characteristics and the hodograph characteristics is important. 
 
