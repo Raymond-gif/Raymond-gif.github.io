@@ -165,12 +165,12 @@ For small perturbations, so small \(\theta \)
   </div>
 </div>
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\linewidth]{obliquemach.png}
-    \caption{Mach wave (blue) and oblique shock (red) for some given flow deflection}
-    \label{fig:machobliqueshock}
-\end{figure}
+<figure id="fig-obliquemach" style="width: 60%; max-width: 500px; margin: 0 auto; text-align: center; display: block;">
+  <img src="/images/obliquemach.png" alt="Oblique Mach" style="width: 100%; height: auto;">
+  <figcaption style="margin-top: 0.5em;">
+    <strong>Figure 2:</strong> Mach wave (blue) and oblique shock (red) for some given flow deflection
+  </figcaption>
+</figure>
 
 <details class="custom-collapse">
   <summary><strong>Show relationship between epsilon and theta</strong></summary>
@@ -271,12 +271,12 @@ It can be shown that \\(\Delta s \sim ({\Delta p}/{p_1})^3\sim\theta^3\\), but I
 
 Imagine that instead of turning the flow abruptly from \\(0^\circ \\) to \\( \theta^\circ \\) via an oblique shock, we turn the flow gradually through a series of very weak, nearly isentropic Mach waves.
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.5\linewidth]{successive.png}
-    \caption{Top: Flow turning through successive isentropic compression waves, Bottom: Flow abruptly turning through oblique shock}
-    \label{fig:successive}
-\end{figure}
+<figure id="fig-successive" style="width: 60%; max-width: 500px; margin: 0 auto; text-align: center; display: block;">
+  <img src="/images/successive.png" alt="successive" style="width: 100%; height: auto;">
+  <figcaption style="margin-top: 0.5em;">
+    <strong>Figure 3:</strong> Top: Flow turning through successive isentropic compression waves, Bottom: Flow abruptly turning through oblique shock
+  </figcaption>
+</figure>
 
 We can solve for the flowfield properties of an isentropic compression caused by a smooth, continuous boundary by approximating the boundary with straight line segments, with infinitely weak oblique shocks at each ``corner". 
 
@@ -350,12 +350,17 @@ The limits of integration is arbitrary. To obtain a neat form, let's set \\( \nu
 $$\nu(M) = \left[\sqrt{\dfrac{\gamma+1}{\gamma-1}}\tan^{-1} \left(z \sqrt{\dfrac{\gamma-1}{\gamma+1}}\right)-\tan^{-1} (z) \right]_{z=0}^{z=\sqrt{M^2-1}}
 $$
 
-\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title= Prandtl-Meyer Function]
+<div class="equation-box">
+  <h3><strong> Prandtl-Meyer Function </strong></h3>
+  <div>
+  $$
     \begin{equation}
     \nu(M) = \sqrt{\dfrac{\gamma+1}{\gamma-1}} \tan^{-1} \left[\sqrt{\dfrac{\gamma-1}{\gamma+1} (M^2-1)} \right]- \tan^{-1} (\sqrt{M^2-1})
     \label{Prandtl-Meyer Function}
     \end{equation}
-\end{tcolorbox}
+  $$
+  </div>
+</div>
 
 The Prandtl-Meyer function reaches an asymptote as \\( M \to \infty \\).
 
@@ -364,24 +369,32 @@ $$
 
 It is often useful to define the characteristic Mach number, \\( M_\star=V/a_\star \\), where \\( a_\star \\) is the hypothetical speed of sound when we imagine accelerating/decelerating the particle to sonic state \\( (M=1) \\). Then, we can express the Prandtl-Meyer equation as a function of the characteristic Mach number instead. See below for a derivation to relate \\( M \\) to \\( M_\star \\).
 
-\begin{figure}[htbp]
-    \centering
-    \begin{subfigure}[t]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{PM_vs_M.png}
-        \caption{Prandtl-Meyer function vs Mach number \(M\)}
-        \label{fig:PM_vs_M}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\linewidth]{PM_vs_Mstar.png}
-        \caption{Prandtl-Meyer function vs characteristic Mach number \(M^*\)}
-        \label{fig:PM_vs_Mstar}
-    \end{subfigure}
-    \caption{Prandtl-Meyer function with respect to \(M\) and \(M^*\).}
-    \label{fig:PM_comparison}
-\end{figure}
+<figure id="fig-PM-comparison" style="width: 100%; max-width: 900px; margin: 0 auto; text-align: center;">
+
+  <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em;">
+
+    <!-- Subfigure 1 -->
+    <div style="flex: 1 1 48%; text-align: center;">
+      <img src="/images/PM_vs_M.png" alt="Prandtl-Meyer vs M" style="width: 100%; height: auto;">
+      <figcaption style="margin-top: 0.5em;">
+        <strong>Figure 4a:</strong> Prandtl-Meyer function vs Mach number \(M\)
+      </figcaption>
+    </div>
+
+    <!-- Subfigure 2 -->
+    <div style="flex: 1 1 48%; text-align: center;">
+      <img src="/images/PM_vs_Mstar.png" alt="Prandtl-Meyer vs M*" style="width: 100%; height: auto;">
+      <figcaption style="margin-top: 0.5em;">
+        <strong>Figure 4b:</strong> Prandtl-Meyer function vs characteristic Mach number \(M^*\)
+      </figcaption>
+    </div>
+
+  </div>
+
+  <figcaption style="margin-top: 1em;">
+    <strong>Figure 4:</strong> Prandtl-Meyer function with respect to \(M\) and \(M^*\).
+  </figcaption>
+</figure>
 
 <details class="custom-collapse">
   <summary><strong> Relating \( M \) and \( M_\star \) </strong></summary>
@@ -500,6 +513,7 @@ $$\begin{align}
 \end{align}$$
 
 The following trig identities are useful in transforming Eq. \ref{trigintermediate}. 
+
 $$\begin{align*}
     \sin 2\theta &= \dfrac{2 \tan \theta}{1+ \tan^2 \theta} \\ 
     \cos^2 \theta &= \dfrac{1}{1+\tan^2 \theta} \\ 
@@ -595,12 +609,12 @@ $$
 
 The Riemann invariants (Eq. \ref{riemanninvariants}) relate flow direction \\( \theta \\) to Mach number  \\( M \\). If we instead use the characteristic Mach number \\( M_\star \\), we can graph all possible hodograph characteristic curves in the \\( (u/a_\star, v/a_\star) \\) Cartesian plane, or equivalently, the \\( (M_\star,\theta) \\) polar plane. 
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.5\linewidth]{hodograph.png}
-    \caption{Hodograph Characteristics}
-    \label{fig:hodographcharacteristics}
-\end{figure}
+<figure id="fig-hodograph" style="width: 50%; max-width: 500px; margin: 0 auto; text-align: center; display: block;">
+  <img src="/images/hodograph.png" alt="hodograph" style="width: 100%; height: auto;">
+  <figcaption style="margin-top: 0.5em;">
+    <strong>Figure 5:</strong> Hodograph Characteristics
+  </figcaption>
+</figure>
 
 To graph fig. \ref{fig:hodographcharacteristics}, we use a polar plot. The theta coordinate is given by \\( \theta=\pm \nu (M_\star) + \text{const.} \\) The radial coordinate is given by \\( r=M_\star \\). We vary the constant term to obtain different characteristic curves. In addition, \\( 1< M_\star < \sqrt{(\gamma+1)/(\gamma-1)} \\) which corresponds to \\( 1 < M < \infty \\). Below is the matlab code used, 
 
@@ -647,6 +661,80 @@ Therefore, we conclude that the hodograph characteristics are orthogonal to the 
 
 ## Method of Characteristics Numeric Method
 
+<figure id="table-moc-comparison" style="width: 100%; max-width: 900px; margin: 0 auto; text-align: center;">
+
+  <!-- Row 1 -->
+  <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 1.5em;">
+    <div style="flex: 1 1 48%; text-align: center;">
+      <img src="/images/table1moca.png" alt="Table 1 MOCA" style="width: 100%; height: auto;">
+      <figcaption style="margin-top: 0.5em;"><strong>Table 1a:</strong> \( 18^{\circ} \) Straight-Walled Diverging Channel: Three-Point Division</figcaption>
+    </div>
+    <div style="flex: 1 1 48%; text-align: center;">
+      <img src="/images/table1mocb.png" alt="Table 1 MOCB" style="width: 100%; height: auto;">
+      <figcaption style="margin-top: 0.5em;"><strong>Table 1b:</strong> \( 18^{\circ} \) Straight-Walled Diverging Channel: Three-Point Division </figcaption>
+    </div>
+  </div>
+
+  <!-- Row 2 -->
+  <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 1.5em;">
+    <div style="flex: 1 1 48%; text-align: center;">
+      <img src="/images/table2moca.png" alt="Table 2 MOCA" style="width: 100%; height: auto;">
+      <figcaption style="margin-top: 0.5em;"><strong>Table 2a:</strong> \( 18^{\circ} \) Straight-Walled Diverging Channel: Four-Point Division </figcaption>
+    </div>
+    <div style="flex: 1 1 48%; text-align: center;">
+      <img src="/images/table2mocb.png" alt="Table 2 MOCB" style="width: 100%; height: auto;">
+      <figcaption style="margin-top: 0.5em;"><strong>Table 2a:</strong> \( 18^{\circ} \) Straight-Walled Diverging Channel: Four-Point Division</figcaption>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+    <div style="flex: 1 1 48%; text-align: center;">
+      <img src="/images/table3moca.png" alt="Table 3 MOCA" style="width: 100%; height: auto;">
+      <figcaption style="margin-top: 0.5em;"><strong>Table 3a: </strong> \( 18^{\circ} \) Straight-Walled Diverging Channel: Seven-Point Division </figcaption>
+    </div>
+    <div style="flex: 1 1 48%; text-align: center;">
+      <img src="/images/table3mocb.png" alt="Table 3 MOCB" style="width: 100%; height: auto;">
+      <figcaption style="margin-top: 0.5em;"><strong>Table 3b: </strong> \( 18^{\circ} \) Straight-Walled Diverging Channel: Seven-Point Division </figcaption>
+    </div>
+  </div>
+</figure>
+
+<br>
+<br>
+
+<figure id="fig-diverging-channel-comparison" style="width: 100%; max-width: 700px; margin: 0 auto; text-align: center;">
+
+  <!-- Subfigure 1 -->
+  <div style="margin-bottom: 1em;">
+    <img src="/images/threepoint.png" alt="Three-point division" style="width: 60%; height: auto;">
+    <figcaption style="margin-top: 0.5em;">
+      <strong>Figure 5a:</strong> Three-point division
+    </figcaption>
+  </div>
+
+  <!-- Subfigure 2 -->
+  <div style="margin-bottom: 1em;">
+    <img src="/images/fourpoint.png" alt="Four-point division" style="width: 60%; height: auto;">
+    <figcaption style="margin-top: 0.5em;">
+      <strong>Figure 5b:</strong> Four-point division
+    </figcaption>
+  </div>
+
+  <!-- Subfigure 3 -->
+  <div style="margin-bottom: 1em;">
+    <img src="/images/sevenpoint.png" alt="Seven-point division" style="width: 60%; height: auto;">
+    <figcaption style="margin-top: 0.5em;">
+      <strong>Figure 5c:</strong> Seven-point division
+    </figcaption>
+  </div>
+
+  <!-- Main Caption -->
+  <figcaption style="margin-top: 1em;">
+    <strong>Figure 5:</strong> Physical characteristic curves in \(18^\circ\) straight-walled diverging channel for various point-division schemes.
+  </figcaption>
+</figure>
+
 ### Comparison with Quasi-One-Dimensional Model
 
 Let's compare the results with quasi-one-dimensional flow. Starting with three-point division,
@@ -655,16 +743,18 @@ $$\begin{align*}
     \underline{\text{Three-Point Division}} \\
     \dfrac{A_{10}}{A_1}=\dfrac{A_{10}}{A_\star} \dfrac{A_\star}{A_1} &=2.1369 \\
     \dfrac{A_{10}}{A_\star} &= 2.1369 \dfrac{A_1}{A_\star} = (2.1369)(1.1349)=2.4252 \\
-    \text{Q1D Result:} \quad \boxed{M_{10} &= 2.4099} \\
-    \text{MOC Result:} \quad \boxed{M_{10} &= 2.4104}
+    \boxed{\text{Q1D Result:} \quad M_{10} = 2.4099} \\
+    \boxed{\text{MOC Result:} \quad M_{10} = 2.4104}
 \end{align*}$$
 
 We repeat this same process for the higher point divisions. 
+
 $$\begin{align*}
     \underline{\text{Four-Point Division}} \\
     \text{Q1D Result: } \quad \boxed{M_{13} =2.0589} \\
     \text{MOC Result: } \quad \boxed{M_{13}=2.0592}
 \end{align*}$$
+
 $$\begin{align*}
     \underline{\text{Seven-Point Division}} \\
     \text{Q1D Result: } \quad \boxed{M_{18} =1.7406} \\
