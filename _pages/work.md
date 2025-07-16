@@ -20,12 +20,12 @@ To find the equations of motion for flow across an oblique shock, we construct a
   <h3>Governing Equations</h3>
   <div>
   $$ 
-  \begin{align*}
+  \begin{align}
       \text{Continuity: } \quad \rho_1 u_1 &= \rho_2 u_2  \label{continuity} \\  
       \text{Momentum: } \quad p_1+ \rho_1u_1^2 &=p_2+\rho_2 u_2^2, \quad w_1=w_2 \label{momentum}\\
       \text{Energy: } \quad  h_1 + \dfrac{u_1^2}{2} &=h_2+\dfrac{u_2^2}{2} \label{energy}\\
       \text{Geometry (see fig. 1): } \quad u_1 &= V_1 \sin(\beta) , \quad u_2=V_2 \sin(\beta-\theta) \label{geometry}\\  w_1&=V_1 \cos (\beta), \quad w_2 = V_2 \cos(\beta - \theta) \notag
-  \end{align*}
+  \end{align}
   $$
   </div>
 </div>
@@ -176,7 +176,7 @@ For small perturbations, so small \(\theta \)
   <summary><strong>Show relationship between epsilon and theta</strong></summary>
   <div class = "collapse-content">
 
-Looking at fig. \ref{fig:machobliqueshock}, we define the difference between the oblique and Mach angle as \( \epsilon \).
+Looking at fig. 2, we define the difference between the oblique and Mach angle as \( \epsilon \).
 
 $$\beta = \mu + \epsilon
 \notag
@@ -616,7 +616,7 @@ The Riemann invariants (Eq. \ref{riemanninvariants}) relate flow direction \\( \
   </figcaption>
 </figure>
 
-To graph fig. \ref{fig:hodographcharacteristics}, we use a polar plot. The theta coordinate is given by \\( \theta=\pm \nu (M_\star) + \text{const.} \\) The radial coordinate is given by \\( r=M_\star \\). We vary the constant term to obtain different characteristic curves. In addition, \\( 1< M_\star < \sqrt{(\gamma+1)/(\gamma-1)} \\) which corresponds to \\( 1 < M < \infty \\). Below is the matlab code used, 
+To graph fig. 5, we use a polar plot. The theta coordinate is given by \\( \theta=\pm \nu (M_\star) + \text{const.} \\) The radial coordinate is given by \\( r=M_\star \\). We vary the constant term to obtain different characteristic curves. In addition, \\( 1< M_\star < \sqrt{(\gamma+1)/(\gamma-1)} \\) which corresponds to \\( 1 < M < \infty \\). Below is the matlab code used, 
 
 <details class="custom-collapse">
   <summary><strong>Click to expand MATLAB code</strong></summary>
