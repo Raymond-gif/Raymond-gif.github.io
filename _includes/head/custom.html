@@ -12,15 +12,15 @@
 <meta name="theme-color" content="#ffffff"/>
 <link rel="stylesheet" href="{{ base_path }}/assets/css/academicons.css"/>
 
-<!-- Support for MatJax -->
+<!-- MathJax configuration -->
 <script>
-  MathJax = {
+  window.MathJax = {
     tex: {
-      tags: 'all'  // should be 'ams', 'none', or 'all'
+      tags: 'all'  // enables equation numbering and referencing
     }
   };
-  </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
   
 <!-- Support for Mermaid -->
 <script type="module">
