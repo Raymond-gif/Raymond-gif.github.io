@@ -218,6 +218,7 @@ $$\begin{equation}
 \end{equation}$$
 
 Rearranging Eq. \ref{M1^2epsilon},
+
 $$\begin{align}
     \sin^2 \beta&=\dfrac{1+ 2\epsilon \sqrt{M_1^2-1}}{M_1^2} \nonumber \\
     \cos^2 \beta &= 1-\sin^2 \beta=1-\dfrac{1}{M_1^2} \left[1+2\epsilon\sqrt{M_1^2-1}\right] \nonumber \\
@@ -332,6 +333,7 @@ $$\begin{align*}
 \end{align*}$$
 
 If we make the following change of variables, 
+
 $$ z^2=\overline{M}^2-1 , \quad \dfrac{d\overline{M}}{\overline{M}}=\dfrac{z}{z^2+1} \, dz $$
 
 $$\begin{equation}
@@ -402,10 +404,12 @@ It is often useful to define the characteristic Mach number, \\( M_\star=V/a_\st
   <div class = "collapse-content">
 
 Start with the adiabatic energy equation, 
+
 $$c_p T_1 + \dfrac{V_1^2}{2}=c_p T_2 + \dfrac{V_2^2}{2} \notag$$
 $$\dfrac{a_1^2}{\gamma-1}+\dfrac{V_1^2}{2}=\dfrac{a_2^2}{\gamma-1}+\dfrac{V_2^2}{2} \notag $$
 
 Let's drop the subscript for state 1 and have state 2 be the sonic state.
+
 $$\dfrac{a^2}{\gamma-1}+\dfrac{V^2}{2}=\dfrac{a_\star^2}{\gamma-1}+\dfrac{V_\star^2}{2}, \quad (a_\star =V_\star) \notag$$
 $$a_\star^2 = \dfrac{2(\gamma-1)}{\gamma+1} \left[ \dfrac{a^2}{\gamma-1}+\dfrac{V^2}{2} \right] \notag
 $$
@@ -429,8 +433,10 @@ The advantage of using \( M_\star \) instead of M is because as \( M \to \infty,
 Earlier above, I derived the Prandtl-Meyer function from the infinitely weak limiting case of an oblique shock. There is an alternative method of deriving the Prandtl-Meyer function using a more generic technique for solving hyperbolic partial differential equations -- the method of characteristics. 
 
 We start with the governing equation of motion for steady, homentropic, homenthalpic flow. 
+
 $${\mathbf{u} \cdot [\mathbf{u} \cdot \nabla \mathbf{u}] - a^2 \nabla \cdot \mathbf{u}=0} \notag
 $$
+
 Specializing to the 2D case,
 
 $${(u^2 -a^2) \dfrac{\partial u}{\partial x} + (v^2-a^2) \dfrac{\partial v}{\partial y} + uv \left( \dfrac{\partial u}{\partial y} + \dfrac{\partial v}{\partial x}\right) = 0} \notag$$
@@ -440,6 +446,7 @@ Substitute in velocity potential, \\( \quad u = \phi_x, \quad v = \phi_y \\),
 $$(u^2-a^2) \phi_{xx} + (v^2-a^2) \phi_{yy} + 2uv \phi_{xy}=0 \notag$$
 
 To make the equation simpler, let's define  \\( A=u^2-a^2, \enspace B=uv, \enspace C=v^2-a^2 \\).
+
 $${A\phi_{xx}+2B \phi_{xy} + C \phi_{yy}=0} \notag
 $$
 
@@ -574,11 +581,14 @@ $$\begin{equation*}
 \end{equation*}$$
 
 Converting to polar coordinates, 
+
 $$\dfrac{dv}{du}=\dfrac{d(V \sin \theta)}{d(V \cos \theta)}= \dfrac{s_\theta dV + Vc_\theta d\theta}{c_\theta dV - V s_\theta d \theta} = \dfrac{-M^2 c_\theta s_\theta \mp \sqrt{M^2-1}}{M^2 s_\theta ^2 -1 } \notag$$
 
 After some algebraic manipulations, 
+
 $$d\theta \mp \sqrt{M^2-1} \dfrac{dV}{V}=0 \notag
 $$
+
 Using Eq. \ref{dVV=dMM} to rewrite in terms of Mach number, 
 
 $$\begin{equation*}
@@ -807,17 +817,21 @@ $$\begin{equation}
 \end{equation}$$
 
 This equation is to be integrated. Perform partial fraction decomposition and obtain, 
+
 $$\begin{align*}
     \dfrac{dA}{A} &= \left[ \dfrac{\dfrac{\gamma+1}{2}M}{1+ \dfrac{\gamma-1}{2}M^2} - \dfrac{1}{M} \right] dM=f(M) \ dM \\
     &= \dfrac{1}{2}\dfrac{\gamma+1}{\gamma-1} d\left[\ln \left( 1+\dfrac{\gamma-1}{2}M^2\right)\right] - d \left[ \ln (M) \right] \\
     &= d \left\{ \ln \left[ \dfrac{1}{M} \left( 1+\dfrac{\gamma-1}{2}M^2\right)^{\frac{1}{2}\frac{\gamma+1}{\gamma-1}}\right] \right\}
 \end{align*}$$
+
 I call the term in the curly braces as \( F(M) \) and note that it is an anti-derivative of \( f(M) \). 
+
 $$\begin{align*}
     F(M) = \ln \left[ \dfrac{1}{M} \left( 1+\dfrac{\gamma-1}{2}M^2\right)^{\frac{1}{2}\frac{\gamma+1}{\gamma-1}}\right] + C 
 \end{align*}$$
 
 Integrating,
+
 $$\begin{align}
     \int_{A_\star}^{A} \dfrac{d \bar{A}}{\bar{A}} &= \int_{1}^{M} f(\bar{M}) \ d \bar{M} = F(M)-F(1) \notag \\
     \ln \dfrac{A}{A_\star} &= \ln \left[\dfrac{1}{M} \left(1+\dfrac{\gamma-1}{2}M^2 \right)^{\frac{1}{2} \frac{\gamma+1}{\gamma-1}} \right] -\ln \left[ \left(1+\dfrac{\gamma-1}{2} \right)^{\frac{1}{2}\frac{\gamma+1}{\gamma-1}} \right] \notag \\
