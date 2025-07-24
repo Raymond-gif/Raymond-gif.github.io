@@ -46,13 +46,14 @@ redirect_from:
 - Coded MATLAB script to size aircraft components, accounting for weight, takeoff lift/drag, thrust available, wing loading, aspect ratio, and sweep angle, in order to meet design requirements  
 - Demonstrated sizing results by modeling aircraft on SW and creating detailed drawings of fuselage interior, wings/tails, and landing gear  
 
-**Supersonic Compressible Fluid Flow Analysis of Diverging Channel**  
+**[Supersonic Compressible Fluid Flow Analysis of Diverging Channel](/portfolio/methodofcharacteristics)**  
 *September 2024 — December 2024*
 - Developed a method to compute velocity and pressure fields in arbitrarily shaped channels using lattice point discretization and method of characteristics  
 - Coded MATLAB script to determine the geometry of Mach waves and derived Prandtl-Meyer function from Navier-Stokes equations to solve for Riemann invariants. Plotted characteristic lines  
 - Determined ideal wall contour shape for isentropic flow (no shocks, cancellation of waves)  
 
-**Numerical Solution to Falkner-Skan Boundary Layer Equation**  
+
+**[Numerical Solution to Falkner-Skan Boundary Layer Equation](/portfolio/numericalmethodsBLeqn/)**  
 *January 2025 — March 2025*
 - Employed a second-order finite difference scheme to solve for flow over flat plate with arbitrary pressure gradient to investigate effects of shear stress on an external body  
 - Generated velocity profile plots in MATLAB under successively stronger adverse pressure gradients, capturing the progression toward boundary layer separation  

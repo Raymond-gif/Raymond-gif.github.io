@@ -841,4 +841,11 @@ $$\begin{align}
 </div>
 </details>
 
+## References
+
+1. H.W. Liepmann and A. Roshko, *Elements of Gasdynamics*
+2. John D. Anderson, *Modern Compressible Flow: With Historical Perspective*, 3rd ed.
+3. Michel A. Saad, *Compressible Fluid Flow*
+
+
 
