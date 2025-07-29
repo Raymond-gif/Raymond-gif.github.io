@@ -66,6 +66,8 @@ $$\begin{equation*}
 \boxed{\dfrac{d^3g}{d\xi^3} + g \dfrac{d^2g}{d\xi^2} + \dfrac{2m}{m+1}\left[1 - \left(\dfrac{dg}{d\xi}\right)^2\right] = 0}
 \end{equation*}$$
 
+To see how I coded for the numerical solution of the Falkner Skan equation, click the button below! 
+
 <p align="center">
   <img src="/images/velprof.png" width="50%">
 </p>
@@ -103,6 +105,26 @@ $$\begin{equation*}
 </p>
 
 **Figure 5:** Falkner Skan: Relationship between \\( m = \dfrac{x}{u_e} \dfrac{du_e}{dx} \\) and \\( \lambda = \dfrac{\Theta^2}{\nu} \dfrac{du_e}{dx} \\)
+
+<a href="/portfolio/falknerskancode" 
+   style="
+     display: inline-block;
+     padding: 12px 24px;
+     background: linear-gradient(to right, #0066cc, #0099ff);
+     color: white;
+     font-size: 16px;
+     font-weight: 600;
+     text-align: center;
+     text-decoration: none;
+     border-radius: 8px;
+     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+     transition: background 0.3s ease, transform 0.2s ease;
+   "
+   onmouseover="this.style.transform='scale(1.05)'"
+   onmouseout="this.style.transform='scale(1)'">
+  Click here to see the numerical solution of the Falkner-Skan differential equation in MATLAB
+</a>
+
 
 ## Momentum Integral Equation and Its Various Forms
 
