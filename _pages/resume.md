@@ -61,6 +61,12 @@ redirect_from:
 
 ---
 
+## Certifications
+
+SOLIDWORKS CAD Design Associate (CSWA) [View here](/files/CSWA_Certification.pdf)
+
+---
+
 ## Extracurriculars
 
 **Board Member of American Society of Mechanical Engineers at UCI**  
