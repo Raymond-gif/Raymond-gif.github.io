@@ -5,6 +5,8 @@ permalink: /formula/
 author_profile: false
 ---
 
+[Click here to download the MAE 230C Formula Sheet](/files/MAE_230C_Formula_Sheet.pdf)
+
 ## Integral Equations of Motion 
 
 ### Conservation of Mass 

@@ -125,7 +125,6 @@ To see how I coded for the numerical solution of the Falkner Skan equation, clic
   Click here to see the numerical solution of the Falkner-Skan differential equation in MATLAB
 </a>
 
-
 ## Momentum Integral Equation and Its Various Forms
 
 Solving the full partial differential equation for boundary layer is difficult due to the nonlinearity of the terms. The Von Karman momentum integral equation allows us to calculate approximate solutions for the boundary layer equations.
