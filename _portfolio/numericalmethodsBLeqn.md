@@ -471,6 +471,7 @@ x_1 \xrightarrow {} u_e'(x_1) \xrightarrow{} \lambda(x_1) = Y(x_1)u_e'(x_1) \xri
 $$\begin{equation*}
 Y(x_2) = Y(x_1) + Y'(x_1) \Delta x
 \end{equation*}$$
+
 </div>
 
 To recap, Pohlhausen's method involves approximating the velocity profile analytically as a polynomial that matches the boundary conditions. From this polynomial velocity profile, we can determine  \\( T(\lambda) = \dfrac{\tau_w \Theta}{\nu u_e} \\) and \\( H(\lambda)=\dfrac{\delta^*}{\Theta} \\), which we can then plug into the momentum integral equation.

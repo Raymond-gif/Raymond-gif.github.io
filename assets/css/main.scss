@@ -85,3 +85,39 @@
   color: #2a4d8f;
   margin-top: 0;
 }
+
+/* === DARK MODE OVERRIDES === */
+html[data-theme="dark"] {
+  .custom-collapse {
+    background-color: #2f2f2f;
+    border-color: #aaa;
+    color: #fff; // make text readable
+  }
+
+  .custom-collapse summary {
+    background-color: #3a3a3a;
+    color: #fff;
+  }
+
+  .custom-collapse summary:hover {
+    background-color: #4a4a4a;
+  }
+
+  .custom-collapse[open] summary {
+    background-color: #5a5a5a;
+  }
+
+  .custom-collapse .collapse-content {
+    color: #ddd;
+  }
+
+  .equation-box {
+    background-color: #1e2a3a;  // dark blue-gray background
+    border-color: #4a90e2;      // keep a blue border
+    color: #fff;                // white text
+  }
+
+  .equation-box h3 {
+    color: #90caff;
+  }
+}
