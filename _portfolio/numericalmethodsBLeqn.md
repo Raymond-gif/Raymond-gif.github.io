@@ -441,11 +441,28 @@ Note that equation \ref{IC2} was simplified by using the fact that \\( M'(\lambd
 
 With the starting conditions known, I can now numerically integrate the differential equation. I coded this in MATLAB, but I will just explain the logic. 
 
-<div style="background:#f5f5f5; border:1px solid #ddd; padding:12px; font-family: monospace; border-radius:4px; overflow-x:auto;">
-  <h3 style="margin-top:0; margin-bottom:10px; font-family: monospace;">
-    Matlab Code For Loop Logic
-  </h3>
-  
+<style>
+  .highlight-box {
+    border-left: 5px solid #4CAF50;
+    background-color: #f9f9f9;
+    color: #222;
+    padding: 16px;
+    border-radius: 6px;
+    font-family: monospace;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+
+  html[data-theme='dark'] .highlight-box {
+    background-color: #1e1e1e;
+    color: #eee;
+    border-left: 5px solid #90ee90;
+  }
+</style>
+
+<div class="highlight-box">
+  <h3 style="margin-top:0; margin-bottom:10px;">Matlab Code For Loop Logic</h3>
+
 <strong>Initialization</strong>
 
 $$\begin{equation*}

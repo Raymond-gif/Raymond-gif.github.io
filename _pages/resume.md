@@ -17,7 +17,8 @@ redirect_from:
 
 ## Education
 
-**[University of California, Irvine](https://engineering.uci.edu/dept/mae)** — BS in Aerospace Engineering, GPA: 3.4  
+**[University of California, Irvine](https://engineering.uci.edu/dept/mae)** — BS in Aerospace Engineering, GPA: 3.4 [[Degree PDF](/files/AerospaceBS.pdf)]
+
 *June 2024*
 
 ---
