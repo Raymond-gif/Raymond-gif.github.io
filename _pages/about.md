@@ -15,5 +15,18 @@ This website serves as the documentation of my work, as I research and learn mor
 
 ## Projects
 
-You can check out my recent work in the [Portfolio](/portfolio/) section.
+You can check out my recent work in the portfolio section.
 
+<a href="/portfolio/" style="
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+">
+  📂 View My Portfolio
+</a>

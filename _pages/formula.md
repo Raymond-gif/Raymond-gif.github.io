@@ -5,7 +5,19 @@ permalink: /formula/
 author_profile: false
 ---
 
-[Click here to download the MAE 230C Formula Sheet](/files/MAE_230C_Formula_Sheet.pdf)
+<a href="/files/MAE_230C_Formula_Sheet.pdf" style="
+  display: inline-block;
+  padding: 12px 20px;
+  background: var(--mm-color-accent, #4a90e2);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+">
+  📄 Download MAE 230C Formula Sheet
+</a>
 
 ## Integral Equations of Motion 
 

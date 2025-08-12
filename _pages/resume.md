@@ -17,7 +17,21 @@ redirect_from:
 
 ## Education
 
-**[University of California, Irvine](https://engineering.uci.edu/dept/mae)** — BS in Aerospace Engineering, GPA: 3.4 [[Degree PDF](/files/AerospaceBS.pdf)]
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <span>
+    <strong>University of California, Irvine</strong> — BS in Aerospace Engineering, GPA: 3.4
+  </span>
+  <a href="/files/AerospaceBS.pdf" style="
+    padding: 6px 12px;
+    background: var(--mm-color-accent, #4a90e2);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  ">
+    📄 <strong>Degree PDF</strong>
+  </a>
+</div>
 
 *June 2024*
 
@@ -64,7 +78,22 @@ redirect_from:
 
 ## Certifications
 
-SOLIDWORKS CAD Design Associate (CSWA) [View here](/files/CSWA_Certification.pdf)
+<span>
+  SOLIDWORKS CAD Design Associate (CSWA)
+</span>
+<a href="/files/CSWA_Certification.pdf" style="
+  display: inline-block;
+  margin-left: 8px;
+  padding: 4px 10px;
+  background: var(--mm-color-accent, #4a90e2);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+">
+  📄 View
+</a>
 
 ---
 
