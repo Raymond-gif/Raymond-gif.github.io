@@ -34,31 +34,36 @@ redirect_from:
     <hr style="margin: 1.5rem 0; border-color: #ccc;">
   </header>
 
-  <section style="margin-bottom: 2rem;">
-    <h2 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 0.75rem; border-bottom: 2px solid #4a90e2; padding-bottom: 0.25rem;">Education</h2>
-    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-      <span style="font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem;">
-        University of California, Irvine — BS in Aerospace Engineering, GPA: 3.4
-      </span>
-      <a href="/files/AerospaceBS.pdf"
-         style="
-           background-color: #4a90e2;
-           color: white;
-           padding: 8px 14px;
-           border-radius: 5px;
-           font-weight: 600;
-           font-size: 0.9rem;
-           text-decoration: none;
-           white-space: nowrap;
-           display: inline-flex;
-           align-items: center;
-           gap: 6px;
-         ">
-        📄 <span>Degree PDF</span>
-      </a>
-    </div>
-    <p style="margin-top: 0.4rem; font-style: italic; color: #555;">June 2024</p>
-  </section>
+<section style="margin-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 0.75rem; border-bottom: 2px solid #4a90e2; padding-bottom: 0.25rem;">
+    Education
+  </h2>
+  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+    <span style="font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem;">
+      University of California, Irvine — BS in Aerospace Engineering, GPA: 3.4
+    </span>
+    <a href="/files/AerospaceBS.pdf"
+       style="
+         background: linear-gradient(135deg, #4a90e2, #357abd);
+         color: white;
+         padding: 8px 14px;
+         border-radius: 5px;
+         font-weight: 600;
+         font-size: 0.9rem;
+         text-decoration: none;
+         white-space: nowrap;
+         display: inline-flex;
+         align-items: center;
+         gap: 6px;
+         transition: background 0.3s ease, transform 0.2s ease;
+       "
+       onmouseover="this.style.background='linear-gradient(135deg, #5aa0f2, #468acc)'; this.style.transform='translateY(-3px)';"
+       onmouseout="this.style.background='linear-gradient(135deg, #4a90e2, #357abd)'; this.style.transform='translateY(0)';">
+      📄 <span>Degree PDF</span>
+    </a>
+  </div>
+  <p style="margin-top: 0.4rem; font-style: italic; color: #555;">June 2024</p>
+</section>
 
   <section style="margin-bottom: 2rem;">
     <h2 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 0.75rem; border-bottom: 2px solid #4a90e2; padding-bottom: 0.25rem;">Experience</h2>
@@ -124,30 +129,48 @@ redirect_from:
         <li>Demonstrated sizing results by modeling aircraft on SW and creating detailed drawings of fuselage interior, wings/tails, and landing gear</li>
       </ul>
     </article>
+
+    <article style="margin-bottom: 1.5rem;">
+  <h3 style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.2rem;">
+    Autonomous Four-Legged Walking Robot Simulating Human Motion
+  </h3>
+  <p style="font-style: italic; margin-top: 0; margin-bottom: 0.5rem;">April 2024 — June 2024</p>
+  <ul style="margin-top: 0; padding-left: 1.3rem; color: #333;">
+    <li>Calibrated weight distribution to ensure center of gravity (CG) was within permitted bounds for control and balance after determining the CG position manually and through SolidWorks (SW) simulation</li>
+    <li>Performed SW motion study analysis to visualize and troubleshoot range of movement and walking mechanism, identifying potential interference issues</li>
+    <li>Tightened joint hole tolerances to improve leg linkages after observing that the leg mechanism was slack, resulting in more natural walking</li>
+  </ul>
+</article>
+
   </section>
 
-  <section style="margin-bottom: 2rem;">
-    <h2 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 0.75rem; border-bottom: 2px solid #4a90e2; padding-bottom: 0.25rem;">Certifications</h2>
-    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
-      <span style="font-weight: 600;">SOLIDWORKS CAD Design Associate (CSWA)</span>
-      <a href="/files/CSWA_Certification.pdf"
-         style="
-           background-color: #4a90e2;
-           color: white;
-           padding: 6px 14px;
-           border-radius: 5px;
-           font-weight: 700;
-           font-size: 0.85rem;
-           text-decoration: none;
-           white-space: nowrap;
-           display: inline-flex;
-           align-items: center;
-           gap: 6px;
-         ">
-        📄 View
-      </a>
-    </div>
-  </section>
+<section style="margin-bottom: 2rem;">
+  <h2 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 0.75rem; border-bottom: 2px solid #4a90e2; padding-bottom: 0.25rem;">
+    Certifications
+  </h2>
+  <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
+    <span style="font-weight: 600;">SOLIDWORKS CAD Design Associate (CSWA)</span>
+    <a href="/files/CSWA_Certification.pdf"
+       style="
+         background: linear-gradient(135deg, #4a90e2, #357abd);
+         color: white;
+         padding: 6px 14px;
+         border-radius: 5px;
+         font-weight: 700;
+         font-size: 0.85rem;
+         text-decoration: none;
+         white-space: nowrap;
+         display: inline-flex;
+         align-items: center;
+         gap: 6px;
+         transition: background 0.3s ease, transform 0.2s ease;
+       "
+       onmouseover="this.style.background='linear-gradient(135deg, #5aa0f2, #468acc)'; this.style.transform='translateY(-3px)';"
+       onmouseout="this.style.background='linear-gradient(135deg, #4a90e2, #357abd)'; this.style.transform='translateY(0)';">
+      📄 View
+    </a>
+  </div>
+</section>
 
   <section>
     <h2 style="font-size: 1.4rem; font-weight: 600; margin-bottom: 0.75rem; border-bottom: 2px solid #4a90e2; padding-bottom: 0.25rem;">Extracurriculars</h2>

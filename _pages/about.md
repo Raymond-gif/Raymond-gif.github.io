@@ -27,6 +27,9 @@ You can check out my recent work in the portfolio section.
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
   transition: background 0.3s ease, transform 0.2s ease;
-">
+"
+onmouseover="this.style.background='linear-gradient(135deg, #5aa0f2, #468acc)'; this.style.transform='translateY(-3px)';"
+onmouseout="this.style.background='linear-gradient(135deg, #4a90e2, #357abd)'; this.style.transform='translateY(0)';">
   📂 View My Portfolio
 </a>
+

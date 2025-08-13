@@ -9,7 +9,20 @@ layout: single
 <div style="background: #f5f5f5; border-left: 5px solid #007acc; padding: 1rem; border-radius: 8px; margin: 1.5rem 0;">
   <p style="margin: 0; font-size: 1.1rem;">
     📌 <strong>This is an addendum to my previous article.</strong>
-    <a href="/portfolio/numericalmethodsBLeqn" style="display: inline-block; background: #007acc; color: white; padding: 0.4rem 0.8rem; margin-left: 0.5rem; text-decoration: none; border-radius: 5px; font-weight: bold;">
+    <a href="/portfolio/numericalmethodsBLeqn" 
+       style="
+         display: inline-block;
+         background: linear-gradient(135deg, #4a90e2, #357abd);
+         color: white;
+         padding: 0.4rem 0.8rem;
+         margin-left: 0.5rem;
+         text-decoration: none;
+         border-radius: 5px;
+         font-weight: bold;
+         transition: background 0.3s ease, transform 0.2s ease;
+       "
+       onmouseover="this.style.background='linear-gradient(135deg, #5aa0f2, #468acc)'; this.style.transform='translateY(-3px)';"
+       onmouseout="this.style.background='linear-gradient(135deg, #4a90e2, #357abd)'; this.style.transform='translateY(0)';">
       Click here
     </a>
   </p>
