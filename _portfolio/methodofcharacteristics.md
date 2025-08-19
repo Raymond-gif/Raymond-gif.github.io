@@ -4,6 +4,9 @@ excerpt: "Developed oblique shock relations, derived Prandtl–Meyer wave behavi
 collection: portfolio
 author_profile: false
 layout: single
+image: /images/mocmain.png
+caption: "Photo credit: Ansys Innovation Courses"
+order: 3
 ---
 
 ## Oblique Shock Theory 

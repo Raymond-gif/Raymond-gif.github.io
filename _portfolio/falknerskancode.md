@@ -4,6 +4,10 @@ excerpt: "I walk you through my MATLAB solution to the Falkner-Skan differential
 collection: portfolio
 author_profile: false
 layout: single
+image: /images/velprof.png
+caption: "Photo credit: myself"
+order: 2
+
 ---
 
 <div style="background: #f5f5f5; border-left: 5px solid #007acc; padding: 1rem; border-radius: 8px; margin: 1.5rem 0;">

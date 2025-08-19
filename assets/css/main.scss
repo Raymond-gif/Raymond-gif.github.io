@@ -170,3 +170,15 @@ html[data-theme="dark"] {
 .portfolio-card h3 a:hover::after {
   width: 100%;
 }
+
+.portfolio-card figure {
+  margin: 0;
+  position: relative;
+}
+
+.portfolio-card figcaption {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+  margin-top: 4px;
+}

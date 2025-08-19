@@ -4,6 +4,8 @@ excerpt: "Solved Falkner-Skan equation using finite difference scheme and shooti
 collection: portfolio
 author_profile: false
 layout: single
+image: /images/BLmain.jpg
+caption: "Photo credit: tec-science"
 ---
 
 ## Boundary Layer Equations + Falkner Skan
