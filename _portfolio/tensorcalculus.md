@@ -9,6 +9,24 @@ caption: "Photo credit: Wikipedia"
 order: 4
 ---
 
+<style>
+h2 {
+  font-size: 1.6em;   /* bigger than default 1.25em */
+  margin: 1.6em 0 0.4em; /* scale margins ~proportional */
+  line-height: 1.25;
+}
+h3 {
+  font-size: 1.3em;   /* bigger than default 1.0em */
+  margin: 1.3em 0 0.35em;
+  line-height: 1.3;
+}
+h4 {
+  font-size: 1em;     /* bigger than default 0.75em */
+  margin: 1em 0 0.3em;
+  line-height: 1.35;
+}
+</style>
+
 ## Cartesian Tensors
 
 Before delving into the general case with curvilinear coordinates, it helps to focus on the simple case: Cartesian coordinates. 
@@ -87,7 +105,7 @@ $$
 $$\overline{A_{pq}}=A_{ij}l_{ip}l_{jq}= \lambda_{(p)} \delta_{pq} \notag
 $$
 
-Therefore, when changing the coordinate system so that it is aligned with the normalized eigenvectors, also known as the \textbf{principal directions} of \\( \mathbf{A}\\), the tensor is in diagonal form. 
+Therefore, when changing the coordinate system so that it is aligned with the normalized eigenvectors, also known as the **principal directions** of \\( \mathbf{A}\\), the tensor is in diagonal form. 
 
 ## Invariants of a Cartesian Tensor
 
@@ -110,7 +128,7 @@ $$\begin{align*}
 
 ## Kinematics
 
-We construct two coordinate systems: the \textbf{material coordinates} of a particle and the \textbf{spatial coordinates} of a particle. The material coordinates refer to a coordinate system that is convected with the fluid particle. We denote the material coordinates with \\( \boldsymbol{\varepsilon} \\) and the spatial coordinates with \\( \mathbf{x} \\).
+We construct two coordinate systems: the **material coordinates** of a particle and the **spatial coordinates** of a particle. The material coordinates refer to a coordinate system that is convected with the fluid particle. We denote the material coordinates with \\( \boldsymbol{\varepsilon} \\) and the spatial coordinates with \\( \mathbf{x} \\).
 
 The velocity gradient tensor, in dyadic notation, is \\( \nabla \mathbf{V}= \dfrac{d \mathbf{V}}{d \mathbf{x}} \\). It describes two things in a flow: rate of strain and rigid body rotation of a fluid particle. This is represented by the symmetric and antisymmetric parts of the tensor, respectively. Here, \\( \mathbf{e} \\) is the rate of strain tensor, and \\( \boldsymbol{\Omega} \\) is the rigid body rotation tensor. 
 
@@ -188,7 +206,7 @@ $$\begin{align*}
 
 ### Momentum
 
-Note: for the divergence of the stress tensor, I used the boxed formula derived above in the \\( \textbf{Stress and Constitutive Equations} \\) section.
+Note: for the divergence of the stress tensor, I used the boxed formula derived above in the **Stress and Constitutive Equations** section.
 
 $$\begin{align*}
     \rho \mathbf{a} &= \rho \mathbf{f} + \nabla \cdot \mathbf{T} \\
@@ -379,7 +397,7 @@ $$g_{ij}=
     1 & 0 & 0 \\
     0 & (x^1)^2 & 0 \\
     0 & 0 & (x^1 \sin x^2)^2 \\
-\end{bmatrix}$$
+\end{bmatrix} \notag$$
 
 $$h_1 = 1, \quad h_2 = x^1, \quad h_3 = x^1 \sin x^2 \notag$$
 
@@ -441,7 +459,7 @@ $$ \left(
 \begin{aligned}
     dA_i &= \dfrac{\partial A_i}{\partial x^j} \mathbf{g}^{(j)} \cdot d \mathbf{y} \\
     d \mathbf{g}^{(i)} &= \dfrac{\partial \mathbf{g}^{(i)}}{\partial x^j} \mathbf{g}^{(j)} \cdot d \mathbf{y}
-\end{aligned} \right)
+\end{aligned} \right) \notag
 $$
 
 $$\begin{align}
@@ -515,7 +533,7 @@ $$\begin{equation}
 
 Using Eq. \ref{christoffelsymbolmetrictensor} and the fact that in orthogonal coordinates, the off-diagonal components of the metric tensor are zero, with \\( g_{ii}=h_i^2, \enspace g^{ii}=1/h_i^2 \\)
 
-\\( \textbf{Case 1:} \\)
+**Case 1:**
 
 $$
 \begin{array}{@{\hskip 1.5cm} l @{\hskip 1.5cm} l @{\hskip 1.5cm} l}
@@ -527,7 +545,7 @@ $$
 \end{array} \notag
 $$
 
-\\( \textbf{Case 2:} \\)
+**Case 2:**
 
 $$
 \begin{array}{@{\hskip 1.5cm} l @{\hskip 1.5cm} l}
@@ -537,7 +555,7 @@ $$
 \end{array} \notag
 $$
 
-\\( \textbf{Case 3:} \\)
+**Case 3:**
 
 $$
 \begin{array}{@{\hskip 1.5cm} l @{\hskip 1.5cm} l}
@@ -695,17 +713,31 @@ $$h_i L(i) = \sum_j \dfrac{1}{h_j^2} \left[\dfrac{\partial^2 u_i}{\partial x^j \
 
 And finally, using physical components, 
 
-$$\begin{align*}
-h_i L(i) &= \sum_j \frac{1}{h_j^2} \Bigg[ 
-    \frac{\partial^2 (h_i u(i))}{\partial x^j \partial x^j}
-    - 2 \sum_m \Gamma^m_{ij} \frac{\partial (h_m u(m))}{\partial x^j} \\
-    &\quad - \sum_m \Gamma^m_{jj} \frac{\partial (h_i u(i))}{\partial x^m}
-    - \sum_m \left( \frac{\partial \Gamma^m_{ij}}{\partial x^j}
-    - \sum_p \Gamma^m_{ip} \Gamma^p_{jj}
-    - \sum_p \Gamma^m_{pj} \Gamma^p_{ij} \right) u(m) h_m 
-\Bigg]
-\end{align*}$$
+<div class="equation-box">
+  <h3><strong>Physical Components of Vector Laplacian in Orthogonal Coordinates</strong></h3>
+  <div>
+    $$\begin{equation} \label{physicalcomponentsvectorlap}
+    \begin{aligned}
+    h_i L(i) &= \sum_j \frac{1}{h_j^2} \Bigg[ 
+        \frac{\partial^2 (h_i u(i))}{\partial x^j \partial x^j}
+        - 2 \sum_m \Gamma^m_{ij} \frac{\partial (h_m u(m))}{\partial x^j} \\
+        &\quad - \sum_m \Gamma^m_{jj} \frac{\partial (h_i u(i))}{\partial x^m}
+        - \sum_m \left( \frac{\partial \Gamma^m_{ij}}{\partial x^j}
+        - \sum_p \Gamma^m_{ip} \Gamma^p_{jj}
+        - \sum_p \Gamma^m_{pj} \Gamma^p_{ij} \right) u(m) h_m 
+    \Bigg]
+    \end{aligned}
+    \end{equation}$$
+  </div>
+</div>
 
+To see the **expanded form** of the physical components of the vector laplacian in orthogonal coordinates, I painstakingly expanded Eq. \ref{physicalcomponentsvectorlap} by hand (which took FOREVER),
+
+<details class="custom-collapse">
+  <summary><strong>Expanding the Physical Components of Vector Laplacian in Orthogonal Coordinates </strong></summary>
+  <div class="collapse-content">
+  First, I sum with respect to p.
+    <br>
 $$\begin{align*}
     h_i L(i) &= \sum_j \frac{1}{h_j^2} \Bigg[ 
     \frac{\partial^2 (h_i u(i))}{\partial x^j \partial x^j}
@@ -715,6 +747,9 @@ $$\begin{align*}
     -\Gamma^m_{1j} \Gamma^1_{ij} - \Gamma^m_{2j} \Gamma^2_{ij}-\Gamma^m_{3j} \Gamma^3_{ij}  \right) u(m) h_m 
 \Bigg] 
 \end{align*}$$
+<br>
+
+Then I sum with respect to m.
 
 $$\begin{align*}
     h_i L(i) &= \sum_j \frac{1}{h_j^2} \Bigg[ 
@@ -731,6 +766,9 @@ $$\begin{align*}
     +\Gamma^3_{1j} \Gamma^1_{ij} + \Gamma^3_{2j} \Gamma^2_{ij} + \Gamma^3_{3j} \Gamma^3_{ij}  \right) u(3) h_3   
 \Bigg] 
 \end{align*}$$
+<br>
+
+Lastly, I sum with respect to j. 
 
 $$\begin{align*}
     h_i L(i) &=  \frac{1}{h_1^2} \Bigg[ 
@@ -771,6 +809,8 @@ $$\begin{align*}
     +\Gamma^3_{i1} \Gamma^1_{33}+\Gamma^3_{i2} \Gamma^2_{33}+\Gamma^3_{i3} \Gamma^3_{33} 
     +\Gamma^3_{13} \Gamma^1_{i3} + \Gamma^3_{23} \Gamma^2_{i3} + \Gamma^3_{33} \Gamma^3_{i3}  \right) u(3) h_3 \Bigg]
 \end{align*}$$
+  </div>
+</details>
 
 In cylindrical coordinates, the vector laplacian is, 
 
@@ -903,42 +943,52 @@ $$\begin{equation*}
     \dfrac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} = \mathbf{f}-\dfrac{\nabla p}{\rho} + \nu \nabla^2 \mathbf{u} 
 \end{equation*}$$
 
-In cylindrical coordinates (with \\( \mathbf{f}=0 \\)),
+<div class="equation-box">
+  <h3><strong>Incompressible Navier-Stokes Equation in Cylindrical Polar Coordinates</strong></h3>
+  <div>
+In cylindrical coordinates (with \( \mathbf{f}=0 \)),
 
 $$\begin{align*}
     \dfrac{\partial u_r}{\partial t} &+ u_r \dfrac{\partial u_r}{\partial r} + \dfrac{u_\theta}{r}\dfrac{\partial u_r}{\partial \theta} + u_z \dfrac{\partial u_r}{\partial z}-\dfrac{u_\theta^2}{r} = -\dfrac{1}{\rho} \dfrac{\partial p}{\partial r} \\
     &+ \nu \bigg[\dfrac{\partial^2 u_r}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_r}{\partial \theta^2}+ \dfrac{\partial ^2 u_r}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_r}{\partial r}-\dfrac{2}{r^2}\dfrac{\partial u_\theta}{\partial \theta} - \dfrac{u_r}{r^2}\bigg]
 \end{align*}$$
-
+<br>
 $$\begin{align*}
     \dfrac{\partial u_\theta}{\partial t} &+u_r \dfrac{\partial u_\theta}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_\theta}{\partial \theta} + u_z \dfrac{\partial u_\theta}{\partial z} + \dfrac{u_r u_\theta}{r} = -\dfrac{1}{\rho r} \dfrac{\partial p}{\partial \theta} \\ 
     &+ \nu \bigg[\dfrac{\partial^2 u_\theta}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_\theta}{\partial \theta^2}+ \dfrac{\partial ^2 u_\theta}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_\theta}{\partial r}+\dfrac{2}{r^2}\dfrac{\partial u_r}{\partial \theta} - \dfrac{u_\theta}{r^2} \bigg]
 \end{align*}$$
-
+<br>
 $$\begin{align*}
     \dfrac{\partial u_z}{\partial t} &+ u_r \dfrac{\partial u_z}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_z}{\partial \theta} + u_z\dfrac{\partial u_z}{\partial z} = - \dfrac{1}{\rho} \dfrac{\partial p}{\partial z}  \\
     &+ \nu \bigg[\dfrac{\partial^2 u_z}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_z}{\partial \theta^2}+ \dfrac{\partial ^2 u_z}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_z}{\partial r} \bigg]
 \end{align*}$$
+  </div>
+</div>
 
-In spherical coordinates (with \\( \mathbf{f}=0 \\)),
+<div class="equation-box">
+  <h3><strong>Incompressible Navier-Stokes Equation in Spherical Polar Coordinates</strong></h3>
+  <div>
+In spherical coordinates (with \( \mathbf{f}=0 \)),
 
 $$\begin{align*}
     \dfrac{\partial u_r}{\partial t} &+ u_r \dfrac{\partial u_r}{\partial r} + \dfrac{u_\theta}{r}\dfrac{\partial u_r}{\partial \theta} + \dfrac{u_\phi}{r \sin \theta} \dfrac{\partial u_r}{\partial \phi}-\dfrac{u_\theta^2+u_\phi^2}{r} = - \dfrac{1}{\rho} \dfrac{\partial p}{\partial r} \\
     &+ \nu \bigg[\dfrac{1}{r} \dfrac{\partial^2 (r u_r)}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_r}{\partial \theta^2} + \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2 u_r}{\partial \phi^2} + \dfrac{\cot \theta}{r^2} \dfrac{\partial u_r}{\partial \theta} \\
     & - \dfrac{2}{r^2} \dfrac{\partial u_\theta}{\partial \theta} - \dfrac{2}{r^2 \sin \theta} \dfrac{\partial u_\phi}{\partial \phi}-\dfrac{2 u_r}{r^2} - \dfrac{2 \cot \theta}{r^2} u_\theta \bigg]
 \end{align*}$$
-
+<br>
 $$\begin{align*}
     \dfrac{\partial u_\theta}{\partial t} &+u_r \dfrac{\partial u_\theta}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_\theta}{\partial \theta} + \dfrac{u_\phi}{r \sin \theta} \dfrac{\partial u_\theta}{\partial \phi} + \dfrac{u_r u_\theta}{r}-\dfrac{u_\phi^2}{r}\cot \theta = -\dfrac{1}{\rho r} \dfrac{\partial p}{\partial \theta} \\
     &+ \nu \bigg[\dfrac{1}{r} \dfrac{\partial^2 (r u_\theta)}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_\theta}{\partial \theta^2} + \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2 u_\theta}{\partial \phi^2} + \dfrac{\cot \theta}{r^2} \dfrac{\partial u_\theta}{\partial \theta} \\
     &- \dfrac{2 \cot \theta}{r^2 \sin \theta} \dfrac{\partial u_\phi}{\partial \phi} + \dfrac{2}{r^2} \dfrac{\partial u_r}{\partial \theta} - \dfrac{ u_\theta}{r^2 \sin^2 \theta} \bigg]
 \end{align*}$$
-
+<br>
 $$\begin{align*}
     \dfrac{\partial u_\phi}{\partial t} &+ u_r \dfrac{\partial u_\phi}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_\phi}{\partial \theta} + \dfrac{u_\phi}{r \sin \theta}\dfrac{\partial u_\phi}{\partial \phi} + \dfrac{u_r u_\phi}{r} + \dfrac{u_\theta u_\phi}{r} \cot \theta = -\dfrac{1}{\rho r \sin \theta} \dfrac{\partial p}{\partial \phi} \\
     &+ \nu \bigg[\dfrac{1}{r} \dfrac{\partial^2 (r u_\phi)}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_\phi}{\partial \theta^2} + \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2 u_\phi}{\partial \phi^2} + \dfrac{\cot \theta}{r^2} \dfrac{\partial u_\phi}{\partial \theta} \\
     &+\dfrac{2}{r^2 \sin \theta} \dfrac{\partial u_r}{\partial \phi} +\dfrac{2 \cot \theta}{r^2 \sin \theta} \dfrac{\partial u_\theta}{\partial \phi}  - \dfrac{ u_\phi}{r^2 \sin^2 \theta}\bigg]
 \end{align*}$$
+  </div>
+</div>
 
 ## References
 
