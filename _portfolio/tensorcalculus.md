@@ -40,13 +40,15 @@ $$\begin{align*}
     (A_{ij} -\lambda \delta_{ij}) x_j &= 0
 \end{align*}$$
 
-Non-trivial solutions only exist when \\( \det (\mathbf{A}-\lambda \mathbf{I})=0 \\). For a symmetric tensor, where \\( \mathbf{A}=\mathbf{A}^T \\), we want to prove that the eigenvectors corresponding to distinct eigenvalues are orthogonal. To do that, let's consider two eigenvectors \\( \mathbf{x}_{(p)} \\) and \\( \mathbf{x}_{(q)}\\) corresponding to eigenvalues \\( \lambda_{(p)} \\) and \\( \lambda_{(q)} \\), respectively.
+<p>
+Non-trivial solutions only exist when \( \det (\mathbf{A}-\lambda \mathbf{I})=0 \). For a symmetric tensor, where \( \mathbf{A}=\mathbf{A}^T \), we want to prove that the eigenvectors corresponding to distinct eigenvalues are orthogonal. To do that, let's consider two eigenvectors \( \mathbf{x}_{(p)} \) and \( \mathbf{x}_{(q)} \) corresponding to eigenvalues \( \lambda_{(p)} \) and \( \lambda_{(q)} \), respectively.
+</p>
 
 In dyadic notation,
 
 $$\mathbf{A} \cdot \mathbf{x}_{(p)} = \lambda \mathbf{x}_{(p)}, \quad \text{and } \quad \mathbf{A} \cdot \mathbf{x}_{(q)} = \lambda \mathbf{x}_{(q)} \notag$$
 
-Now, we dot the first equation with \\( \mathbf{x}_{(q)}\\) and the second equation with \\(\mathbf{x}_{(p)}\\), obtaining 
+<p> Now, we dot the first equation with \( \mathbf{x}_{(q)} \) and the second equation with \( \mathbf{x}_{(p)} \), obtaining </p>
 
 $$
 \mathbf{A} \cdot \mathbf{x}_{(p)} \cdot \mathbf{x}_{(q)} = \lambda \, \mathbf{x}_{(p)} \cdot \mathbf{x}_{(q)}, \quad \mathbf{A} \cdot \mathbf{x}_{(q)} \cdot \mathbf{x}_{(p)} = \lambda \, \mathbf{x}_{(q)} \cdot \mathbf{x}_{(p)} \notag
@@ -98,7 +100,7 @@ $$\begin{vmatrix}
 \end{vmatrix} =0 \notag$$
 
 The evaluation of which is,
-\[\Psi  - \lambda \Phi + \lambda^2 \Theta - \lambda^3=0, \quad \text{where}\]
+\\( \Psi  - \lambda \Phi + \lambda^2 \Theta - \lambda^3=0, \quad \text{where} \\)
 
 $$\begin{align*}
     \Theta &= \text{tr} \ \mathbf{A} \\
@@ -148,7 +150,7 @@ $$
 
 For our purposes, Newtonian fluid will suffice. Therefore, the stress tensor can be written as, for a Newtonian fluid,
 
-$$\boxed{T_{ij} = (-p + \lambda \Theta) \delta_{ij} + 2 \mu e_{ij}, \quad \mathbf{T}=\bigg[-p+\lambda(\nabla \cdot \mathbf{u}) \bigg] \mathbf{I}+2\mu \mathbf{e}}
+$$\boxed{T_{ij} = (-p + \lambda \Theta) \delta_{ij} + 2 \mu e_{ij}, \quad \mathbf{T}=\bigg[-p+\lambda(\nabla \cdot \mathbf{u}) \bigg] \mathbf{I}+2\mu \mathbf{e}} \notag
 $$
 
 For the momentum equation, calculating the divergence of the stress tensor is needed. In preparation of this, I will calculate the divergence here, 
@@ -168,7 +170,7 @@ $$\begin{equation}
     \label{divergenceofT}
 \end{equation}$$
 
-## Equations of Motion in Cartesian Coordinates
+### Equations of Motion in Cartesian Coordinates
 
 ### Acceleration
 
@@ -186,7 +188,7 @@ $$\begin{align*}
 
 ### Momentum
 
-Note: for the divergence of the stress tensor, I used the boxed formula derived above in the \textbf{Stress and Constitutive Equations} section.
+Note: for the divergence of the stress tensor, I used the boxed formula derived above in the \\( \textbf{Stress and Constitutive Equations} \\) section.
 
 $$\begin{align*}
     \rho \mathbf{a} &= \rho \mathbf{f} + \nabla \cdot \mathbf{T} \\
@@ -194,7 +196,7 @@ $$\begin{align*}
     \rho a_i &= \rho f_i - \dfrac{\partial p }{\partial x_i} + (\lambda + \mu) \dfrac{\partial}{\partial x_i} (\nabla \cdot \mathbf{u}) + \mu \nabla^2 u_i
 \end{align*}$$
 
-$$\boxed{\rho \mathbf{a} = \rho \mathbf{f} - \nabla p + (\lambda + \mu) \nabla (\nabla \cdot \mathbf{u} ) + \mu \nabla^2 \mathbf{u}}$$
+$$\boxed{\rho \mathbf{a} = \rho \mathbf{f} - \nabla p + (\lambda + \mu) \nabla (\nabla \cdot \mathbf{u} ) + \mu \nabla^2 \mathbf{u}} \notag$$
 
 ## Covariant and Contravariant Base Vectors
 
@@ -204,61 +206,61 @@ $$\begin{equation*}
     \mathbf{g}_{(i)}= \dfrac{\partial \mathbf{y}}{\partial x^i}
 \end{equation*}$$
 
-where $\mathbf{y}$ is the position vector and $(x^1,x^2,x^3)$ are the coordinates of the point in space. 
+where \\( \mathbf{y} \\) is the position vector and \\( (x^1,x^2,x^3) \\) are the coordinates of the point in space. 
 
-Suppose that we decide to use a different coordinate system, say $(\bar{x}_1, \bar{x}_2, \bar{x}_3)$. Then, the basis vectors for those coordinates are, 
+Suppose that we decide to use a different coordinate system, say \\( (\bar{x}_1, \bar{x}_2, \bar{x}_3) \\). Then, the basis vectors for those coordinates are, 
 
-$$\mathbf{\bar{g}}_{(k)}= \dfrac{\partial \mathbf{y}}{\partial \bar{x}^k}$$
+$$\mathbf{\bar{g}}_{(k)}= \dfrac{\partial \mathbf{y}}{\partial \bar{x}^k} \notag$$
 
 I can write this in terms of the old basis vectors by using chain rule,
 
-$$\mathbf{\bar{g}}_{(k)}= \dfrac{\partial \mathbf{y}}{\partial \bar{x}^k}=\dfrac{\partial x^i}{\partial \bar{x}^k} \dfrac{\partial \mathbf{y}}{\partial x^i}=\dfrac{\partial x^i}{\partial \bar{x}^k} \mathbf{g}_{(i)}$$
+$$\mathbf{\bar{g}}_{(k)}= \dfrac{\partial \mathbf{y}}{\partial \bar{x}^k}=\dfrac{\partial x^i}{\partial \bar{x}^k} \dfrac{\partial \mathbf{y}}{\partial x^i}=\dfrac{\partial x^i}{\partial \bar{x}^k} \mathbf{g}_{(i)} \notag$$
 
 Similarly, 
 
-$$\mathbf{g}_{(i)} = \dfrac{\partial \bar{x}^k}{\partial x^i} \dfrac{\partial \mathbf{y}}{\partial \bar{x}^k}= \dfrac{\partial \bar{x}^k}{\partial x^i} \mathbf{\bar{g}}_{(k)} $$
+$$\mathbf{g}_{(i)} = \dfrac{\partial \bar{x}^k}{\partial x^i} \dfrac{\partial \mathbf{y}}{\partial \bar{x}^k}= \dfrac{\partial \bar{x}^k}{\partial x^i} \mathbf{\bar{g}}_{(k)} \notag $$
 
 In summary.
 
-$$\boxed{\mathbf{\bar{g}}_{(k)}=\dfrac{\partial x^i}{\partial \bar{x}^k} \mathbf{g}_{(i)}, \quad \mathbf{g}_{(i)} = \dfrac{\partial \bar{x}^k}{\partial x^i} \mathbf{\bar{g}}_{(k)}}$$
+$$\boxed{\mathbf{\bar{g}}_{(k)}=\dfrac{\partial x^i}{\partial \bar{x}^k} \mathbf{g}_{(i)}, \quad \mathbf{g}_{(i)} = \dfrac{\partial \bar{x}^k}{\partial x^i} \mathbf{\bar{g}}_{(k)}} \notag $$
 
-Any arbitrary vector, which we call $\mathbf{A}$, can be expressed in terms of the new or old basis 
+Any arbitrary vector, which we call \\( \mathbf{A} \\), can be expressed in terms of the new or old basis 
 
-$$\mathbf{A}=\bar{A}^k \bar{\mathbf{g}}_{(k)}=A^i \mathbf{g}_{(i)}
+$$\mathbf{A}=\bar{A}^k \bar{\mathbf{g}}_{(k)}=A^i \mathbf{g}_{(i)} \notag
 $$
 
-$$\mathbf{A} = \bar{A}^k \dfrac{\partial x^i}{\partial \bar{x}^k} \mathbf{g}_{(i)}=A^i \dfrac{\partial \bar{x}^k}{\partial x^i} \mathbf{\bar{g}}_{(k)} 
+$$\mathbf{A} = \bar{A}^k \dfrac{\partial x^i}{\partial \bar{x}^k} \mathbf{g}_{(i)}=A^i \dfrac{\partial \bar{x}^k}{\partial x^i} \mathbf{\bar{g}}_{(k)} \notag
 $$
 
-$$\boxed{A^i = \bar{A}^k \dfrac{\partial x^i}{\partial \bar{x}^k}, \quad \bar{A}^k=A^i \dfrac{\partial \bar{x}^k}{\partial x^i}}
+$$\boxed{A^i = \bar{A}^k \dfrac{\partial x^i}{\partial \bar{x}^k}, \quad \bar{A}^k=A^i \dfrac{\partial \bar{x}^k}{\partial x^i}} \notag
 $$
 
-To find the length of this vector, I take the dot product of $\mathbf{A}$ with itself, 
+To find the length of this vector, I take the dot product of \\( \mathbf{A} \\) with itself, 
 
-$$||\mathbf{A}||^2=\mathbf{A} \cdot \mathbf{A}= A^i \mathbf{g}_{(i)} \cdot A^j \mathbf{g}_{(j)} = A^i A^j \bigg(\mathbf{g}_{(i)} \cdot \mathbf{g}_{(j)} \bigg)=A^i A^j g_{ij}$$
+$$||\mathbf{A}||^2=\mathbf{A} \cdot \mathbf{A}= A^i \mathbf{g}_{(i)} \cdot A^j \mathbf{g}_{(j)} = A^i A^j \bigg(\mathbf{g}_{(i)} \cdot \mathbf{g}_{(j)} \bigg)=A^i A^j g_{ij} \notag $$
 
-The second order tensor $g_{ij} = \mathbf{g}_{(i)} \cdot \mathbf{g}_{(j)}$ is known as the metric tensor. When the position vector is expressed in Cartesian components, $\mathbf{y}=\sum y_k \mathbf{e}_{(k)}$, the metric tensor is calculated as,
+<p>The second order tensor \( g_{ij} = \mathbf{g}_{(i)} \cdot \mathbf{g}_{(j)} \) is known as the metric tensor. When the position vector is expressed in Cartesian components, \( \mathbf{y}=\sum y_k \mathbf{e}_{(k)} \), the metric tensor is calculated as, </p>
 
-$$g_{ij}=\sum_{k=1}^3 \dfrac{\partial y_k}{\partial x^i} \dfrac{\partial y_k}{\partial x^j}$$
+$$g_{ij}=\sum_{k=1}^3 \dfrac{\partial y_k}{\partial x^i} \dfrac{\partial y_k}{\partial x^j} \notag$$
 
-The reciprocal (or dual) basis vectors $\mathbf{g}^{(i)}$ are defined as 
+The reciprocal (or dual) basis vectors \\( \mathbf{g}^{(i)} \\) are defined as 
 
-$$\mathbf{g}^{(i)} \cdot \mathbf{g}_{(j)} = \delta^i_j$$
+$$\mathbf{g}^{(i)} \cdot \mathbf{g}_{(j)} = \delta^i_j \notag$$
 
 To calculate the reciprocal basis from the original basis, we use the following formulas, 
 
 $$
 \mathbf{g}^{(1)} = \dfrac{1}{J} \bigg(\mathbf{g}_{(2)} \times \mathbf{g}_{(3)} \bigg), \quad
 \mathbf{g}^{(2)} = \dfrac{1}{J} \bigg(\mathbf{g}_{(3)} \times \mathbf{g}_{(1)} \bigg), \quad
-\mathbf{g}^{(3)} = \dfrac{1}{J} \bigg(\mathbf{g}_{(1)} \times \mathbf{g}_{(2)} \bigg)$$
+\mathbf{g}^{(3)} = \dfrac{1}{J} \bigg(\mathbf{g}_{(1)} \times \mathbf{g}_{(2)} \bigg) \notag$$
 
-$$J = \mathbf{g}_{(1)} \cdot \bigg(\mathbf{g}_{(2)} \times \mathbf{g}_{(3)} \bigg)$$
+$$J = \mathbf{g}_{(1)} \cdot \bigg(\mathbf{g}_{(2)} \times \mathbf{g}_{(3)} \bigg) \notag $$
 
-Any arbitrary vector, $\mathbf{A}$, can be written in terms of the original basis or the reciprocal basis. 
+Any arbitrary vector, \\( \mathbf{A} \\), can be written in terms of the original basis or the reciprocal basis. 
 
-$$\mathbf{A}=A^i \mathbf{g}_{(i)}=A_k \mathbf{g}^{(k)}$$
+$$\mathbf{A}=A^i \mathbf{g}_{(i)}=A_k \mathbf{g}^{(k)} \notag$$
 
-If I dot by $\mathbf{g}_{(j)}$ on both sides, 
+If I dot by \\( \mathbf{g}_{(j)} \\) on both sides, 
 
 $$\begin{align*}
     \mathbf{A} \cdot \mathbf{g}_{(j)}= A^i \mathbf{g}_{(i)} \cdot \mathbf{g}_{(j)} &=A_k \mathbf{g}^{(k)} \cdot \mathbf{g}_{(j)} \\
@@ -278,7 +280,7 @@ $$\begin{equation}
 
 We could have also chosen to represent to the arc length element as, 
 
-$$\boxed{d \mathbf{y} = d \bar{x}^j \dfrac{\partial \mathbf{y}}{\partial \bar{x}^j}=d \bar{x}^j \mathbf{\bar{g}}_{(j)}}$$
+$$\boxed{d \mathbf{y} = d \bar{x}^j \dfrac{\partial \mathbf{y}}{\partial \bar{x}^j}=d \bar{x}^j \mathbf{\bar{g}}_{(j)}} \notag$$
 
 To find the arc length,
 
@@ -287,37 +289,39 @@ $$\begin{align*}
     &= (d \bar{x}^i \mathbf{\bar{g}}_{(i)}) \cdot (d \bar{x}^j \mathbf{\bar{g}}_{(j)}) = d\bar{x}^i d \bar{x}^j \bar{g}_{ij}
 \end{align*}$$
 
-A important identity is obtained when you dot both sides of Eq. \ref{differentialarclength} with $\mathbf{g}^{(j)}$, obtaining 
+A important identity is obtained when you dot both sides of Eq. \ref{differentialarclength} with \\( \mathbf{g}^{(j)} \\), obtaining 
 
 $$\begin{align}
     d \mathbf{y} &= dx^i \mathbf{g}_{(i)} \notag\\
     \mathbf{g}^{(j)} \cdot d \mathbf{y} &= dx^i \mathbf{g}^{(j)} \cdot \mathbf{g}_{(i)} \notag \\
-    \mathbf{g}^{(j)} \cdot d \mathbf{y} &= dx^i \delta^j_i  \notag \\
-    dx^j &= \mathbf{g}^{(j)} \cdot d \mathbf{y} \label{diffarclengthcomp}
+    \mathbf{g}^{(j)} \cdot d \mathbf{y} &= dx^i \delta^j_i  \notag 
 \end{align}$$
+
+$$\begin{equation}
+    \boxed{dx^j = \mathbf{g}^{(j)} \cdot d \mathbf{y}} \label{diffarclengthcomp}
+\end{equation}$$
 
 ## Physical Components of Vectors
 
-$$\mathbf{A}=A^1 \mathbf{g}_{(1)} + A^2 \mathbf{g}_{(2)}+A^3 \mathbf{g}_{(3)}$$
+$$\mathbf{A}=A^1 \mathbf{g}_{(1)} + A^2 \mathbf{g}_{(2)}+A^3 \mathbf{g}_{(3)} \notag$$
 
-$$\mathbf{e}_{(1)}=\dfrac{\mathbf{g}_{(1)}}{\sqrt{\mathbf{g}_{(1)} \cdot \mathbf{g}_{(1)}}}=\dfrac{\mathbf{g}_{(1)}}{\sqrt{g_{11}}}, \quad \mathbf{e}_{(2)}=\dfrac{\mathbf{g}_{(2)}}{\sqrt{\mathbf{g}_{(2)} \cdot \mathbf{g}_{(2)}}}=\dfrac{\mathbf{g}_{(2)}}{\sqrt{g_{22}}}, \quad \mathbf{e}_{(3)}=\dfrac{\mathbf{g}_{(3)}}{\sqrt{\mathbf{g}_{(3)} \cdot \mathbf{g}_{(3)}}}=\dfrac{\mathbf{g}_{(3)}}{\sqrt{g_{33}}}$$
+$$\mathbf{e}_{(1)}=\dfrac{\mathbf{g}_{(1)}}{\sqrt{\mathbf{g}_{(1)} \cdot \mathbf{g}_{(1)}}}=\dfrac{\mathbf{g}_{(1)}}{\sqrt{g_{11}}}, \quad \mathbf{e}_{(2)}=\dfrac{\mathbf{g}_{(2)}}{\sqrt{\mathbf{g}_{(2)} \cdot \mathbf{g}_{(2)}}}=\dfrac{\mathbf{g}_{(2)}}{\sqrt{g_{22}}}, \quad \mathbf{e}_{(3)}=\dfrac{\mathbf{g}_{(3)}}{\sqrt{\mathbf{g}_{(3)} \cdot \mathbf{g}_{(3)}}}=\dfrac{\mathbf{g}_{(3)}}{\sqrt{g_{33}}} \notag$$
 
-
-## Non-orthogonal Coordinates
+### Non-orthogonal Coordinates
 
 $$\begin{align*}
     \mathbf{A} &=  A^1 \sqrt{g_{11}} \mathbf{e}_1+A^2 \sqrt{g_{22}} \mathbf{e}_2+A^3 \sqrt{g_{33}} \mathbf{e}_3 \\ 
     &= A(1) \mathbf{e}_1 + A(2) \mathbf{e}_2 + A(3) \mathbf{e}_3
 \end{align*}$$
 
-Therefore, the physical component $A(i)$ is defined by the following rule: 
+Therefore, the physical component \\( A(i) \\) is defined by the following rule: 
 
 $$\begin{equation}
     \boxed{A(i) = A^i \sqrt{g_{ii}}, \quad \text{(no sum on i)}}
     \label{contravariantphysicalcomponents}
 \end{equation}$$
 
-Suppose instead that $\mathbf{A}$ was expressed in terms of covariant components times contravariant basis vectors,
+Suppose instead that \\( \mathbf{A} \\) was expressed in terms of covariant components times contravariant basis vectors,
 
 $$\begin{align*}
     \mathbf{A} &=A_j \mathbf{g}^{(j)} \\
@@ -330,20 +334,19 @@ $$\begin{equation}
     \label{covariantphysicalcomponents}
 \end{equation}$$
 
+### Orthogonal Coordinates
+Let us define \\( h_i=\sqrt{g_{ii}} \\) for orthogonal coordinates. In the orthogonal case, \\( g^{ii}=1/g_{jj} \\) and \\( g^{ij}=0, \ i \neq j \\), so Eqs. \ref{contravariantphysicalcomponents}-\ref{covariantphysicalcomponents} simplifies to,
 
-## Orthogonal Coordinates
-Let us define $h_i=\sqrt{g_{ii}}$ for orthogonal coordinates. In the orthogonal case, $g^{ii}=1/g_{jj}$ and $g^{ij}=0, \ i \neq j $, so Eqs. \ref{contravariantphysicalcomponents}-\ref{covariantphysicalcomponents} simplifies to,
-
-\begin{empheq}[box=\fbox]{align*}
+$$\begin{align*}
     A(i) &= A^i h_i \quad  \text{ (no sum on i)} \\
     A(i) &= \dfrac{A_i}{h_i}
-\end{empheq}
+\end{align*}$$
 
 ## Examples: Cylindrical and Spherical Coordinate Systems
 
 ### Cylindrical
 
-$$(y^1,y^2,y^3) = (x,y,z) \quad     \longrightarrow \quad (x^1,x^2,x^3) = (r, \theta, z)
+$$(y^1,y^2,y^3) = (x,y,z) \quad     \longrightarrow \quad (x^1,x^2,x^3) = (r, \theta, z) \notag
 $$
 
 $$\begin{align*}
@@ -352,18 +355,18 @@ $$\begin{align*}
     y^3 &= x^3
 \end{align*}$$
 
-$$\[g_{ij}=
+$$g_{ij}=
 \begin{bmatrix}
     1 & 0 & 0 \\
     0 & (x^1)^2 & 0 \\
     0 & 0 & 1 \\
-\end{bmatrix}\]$$
+\end{bmatrix} \notag$$
 
-$$h_1=1, \quad h_2=x^1, \quad h_3=1$$
+$$h_1=1, \quad h_2=x^1, \quad h_3=1 \notag$$
 
 ### Spherical
 
-$$(y^1,y^2,y^3) = (x,y,z) \quad     \longrightarrow \quad (x^1,x^2,x^3) = (r, \theta, \phi)$$
+$$(y^1,y^2,y^3) = (x,y,z) \quad     \longrightarrow \quad (x^1,x^2,x^3) = (r, \theta, \phi) \notag$$
 
 $$\begin{align*}
     y^1 &= x^1 \sin x^2 \cos x^3   \\
@@ -378,11 +381,11 @@ $$g_{ij}=
     0 & 0 & (x^1 \sin x^2)^2 \\
 \end{bmatrix}$$
 
-$$h_1 = 1, \quad h_2 = x^1, \quad h_3 = x^1 \sin x^2$$
+$$h_1 = 1, \quad h_2 = x^1, \quad h_3 = x^1 \sin x^2 \notag$$
 
 ## Christoffel Symbols and Covariant Differentiation
 
-Suppose that we have a vector field, $\mathbf{A}=A^i \mathbf{g}_{(i)}$. To each point $(x^1, x^2, x^3)$ in space, we imagine a vector attached to it. As usual, we can decompose the vector into components times basis vectors. Unlikely in the Cartesian case, both $A^i$ and $\mathbf{g}_{(i)}$ vary in space, so taking the total derivative of $\mathbf{A}$ requires the product rule. 
+<p>Suppose that we have a vector field, \( \mathbf{A}=A^i \mathbf{g}_{(i)} \). To each point \( (x^1, x^2, x^3) \) in space, we imagine a vector attached to it. As usual, we can decompose the vector into components times basis vectors. Unlikely in the Cartesian case, both \( A^i \) and \( \mathbf{g}_{(i)} \) vary in space, so taking the total derivative of \( \mathbf{A} \) requires the product rule. </p>
 
 $$\begin{equation}
     d \mathbf{A} = dA^i \mathbf{g}_{(i)} + A^i d \mathbf{g}_{(i)}
@@ -419,17 +422,16 @@ $$\begin{equation}
 
 So, Eq. \ref{gradvectorfield} is rewritten as, 
 
-$$\dfrac{d \mathbf{A}}{d \mathbf{y}}= \dfrac{\partial A^i}{\partial x^j} \mathbf{g}_{(i)} \mathbf{g}^{(j)} + A^i \Gamma^k_{ij} \mathbf{g}_{(k)} \mathbf{g}^{(j)}
+$$\dfrac{d \mathbf{A}}{d \mathbf{y}}= \dfrac{\partial A^i}{\partial x^j} \mathbf{g}_{(i)} \mathbf{g}^{(j)} + A^i \Gamma^k_{ij} \mathbf{g}_{(k)} \mathbf{g}^{(j)} \notag
 $$
 
-We can switch the dummy indices to group terms easier. I'm going to switch $i \to k, \ k \to i, \ j \to j$
+We can switch the dummy indices to group terms easier. I'm going to switch \\( i \to k, \ k \to i, \ j \to j \\)
 
-$$\boxed{\dfrac{d \mathbf{A}}{d \mathbf{y}}= \left[\dfrac{\partial A^i}{\partial x^j}+ A^k \Gamma^i_{{kj}} \right] \mathbf{g}_{(i)} \mathbf{g}^{(j)}=A^i_{ \ /j} \mathbf{g}_{(i)} \mathbf{g}^{(j)}}$$
+$$\boxed{\dfrac{d \mathbf{A}}{d \mathbf{y}}= \left[\dfrac{\partial A^i}{\partial x^j}+ A^k \Gamma^i_{kj} \right] \mathbf{g}_{(i)} \mathbf{g}^{(j)}=A^i_{ \ /j} \mathbf{g}_{(i)} \mathbf{g}^{(j)}} \notag$$
 
-The bracketed term is what is known as the covariant derivative of $A^i$ with respect to $x^j$, and is commonly denoted as $A^{i}_{/j}$.
+The bracketed term is what is known as the covariant derivative of \\( A^i \\) with respect to \\( x^j \\), and is commonly denoted as \\( A^{i}_{/j} \\).
 
-In the beginning, we assumed that the vector field $\mathbf{A}=A^i \mathbf{g}_{(i)}$ was written in terms of contravariant components. What if instead it was written in terms of covariant components? For example, 
-$\mathbf{A} = A_i \mathbf{g}^{(i)}$. Following a similar procedure, 
+In the beginning, we assumed that the vector field \\( \mathbf{A}=A^i \mathbf{g}_{(i)} \\) was written in terms of contravariant components. What if instead it was written in terms of covariant components? For example, \\( \mathbf{A} = A_i \mathbf{g}^{(i)} \\). Following a similar procedure, 
 
 $$\begin{equation*}
     d \mathbf{A} = dA_i \mathbf{g}^{(i)} + A_i d \mathbf{g}^{(i)}
@@ -447,7 +449,7 @@ $$\begin{align}
    \label{dA=bracketdy2}
 \end{align}$$
 
-To find the spatial variation of the contravariant base vector $\dfrac{\partial \mathbf{g}^{(i)}}{\partial x^j}$ in terms of the Christoffel symbol, I first need to calculate the following, 
+To find the spatial variation of the contravariant base vector \\( \dfrac{\partial \mathbf{g}^{(i)}}{\partial x^j} \\) in terms of the Christoffel symbol, I first need to calculate the following, 
 
 $$\begin{align}
     \dfrac{\partial}{\partial x^j} \bigg( \mathbf{g}^{(i)} \cdot \mathbf{g}_{(k)} \bigg) &= 0 \notag\\
@@ -460,17 +462,17 @@ $$\begin{align}
 
 Substituting Eq. \ref{partialgipartialxj} into Eq. \ref{dA=bracketdy2},
 
-$$d \mathbf{A} = \left[ \dfrac{\partial  A_i}{\partial x^j} \mathbf{g}^{(i)} \mathbf{g}^{(j)} - A_i \Gamma^i_{jk} \mathbf{g}^{(k)} \mathbf{g}^{(j)}\right] \cdot d \mathbf{y}$$
+$$d \mathbf{A} = \left[ \dfrac{\partial  A_i}{\partial x^j} \mathbf{g}^{(i)} \mathbf{g}^{(j)} - A_i \Gamma^i_{jk} \mathbf{g}^{(k)} \mathbf{g}^{(j)}\right] \cdot d \mathbf{y} \notag$$
 
 Switching indices,
 
-$$\boxed{\dfrac{d \mathbf{A}}{d \mathbf{y}}= \left[ \dfrac{\partial A_i}{\partial x^j} - \Gamma^k_{ij} A_k\right] \mathbf{g}^{(i)}\mathbf{g}^{(j)}=A_{i/j}\mathbf{g}^{(i)}\mathbf{g}^{(j)}}$$
+$$\boxed{\dfrac{d \mathbf{A}}{d \mathbf{y}}= \left[ \dfrac{\partial A_i}{\partial x^j} - \Gamma^k_{ij} A_k\right] \mathbf{g}^{(i)}\mathbf{g}^{(j)}=A_{i/j}\mathbf{g}^{(i)}\mathbf{g}^{(j)}} \notag$$
 
 ## Covariant Derivative
 
 $$\boxed{
 \begin{aligned}
-    A^i_{ \ /j} = \dfrac{\partial A^i}{\partial x^j}+ \Gamma^i_{{kj}} A^k \\
+    A^i_{ \ /j} = \dfrac{\partial A^i}{\partial x^j}+ \Gamma^i_{kj} A^k \\
     A_{i/j} =\dfrac{\partial A_i}{\partial x^j} - \Gamma^k_{ij} A_k
 \end{aligned}}$$
 
@@ -478,17 +480,17 @@ $$\boxed{
 
 Recall from Eq. \ref{christoffelsymboldef} that,
 
-$$\dfrac{\partial \mathbf{g}_{(i)}}{\partial x^j}= \Gamma ^k_{ij} \mathbf{g}_{(k)}$$
+$$\dfrac{\partial \mathbf{g}_{(i)}}{\partial x^j}= \Gamma ^k_{ij} \mathbf{g}_{(k)} \notag$$
 
-Let's dot both sides with $\mathbf{g}^{(l)}$
+Let's dot both sides with \\( \mathbf{g}^{(l)} \\)
 
 $$\begin{align*}
     \dfrac{\partial \mathbf{g}_{(i)}}{\partial x^j} \cdot \mathbf{g}^{(l)}= \Gamma^l_{ij}
 \end{align*}$$
 
-Since $\partial \mathbf{g}_{(i)}/\partial x^j= \partial \mathbf{g}_{(j)}/\partial x^i$, this may be written as, 
+<p>Since \( \partial \mathbf{g}_{(i)}/\partial x^j= \partial \mathbf{g}_{(j)}/\partial x^i \), this may be written as, </p>
 
-$$\Gamma^l_{ij}=\dfrac{1}{2} \mathbf{g}^{(l)} \cdot \dfrac{\partial \mathbf{g}_{(i)}}{\partial x^j} + \dfrac{1}{2} \mathbf{g}^{(l)} \cdot \dfrac{\partial \mathbf{g}_{(j)}}{\partial x^i}$$
+$$\Gamma^l_{ij}=\dfrac{1}{2} \mathbf{g}^{(l)} \cdot \dfrac{\partial \mathbf{g}_{(i)}}{\partial x^j} + \dfrac{1}{2} \mathbf{g}^{(l)} \cdot \dfrac{\partial \mathbf{g}_{(j)}}{\partial x^i} \notag$$
 
 Adding nothing to this (the terms in parenthesis sums to 0),
 
@@ -497,9 +499,9 @@ $$\begin{align*}
     &+ \dfrac{1}{2} \mathbf{g}^{(l)} \cdot \dfrac{\partial \mathbf{g}_{(j)}}{\partial x^i}+ \left(\dfrac{1}{2} g^{kl} \dfrac{\partial \mathbf{g}_{(k)}}{\partial x^i} \cdot \mathbf{g}_{(j)} - \dfrac{1}{2}g^{kl} \dfrac{\partial \mathbf{g}_{(i)}}{\partial x^k} \cdot \mathbf{g}_{(j)} \right)
 \end{align*}$$
 
-Plugging in $\mathbf{g}^{(l)}=g^{kl} \mathbf{g}_{(k)}$ followed by pulling out a common factor of $\dfrac{1}{2} g^{kl}$ and grouping terms by their signs,
+Plugging in \\( \mathbf{g}^{(l)}=g^{kl} \mathbf{g}_{(k)} \\) followed by pulling out a common factor of \\( \dfrac{1}{2} g^{kl} \\) and grouping terms by their signs,
 
-$$\Gamma^{l}_{ij}=\dfrac{1}{2}g^{kl} \left[ \dfrac{\partial}{\partial x^j} \bigg(\mathbf{g}_{(i)}\cdot \mathbf{g}_{(k)} \bigg) + \dfrac{\partial }{\partial x^i} \bigg(\mathbf{g}_{(j)}\cdot \mathbf{g}_{(k)} \bigg) -\dfrac{\partial}{\partial x^k} \bigg(\mathbf{g}_{(i)}\cdot \mathbf{g}_{(j)} \bigg) \right]$$
+$$\Gamma^{l}_{ij}=\dfrac{1}{2}g^{kl} \left[ \dfrac{\partial}{\partial x^j} \bigg(\mathbf{g}_{(i)}\cdot \mathbf{g}_{(k)} \bigg) + \dfrac{\partial }{\partial x^i} \bigg(\mathbf{g}_{(j)}\cdot \mathbf{g}_{(k)} \bigg) -\dfrac{\partial}{\partial x^k} \bigg(\mathbf{g}_{(i)}\cdot \mathbf{g}_{(j)} \bigg) \right] \notag$$
 
 And finally,
 
@@ -511,10 +513,9 @@ $$\begin{equation}
 
 ### Christoffel Symbol in Orthogonal Coordinates
 
-Using Eq. \ref{christoffelsymbolmetrictensor} and the fact that in orthogonal coordinates, the off-diagonal components of the metric tensor are zero, with $g_{ii}=h_i^2, \enspace g^{ii}=1/h_i^2$
+Using Eq. \ref{christoffelsymbolmetrictensor} and the fact that in orthogonal coordinates, the off-diagonal components of the metric tensor are zero, with \\( g_{ii}=h_i^2, \enspace g^{ii}=1/h_i^2 \\)
 
-
-\textbf{Case 1:}
+\\( \textbf{Case 1:} \\)
 
 $$
 \begin{array}{@{\hskip 1.5cm} l @{\hskip 1.5cm} l @{\hskip 1.5cm} l}
@@ -523,26 +524,27 @@ $$
   \Gamma^2_{12} = \dfrac{1}{h_2} \dfrac{\partial h_2}{\partial x^1} & \Gamma^2_{22} = \dfrac{1}{h_2} \dfrac{\partial h_2}{\partial x^2} & \Gamma^2_{32} = \dfrac{1}{h_2} \dfrac{\partial h_2}{\partial x^3} \\
   \Gamma^1_{13} = \dfrac{1}{h_1} \dfrac{\partial h_1}{\partial x^3} & \Gamma^2_{23} = \dfrac{1}{h_2} \dfrac{\partial h_2}{\partial x^3} & \Gamma^3_{32} = \dfrac{1}{h_3} \dfrac{\partial h_3}{\partial x^2} \\
   \Gamma^3_{13} = \dfrac{1}{h_3} \dfrac{\partial h_3}{\partial x^1} & \Gamma^3_{23} = \dfrac{1}{h_3} \dfrac{\partial h_3}{\partial x^2} & \Gamma^3_{33} = \dfrac{1}{h_3} \dfrac{\partial h_3}{\partial x^3}
-\end{array}
+\end{array} \notag
 $$
 
-\textbf{Case 2:}
+\\( \textbf{Case 2:} \\)
 
 $$
 \begin{array}{@{\hskip 1.5cm} l @{\hskip 1.5cm} l}
   \Gamma^2_{11} = -\dfrac{h_1}{h_2^2} \dfrac{\partial h_1}{\partial x^2} & \Gamma^1_{33} = -\dfrac{h_3}{h_1^2} \dfrac{\partial h_3}{\partial x^1} \\
   \Gamma^3_{11} = -\dfrac{h_1}{h_3^2} \dfrac{\partial h_1}{\partial x^3} & \Gamma^2_{33} = -\dfrac{h_3}{h_2^2} \dfrac{\partial h_3}{\partial x^2} \\
   \Gamma^1_{22} = -\dfrac{h_2}{h_1^2} \dfrac{\partial h_2}{\partial x^1} & \Gamma^3_{22} = -\dfrac{h_2}{h_3^2} \dfrac{\partial h_2}{\partial x^3}
-\end{array}
+\end{array} \notag
 $$
 
-\textbf{Case 3:}
+\\( \textbf{Case 3:} \\)
+
 $$
 \begin{array}{@{\hskip 1.5cm} l @{\hskip 1.5cm} l}
   \Gamma^3_{12} = 0 & \Gamma^1_{23} = 0 \\
   \Gamma^2_{13} = 0 & \Gamma^2_{31} = 0 \\
   \Gamma^3_{21} = 0 & \Gamma^1_{32} = 0
-\end{array}
+\end{array} \notag
 $$
 
 #### Christoffel Symbol in Cylindrical Coordinates
@@ -568,22 +570,23 @@ $$\begin{align*}
 
 ## Gradient, Laplacian, Divergence, Curl
 
-Suppose we have a scalar field, $\phi = \phi(x^1,x^2,x^3)$.
+Suppose we have a scalar field, \\( \phi = \phi(x^1,x^2,x^3) \\).
 
-\subsection*{Gradient}
+### Gradient 
 
 $$\begin{align*}
         d \phi &= \dfrac{\partial \phi}{\partial x^i} dx^i= \dfrac{\partial \phi}{\partial x^i} \mathbf{g}^{(i)} \cdot d \mathbf{y} \\
         \dfrac{d \phi}{d \mathbf{y}} &= \dfrac{\partial \phi}{\partial x^i} \mathbf{g}^{(i)}= \dfrac{\partial \phi}{\partial x^i} g^{ij} \mathbf{g}_{(j)}
 \end{align*}$$
 
-In more common notation, the gradient is denoted with a $\nabla$ symbol, $\nabla \phi = d \phi / d \mathbf{y}$.
+In more common notation, the gradient is denoted with a \\( \nabla \\) symbol, \\( \nabla \phi = d \phi / d \mathbf{y} \\).
 
 $$\begin{align*}
     \nabla \phi^j =g^{ij} \dfrac{\partial \phi}{\partial x^i}
 \end{align*}$$
 
 We can find the physical components of this contravariant vector (see above article),
+
 $$    \begin{align*}
         \nabla \phi (j) &= \sqrt{g_{jj}} g^{ij} \dfrac{\partial \phi}{\partial x^i}, \quad \text{(no sum on j)} \\
         \nabla \phi (j) &= \dfrac{1}{\sqrt{g_{jj}}} \dfrac{\partial \phi}{\partial x^j}=\dfrac{1}{h_j} \dfrac{\partial \phi}{\partial x^j} \quad \text{(orthogonal coordinates, no sum on j)}
@@ -591,11 +594,11 @@ $$    \begin{align*}
 
 In cylindrical coordinates, 
 
-$$\nabla \phi = \dfrac{\partial \phi}{\partial r} \mathbf{e}_r+ \dfrac{1}{r}\dfrac{\partial \phi}{\partial \theta} \mathbf{e}_\theta+ \dfrac{\partial \phi}{\partial z} \mathbf{e}_z$$
+$$\nabla \phi = \dfrac{\partial \phi}{\partial r} \mathbf{e}_r+ \dfrac{1}{r}\dfrac{\partial \phi}{\partial \theta} \mathbf{e}_\theta+ \dfrac{\partial \phi}{\partial z} \mathbf{e}_z \notag$$
 
 In spherical coordinates, 
 
-$$\nabla \Phi = \dfrac{\partial \Phi}{\partial r} \mathbf{e}_r + \dfrac{1}{r} \dfrac{\partial \Phi}{\partial \theta} \mathbf{e}_\theta + \dfrac{1}{r \sin \theta} \dfrac{\partial \Phi}{\partial \phi} \mathbf{e}_\phi$$
+$$\nabla \Phi = \dfrac{\partial \Phi}{\partial r} \mathbf{e}_r + \dfrac{1}{r} \dfrac{\partial \Phi}{\partial \theta} \mathbf{e}_\theta + \dfrac{1}{r \sin \theta} \dfrac{\partial \Phi}{\partial \phi} \mathbf{e}_\phi \notag$$
 
 ### Divergence
 
@@ -607,27 +610,27 @@ $$\begin{align*}
 
 In orthogonal coordinates, this simplifies to, 
 
-$$\boxed{\nabla \cdot \mathbf{A}=\dfrac{1}{h_1 h_2 h_3} \left[\dfrac{\partial}{\partial x^1}\biggl\{h_2 h_3 A(1) \biggr\} + \dfrac{\partial}{\partial x^2}\biggl\{h_1 h_3 A(2) \biggr\} +\dfrac{\partial}{\partial x^3}\biggl\{h_1 h_2 A(3) \biggr\}  \right]}$$
+$$\boxed{\nabla \cdot \mathbf{A}=\dfrac{1}{h_1 h_2 h_3} \left[\dfrac{\partial}{\partial x^1}\biggl\{h_2 h_3 A(1) \biggr\} + \dfrac{\partial}{\partial x^2}\biggl\{h_1 h_3 A(2) \biggr\} +\dfrac{\partial}{\partial x^3}\biggl\{h_1 h_2 A(3) \biggr\}  \right]} \notag$$
 
 In cylindrical coordinates,
 
-$$\mathbf{A}=A_r \mathbf{e}_r + A_\theta \mathbf{e}_\theta + A_z \mathbf{e}_z
+$$\mathbf{A}=A_r \mathbf{e}_r + A_\theta \mathbf{e}_\theta + A_z \mathbf{e}_z \notag
 $$
 
-$$\nabla \cdot \mathbf{A}=\dfrac{1}{r} \dfrac{\partial }{\partial r} (r A_r) + \dfrac{1}{r} \dfrac{\partial A_\theta}{\partial \theta} + \dfrac{\partial A_z}{\partial z}$$
+$$\nabla \cdot \mathbf{A}=\dfrac{1}{r} \dfrac{\partial }{\partial r} (r A_r) + \dfrac{1}{r} \dfrac{\partial A_\theta}{\partial \theta} + \dfrac{\partial A_z}{\partial z}\notag$$
 
 In spherical coordinates, 
 
-$$\mathbf{A}=A_r \mathbf{e}_r + A_\theta \mathbf{e}_\theta + A_\phi \mathbf{e}_\phi$$
+$$\mathbf{A}=A_r \mathbf{e}_r + A_\theta \mathbf{e}_\theta + A_\phi \mathbf{e}_\phi \notag$$
 
-$$\nabla \cdot \mathbf{A}=\dfrac{1}{r^2} \dfrac{\partial }{\partial r} (r^2 A_r) + \dfrac{1}{r \sin \theta} \dfrac{\partial}{\partial \theta} (\sin \theta A_\theta) + \dfrac{1}{r \sin \theta} \dfrac{\partial A_\phi}{\partial \phi}
+$$\nabla \cdot \mathbf{A}=\dfrac{1}{r^2} \dfrac{\partial }{\partial r} (r^2 A_r) + \dfrac{1}{r \sin \theta} \dfrac{\partial}{\partial \theta} (\sin \theta A_\theta) + \dfrac{1}{r \sin \theta} \dfrac{\partial A_\phi}{\partial \phi} \notag
 $$
 
 ### Scalar Laplacian
 
-To find the scalar Laplacian, we take the covariant derivative of the gradient with respect to $x^j$. In compact notation, we write,
+To find the scalar Laplacian, we take the covariant derivative of the gradient with respect to \\( x^j \\). In compact notation, we write,
 
-$$\nabla^2 \phi = g^{ij} \phi_{/ij}$$
+$$\nabla^2 \phi = g^{ij} \phi_{/ij} \notag$$
 
 Expanding this out, we obtain, 
 
@@ -639,7 +642,7 @@ $$\begin{align}
 
 To put this into a more amenable form, we use the following identity, which I shall not derive, 
 
-$$\boxed{\Gamma^i_{ij} = \dfrac{1}{2}\dfrac{\partial \ln g}{\partial x^j}=\dfrac{1}{2 g} \dfrac{\partial g}{\partial x^j}} \quad \text{where g is the determinant of the metric tensor}$$
+$$\boxed{\Gamma^i_{ij} = \dfrac{1}{2}\dfrac{\partial \ln g}{\partial x^j}=\dfrac{1}{2 g} \dfrac{\partial g}{\partial x^j}} \quad \text{where g is the determinant of the metric tensor} \notag$$
 
 Using the above identity, I can write Eq. \ref{laplacianformulaexpanded} in the following form, 
 
@@ -648,17 +651,17 @@ $$\begin{equation}
 \label{laplaciansimplified}
 \end{equation}$$
 
-The laplacian formula (eq. \ref{laplaciansimplified}) takes the following form in orthogonal coordinates. To derive this, note that $\sqrt{g}=h_1 h_2 h_3$ and $g^{ii}=1/g_{ii}=1/h_i^2$ in orthogonal coordinates, 
+The laplacian formula (eq. \ref{laplaciansimplified}) takes the following form in orthogonal coordinates. To derive this, note that \\( \sqrt{g}=h_1 h_2 h_3 \\) and \\( g^{ii}=1/g_{ii}=1/h_i^2 \\) in orthogonal coordinates, 
 
-$$\boxed{\nabla^2 \phi = \dfrac{1}{h_1 h_2 h_3} \left[\dfrac{\partial}{\partial x^1} \left( \dfrac{h_2 h_3}{h_1} \dfrac{\partial \phi}{\partial x^1}\right) + \dfrac{\partial}{\partial x^2} \left(\dfrac{h_1 h_3}{h_2} \dfrac{\partial \phi}{\partial x^2} \right)  + \dfrac{\partial}{\partial x^3} \left(\dfrac{h_1 h_2 }{h_3} \dfrac{\partial \phi}{\partial x^3} \right)\right]}$$
+$$\boxed{\nabla^2 \phi = \dfrac{1}{h_1 h_2 h_3} \left[\dfrac{\partial}{\partial x^1} \left( \dfrac{h_2 h_3}{h_1} \dfrac{\partial \phi}{\partial x^1}\right) + \dfrac{\partial}{\partial x^2} \left(\dfrac{h_1 h_3}{h_2} \dfrac{\partial \phi}{\partial x^2} \right)  + \dfrac{\partial}{\partial x^3} \left(\dfrac{h_1 h_2 }{h_3} \dfrac{\partial \phi}{\partial x^3} \right)\right]} \notag$$
 
 For cylindrical coordinates,
 
-$$\nabla^2 \phi = \dfrac{1}{r} \dfrac{\partial}{\partial r} \left(r \dfrac{\partial \phi}{\partial r} \right) + \dfrac{1}{r^2} \dfrac{\partial^2 \phi}{\partial \theta^2} + \dfrac{\partial^2 \phi}{\partial z^2}$$
+$$\nabla^2 \phi = \dfrac{1}{r} \dfrac{\partial}{\partial r} \left(r \dfrac{\partial \phi}{\partial r} \right) + \dfrac{1}{r^2} \dfrac{\partial^2 \phi}{\partial \theta^2} + \dfrac{\partial^2 \phi}{\partial z^2} \notag$$
 
 For spherical coordinates,
 
-$$\nabla^2 \Phi = \dfrac{1}{r^2} \dfrac{\partial}{\partial r} \left(r^2 \dfrac{\partial \Phi}{\partial r} \right) + \dfrac{1}{r^2 \sin \theta} \dfrac{\partial}{\partial \theta} \left(\sin \theta \dfrac{\partial \Phi}{\partial \theta} \right) + \dfrac{1}{r^2 \sin^2 \theta} \dfrac{\partial^2 \Phi}{\partial \phi^2}$$
+$$\nabla^2 \Phi = \dfrac{1}{r^2} \dfrac{\partial}{\partial r} \left(r^2 \dfrac{\partial \Phi}{\partial r} \right) + \dfrac{1}{r^2 \sin \theta} \dfrac{\partial}{\partial \theta} \left(\sin \theta \dfrac{\partial \Phi}{\partial \theta} \right) + \dfrac{1}{r^2 \sin^2 \theta} \dfrac{\partial^2 \Phi}{\partial \phi^2} \notag$$
 
 ### Vector Laplacian
 
@@ -669,7 +672,7 @@ $$\begin{equation}
     \label{vectorlaplacian}
 \end{equation}$$
 
-We should first calculate $u_{i/jk}$.
+We should first calculate \\( u_{i/jk} \\).
 
 $$\begin{align*}
     (u_{i/j})_{/k} &= \dfrac{\partial}{\partial x^k} (u_{i/j})-\Gamma^p_{ik} u_{p/j}-\Gamma^p_{jk} u_{i/p} \\
@@ -677,7 +680,7 @@ $$\begin{align*}
     &= \dfrac{\partial^2 u_i}{\partial x^k \partial x^j} - \left(\Gamma^m_{ij} \dfrac{\partial u_m}{\partial x^k} + \Gamma^p_{ik} \dfrac{\partial u_p}{\partial x^j}+\Gamma^p_{jk} \dfrac{\partial u_i}{\partial x^p} \right) - \left( \dfrac{\partial \Gamma^m_{ij}}{\partial x^k} - \Gamma^p_{ik} \Gamma^m_{pj} -\Gamma^p_{jk} \Gamma^m_{ip} \right) u_m
 \end{align*}$$
 
-Let's consider orthogonal coordinates, where $g^{jk}$ is only nonzero when $k=j$ and $g^{jj}=1/h_j^2$. Recall also the definition of physical components of covariant vectors, $u_i=h_i u(i)$
+Let's consider orthogonal coordinates, where \\( g^{jk} \\) is only nonzero when \\( k=j \\) and \\( g^{jj}=1/h_j^2 \\). Recall also the definition of physical components of covariant vectors, \\( u_i=h_i u(i) \\)
 
 In such case, 
 
@@ -688,11 +691,11 @@ $$\begin{align*}
 Changing dummy indices, 
 
 $$h_i L(i) = \sum_j \dfrac{1}{h_j^2} \left[\dfrac{\partial^2 u_i}{\partial x^j \partial x^j}- 2\Gamma^m_{ij} \dfrac{\partial u_m}{\partial x^j} - \Gamma^m_{jj} \dfrac{\partial u_i}{\partial x^m} - \left( \dfrac{\partial \Gamma^m_{ij}}{\partial x^j}-\Gamma^m_{ip} \Gamma^p_{jj}-\Gamma^m_{pj} \Gamma^p_{ij}\right) u_m\right] 
-$$
+\notag$$
 
 And finally, using physical components, 
 
-\begin{empheq}[box=\fbox]{align*}
+$$\begin{align*}
 h_i L(i) &= \sum_j \frac{1}{h_j^2} \Bigg[ 
     \frac{\partial^2 (h_i u(i))}{\partial x^j \partial x^j}
     - 2 \sum_m \Gamma^m_{ij} \frac{\partial (h_m u(m))}{\partial x^j} \\
@@ -701,7 +704,7 @@ h_i L(i) &= \sum_j \frac{1}{h_j^2} \Bigg[
     - \sum_p \Gamma^m_{ip} \Gamma^p_{jj}
     - \sum_p \Gamma^m_{pj} \Gamma^p_{ij} \right) u(m) h_m 
 \Bigg]
-\end{empheq}
+\end{align*}$$
 
 $$\begin{align*}
     h_i L(i) &= \sum_j \frac{1}{h_j^2} \Bigg[ 
@@ -771,24 +774,24 @@ $$\begin{align*}
 
 In cylindrical coordinates, the vector laplacian is, 
 
-$$\nabla^2 \mathbf{u} \cdot \mathbf{e}_{r}=L(1)= \underbrace{\dfrac{\partial^2 u_r}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_r}{\partial \theta^2}+ \dfrac{\partial ^2 u_r}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_r}{\partial r}}_{\nabla^2 u_r}-\dfrac{2}{r^2}\dfrac{\partial u_\theta}{\partial \theta} - \dfrac{u_r}{r^2}$$
+$$\nabla^2 \mathbf{u} \cdot \mathbf{e}_{r}=L(1)= \underbrace{\dfrac{\partial^2 u_r}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_r}{\partial \theta^2}+ \dfrac{\partial ^2 u_r}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_r}{\partial r}}_{\nabla^2 u_r}-\dfrac{2}{r^2}\dfrac{\partial u_\theta}{\partial \theta} - \dfrac{u_r}{r^2} \notag$$
 
-$$\nabla^2 \mathbf{u} \cdot \mathbf{e}_\theta=L(2)= \underbrace{\dfrac{\partial^2 u_\theta}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_\theta}{\partial \theta^2}+ \dfrac{\partial ^2 u_\theta}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_\theta}{\partial r}}_{\nabla^2 u_\theta}+\dfrac{2}{r^2}\dfrac{\partial u_r}{\partial \theta} - \dfrac{u_\theta}{r^2} $$
+$$\nabla^2 \mathbf{u} \cdot \mathbf{e}_\theta=L(2)= \underbrace{\dfrac{\partial^2 u_\theta}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_\theta}{\partial \theta^2}+ \dfrac{\partial ^2 u_\theta}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_\theta}{\partial r}}_{\nabla^2 u_\theta}+\dfrac{2}{r^2}\dfrac{\partial u_r}{\partial \theta} - \dfrac{u_\theta}{r^2} \notag$$
 
-$$\nabla^2 \mathbf{u} \cdot \mathbf{e}_z=L(3)= \underbrace{\dfrac{\partial^2 u_z}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_z}{\partial \theta^2}+ \dfrac{\partial ^2 u_z}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_z}{\partial r}}_{\nabla^2 u_z} 
+$$\nabla^2 \mathbf{u} \cdot \mathbf{e}_z=L(3)= \underbrace{\dfrac{\partial^2 u_z}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_z}{\partial \theta^2}+ \dfrac{\partial ^2 u_z}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_z}{\partial r}}_{\nabla^2 u_z} \notag
 $$
 
 In spherical coordinates, the vector laplacian is, 
 
-$$\nabla^2 \mathbf{u} \, \cdot \, \mathbf{e}_r =L(1) = \underbrace{\dfrac{1}{r} \dfrac{\partial^2 (r u_r)}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_r}{\partial \theta^2} + \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2 u_r}{\partial \phi^2} + \dfrac{\cot \theta}{r^2} \dfrac{\partial u_r}{\partial \theta}}_{\nabla^2 u_r} - \dfrac{2}{r^2} \dfrac{\partial u_\theta}{\partial \theta} - \dfrac{2}{r^2 \sin \theta} \dfrac{\partial u_\phi}{\partial \phi}-\dfrac{2 u_r}{r^2} - \dfrac{2 \cot \theta}{r^2} u_\theta$$
+$$\nabla^2 \mathbf{u} \, \cdot \, \mathbf{e}_r =L(1) = \underbrace{\dfrac{1}{r} \dfrac{\partial^2 (r u_r)}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_r}{\partial \theta^2} + \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2 u_r}{\partial \phi^2} + \dfrac{\cot \theta}{r^2} \dfrac{\partial u_r}{\partial \theta}}_{\nabla^2 u_r} - \dfrac{2}{r^2} \dfrac{\partial u_\theta}{\partial \theta} - \dfrac{2}{r^2 \sin \theta} \dfrac{\partial u_\phi}{\partial \phi}-\dfrac{2 u_r}{r^2} - \dfrac{2 \cot \theta}{r^2} u_\theta \notag$$
 
-$$\nabla^2 \mathbf{u} \, \cdot \, \mathbf{e}_\theta =L(2) = \underbrace{\dfrac{1}{r} \dfrac{\partial^2 (r u_\theta)}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_\theta}{\partial \theta^2} + \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2 u_\theta}{\partial \phi^2} + \dfrac{\cot \theta}{r^2} \dfrac{\partial u_\theta}{\partial \theta}}_{\nabla^2 u_\theta} - \dfrac{2 \cot \theta}{r^2 \sin \theta} \dfrac{\partial u_\phi}{\partial \phi} + \dfrac{2}{r^2} \dfrac{\partial u_r}{\partial \theta} - \dfrac{ u_\theta}{r^2 \sin^2 \theta}$$
+$$\nabla^2 \mathbf{u} \, \cdot \, \mathbf{e}_\theta =L(2) = \underbrace{\dfrac{1}{r} \dfrac{\partial^2 (r u_\theta)}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_\theta}{\partial \theta^2} + \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2 u_\theta}{\partial \phi^2} + \dfrac{\cot \theta}{r^2} \dfrac{\partial u_\theta}{\partial \theta}}_{\nabla^2 u_\theta} - \dfrac{2 \cot \theta}{r^2 \sin \theta} \dfrac{\partial u_\phi}{\partial \phi} + \dfrac{2}{r^2} \dfrac{\partial u_r}{\partial \theta} - \dfrac{ u_\theta}{r^2 \sin^2 \theta} \notag$$
 
-$$\nabla^2 \mathbf{u} \, \cdot \, \mathbf{e}_{\phi} =L(3) = \underbrace{\dfrac{1}{r} \dfrac{\partial^2 (r u_\phi)}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_\phi}{\partial \theta^2} + \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2 u_\phi}{\partial \phi^2} + \dfrac{\cot \theta}{r^2} \dfrac{\partial u_\phi}{\partial \theta}}_{\nabla^2 u_\phi} +\dfrac{2}{r^2 \sin \theta} \dfrac{\partial u_r}{\partial \phi} +\dfrac{2 \cot \theta}{r^2 \sin \theta} \dfrac{\partial u_\theta}{\partial \phi}  - \dfrac{ u_\phi}{r^2 \sin^2 \theta}$$
+$$\nabla^2 \mathbf{u} \, \cdot \, \mathbf{e}_{\phi} =L(3) = \underbrace{\dfrac{1}{r} \dfrac{\partial^2 (r u_\phi)}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_\phi}{\partial \theta^2} + \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2 u_\phi}{\partial \phi^2} + \dfrac{\cot \theta}{r^2} \dfrac{\partial u_\phi}{\partial \theta}}_{\nabla^2 u_\phi} +\dfrac{2}{r^2 \sin \theta} \dfrac{\partial u_r}{\partial \phi} +\dfrac{2 \cot \theta}{r^2 \sin \theta} \dfrac{\partial u_\theta}{\partial \phi}  - \dfrac{ u_\phi}{r^2 \sin^2 \theta} \notag$$
 
-### \subsection*{Curl}
+### Curl
 
-$$(\nabla \times \mathbf{A})^i =\varepsilon^{ijk} A_{k / j}$$
+$$(\nabla \times \mathbf{A})^i =\varepsilon^{ijk} A_{k / j} \notag$$
 
 When expanded out, this becomes,
 
@@ -798,24 +801,24 @@ $$\begin{align*}
     (\nabla \times \mathbf{A})^3 &= \dfrac{1}{\sqrt{g}} \left( \dfrac{\partial A_2}{\partial x^1} -\dfrac{\partial A_1}{\partial x^2}\right)
 \end{align*}$$
 
-In other words, for vector $\mathbf{A}=A_1 \mathbf{g}^{(1)}+A_2 \mathbf{g}^{(2)}+A_3 \mathbf{g}^{(3)}$, curl $\mathbf{A}$ is calculated as,
+In other words, for vector \\( \mathbf{A}=A_1 \mathbf{g}^{(1)}+A_2 \mathbf{g}^{(2)}+A_3 \mathbf{g}^{(3)} \\), curl \\( \mathbf{A} \\) is calculated as,
 
-$$\nabla \times \mathbf{A}=\epsilon^{ijk} \dfrac{1}{\sqrt{g}} \dfrac{\partial A_k}{\partial x^j} \mathbf{g}_{(i)}
+$$\nabla \times \mathbf{A}=\epsilon^{ijk} \dfrac{1}{\sqrt{g}} \dfrac{\partial A_k}{\partial x^j} \mathbf{g}_{(i)} \notag
 $$
 
-$$\boxed{\nabla \times \mathbf{A} = \dfrac{1}{\sqrt{g}}\left( \dfrac{\partial A_3}{\partial x^2} -\dfrac{\partial A_2}{\partial x^3}\right)\mathbf{g}_{(1)} + \dfrac{1}{\sqrt{g}} \left(\dfrac{\partial A_1}{\partial x^3} -\dfrac{\partial A_3}{\partial x^1} \right) \mathbf{g}_{(2)} + \dfrac{1}{\sqrt{g}} \left( \dfrac{\partial A_2}{\partial x^1} -\dfrac{\partial A_1}{\partial x^2}\right) \mathbf{g}_{(3)}}$$
+$$\boxed{\nabla \times \mathbf{A} = \dfrac{1}{\sqrt{g}}\left( \dfrac{\partial A_3}{\partial x^2} -\dfrac{\partial A_2}{\partial x^3}\right)\mathbf{g}_{(1)} + \dfrac{1}{\sqrt{g}} \left(\dfrac{\partial A_1}{\partial x^3} -\dfrac{\partial A_3}{\partial x^1} \right) \mathbf{g}_{(2)} + \dfrac{1}{\sqrt{g}} \left( \dfrac{\partial A_2}{\partial x^1} -\dfrac{\partial A_1}{\partial x^2}\right) \mathbf{g}_{(3)}} \notag$$
 
-Important: note that $\varepsilon^{ijk}= g^{-1/2} \epsilon^{ijk}$
+Important: note that \\( \varepsilon^{ijk}= g^{-1/2} \epsilon^{ijk} \\)
 
-It is usual to express this result in terms of the physical components of A and using normalized basis vectors. In orthogonal coordinates, the curl of $\mathbf{A}=A(1) \mathbf{e}_{(1)}+A(2) \mathbf{e}_{(2)}+A(3) \mathbf{e}_{(3)}$ is,
+<p>It is usual to express this result in terms of the physical components of A and using normalized basis vectors. In orthogonal coordinates, the curl of \( \mathbf{A}=A(1) \mathbf{e}_{(1)}+A(2) \mathbf{e}_{(2)}+A(3) \mathbf{e}_{(3)} \) is, </p>
 
-$$\nabla \times \mathbf{A}=\sum_i \sum_j \sum_k \epsilon^{ijk} \dfrac{h_i}{h_1h_2h_3} \dfrac{\partial}{\partial x^j} \bigg[h_k A(k) \bigg] \mathbf{e}_{(i)}
+$$\nabla \times \mathbf{A}=\sum_i \sum_j \sum_k \epsilon^{ijk} \dfrac{h_i}{h_1h_2h_3} \dfrac{\partial}{\partial x^j} \bigg[h_k A(k) \bigg] \mathbf{e}_{(i)} \notag
 $$
 
-\begin{empheq}[box=\fbox]{align*}
+$$\begin{align*}
     \nabla \times \mathbf{A}= &\dfrac{1}{h_2 h_3} \left[ \dfrac{\partial \big\{h_3 A(3) \big\}}{\partial x^2}  - \dfrac{\partial\big\{h_2 A(2) \big\}}{\partial x^3}  \right] \mathbf{e}_{(1)} + \dfrac{1}{h_1 h_3} \left[ \dfrac{\partial \big\{h_1 A(1) \big\}}{\partial x^3}  - \dfrac{\partial\big\{h_3 A(3) \big\}}{\partial x^1}  \right] \mathbf{e}_{(2)} \\
     &+ \dfrac{1}{h_1 h_2} \left[ \dfrac{\partial \big\{h_2 A(2) \big\}}{\partial x^1}  - \dfrac{\partial\big\{h_1 A(1) \big\}}{\partial x^2}  \right] \mathbf{e}_{(3)}
-\end{empheq}
+\end{align*}$$
 
 In cylindrical coordinates, 
 
@@ -830,8 +833,9 @@ $$\begin{align*}
     &+\dfrac{1}{r} \left[\dfrac{\partial}{\partial r} \left( r A_\theta \right) - \dfrac{\partial A_r}{\partial \theta} \right] \mathbf{e}_\phi 
 \end{align*}$$
 
-## \section*{Equations of Motion in Curvilinear Coordinates}
-#### \subsubsection*{Acceleration}
+## Equations of Motion in Curvilinear Coordinates
+
+#### Acceleration
 
 $$\begin{align}
     \mathbf{a} = \dfrac{D \mathbf{u}}{Dt} &= \dfrac{\partial \mathbf u}{\partial t} + \mathbf{u \cdot \nabla \mathbf{u}} \notag \\
@@ -842,14 +846,14 @@ $$\begin{align}
 
 In physical components, Eq. \ref{accelerationincurvilinear} becomes,
 
-$$\boxed{a(i) = \dfrac{\partial u(i)}{\partial t} + \dfrac{h_i}{h_j}u(j) \dfrac{\partial}{\partial x^j}{ \left[ \dfrac{u(i)}{h_i}\right] } + \dfrac{h_i}{h_j h_k} \Gamma^i_{jk} u(j) u(k)}$$
+$$\boxed{a(i) = \dfrac{\partial u(i)}{\partial t} + \dfrac{h_i}{h_j}u(j) \dfrac{\partial}{\partial x^j}{ \left[ \dfrac{u(i)}{h_i}\right] } + \dfrac{h_i}{h_j h_k} \Gamma^i_{jk} u(j) u(k)} \notag$$
 
 For orthogonal physical components, this simplifies to 
 
-$$\boxed{a(i)= \dfrac{\partial u(i)}{\partial t}+ \sum_j \dfrac{u(j)}{h_j} \left[ \dfrac{\partial u(i)}{\partial x^j}+ \dfrac{u(i)}{h_i} \dfrac{\partial h_i}{\partial x^j} - \dfrac{u(j)}{h_i} \dfrac{\partial h_j}{\partial x^i} \right]}$$
+$$\boxed{a(i)= \dfrac{\partial u(i)}{\partial t}+ \sum_j \dfrac{u(j)}{h_j} \left[ \dfrac{\partial u(i)}{\partial x^j}+ \dfrac{u(i)}{h_i} \dfrac{\partial h_i}{\partial x^j} - \dfrac{u(j)}{h_i} \dfrac{\partial h_j}{\partial x^i} \right]} \notag$$
 
-For cylindrical coordinates, $\mathbf{a}=a_r \mathbf{e}_r + a_\theta 
-\mathbf{e}_\theta + a_z \mathbf{e}_z$
+<p>For cylindrical coordinates, \( \mathbf{a}=a_r \mathbf{e}_r + a_\theta 
+\mathbf{e}_\theta + a_z \mathbf{e}_z \) </p>
 
 $$\begin{align*}
     a_r &= \dfrac{\partial u_r}{\partial t}+ u_r \dfrac{\partial u_r}{\partial r} + \dfrac{u_\theta}{r}\dfrac{\partial u_r}{\partial \theta} + u_z \dfrac{\partial u_r}{\partial z}-\dfrac{u_\theta^2}{r} \\
@@ -857,8 +861,8 @@ $$\begin{align*}
     a_z &= \dfrac{\partial u_z}{\partial t} + u_r \dfrac{\partial u_z}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_z}{\partial \theta} + u_z\dfrac{\partial u_z}{\partial z}
 \end{align*}$$
 
-For spherical coordinates, $\mathbf{a}=a_r \mathbf{e}_r + a_\theta 
-\mathbf{e}_\theta + a_\phi \mathbf{e}_\phi$
+<p> For spherical coordinates, \( \mathbf{a}=a_r \mathbf{e}_r + a_\theta 
+\mathbf{e}_\theta + a_\phi \mathbf{e}_\phi \) </p>
 
 $$\begin{align*}
     a_r &= \dfrac{\partial u_r}{\partial t}+ u_r \dfrac{\partial u_r}{\partial r} + \dfrac{u_\theta}{r}\dfrac{\partial u_r}{\partial \theta} + \dfrac{u_\phi}{r \sin \theta} \dfrac{\partial u_r}{\partial \phi}-\dfrac{u_\theta^2+u_\phi^2}{r}\\
@@ -866,7 +870,7 @@ $$\begin{align*}
     a_\phi &= \dfrac{\partial u_\phi}{\partial t} + u_r \dfrac{\partial u_\phi}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_\phi}{\partial \theta} + \dfrac{u_\phi}{r \sin \theta}\dfrac{\partial u_\phi}{\partial \phi} + \dfrac{u_r u_\phi}{r} + \dfrac{u_\theta u_\phi}{r} \cot \theta 
 \end{align*}$$
 
-#### \subsubsection*{Continuity}
+#### Continuity
 
 $$\begin{align*}
     \dfrac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{u}) &= 0 \\
@@ -879,19 +883,19 @@ $$\begin{align*}
 In physical components of the velocity for an orthogonal coordinate system,
 
 $$\boxed{\dfrac{\partial \rho}{\partial t} + \sum_i \dfrac{1}{h_1 h_2 h_3} \dfrac{\partial}{\partial x^i} \left[\dfrac{h_1 h_2 h_3}{h_i} \rho u(i) \right]=0}
-$$
+\notag$$
 
 In cylindrical coordinates,
 
-$$\dfrac{\partial \rho}{\partial t} + \dfrac{1}{r} \dfrac{\partial}{\partial r}(r \rho u_r) + \dfrac{1}{r}\dfrac{\partial}{\partial \theta}(\rho u_\theta) + \dfrac{\partial}{\partial z}(\rho u_z)=0$$
+$$\dfrac{\partial \rho}{\partial t} + \dfrac{1}{r} \dfrac{\partial}{\partial r}(r \rho u_r) + \dfrac{1}{r}\dfrac{\partial}{\partial \theta}(\rho u_\theta) + \dfrac{\partial}{\partial z}(\rho u_z)=0 \notag$$
 
 In spherical coordinates,
 
-$$\dfrac{\partial \rho}{\partial t} + \dfrac{1}{r^2} \dfrac{\partial}{\partial r} \left(r^2 \rho u_r \right) + \dfrac{1}{r \sin \theta} \dfrac{\partial}{\partial \theta} (\sin \theta \ \rho u_\theta) + \dfrac{1}{r \sin \theta} \dfrac{\partial}{\partial \phi} (\rho u_\phi)=0$$
+$$\dfrac{\partial \rho}{\partial t} + \dfrac{1}{r^2} \dfrac{\partial}{\partial r} \left(r^2 \rho u_r \right) + \dfrac{1}{r \sin \theta} \dfrac{\partial}{\partial \theta} (\sin \theta \ \rho u_\theta) + \dfrac{1}{r \sin \theta} \dfrac{\partial}{\partial \phi} (\rho u_\phi)=0 \notag$$
 
-#### \subsubsection*{Momentum Equation }
+#### Momentum Equation 
 
-$$\rho \mathbf{a} = \rho \mathbf{f} - \nabla p + (\lambda + \mu) \nabla (\nabla \cdot \mathbf{u} ) + \mu \nabla^2 \mathbf{u}$$
+$$\rho \mathbf{a} = \rho \mathbf{f} - \nabla p + (\lambda + \mu) \nabla (\nabla \cdot \mathbf{u} ) + \mu \nabla^2 \mathbf{u} \notag$$
 
 To make things simpler on me, let's just focus on the incompressible case. The above formula then reduces to, 
 
@@ -899,7 +903,7 @@ $$\begin{equation*}
     \dfrac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} = \mathbf{f}-\dfrac{\nabla p}{\rho} + \nu \nabla^2 \mathbf{u} 
 \end{equation*}$$
 
-In cylindrical coordinates (with $\mathbf{f}=0$),
+In cylindrical coordinates (with \\( \mathbf{f}=0 \\)),
 
 $$\begin{align*}
     \dfrac{\partial u_r}{\partial t} &+ u_r \dfrac{\partial u_r}{\partial r} + \dfrac{u_\theta}{r}\dfrac{\partial u_r}{\partial \theta} + u_z \dfrac{\partial u_r}{\partial z}-\dfrac{u_\theta^2}{r} = -\dfrac{1}{\rho} \dfrac{\partial p}{\partial r} \\
@@ -916,7 +920,7 @@ $$\begin{align*}
     &+ \nu \bigg[\dfrac{\partial^2 u_z}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_z}{\partial \theta^2}+ \dfrac{\partial ^2 u_z}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_z}{\partial r} \bigg]
 \end{align*}$$
 
-In spherical coordinates (with $\mathbf{f}=0$),
+In spherical coordinates (with \\( \mathbf{f}=0 \\)),
 
 $$\begin{align*}
     \dfrac{\partial u_r}{\partial t} &+ u_r \dfrac{\partial u_r}{\partial r} + \dfrac{u_\theta}{r}\dfrac{\partial u_r}{\partial \theta} + \dfrac{u_\phi}{r \sin \theta} \dfrac{\partial u_r}{\partial \phi}-\dfrac{u_\theta^2+u_\phi^2}{r} = - \dfrac{1}{\rho} \dfrac{\partial p}{\partial r} \\

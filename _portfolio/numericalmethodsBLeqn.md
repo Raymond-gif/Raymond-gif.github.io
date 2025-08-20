@@ -6,6 +6,7 @@ author_profile: false
 layout: single
 image: /images/BLmain.jpg
 caption: "Photo credit: tec-science"
+order: 1
 ---
 
 ## Boundary Layer Equations + Falkner Skan
