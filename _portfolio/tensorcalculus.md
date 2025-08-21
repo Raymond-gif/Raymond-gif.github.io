@@ -528,7 +528,6 @@ $$\begin{equation}
     \label{christoffelsymbolmetrictensor}
 \end{equation}$$
 
-
 ### Christoffel Symbol in Orthogonal Coordinates
 
 Using Eq. \ref{christoffelsymbolmetrictensor} and the fact that in orthogonal coordinates, the off-diagonal components of the metric tensor are zero, with \\( g_{ii}=h_i^2, \enspace g^{ii}=1/h_i^2 \\)
@@ -622,13 +621,26 @@ $$\nabla \Phi = \dfrac{\partial \Phi}{\partial r} \mathbf{e}_r + \dfrac{1}{r} \d
 
 $$\begin{align*}
     \nabla \cdot \mathbf{A}= A^i_{/i} &= \dfrac{\partial A^i}{\partial x^i} + \Gamma^i_{ij} A^j \\
-    &= \dfrac{1}{g^{1/2}} \dfrac{\partial}{\partial x^i} \left( g^{1/2} A^i \right) \\
-    &= \boxed{\sum_i \dfrac{1}{g^{1/2}} \dfrac{\partial}{\partial x^i} \left[\sqrt{\dfrac{g}{g_{ii}} } A(i)  \right]}
+    &= \dfrac{1}{g^{1/2}} \dfrac{\partial}{\partial x^i} \left( g^{1/2} A^i \right) 
 \end{align*}$$
 
-In orthogonal coordinates, this simplifies to, 
+<div class="equation-box">
+  <h4><strong>Divergence in General Curvilinear Coordinates</strong></h4>
+  <div>
+$$\begin{equation*}
+    \nabla \cdot \mathbf{A}=\sum_i \dfrac{1}{g^{1/2}} \dfrac{\partial}{\partial x^i} \left[\sqrt{\dfrac{g}{g_{ii}} } A(i)  \right]
+\end{equation*}$$
+  </div>
+</div>
 
-$$\boxed{\nabla \cdot \mathbf{A}=\dfrac{1}{h_1 h_2 h_3} \left[\dfrac{\partial}{\partial x^1}\biggl\{h_2 h_3 A(1) \biggr\} + \dfrac{\partial}{\partial x^2}\biggl\{h_1 h_3 A(2) \biggr\} +\dfrac{\partial}{\partial x^3}\biggl\{h_1 h_2 A(3) \biggr\}  \right]} \notag$$
+<div class="equation-box">
+  <h4><strong>Divergence in Orthogonal Coordinates</strong></h4>
+  <div>
+
+$$ \nabla \cdot \mathbf{A}=\dfrac{1}{h_1 h_2 h_3} \left[\dfrac{\partial}{\partial x^1}\biggl\{h_2 h_3 A(1) \biggr\} + \dfrac{\partial}{\partial x^2}\biggl\{h_1 h_3 A(2) \biggr\} +\dfrac{\partial}{\partial x^3}\biggl\{h_1 h_2 A(3) \biggr\}  \right] \notag 
+$$
+  </div>
+</div>
 
 In cylindrical coordinates,
 
@@ -812,22 +824,38 @@ $$\begin{align*}
   </div>
 </details>
 
-In cylindrical coordinates, the vector laplacian is, 
+<div class="equation-box">
+  <h3><strong>Vector Laplacian in Cylindrical Coordinates</strong></h3>
+  <div>
 
 $$\nabla^2 \mathbf{u} \cdot \mathbf{e}_{r}=L(1)= \underbrace{\dfrac{\partial^2 u_r}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_r}{\partial \theta^2}+ \dfrac{\partial ^2 u_r}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_r}{\partial r}}_{\nabla^2 u_r}-\dfrac{2}{r^2}\dfrac{\partial u_\theta}{\partial \theta} - \dfrac{u_r}{r^2} \notag$$
 
+<br>
+
 $$\nabla^2 \mathbf{u} \cdot \mathbf{e}_\theta=L(2)= \underbrace{\dfrac{\partial^2 u_\theta}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_\theta}{\partial \theta^2}+ \dfrac{\partial ^2 u_\theta}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_\theta}{\partial r}}_{\nabla^2 u_\theta}+\dfrac{2}{r^2}\dfrac{\partial u_r}{\partial \theta} - \dfrac{u_\theta}{r^2} \notag$$
+
+<br>
 
 $$\nabla^2 \mathbf{u} \cdot \mathbf{e}_z=L(3)= \underbrace{\dfrac{\partial^2 u_z}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_z}{\partial \theta^2}+ \dfrac{\partial ^2 u_z}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_z}{\partial r}}_{\nabla^2 u_z} \notag
 $$
+  </div>
+</div>
 
-In spherical coordinates, the vector laplacian is, 
+<div class="equation-box">
+  <h3><strong> Vector Laplacian in Spherical Coordinates</strong></h3>
+  <div>
 
 $$\nabla^2 \mathbf{u} \, \cdot \, \mathbf{e}_r =L(1) = \underbrace{\dfrac{1}{r} \dfrac{\partial^2 (r u_r)}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_r}{\partial \theta^2} + \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2 u_r}{\partial \phi^2} + \dfrac{\cot \theta}{r^2} \dfrac{\partial u_r}{\partial \theta}}_{\nabla^2 u_r} - \dfrac{2}{r^2} \dfrac{\partial u_\theta}{\partial \theta} - \dfrac{2}{r^2 \sin \theta} \dfrac{\partial u_\phi}{\partial \phi}-\dfrac{2 u_r}{r^2} - \dfrac{2 \cot \theta}{r^2} u_\theta \notag$$
 
+<br>
+
 $$\nabla^2 \mathbf{u} \, \cdot \, \mathbf{e}_\theta =L(2) = \underbrace{\dfrac{1}{r} \dfrac{\partial^2 (r u_\theta)}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_\theta}{\partial \theta^2} + \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2 u_\theta}{\partial \phi^2} + \dfrac{\cot \theta}{r^2} \dfrac{\partial u_\theta}{\partial \theta}}_{\nabla^2 u_\theta} - \dfrac{2 \cot \theta}{r^2 \sin \theta} \dfrac{\partial u_\phi}{\partial \phi} + \dfrac{2}{r^2} \dfrac{\partial u_r}{\partial \theta} - \dfrac{ u_\theta}{r^2 \sin^2 \theta} \notag$$
 
+<br>
+
 $$\nabla^2 \mathbf{u} \, \cdot \, \mathbf{e}_{\phi} =L(3) = \underbrace{\dfrac{1}{r} \dfrac{\partial^2 (r u_\phi)}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_\phi}{\partial \theta^2} + \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2 u_\phi}{\partial \phi^2} + \dfrac{\cot \theta}{r^2} \dfrac{\partial u_\phi}{\partial \theta}}_{\nabla^2 u_\phi} +\dfrac{2}{r^2 \sin \theta} \dfrac{\partial u_r}{\partial \phi} +\dfrac{2 \cot \theta}{r^2 \sin \theta} \dfrac{\partial u_\theta}{\partial \phi}  - \dfrac{ u_\phi}{r^2 \sin^2 \theta} \notag$$
+  </div>
+</div>
 
 ### Curl
 

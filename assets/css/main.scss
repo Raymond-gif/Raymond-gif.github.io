@@ -86,6 +86,11 @@
   margin-top: 0;
 }
 
+.equation-box h4 {
+  color: #2a4d8f;
+  margin-top: 0;
+}
+
 /* === DARK MODE OVERRIDES === */
 html[data-theme="dark"] {
   .custom-collapse {
@@ -118,6 +123,10 @@ html[data-theme="dark"] {
   }
 
   .equation-box h3 {
+    color: #90caff;
+  }
+
+  .equation-box h4 {
     color: #90caff;
   }
 }
