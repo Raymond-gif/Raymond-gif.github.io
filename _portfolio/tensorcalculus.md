@@ -155,7 +155,7 @@ $$\begin{align*}
 
 We may always decompose the stress tensor into the sum of isotropic and deviatoric tensors. This amounts to separating the stress tensor into the hydrostatic pressure tensor plus the viscous stress tensor. 
 
-$$\mathbf{T}= -p \mathbf{I} + \boldsymbol{\tau}, \quad \text{or} \quad T_{ij}=-p \delta_{ij}+\tau_{ij} \notag$$
+$$\boldsymbol{\sigma}= -p \mathbf{I} + \boldsymbol{\tau}, \quad \text{or} \quad \sigma_{ij}=-p \delta_{ij}+\tau_{ij} \notag$$
 
 For a Stokesian fluid, 
 
@@ -168,23 +168,23 @@ $$
 
 For our purposes, Newtonian fluid will suffice. Therefore, the stress tensor can be written as, for a Newtonian fluid,
 
-$$\boxed{T_{ij} = (-p + \lambda \Theta) \delta_{ij} + 2 \mu e_{ij}, \quad \mathbf{T}=\bigg[-p+\lambda(\nabla \cdot \mathbf{u}) \bigg] \mathbf{I}+2\mu \mathbf{e}} \notag
+$$\boxed{\sigma_{ij} = (-p + \lambda \Theta) \delta_{ij} + 2 \mu e_{ij}, \quad \boldsymbol{\sigma}=\bigg[-p+\lambda(\nabla \cdot \mathbf{u}) \bigg] \mathbf{I}+2\mu \mathbf{e}} \notag
 $$
 
 For the momentum equation, calculating the divergence of the stress tensor is needed. In preparation of this, I will calculate the divergence here, 
 
 $$\begin{align*}
-    (\nabla \cdot \mathbf{T})_i = \dfrac{\partial T_{ij}}{\partial x_j} &= \delta_{ij} \dfrac{\partial}{\partial x_j} (-p + \lambda \Theta) + \mu \dfrac{\partial}{\partial x_j} \left( \dfrac{\partial u_i}{\partial x_j}+\dfrac{\partial u_j}{\partial x_i} \right) \\
+    (\nabla \cdot \boldsymbol{\sigma})_i = \dfrac{\partial \sigma_{ij}}{\partial x_j} &= \delta_{ij} \dfrac{\partial}{\partial x_j} (-p + \lambda \Theta) + \mu \dfrac{\partial}{\partial x_j} \left( \dfrac{\partial u_i}{\partial x_j}+\dfrac{\partial u_j}{\partial x_i} \right) \\
     &= \dfrac{\partial}{\partial x_i} (-p + \lambda \Theta) + \mu \left( \dfrac{\partial}{\partial x_j} \dfrac{\partial u_i}{\partial x_j} + \dfrac{\partial}{\partial x_i} \dfrac{\partial u_j}{\partial x_j} \right) \\
     &= \dfrac{\partial}{\partial x_i} (-p + \lambda \Theta) + \mu \left[ \nabla^2 u_i + \dfrac{\partial}{\partial x_i}(\nabla \cdot \mathbf{u})\right] \\
     & (\text{recall that } \Theta = \nabla \cdot \mathbf{u}) \\
-     (\nabla \cdot \mathbf{T})_i=\dfrac{\partial T_{ij}}{\partial x_j}&= -\dfrac{\partial p}{\partial x_i} + (\lambda + \mu) \dfrac{\partial}{\partial x_i} (\nabla \cdot \mathbf{u}) + \mu \nabla^2 u_i
+     (\nabla \cdot \boldsymbol{\sigma})_i=\dfrac{\partial \sigma_{ij}}{\partial x_j}&= -\dfrac{\partial p}{\partial x_i} + (\lambda + \mu) \dfrac{\partial}{\partial x_i} (\nabla \cdot \mathbf{u}) + \mu \nabla^2 u_i
 \end{align*}$$
 
 Therefore, 
 
 $$\begin{equation}
-    \boxed{\nabla \cdot \mathbf{T}= -\nabla p + (\lambda + \mu) \nabla (\nabla \cdot \mathbf{u})+\mu \nabla^2 \mathbf{u}}
+    \boxed{\nabla \cdot \boldsymbol{\sigma}= -\nabla p + (\lambda + \mu) \nabla (\nabla \cdot \mathbf{u})+\mu \nabla^2 \mathbf{u}}
     \label{divergenceofT}
 \end{equation}$$
 
@@ -209,8 +209,8 @@ $$\begin{align*}
 Note: for the divergence of the stress tensor, I used the boxed formula derived above in the **Stress and Constitutive Equations** section.
 
 $$\begin{align*}
-    \rho \mathbf{a} &= \rho \mathbf{f} + \nabla \cdot \mathbf{T} \\
-    \rho a_i &= \rho f_i +\dfrac{\partial T_{ij}}{\partial x_j} \\
+    \rho \mathbf{a} &= \rho \mathbf{f} + \nabla \cdot \boldsymbol{\sigma} \\
+    \rho a_i &= \rho f_i +\dfrac{\partial \sigma_{ij}}{\partial x_j} \\
     \rho a_i &= \rho f_i - \dfrac{\partial p }{\partial x_i} + (\lambda + \mu) \dfrac{\partial}{\partial x_i} (\nabla \cdot \mathbf{u}) + \mu \nabla^2 u_i
 \end{align*}$$
 
@@ -486,13 +486,16 @@ Switching indices,
 
 $$\boxed{\dfrac{d \mathbf{A}}{d \mathbf{y}}= \left[ \dfrac{\partial A_i}{\partial x^j} - \Gamma^k_{ij} A_k\right] \mathbf{g}^{(i)}\mathbf{g}^{(j)}=A_{i/j}\mathbf{g}^{(i)}\mathbf{g}^{(j)}} \notag$$
 
-## Covariant Derivative
-
-$$\boxed{
+<div class="equation-box">
+  <h3><strong>Covariant Derivative</strong></h3>
+  <div>
+$$
 \begin{aligned}
     A^i_{ \ /j} = \dfrac{\partial A^i}{\partial x^j}+ \Gamma^i_{kj} A^k \\
     A_{i/j} =\dfrac{\partial A_i}{\partial x^j} - \Gamma^k_{ij} A_k
-\end{aligned}}$$
+\end{aligned}$$
+  </div>
+</div>
 
 ### Christoffel Symbols in Terms of Metric Tensor
 
@@ -528,11 +531,14 @@ $$\begin{equation}
     \label{christoffelsymbolmetrictensor}
 \end{equation}$$
 
-### Christoffel Symbol in Orthogonal Coordinates
+<details class="custom-collapse" open>
+  <summary><h3>Christoffel Symbol in Orthogonal, Cylindrical, and Spherical Coordinates </h3></summary>
+  <div class="collapse-content">
 
-Using Eq. \ref{christoffelsymbolmetrictensor} and the fact that in orthogonal coordinates, the off-diagonal components of the metric tensor are zero, with \\( g_{ii}=h_i^2, \enspace g^{ii}=1/h_i^2 \\)
-
-**Case 1:**
+Using Eq. \ref{christoffelsymbolmetrictensor} and the fact that in orthogonal coordinates, the off-diagonal components of the metric tensor are zero, with \( g_{ii}=h_i^2, \enspace g^{ii}=1/h_i^2 \)
+<br>
+<br>
+<b>Case 1:</b>
 
 $$
 \begin{array}{@{\hskip 1.5cm} l @{\hskip 1.5cm} l @{\hskip 1.5cm} l}
@@ -544,7 +550,7 @@ $$
 \end{array} \notag
 $$
 
-**Case 2:**
+<b>Case 2:</b>
 
 $$
 \begin{array}{@{\hskip 1.5cm} l @{\hskip 1.5cm} l}
@@ -554,7 +560,7 @@ $$
 \end{array} \notag
 $$
 
-**Case 3:**
+<b>Case 3:</b>
 
 $$
 \begin{array}{@{\hskip 1.5cm} l @{\hskip 1.5cm} l}
@@ -564,7 +570,7 @@ $$
 \end{array} \notag
 $$
 
-#### Christoffel Symbol in Cylindrical Coordinates
+<h4> Christoffel Symbol in Cylindrical Coordinates </h4>
 
 The only nonvanishing components of the Christoffel symbol in cylindrical coordinates are: 
 
@@ -573,7 +579,7 @@ $$\begin{align*}
     \Gamma^1_{22} &= -x^1
 \end{align*}$$
 
-#### Christoffel Symbol in Spherical Coordinates
+<h4>Christoffel Symbol in Spherical Coordinates</h4>
 
 The only nonvanishing components of the Christoffel symbol in spherical coordinates are: 
 
@@ -584,6 +590,9 @@ $$\begin{align*}
     \Gamma^2_{33} &= -\sin(x^2) \cos(x^2) \\
     \Gamma^1_{22} &=-x^1
 \end{align*}$$
+
+  </div>
+</details>
 
 ## Gradient, Laplacian, Divergence, Curl
 
@@ -676,22 +685,43 @@ $$\boxed{\Gamma^i_{ij} = \dfrac{1}{2}\dfrac{\partial \ln g}{\partial x^j}=\dfrac
 
 Using the above identity, I can write Eq. \ref{laplacianformulaexpanded} in the following form, 
 
+<div class="equation-box">
+  <h4><strong>Scalar Laplacian in General Curvilinear Coordinates</strong></h4>
+  <div>
 $$\begin{equation}
-\boxed{\nabla^2 \phi = \dfrac{1}{g^{1/2}} \dfrac{\partial}{\partial x^j} \left(g^{1/2} g^{ij} \dfrac{\partial \phi}{\partial x^i} \right)}
+\nabla^2 \phi = \dfrac{1}{g^{1/2}} \dfrac{\partial}{\partial x^j} \left(g^{1/2} g^{ij} \dfrac{\partial \phi}{\partial x^i} \right)
 \label{laplaciansimplified}
 \end{equation}$$
+  </div>
+</div>
 
 The laplacian formula (eq. \ref{laplaciansimplified}) takes the following form in orthogonal coordinates. To derive this, note that \\( \sqrt{g}=h_1 h_2 h_3 \\) and \\( g^{ii}=1/g_{ii}=1/h_i^2 \\) in orthogonal coordinates, 
 
-$$\boxed{\nabla^2 \phi = \dfrac{1}{h_1 h_2 h_3} \left[\dfrac{\partial}{\partial x^1} \left( \dfrac{h_2 h_3}{h_1} \dfrac{\partial \phi}{\partial x^1}\right) + \dfrac{\partial}{\partial x^2} \left(\dfrac{h_1 h_3}{h_2} \dfrac{\partial \phi}{\partial x^2} \right)  + \dfrac{\partial}{\partial x^3} \left(\dfrac{h_1 h_2 }{h_3} \dfrac{\partial \phi}{\partial x^3} \right)\right]} \notag$$
+<div class="equation-box">
+  <h4><strong>Scalar Laplacian in Orthogonal Coordinates</strong></h4>
+  <div>
 
-For cylindrical coordinates,
+$$\nabla^2 \phi = \dfrac{1}{h_1 h_2 h_3} \left[\dfrac{\partial}{\partial x^1} \left( \dfrac{h_2 h_3}{h_1} \dfrac{\partial \phi}{\partial x^1}\right) + \dfrac{\partial}{\partial x^2} \left(\dfrac{h_1 h_3}{h_2} \dfrac{\partial \phi}{\partial x^2} \right)  + \dfrac{\partial}{\partial x^3} \left(\dfrac{h_1 h_2 }{h_3} \dfrac{\partial \phi}{\partial x^3} \right)\right] \notag$$
+
+  </div>
+</div>
+
+<div class="equation-box">
+  <h4><strong>Scalar Laplacian in Cylindrical Coordinates</strong></h4>
+  <div>
 
 $$\nabla^2 \phi = \dfrac{1}{r} \dfrac{\partial}{\partial r} \left(r \dfrac{\partial \phi}{\partial r} \right) + \dfrac{1}{r^2} \dfrac{\partial^2 \phi}{\partial \theta^2} + \dfrac{\partial^2 \phi}{\partial z^2} \notag$$
+  </div>
+</div>
 
-For spherical coordinates,
+<div class="equation-box">
+  <h4><strong>Scalar Laplacian in Spherical Coordinates</strong></h4>
+  <div>
 
 $$\nabla^2 \Phi = \dfrac{1}{r^2} \dfrac{\partial}{\partial r} \left(r^2 \dfrac{\partial \Phi}{\partial r} \right) + \dfrac{1}{r^2 \sin \theta} \dfrac{\partial}{\partial \theta} \left(\sin \theta \dfrac{\partial \Phi}{\partial \theta} \right) + \dfrac{1}{r^2 \sin^2 \theta} \dfrac{\partial^2 \Phi}{\partial \phi^2} \notag$$
+
+  </div>
+</div>
 
 ### Vector Laplacian
 
@@ -726,7 +756,7 @@ $$h_i L(i) = \sum_j \dfrac{1}{h_j^2} \left[\dfrac{\partial^2 u_i}{\partial x^j \
 And finally, using physical components, 
 
 <div class="equation-box">
-  <h3><strong>Physical Components of Vector Laplacian in Orthogonal Coordinates</strong></h3>
+  <h4><strong>Physical Components of Vector Laplacian in Orthogonal Coordinates</strong></h4>
   <div>
     $$\begin{equation} \label{physicalcomponentsvectorlap}
     \begin{aligned}
@@ -825,7 +855,7 @@ $$\begin{align*}
 </details>
 
 <div class="equation-box">
-  <h3><strong>Vector Laplacian in Cylindrical Coordinates</strong></h3>
+  <h4><strong>Vector Laplacian in Cylindrical Coordinates</strong></h4>
   <div>
 
 $$\nabla^2 \mathbf{u} \cdot \mathbf{e}_{r}=L(1)= \underbrace{\dfrac{\partial^2 u_r}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_r}{\partial \theta^2}+ \dfrac{\partial ^2 u_r}{\partial z^2} + \dfrac{1}{r}\dfrac{\partial u_r}{\partial r}}_{\nabla^2 u_r}-\dfrac{2}{r^2}\dfrac{\partial u_\theta}{\partial \theta} - \dfrac{u_r}{r^2} \notag$$
@@ -842,7 +872,7 @@ $$
 </div>
 
 <div class="equation-box">
-  <h3><strong> Vector Laplacian in Spherical Coordinates</strong></h3>
+  <h4><strong> Vector Laplacian in Spherical Coordinates</strong></h4>
   <div>
 
 $$\nabla^2 \mathbf{u} \, \cdot \, \mathbf{e}_r =L(1) = \underbrace{\dfrac{1}{r} \dfrac{\partial^2 (r u_r)}{\partial r^2} + \dfrac{1}{r^2} \dfrac{\partial^2 u_r}{\partial \theta^2} + \dfrac{1}{r^2 \sin^2\theta} \dfrac{\partial^2 u_r}{\partial \phi^2} + \dfrac{\cot \theta}{r^2} \dfrac{\partial u_r}{\partial \theta}}_{\nabla^2 u_r} - \dfrac{2}{r^2} \dfrac{\partial u_\theta}{\partial \theta} - \dfrac{2}{r^2 \sin \theta} \dfrac{\partial u_\phi}{\partial \phi}-\dfrac{2 u_r}{r^2} - \dfrac{2 \cot \theta}{r^2} u_\theta \notag$$
@@ -871,15 +901,24 @@ $$\begin{align*}
 
 In other words, for vector \\( \mathbf{A}=A_1 \mathbf{g}^{(1)}+A_2 \mathbf{g}^{(2)}+A_3 \mathbf{g}^{(3)} \\), curl \\( \mathbf{A} \\) is calculated as,
 
+<div class="equation-box">
+  <h4><strong>Curl in General Curvilinear Coordinates</strong></h4>
+  <div>
 $$\nabla \times \mathbf{A}=\epsilon^{ijk} \dfrac{1}{\sqrt{g}} \dfrac{\partial A_k}{\partial x^j} \mathbf{g}_{(i)} \notag
 $$
 
-$$\boxed{\nabla \times \mathbf{A} = \dfrac{1}{\sqrt{g}}\left( \dfrac{\partial A_3}{\partial x^2} -\dfrac{\partial A_2}{\partial x^3}\right)\mathbf{g}_{(1)} + \dfrac{1}{\sqrt{g}} \left(\dfrac{\partial A_1}{\partial x^3} -\dfrac{\partial A_3}{\partial x^1} \right) \mathbf{g}_{(2)} + \dfrac{1}{\sqrt{g}} \left( \dfrac{\partial A_2}{\partial x^1} -\dfrac{\partial A_1}{\partial x^2}\right) \mathbf{g}_{(3)}} \notag$$
+$$\nabla \times \mathbf{A} = \dfrac{1}{\sqrt{g}}\left( \dfrac{\partial A_3}{\partial x^2} -\dfrac{\partial A_2}{\partial x^3}\right)\mathbf{g}_{(1)} + \dfrac{1}{\sqrt{g}} \left(\dfrac{\partial A_1}{\partial x^3} -\dfrac{\partial A_3}{\partial x^1} \right) \mathbf{g}_{(2)} + \dfrac{1}{\sqrt{g}} \left( \dfrac{\partial A_2}{\partial x^1} -\dfrac{\partial A_1}{\partial x^2}\right) \mathbf{g}_{(3)} \notag$$
+
+  </div>
+</div>
 
 Important: note that \\( \varepsilon^{ijk}= g^{-1/2} \epsilon^{ijk} \\)
 
 <p>It is usual to express this result in terms of the physical components of A and using normalized basis vectors. In orthogonal coordinates, the curl of \( \mathbf{A}=A(1) \mathbf{e}_{(1)}+A(2) \mathbf{e}_{(2)}+A(3) \mathbf{e}_{(3)} \) is, </p>
 
+<div class="equation-box">
+  <h4><strong>Curl in Orthogonal Coordinates</strong></h4>
+  <div>
 $$\nabla \times \mathbf{A}=\sum_i \sum_j \sum_k \epsilon^{ijk} \dfrac{h_i}{h_1h_2h_3} \dfrac{\partial}{\partial x^j} \bigg[h_k A(k) \bigg] \mathbf{e}_{(i)} \notag
 $$
 
@@ -887,19 +926,27 @@ $$\begin{align*}
     \nabla \times \mathbf{A}= &\dfrac{1}{h_2 h_3} \left[ \dfrac{\partial \big\{h_3 A(3) \big\}}{\partial x^2}  - \dfrac{\partial\big\{h_2 A(2) \big\}}{\partial x^3}  \right] \mathbf{e}_{(1)} + \dfrac{1}{h_1 h_3} \left[ \dfrac{\partial \big\{h_1 A(1) \big\}}{\partial x^3}  - \dfrac{\partial\big\{h_3 A(3) \big\}}{\partial x^1}  \right] \mathbf{e}_{(2)} \\
     &+ \dfrac{1}{h_1 h_2} \left[ \dfrac{\partial \big\{h_2 A(2) \big\}}{\partial x^1}  - \dfrac{\partial\big\{h_1 A(1) \big\}}{\partial x^2}  \right] \mathbf{e}_{(3)}
 \end{align*}$$
+  </div>
+</div>
 
-In cylindrical coordinates, 
-
+<div class="equation-box">
+  <h4><strong>Curl in Cylindrical Coordinates</strong></h4>
+  <div>
 $$\begin{equation*}
     \nabla \times \mathbf{A} = \left[\dfrac{1}{r} \dfrac{\partial A_z}{\partial \theta} - \dfrac{\partial A_\theta}{\partial z} \right] \mathbf{e}_r+ \left[\dfrac{\partial A_r}{\partial z}  - \dfrac{\partial A_z}{\partial r}  \right] \mathbf{e}_\theta +\dfrac{1}{r} \left[\dfrac{\partial}{\partial r} \left( r A_\theta \right) - \dfrac{\partial A_r}{\partial \theta} \right] \mathbf{e}_z 
 \end{equation*}$$
+  </div>
+</div>
 
-In spherical coordinates, 
-
+<div class="equation-box">
+  <h4><strong>Curl in Spherical Coordinates</strong></h4>
+  <div>
 $$\begin{align*}
     \nabla \times \mathbf{A} = & \dfrac{1}{r \sin \theta} \left[\dfrac{\partial}{\partial \theta} \left( A_\phi\sin \theta \right) - \dfrac{\partial A_\theta}{\partial \phi} \right] \mathbf{e}_r+\dfrac{1}{r} \left[ \dfrac{1}{\sin \theta}\dfrac{\partial A_r}{\partial \phi}  - \dfrac{\partial }{\partial r} \left(r A_\phi \right) \right] \mathbf{e}_\theta \\
     &+\dfrac{1}{r} \left[\dfrac{\partial}{\partial r} \left( r A_\theta \right) - \dfrac{\partial A_r}{\partial \theta} \right] \mathbf{e}_\phi 
 \end{align*}$$
+  </div>
+</div>
 
 ## Equations of Motion in Curvilinear Coordinates
 
@@ -918,8 +965,17 @@ $$\boxed{a(i) = \dfrac{\partial u(i)}{\partial t} + \dfrac{h_i}{h_j}u(j) \dfrac{
 
 For orthogonal physical components, this simplifies to 
 
-$$\boxed{a(i)= \dfrac{\partial u(i)}{\partial t}+ \sum_j \dfrac{u(j)}{h_j} \left[ \dfrac{\partial u(i)}{\partial x^j}+ \dfrac{u(i)}{h_i} \dfrac{\partial h_i}{\partial x^j} - \dfrac{u(j)}{h_i} \dfrac{\partial h_j}{\partial x^i} \right]} \notag$$
+<div class="equation-box">
+  <h4><strong>Acceleration in Orthogonal Coordinates</strong></h4>
+  <div>
 
+$$a(i)= \dfrac{\partial u(i)}{\partial t}+ \sum_j \dfrac{u(j)}{h_j} \left[ \dfrac{\partial u(i)}{\partial x^j}+ \dfrac{u(i)}{h_i} \dfrac{\partial h_i}{\partial x^j} - \dfrac{u(j)}{h_i} \dfrac{\partial h_j}{\partial x^i} \right] \notag$$
+  </div>
+</div>
+
+<div class="equation-box">
+  <h4><strong>Acceleration in Cylindrical Coordinates </strong></h4>
+  <div>
 <p>For cylindrical coordinates, \( \mathbf{a}=a_r \mathbf{e}_r + a_\theta 
 \mathbf{e}_\theta + a_z \mathbf{e}_z \) </p>
 
@@ -928,7 +984,12 @@ $$\begin{align*}
     a_\theta &=\dfrac{\partial u_\theta}{\partial t}+u_r \dfrac{\partial u_\theta}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_\theta}{\partial \theta} + u_z \dfrac{\partial u_\theta}{\partial z} + \dfrac{u_r u_\theta}{r} \\
     a_z &= \dfrac{\partial u_z}{\partial t} + u_r \dfrac{\partial u_z}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_z}{\partial \theta} + u_z\dfrac{\partial u_z}{\partial z}
 \end{align*}$$
+  </div>
+</div>
 
+<div class="equation-box">
+  <h4><strong>Acceleration in Spherical Coordinates</strong></h4>
+  <div>
 <p> For spherical coordinates, \( \mathbf{a}=a_r \mathbf{e}_r + a_\theta 
 \mathbf{e}_\theta + a_\phi \mathbf{e}_\phi \) </p>
 
@@ -937,6 +998,8 @@ $$\begin{align*}
     a_\theta &=\dfrac{\partial u_\theta}{\partial t}+u_r \dfrac{\partial u_\theta}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_\theta}{\partial \theta} + \dfrac{u_\phi}{r \sin \theta} \dfrac{\partial u_\theta}{\partial \phi} + \dfrac{u_r u_\theta}{r}-\dfrac{u_\phi^2}{r}\cot \theta \\
     a_\phi &= \dfrac{\partial u_\phi}{\partial t} + u_r \dfrac{\partial u_\phi}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_\phi}{\partial \theta} + \dfrac{u_\phi}{r \sin \theta}\dfrac{\partial u_\phi}{\partial \phi} + \dfrac{u_r u_\phi}{r} + \dfrac{u_\theta u_\phi}{r} \cot \theta 
 \end{align*}$$
+  </div>
+</div>
 
 #### Continuity
 
@@ -948,18 +1011,30 @@ $$\begin{align*}
     \dfrac{\partial \rho}{\partial t } + \dfrac{1}{\sqrt{g}}\dfrac{\partial}{\partial x^i} \bigg[ \sqrt{g} \ \rho u^i \bigg] &= 0
 \end{align*}$$
 
-In physical components of the velocity for an orthogonal coordinate system,
-
-$$\boxed{\dfrac{\partial \rho}{\partial t} + \sum_i \dfrac{1}{h_1 h_2 h_3} \dfrac{\partial}{\partial x^i} \left[\dfrac{h_1 h_2 h_3}{h_i} \rho u(i) \right]=0}
+<div class="equation-box">
+  <h4><strong> Continuity Equation in Orthogonal Coordinates</strong></h4>
+  <div>
+$$\dfrac{\partial \rho}{\partial t} + \sum_i \dfrac{1}{h_1 h_2 h_3} \dfrac{\partial}{\partial x^i} \left[\dfrac{h_1 h_2 h_3}{h_i} \rho u(i) \right]=0
 \notag$$
+  </div>
+</div>
 
-In cylindrical coordinates,
+<div class="equation-box">
+  <h4><strong>Continuity Equation in Cylindrical Coordinates</strong></h4>
+  <div>
 
 $$\dfrac{\partial \rho}{\partial t} + \dfrac{1}{r} \dfrac{\partial}{\partial r}(r \rho u_r) + \dfrac{1}{r}\dfrac{\partial}{\partial \theta}(\rho u_\theta) + \dfrac{\partial}{\partial z}(\rho u_z)=0 \notag$$
+  </div>
+</div>
 
-In spherical coordinates,
+<div class="equation-box">
+  <h4><strong>Continuity Equation in Spherical Coordinates</strong></h4>
+  <div>
 
 $$\dfrac{\partial \rho}{\partial t} + \dfrac{1}{r^2} \dfrac{\partial}{\partial r} \left(r^2 \rho u_r \right) + \dfrac{1}{r \sin \theta} \dfrac{\partial}{\partial \theta} (\sin \theta \ \rho u_\theta) + \dfrac{1}{r \sin \theta} \dfrac{\partial}{\partial \phi} (\rho u_\phi)=0 \notag$$
+
+  </div>
+</div>
 
 #### Momentum Equation 
 
@@ -968,7 +1043,7 @@ $$\rho \mathbf{a} = \rho \mathbf{f} - \nabla p + (\lambda + \mu) \nabla (\nabla 
 To make things simpler on me, let's just focus on the incompressible case. The above formula then reduces to, 
 
 $$\begin{equation*}
-    \dfrac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} = \mathbf{f}-\dfrac{\nabla p}{\rho} + \nu \nabla^2 \mathbf{u} 
+    \boxed{\dfrac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} = \mathbf{f}-\dfrac{\nabla p}{\rho} + \nu \nabla^2 \mathbf{u}}
 \end{equation*}$$
 
 <div class="equation-box">
