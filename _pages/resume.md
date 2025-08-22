@@ -42,23 +42,7 @@ redirect_from:
     <span style="font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem;">
       University of California, Irvine — BS in Aerospace Engineering, GPA: 3.4
     </span>
-    <a href="/files/AerospaceBS.pdf"
-       style="
-         background: linear-gradient(135deg, #4a90e2, #357abd);
-         color: white;
-         padding: 8px 14px;
-         border-radius: 5px;
-         font-weight: 600;
-         font-size: 0.9rem;
-         text-decoration: none;
-         white-space: nowrap;
-         display: inline-flex;
-         align-items: center;
-         gap: 6px;
-         transition: background 0.3s ease, transform 0.2s ease;
-       "
-       onmouseover="this.style.background='linear-gradient(135deg, #5aa0f2, #468acc)'; this.style.transform='translateY(-3px)';"
-       onmouseout="this.style.background='linear-gradient(135deg, #4a90e2, #357abd)'; this.style.transform='translateY(0)';">
+    <a href="/files/AerospaceBS.pdf" class="button-gradient">
       📄 <span>Degree PDF</span>
     </a>
   </div>
@@ -150,23 +134,7 @@ redirect_from:
   </h2>
   <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
     <span style="font-weight: 600;">SOLIDWORKS CAD Design Associate (CSWA)</span>
-    <a href="/files/CSWA_Certification.pdf"
-       style="
-         background: linear-gradient(135deg, #4a90e2, #357abd);
-         color: white;
-         padding: 6px 14px;
-         border-radius: 5px;
-         font-weight: 700;
-         font-size: 0.85rem;
-         text-decoration: none;
-         white-space: nowrap;
-         display: inline-flex;
-         align-items: center;
-         gap: 6px;
-         transition: background 0.3s ease, transform 0.2s ease;
-       "
-       onmouseover="this.style.background='linear-gradient(135deg, #5aa0f2, #468acc)'; this.style.transform='translateY(-3px)';"
-       onmouseout="this.style.background='linear-gradient(135deg, #4a90e2, #357abd)'; this.style.transform='translateY(0)';">
+    <a href="/files/CSWA_Certification.pdf" class="button-gradient">
       📄 View
     </a>
   </div>

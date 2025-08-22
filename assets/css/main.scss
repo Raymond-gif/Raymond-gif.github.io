@@ -33,42 +33,90 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 
-.custom-collapse {
-  border: 2px solid #888;
-  border-radius: 6px;
-  background-color: #f9f9f9;
-  margin: 1rem 0;
-  padding: 0.5rem;
+.button-gradient {
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #4a90e2, #357abd);
+  color: white;
+  font-weight: bold;
+  text-decoration: none !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
+/* Hover effect */
+.button-gradient:hover {
+  background: linear-gradient(135deg, #5aa0f2, #468acc);
+  transform: translateY(-3px);
+}
+
+.custom-collapse {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  margin: 1rem 0;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+/* --- Summary (the clickable header) --- */
 .custom-collapse summary {
   cursor: pointer;
-  font-weight: bold;
-  font-size: 1.1rem;
-  background-color: #ddd;
-  padding: 0.4rem 0.6rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  font-size: 1.05rem;
+  background-color: #e9ecef;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
   list-style: none;
+  transition: background-color 0.25s ease;
+  position: relative;
 }
 
+/* Add a custom toggle arrow */
+.custom-collapse summary::after {
+  content: "▸";
+  font-size: 0.9rem;
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.25s ease;
+}
+
+/* Rotate arrow when open */
+.custom-collapse[open] summary::after {
+  transform: rotate(90deg);
+}
+
+/* Hover effect */
 .custom-collapse summary:hover {
-  background-color: #ccc;
+  background-color: #d8dee3;
 }
 
+/* Active/open state */
 .custom-collapse[open] summary {
-  background-color: #bbb;
+  background-color: #cfd6dc;
 }
 
+/* --- Collapsible Content --- */
 .custom-collapse .collapse-content {
   margin-top: 0.5rem;
-  overflow-x: auto;      /* Allows horizontal scroll if content is too wide */
-  white-space: nowrap;   /* Keeps content on one line, no wrapping */
   padding: 0.5rem;
+  border-top: 1px solid #ddd;
+  overflow-x: auto;      /* Allows scroll for long equations/code */
+  overflow-y: hidden;
+  line-height: 1.5;      /* More readable */
 }
 
+/* Scrollbar polish */
+.custom-collapse .collapse-content::-webkit-scrollbar {
+  height: 6px;
+}
+.custom-collapse .collapse-content::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 3px;
+}
 
-/* === Equation Box Styling === */
 .equation-box {
   background-color: #e6f0ff;
   border: 2px solid #2a4d8f;
@@ -78,57 +126,26 @@
   margin: 1em auto;
   overflow-x: auto;
   overflow-y: hidden;  
-  word-wrap: break-word;
+  text-align: center;
+  line-height: 1.5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;              
+  scrollbar-color: #bbb transparent;  
 }
 
-.equation-box h3 {
-  color: #2a4d8f;
-  margin-top: 0;
-}
-
+.equation-box h3,
 .equation-box h4 {
   color: #2a4d8f;
   margin-top: 0;
 }
 
-/* === DARK MODE OVERRIDES === */
-html[data-theme="dark"] {
-  .custom-collapse {
-    background-color: #2f2f2f;
-    border-color: #aaa;
-    color: #fff; // make text readable
-  }
-
-  .custom-collapse summary {
-    background-color: #3a3a3a;
-    color: #fff;
-  }
-
-  .custom-collapse summary:hover {
-    background-color: #4a4a4a;
-  }
-
-  .custom-collapse[open] summary {
-    background-color: #5a5a5a;
-  }
-
-  .custom-collapse .collapse-content {
-    color: #ddd;
-  }
-
-  .equation-box {
-    background-color: #1e2a3a;  // dark blue-gray background
-    border-color: #4a90e2;      // keep a blue border
-    color: #fff;                // white text
-  }
-
-  .equation-box h3 {
-    color: #90caff;
-  }
-
-  .equation-box h4 {
-    color: #90caff;
-  }
+.equation-box::-webkit-scrollbar {
+  height: 6px;
+}
+.equation-box::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 3px;
 }
 
 .portfolio-grid {

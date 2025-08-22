@@ -6,6 +6,7 @@ author_profile: false
 layout: single
 image: /images/tensorsimage.png
 caption: "Photo credit: Wikipedia"
+toc: true
 order: 4
 ---
 
@@ -215,6 +216,15 @@ $$\begin{align*}
 \end{align*}$$
 
 $$\boxed{\rho \mathbf{a} = \rho \mathbf{f} - \nabla p + (\lambda + \mu) \nabla (\nabla \cdot \mathbf{u} ) + \mu \nabla^2 \mathbf{u}} \notag$$
+
+<div class="equation-box">
+  <h4><strong>Navier Stokes Equation for Newtonian Fluid (in Vector Form) </strong></h4>
+  <div>
+
+$$\rho \left( \dfrac{\partial \mathbf u}{\partial t} + \mathbf{u \cdot \nabla \mathbf{u}} \right) = \rho \mathbf{f} - \nabla p + (\lambda + \mu) \nabla (\nabla \cdot \mathbf{u} ) + \mu \nabla^2 \mathbf{u} \notag$$
+  </div>
+</div>
+
 
 ## Covariant and Contravariant Base Vectors
 
@@ -651,19 +661,29 @@ $$
   </div>
 </div>
 
-In cylindrical coordinates,
+<div class="equation-box">
+  <h4><strong>Divergence in Cylindrical Coordinates</strong></h4>
+  <div>
 
 $$\mathbf{A}=A_r \mathbf{e}_r + A_\theta \mathbf{e}_\theta + A_z \mathbf{e}_z \notag
 $$
 
 $$\nabla \cdot \mathbf{A}=\dfrac{1}{r} \dfrac{\partial }{\partial r} (r A_r) + \dfrac{1}{r} \dfrac{\partial A_\theta}{\partial \theta} + \dfrac{\partial A_z}{\partial z}\notag$$
 
-In spherical coordinates, 
+  </div>
+</div>
+
+<div class="equation-box">
+  <h4><strong>Divergence in Spherical Coordinates </strong></h4>
+  <div>
 
 $$\mathbf{A}=A_r \mathbf{e}_r + A_\theta \mathbf{e}_\theta + A_\phi \mathbf{e}_\phi \notag$$
 
 $$\nabla \cdot \mathbf{A}=\dfrac{1}{r^2} \dfrac{\partial }{\partial r} (r^2 A_r) + \dfrac{1}{r \sin \theta} \dfrac{\partial}{\partial \theta} (\sin \theta A_\theta) + \dfrac{1}{r \sin \theta} \dfrac{\partial A_\phi}{\partial \phi} \notag
 $$
+
+  </div>
+</div>
 
 ### Scalar Laplacian
 
