@@ -188,35 +188,37 @@ $$\begin{align*}
 
 This system of equations forms a tridiagonal matrix. 
 
-$$
-\begin{bmatrix}
--2 \bigg(h^2B_1 + 1 \bigg) & 1 - \dfrac{h}{2}A_1  & 0   & 0   \\
-1+\dfrac{h}{2}A_2  & -2 \bigg(h^2 B_2 + 1\bigg) & 1-\dfrac{h}{2}A_2 & 0   \\
-0   & 1+\dfrac{h}{2}A_3 & -2 \bigg(h^2 B_3 + 1 \bigg) & 1 - \dfrac{h}{2}A_3  \\
-0   & 0   & 1+\dfrac{h}{2}A_4  & -2 \bigg(h^2 B_4 +1 \bigg)
-\end{bmatrix}
-\begin{bmatrix}
-u_1 \\
-u_2 \\
-u_3 \\
-u_4
-\end{bmatrix}
-+
-\begin{bmatrix}
-0 \\
-0 \\
-0 \\
-\dfrac{h}{2} A_4-1
-\end{bmatrix}
-=
-\begin{bmatrix}
-B_1 u_1^2 h^2 \\
-B_2 u_2^2 h^2 \\
-B_3 u_3^2 h^2 \\
-B_4 u_4^2 h^2
-\end{bmatrix}
-\notag
-$$
+<div class = "math-container">
+    $$
+    \begin{bmatrix}
+    -2 \bigg(h^2B_1 + 1 \bigg) & 1 - \dfrac{h}{2}A_1  & 0   & 0   \\
+    1+\dfrac{h}{2}A_2  & -2 \bigg(h^2 B_2 + 1\bigg) & 1-\dfrac{h}{2}A_2 & 0   \\
+    0   & 1+\dfrac{h}{2}A_3 & -2 \bigg(h^2 B_3 + 1 \bigg) & 1 - \dfrac{h}{2}A_3  \\
+    0   & 0   & 1+\dfrac{h}{2}A_4  & -2 \bigg(h^2 B_4 +1 \bigg)
+    \end{bmatrix}
+    \begin{bmatrix}
+    u_1 \\
+    u_2 \\
+    u_3 \\
+    u_4
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+    0 \\
+    0 \\
+    0 \\
+    \dfrac{h}{2} A_4-1
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    B_1 u_1^2 h^2 \\
+    B_2 u_2^2 h^2 \\
+    B_3 u_3^2 h^2 \\
+    B_4 u_4^2 h^2
+    \end{bmatrix}
+    \notag
+    $$
+</div>
 
 ### First Loop: k=1
 
@@ -290,39 +292,41 @@ $$\mathbf{A^{(1)}}= \begin{bmatrix}
     1.5625
 \end{bmatrix} \notag$$
 
-$$
-\begin{bmatrix}
--4 & 1.09528 & 0      & 0      \\
-0.8291 & -2.5 & 1.1709 & 0      \\
-0      & 0.8518 & -2.222 & 1.1482 \\
-0      & 0      & 0.8779 & -2.125
-\end{bmatrix}
-\begin{bmatrix}
-u_1^{(2)} \\
-u_2^{(2)} \\
-u_3^{(2)} \\
-u_4^{(2)}
-\end{bmatrix}
-=
-\begin{bmatrix}
-0.04 \\
-0.04 \\
-0.04 \\
-1.1621
-\end{bmatrix} \xrightarrow{\quad\quad\quad\quad} 
-\begin{bmatrix}
+<div class = "math-container">
+    $$
+    \begin{bmatrix}
+    -4 & 1.09528 & 0      & 0      \\
+    0.8291 & -2.5 & 1.1709 & 0      \\
+    0      & 0.8518 & -2.222 & 1.1482 \\
+    0      & 0      & 0.8779 & -2.125
+    \end{bmatrix}
+    \begin{bmatrix}
     u_1^{(2)} \\
     u_2^{(2)} \\
     u_3^{(2)} \\
     u_4^{(2)}
-\end{bmatrix}
-= \begin{bmatrix}
-    - 0.0897 \\
-    -0.2912 \\
-    -0.5241 \\
-    -0.7634
-\end{bmatrix} \notag
-$$
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    0.04 \\
+    0.04 \\
+    0.04 \\
+    1.1621
+    \end{bmatrix} \xrightarrow{\quad\quad\quad\quad} 
+    \begin{bmatrix}
+        u_1^{(2)} \\
+        u_2^{(2)} \\
+        u_3^{(2)} \\
+        u_4^{(2)}
+    \end{bmatrix}
+    = \begin{bmatrix}
+        - 0.0897 \\
+        -0.2912 \\
+        -0.5241 \\
+        -0.7634
+    \end{bmatrix} \notag
+    $$
+</div>
 
 With this updated \\( \mathbf{u}^{(2)}\\) vector, I repeat the same process as I did above.
 

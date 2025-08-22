@@ -571,17 +571,19 @@ Importantly, Eq. \ref{characteristicequationfinal} shows that the physical chara
 
 Now, let's go to N = 0 in Eq. \ref{numerator-denominator}.
 
-$$
-\begin{align}
-    \dfrac{dv}{du} &=\dfrac{1}{dy/dx}-\dfrac{2B}{C} \nonumber \\ 
-    &= \dfrac{\dfrac{u^2}{a^2}-1}{\dfrac{uv}{a^2}\pm \sqrt{\dfrac{u^2 + v^2}{a^2}-1}}+\dfrac{\dfrac{2uv}{a^2}}{1-\dfrac{v^2}{a^2}} = \dfrac{\left(\dfrac{u^2}{a^2}-1 \right) \left(1-\dfrac{v^2}{a^2} \right)+\dfrac{2uv}{a^2} \left( \dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2+v^2}{a^2}-1}\right)}{\left( \dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2 +v^2}{a^2}-1} \right) \left(1-\dfrac{v^2}{a^2} \right)} \nonumber \\ 
-    &= \dfrac{\left(\dfrac{u v}{a^2}\right)^2 \pm \dfrac{2uv}{a^2}\sqrt{\dfrac{u^2+v^2}{a^2}-1} + \left(\dfrac{u^2 +v^2}{a^2}-1 \right)}{\left( \dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2 +v^2}{a^2}-1} \right) \left(1-\dfrac{v^2}{a^2} \right)}= \dfrac{\left[\dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2+v^2}{a^2}-1} \right]^2}{\left( \dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2 +v^2}{a^2}-1} \right) \left(1-\dfrac{v^2}{a^2} \right)} \nonumber 
-\end{align}
-$$
+<div class = "math-container">
+  $$
+  \begin{align}
+      \dfrac{dv}{du} &=\dfrac{1}{dy/dx}-\dfrac{2B}{C} \nonumber \\ 
+      &= \dfrac{\dfrac{u^2}{a^2}-1}{\dfrac{uv}{a^2}\pm \sqrt{\dfrac{u^2 + v^2}{a^2}-1}}+\dfrac{\dfrac{2uv}{a^2}}{1-\dfrac{v^2}{a^2}} = \dfrac{\left(\dfrac{u^2}{a^2}-1 \right) \left(1-\dfrac{v^2}{a^2} \right)+\dfrac{2uv}{a^2} \left( \dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2+v^2}{a^2}-1}\right)}{\left( \dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2 +v^2}{a^2}-1} \right) \left(1-\dfrac{v^2}{a^2} \right)} \nonumber \\ 
+      &= \dfrac{\left(\dfrac{u v}{a^2}\right)^2 \pm \dfrac{2uv}{a^2}\sqrt{\dfrac{u^2+v^2}{a^2}-1} + \left(\dfrac{u^2 +v^2}{a^2}-1 \right)}{\left( \dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2 +v^2}{a^2}-1} \right) \left(1-\dfrac{v^2}{a^2} \right)}= \dfrac{\left[\dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2+v^2}{a^2}-1} \right]^2}{\left( \dfrac{uv}{a^2} \pm \sqrt{\dfrac{u^2 +v^2}{a^2}-1} \right) \left(1-\dfrac{v^2}{a^2} \right)} \nonumber 
+  \end{align}
+  $$
 
-$$\begin{equation*}
-\boxed{\dfrac{dv}{du} = \dfrac{-\dfrac{uv}{a^2}\mp \sqrt{\dfrac{u^2+v^2}{a^2}-1}}{\dfrac{v^2}{a^2}-1}}
-\end{equation*}$$
+  $$\begin{equation*}
+  \boxed{\dfrac{dv}{du} = \dfrac{-\dfrac{uv}{a^2}\mp \sqrt{\dfrac{u^2+v^2}{a^2}-1}}{\dfrac{v^2}{a^2}-1}}
+  \end{equation*}$$
+</div>
 
 Converting to polar coordinates, 
 

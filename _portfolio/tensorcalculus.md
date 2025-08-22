@@ -6,7 +6,6 @@ author_profile: false
 layout: single
 image: /images/tensorsimage.png
 caption: "Photo credit: Wikipedia"
-toc: true
 order: 4
 ---
 
@@ -762,16 +761,19 @@ $$\begin{align*}
 
 Let's consider orthogonal coordinates, where \\( g^{jk} \\) is only nonzero when \\( k=j \\) and \\( g^{jj}=1/h_j^2 \\). Recall also the definition of physical components of covariant vectors, \\( u_i=h_i u(i) \\)
 
+<div class="math-container">
 In such case, 
 
-$$\begin{align*}
-    L_i = h_i L(i) = \sum_j \dfrac{1}{h_j^2} \left[\dfrac{\partial^2 u_i}{\partial x^j \partial x^j}- \left(\Gamma^m_{ij} \dfrac{\partial u_m}{\partial x^j} + \Gamma^p_{ij} \dfrac{\partial u_p}{\partial x^j} + \Gamma^p_{jj} \dfrac{\partial u_i}{\partial x^p} \right)- \left( \dfrac{\partial \Gamma^m_{ij}}{\partial x^j}-\Gamma^m_{pj} \Gamma^p_{ij}-\Gamma^m_{ip} \Gamma^p_{jj}\right) u_m\right] 
-\end{align*}$$
+  $$\begin{align*}
+      L_i = h_i L(i) = \sum_j \dfrac{1}{h_j^2} \left[\dfrac{\partial^2 u_i}{\partial x^j \partial x^j}- \left(\Gamma^m_{ij} \dfrac{\partial u_m}{\partial x^j} + \Gamma^p_{ij} \dfrac{\partial u_p}{\partial x^j} + \Gamma^p_{jj} \dfrac{\partial u_i}{\partial x^p} \right)- \left( \dfrac{\partial \Gamma^m_{ij}}{\partial x^j}-\Gamma^m_{pj} \Gamma^p_{ij}-\Gamma^m_{ip} \Gamma^p_{jj}\right) u_m\right] 
+  \end{align*}$$
 
-Changing dummy indices, 
+  Changing dummy indices, 
 
-$$h_i L(i) = \sum_j \dfrac{1}{h_j^2} \left[\dfrac{\partial^2 u_i}{\partial x^j \partial x^j}- 2\Gamma^m_{ij} \dfrac{\partial u_m}{\partial x^j} - \Gamma^m_{jj} \dfrac{\partial u_i}{\partial x^m} - \left( \dfrac{\partial \Gamma^m_{ij}}{\partial x^j}-\Gamma^m_{ip} \Gamma^p_{jj}-\Gamma^m_{pj} \Gamma^p_{ij}\right) u_m\right] 
-\notag$$
+  $$h_i L(i) = \sum_j \dfrac{1}{h_j^2} \left[\dfrac{\partial^2 u_i}{\partial x^j \partial x^j}- 2\Gamma^m_{ij} \dfrac{\partial u_m}{\partial x^j} - \Gamma^m_{jj} \dfrac{\partial u_i}{\partial x^m} - \left( \dfrac{\partial \Gamma^m_{ij}}{\partial x^j}-\Gamma^m_{ip} \Gamma^p_{jj}-\Gamma^m_{pj} \Gamma^p_{ij}\right) u_m\right] 
+  \notag$$
+
+</div>
 
 And finally, using physical components, 
 

@@ -368,7 +368,7 @@ The relation between these two variables is plotted below,
 
 With the relation between \\( \lambda \\) and \\( \Lambda \\), I can now solve for M. Recall that \\( M = 2T-2\lambda(H+2) \\). Since T, \\( \lambda \\), and H are all known as functions of \\( \Lambda \\), M can be found as a function of \\( \Lambda \\).
 
-<div style="overflow-x:auto;">
+<div class = "math-container">
 $$\begin{equation*}
     \boxed{M = -2\,{\left(\dfrac{\Lambda }{6}+2\right)}\,{\left(\dfrac{\Lambda^2 }{9072}+\dfrac{\Lambda }{945}-\dfrac{37}{315}\right)}-2\,\Lambda \,{\left(\dfrac{\dfrac{\Lambda }{120}-\dfrac{3}{10}}{\dfrac{\Lambda^2 }{9072}+\dfrac{\Lambda }{945}-\dfrac{37}{315}}+2\right)}\,{\left(\dfrac{\Lambda^2 }{9072}+\dfrac{\Lambda }{945}-\dfrac{37}{315}\right)}^2}
 \end{equation*}$$
