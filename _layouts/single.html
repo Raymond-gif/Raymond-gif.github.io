@@ -106,9 +106,8 @@ layout: default
       </div>
     </div>
   {% endif %}
-</div>
 
-<script>
+  <script>
 document.addEventListener("DOMContentLoaded", () => {
   // grab all headings that get included in the TOC
   const sections = document.querySelectorAll("h1[id], h2[id], h3[id]");
@@ -134,5 +133,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", onScroll);
 });
 </script>
+
+</div>
+
 
 

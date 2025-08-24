@@ -7,8 +7,6 @@ layout: single
 image: /images/tensorsimage.png
 caption: "Photo credit: Wikipedia"
 toc: true
-toc_sticky: true       # keeps TOC fixed (we already did this with CSS)
-toc_scroll: true       # highlights current section while scrolling
 order: 4
 ---
 {% include toc %}
