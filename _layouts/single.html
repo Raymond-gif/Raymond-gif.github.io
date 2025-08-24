@@ -108,3 +108,31 @@ layout: default
   {% endif %}
 </div>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // grab all headings that get included in the TOC
+  const sections = document.querySelectorAll("h1[id], h2[id], h3[id]");
+  const navLinks = document.querySelectorAll(".sidebar__right .toc a");
+
+  function onScroll() {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120; // adjust if you have sticky header
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", onScroll);
+});
+</script>
+
+

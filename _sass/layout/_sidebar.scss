@@ -71,7 +71,7 @@
     width: 200px;                   // fixed width
     z-index: 10;
     overflow-y: auto;              // allows scrolling inside sidebar if content is long
-    max-height: calc(70vh);        // max height = 80% of viewport
+    max-height: calc(70vh);        // max height = 70% of viewport
   }
 
   @include breakpoint($x-large) {
@@ -116,6 +116,15 @@
   /* Firefox */
   scrollbar-width: thin;           // thin scrollbar
   scrollbar-color: rgba(0,0,0,0.3) transparent; // thumb + track
+}
+
+/* Highlight current section in sidebar TOC */
+.sidebar__right .toc a.active {
+  font-weight: bold;
+  color: #007acc;              /* pick your highlight color */
+  border-left: 3px solid #007acc;
+  padding-left: 6px;
+  transition: all 0.2s ease;   /* smooth highlight change */
 }
 
 /*
