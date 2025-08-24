@@ -219,3 +219,12 @@
   text-align: center;
   margin-top: 4px;
 }
+
+/* Highlight current section in sidebar TOC */
+.sidebar__right .toc a.active {
+  font-weight: bold;
+  color: #007acc;              /* pick your highlight color */
+  border-left: 3px solid #007acc;
+  padding-left: 6px;
+  transition: all 0.2s ease;   /* smooth highlight change */
+}
