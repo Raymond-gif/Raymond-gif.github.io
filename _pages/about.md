@@ -2,7 +2,6 @@
 permalink: /
 layout: splash
 title: About Me 
-hidden: true
 header:
   overlay_image: fluidheader.jpg
 redirect_from: 

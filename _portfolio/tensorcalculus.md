@@ -206,7 +206,7 @@ $$\begin{align*}
     \dfrac{\partial \rho}{\partial t} +  \dfrac{\partial}{\partial x_i} \bigg(\rho u_i \bigg) &=0
 \end{align*}$$
 
-### Momentum
+### Momentum Equation and Its Various Forms
 
 Note: for the divergence of the stress tensor, I used the boxed formula derived above in the **Stress and Constitutive Equations** section.
 
