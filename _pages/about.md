@@ -1,8 +1,10 @@
 ---
 permalink: /
-layout: single
-title: "About me: Raymond Dunn"
-author_profile: false
+layout: splash
+title: About Me 
+hidden: true
+header:
+  overlay_image: fluidheader.jpg
 redirect_from: 
   - /about/
   - /about.html

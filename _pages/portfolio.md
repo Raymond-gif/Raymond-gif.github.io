@@ -1,8 +1,9 @@
 ---
-layout: archive
+layout: splash
 title: "Portfolio"
 permalink: /portfolio/
-author_profile: false
+header:
+  overlay_image: fluidimage2.jpg
 ---
 
 {% include base_path %}
