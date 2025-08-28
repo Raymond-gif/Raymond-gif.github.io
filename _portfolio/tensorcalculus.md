@@ -52,7 +52,7 @@ In general, a tensor \\( \mathbf{A} \\) of order n transforms as,
 $$\bar{A}_{pq...t} = l_{ip} l_{jq} ...l_{nt} A_{ij...n} \notag
 $$
 
-## Eigenvalues and Eigenvectors of a Cartesian Tensor
+### Eigenvalues and Eigenvectors of a Cartesian Tensor
 
 $$\begin{align*}
     \mathbf{A} \cdot \mathbf{x} &= \lambda \mathbf{x} \\
@@ -109,7 +109,7 @@ $$
 
 Therefore, when changing the coordinate system so that it is aligned with the normalized eigenvectors, also known as the **principal directions** of \\( \mathbf{A}\\), the tensor is in diagonal form. 
 
-## Invariants of a Cartesian Tensor
+### Invariants of a Cartesian Tensor
 
 Let's evaluate \\( \det (\mathbf{A}-\lambda \mathbf{I})=0 \\). In matrix form, this is,
 
@@ -225,7 +225,6 @@ $$\boxed{\rho \mathbf{a} = \rho \mathbf{f} - \nabla p + (\lambda + \mu) \nabla (
 $$\rho \left( \dfrac{\partial \mathbf u}{\partial t} + \mathbf{u \cdot \nabla \mathbf{u}} \right) = \rho \mathbf{f} - \nabla p + (\lambda + \mu) \nabla (\nabla \cdot \mathbf{u} ) + \mu \nabla^2 \mathbf{u} \notag$$
   </div>
 </div>
-
 
 ## Covariant and Contravariant Base Vectors
 

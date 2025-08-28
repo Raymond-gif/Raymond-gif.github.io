@@ -363,3 +363,192 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
       display: none;
     }
   }
+
+/* ================================
+   Custom Collapsible Section
+   ================================ */
+.custom-collapse {
+  border: 1px solid #ccc;                /* Light border around the whole box */
+  border-radius: 8px;                    /* Rounded corners */
+  background-color: #fafafa;             /* Light gray background */
+  margin: 1rem 0;                        /* Vertical spacing */
+  padding: 0.5rem 0.75rem;               /* Inner padding */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);/* Soft shadow for depth */
+  transition: all 0.3s ease;             /* Smooth transition on state change */
+}
+
+/* --- Summary (clickable header for collapsible) --- */
+.custom-collapse summary {
+  cursor: pointer;                       /* Pointer cursor to indicate clickability */
+  font-weight: 600;                      /* Bold text */
+  font-size: 1.05rem;                    /* Slightly larger font */
+  background-color: #e9ecef;             /* Light gray background */
+  padding: 0.5rem 0.75rem;               /* Inner spacing */
+  border-radius: 6px;                    /* Rounded corners */
+  list-style: none;                      /* Remove default marker (triangle/arrow) */
+  transition: background-color 0.25s ease;
+  position: relative;                    /* Needed for custom arrow positioning */
+}
+
+/* --- Add a custom toggle arrow --- */
+.custom-collapse summary::after {
+  content: "▸";                          /* Right arrow character */
+  font-size: 0.9rem;
+  position: absolute;
+  right: 1rem;                           /* Place on the far right */
+  transition: transform 0.25s ease;      /* Smooth rotation animation */
+}
+
+/* --- Rotate arrow when open --- */
+.custom-collapse[open] summary::after {
+  transform: rotate(90deg);              /* Arrow points down when expanded */
+}
+
+/* --- Hover effect for header --- */
+.custom-collapse summary:hover {
+  background-color: #d8dee3;             /* Darker gray when hovering */
+}
+
+/* --- Active/open state (header style when open) --- */
+.custom-collapse[open] summary {
+  background-color: #cfd6dc;
+}
+
+/* --- Collapsible Content Area --- */
+.custom-collapse .collapse-content {
+  margin-top: 0.5rem;                    /* Space above content */
+  padding: 0.5rem;
+  border-top: 1px solid #ddd;            /* Divider line */
+  overflow-x: auto;                      /* Horizontal scroll for wide content */
+  overflow-y: hidden;                    /* Prevent vertical scrollbar */
+  line-height: 1.5;                      /* Improve readability */
+}
+
+/* --- Scrollbar styling for content --- */
+.custom-collapse .collapse-content::-webkit-scrollbar {
+  height: 6px;
+}
+.custom-collapse .collapse-content::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 3px;
+}
+
+/* ================================
+   Equation Box
+   ================================ */
+.equation-box {
+  background-color: #e6f0ff;             /* Light blue background */
+  border: 2px solid #2a4d8f;             /* Dark blue border */
+  padding: 1em;
+  border-radius: 8px;
+  max-width: 700px;                      /* Constrain width */
+  margin: 1em auto;                      /* Center align */
+  overflow-x: auto;                      /* Scroll horizontally if too wide */
+  overflow-y: hidden;
+  text-align: center;                    /* Center align content */
+  line-height: 1.5;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  -webkit-overflow-scrolling: touch;     /* Smooth scrolling on mobile */
+  scrollbar-width: thin;                 
+  scrollbar-color: #bbb transparent;     
+}
+
+/* --- Headings inside equation box --- */
+.equation-box h3,
+.equation-box h4 {
+  color: #2a4d8f;                        /* Match border color */
+  margin-top: 0;                         /* Remove extra spacing */
+}
+
+/* --- Scrollbar styling for equation box --- */
+.equation-box::-webkit-scrollbar {
+  height: 6px;
+}
+.equation-box::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 3px;
+}
+
+/* ================================
+   Math Container
+   ================================ */
+.math-container {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  background-color: #fafafa;
+  overflow-x: auto;                      /* Horizontal scrolling allowed */
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ================================
+   Portfolio Grid & Cards
+   ================================ */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 16px;                             /* Spacing between cards */
+}
+
+.portfolio-card {
+  background: white;
+  padding: 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+  transition: transform 0.2s ease;       /* Hover animation */
+}
+
+/* --- Lift effect on hover --- */
+.portfolio-card:hover {
+  transform: translateY(-4px);
+}
+
+/* --- Card title --- */
+.portfolio-card h3 {
+  margin: 12px 0 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  position: relative;                    /* Needed for underline effect */
+}
+
+/* --- Title link styling --- */
+.portfolio-card h3 a {
+  color: #222;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+/* --- Animated underline for links --- */
+.portfolio-card h3 a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;                              /* Hidden by default */
+  height: 2px;
+  background-color: #0066cc;
+  transition: width 0.3s ease;
+}
+
+/* --- Show underline on hover --- */
+.portfolio-card h3 a:hover::after {
+  width: 100%;
+}
+
+/* --- Image container inside card --- */
+.portfolio-card figure {
+  margin: 0;
+  position: relative;
+}
+
+/* --- Caption under card image --- */
+.portfolio-card figcaption {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+  margin-top: 4px;
+}
