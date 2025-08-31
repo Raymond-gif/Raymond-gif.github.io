@@ -681,4 +681,7 @@ $$ \boxed{\lambda = 0.45  G(x/R)\cos(x/R)} \notag $$
 
 <p align="center"><b>Figure 14:</b> Thwaites Method: Analysis of a circular cylinder</p>
 
+<a href="/portfolio/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
+  ← Back to Portfolio
+</a>
 
