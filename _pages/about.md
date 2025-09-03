@@ -9,6 +9,9 @@ redirect_from:
   - /about.html
 ---
 
+<img src="/images/profile.jpg" alt="My Profile" 
+     style="width:80%; max-width:800px; display:block; margin:20px auto;">
+
 My name is Raymond Dunn. I recently received my B.S. in Aerospace Engineering during Spring 2024. I am interested in fluid dynamics and continuum mechanics, and I am currently doing work on the tensor formulations of the fundamental equations governing fluid flow. Tensors capture the physical nature of fluid flow, irrespective of the coordinate system. By investigating how changing coordinate systems influence the form of the equations of motion, I hope to gain more insight into the mathematical structure of tensors.
 
 I have also done work in compressible flow, in particular using the Method of Characteristics to analyze 2D flow through an arbitrary diverging channel. In the future, I hope to dive more in Computational Fluid Dynamics (CFD).
@@ -22,5 +25,4 @@ You can check out my recent work in the portfolio section.
 <a href="/portfolio/" class="button-gradient">
   📂 View My Portfolio
 </a>
-
 
