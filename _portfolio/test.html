@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky TOC Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+    }
+
+    /* Main content area */
+    .content {
+      flex: 1;
+      padding: 2rem;
+      max-width: 700px;
+    }
+
+    section {
+      margin-bottom: 100vh; /* just for demo scrolling */
+    }
+
+    /* TOC sidebar */
+    .toc {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 250px;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 1rem;
+      background: #f9f9f9;
+      border-left: 1px solid #ddd;
+    }
+
+    .toc ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .toc li {
+      margin: 0.5rem 0;
+    }
+
+    .toc a {
+      text-decoration: none;
+      color: #444;
+    }
+
+    /* Highlight active section */
+    .toc a.active {
+      font-weight: bold;
+      color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <h1>My Document</h1>
+    <section id="intro"><h2>Introduction</h2><p>Some content...</p></section>
+    <section id="chapter1"><h2>Chapter 1</h2><p>Lots of content...</p></section>
+    <section id="chapter2"><h2>Chapter 2</h2><p>Lots of content...</p></section>
+    <section id="conclusion"><h2>Conclusion</h2><p>Some closing remarks...</p></section>
+  </div>
+
+  <nav class="toc">
+    <h3>Table of Contents</h3>
+    <ul>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#chapter1">Chapter 1</a></li>
+      <li><a href="#chapter2">Chapter 2</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('.toc a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Highlight active section
+    const sections = document.querySelectorAll("section");
+    const tocLinks = document.querySelectorAll(".toc a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100; // adjust threshold
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      tocLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
