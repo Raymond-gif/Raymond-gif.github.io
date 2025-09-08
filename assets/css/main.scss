@@ -34,4 +34,8 @@
 @import "vendor/magnific-popup/magnific-popup";
 @import "custom";
 
-
+.single .content {
+    max-width: 1200px;  /* increase from 900px to whatever you want */
+    margin: 3rem auto;  /* center the content */
+    padding: 0 2rem;    /* optional: add side padding */
+}

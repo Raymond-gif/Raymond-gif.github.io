@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: splash
 title: "Resume"
 permalink: /resume/
 author_profile: false
@@ -17,7 +17,7 @@ redirect_from:
 
 <section style="
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  max-width: 700px;
+  max-width: none;
   margin-left: 0;
   margin-right: 0;
   padding-left: 16px;  /* small padding so text not flush to edge */

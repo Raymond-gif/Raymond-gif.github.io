@@ -1,18 +1,19 @@
 ---
 title: "Falkner-Skan MATLAB Solution: Finite Difference Method"
 excerpt: "I walk you through my MATLAB solution to the Falkner-Skan differential equation."
-collection: portfolio
 author_profile: false
-layout: single
+layout: splash
 image: /images/velprof.png
 caption: "Photo credit: myself"
-order: 2
+header:
+  overlay_color: "#2a4d8f"   
+  hero_title: "Falkner-Skan MATLAB Solution: Finite Difference Method"
 
 ---
 
 <div style="background: #f5f5f5; border-left: 5px solid #007acc; padding: 1rem; border-radius: 8px;">
   📌 <strong>This is an addendum to my previous article.</strong>
-  <a href="/portfolio/numericalmethodsBLeqn" class="button-gradient">
+  <a href="/academics/numericalmethodsBLeqn" class="button-gradient">
     Click here
   </a>
 </div>
