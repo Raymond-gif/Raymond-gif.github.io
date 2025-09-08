@@ -11,6 +11,10 @@ header:
 
 ---
 
+<a href="/academics/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
+  ← Back to Academic Works Page
+</a>
+
 <div style="background: #f5f5f5; border-left: 5px solid #007acc; padding: 1rem; border-radius: 8px;">
   📌 <strong>This is an addendum to my previous article.</strong>
   <a href="/academics/numericalmethodsBLeqn" class="button-gradient">
@@ -455,6 +459,6 @@ end
 
 Asai Asaithambi, A second-order finite-difference method for the Falkner–Skan equation, Applied Mathematics and Computation, 2004.
 
-<a href="/portfolio/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
-  ← Back to Portfolio
+<a href="/academics/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
+  ← Back to Academic Works Page
 </a>

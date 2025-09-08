@@ -21,7 +21,7 @@ redirect_from:
 
 
 <!-- Bio Section -->
-<div style="max-width:800px; margin:0 auto; text-align:center; line-height:1.6; color:#000000;">
+<div style="max-width:none; margin:0 auto; text-align:center; line-height:1.6; color:#000000;">
   <p>Hi, I’m <strong>Raymond Dunn</strong>. I received my B.S. in Aerospace Engineering in <strong>Spring 2024</strong> and am passionate about <strong>fluid dynamics</strong> and <strong>continuum mechanics</strong>.</p>
 
   <p>I am currently exploring <strong>tensor formulations</strong> of the fundamental equations governing fluid flow. Tensors capture the physical nature of motion, independent of coordinate systems. By analyzing how coordinate transformations influence the equations of motion, I aim to deepen my understanding of the mathematical structure behind fluids.</p>

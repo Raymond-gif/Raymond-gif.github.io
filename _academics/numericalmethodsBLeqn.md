@@ -10,8 +10,11 @@ header:
   overlay_color: "#2a4d8f" 
   hero_title: "Numerical Methods in Boundary Layer Equations"
   hero_excerpt: "Solved Falkner-Skan equation using finite difference scheme and shooting method, approximated solution to boundary layer equation by using momentum integral equation, Thwaites Method"
-order: 1
 ---
+
+<a href="/academics/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
+  ← Back to Academic Works Page
+</a>
 
 ## Boundary Layer Equations + Falkner Skan
 
@@ -685,7 +688,8 @@ $$ \boxed{\lambda = 0.45  G(x/R)\cos(x/R)} \notag $$
 
 <p align="center"><b>Figure 14:</b> Thwaites Method: Analysis of a circular cylinder</p>
 
-<a href="/portfolio/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
-  ← Back to Portfolio
+<a href="/academics/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
+  ← Back to Academic Works Page
 </a>
+
 
