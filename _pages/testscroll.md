@@ -156,33 +156,36 @@ permalink: /testscroll/
 </style>
 
 <script>
-document.addEventListener("scroll", function () {
-  const links = document.querySelectorAll(".sidebar-toc a");
-  let current = "";
-  document.querySelectorAll("h2, h3, h4").forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - 130;
-    if (window.scrollY >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  links.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-
-      // Auto-scroll only if out of view
-      const toc = document.querySelector(".sidebar-toc");
-      const linkRect = link.getBoundingClientRect();
-      const tocRect = toc.getBoundingClientRect();
-
-      if (linkRect.top < tocRect.top || linkRect.bottom > tocRect.bottom) {
-        link.scrollIntoView({
-          block: "center",
-          behavior: "smooth"
-        });
+document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("scroll", function () {
+    const links = document.querySelectorAll(".sidebar-toc a");
+    let current = "";
+    document.querySelectorAll("h2, h3, h4").forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - 130;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
       }
-    }
+    });
+
+    links.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+
+        const toc = document.querySelector(".sidebar-toc");
+        if (toc) {
+          const linkRect = link.getBoundingClientRect();
+          const tocRect = toc.getBoundingClientRect();
+
+          if (linkRect.top < tocRect.top || linkRect.bottom > tocRect.bottom) {
+            link.scrollIntoView({
+              block: "center",
+              behavior: "smooth"
+            });
+          }
+        }
+      }
+    });
   });
 });
 </script>
