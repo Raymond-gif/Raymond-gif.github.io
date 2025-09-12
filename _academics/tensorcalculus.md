@@ -11,6 +11,7 @@ header:
 image: /images/tensorsimage.png
 caption: "Photo credit: Wikipedia"
 toc: true
+order: 1 
 ---
 
 <a href="/academics/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
@@ -1206,9 +1207,9 @@ $$\begin{align*}
 
 .sidebar-toc {
   position: fixed;
-  top: 100px;
-  right: 20px;
-  width: 220px;
+  top: 70px;
+  right: 10px;
+  width: 200px;
   max-height: 80vh;
   overflow-y: auto;
   padding: 1rem;
@@ -1259,8 +1260,31 @@ $$\begin{align*}
   font-weight: bold;
   color: #007acc;
 }
-</style>
 
+.sidebar-toc::-webkit-scrollbar {
+  width: 6px;              /* scrollbar width */
+}
+
+.sidebar-toc::-webkit-scrollbar-track {
+  background: transparent; /* track background */
+}
+
+.sidebar-toc::-webkit-scrollbar-thumb {
+  background: #bbb;        /* scrollbar color */
+  border-radius: 3px;      /* rounded edges */
+}
+
+.sidebar-toc::-webkit-scrollbar-thumb:hover {
+  background: #888;        /* darker on hover */
+}
+
+/* Hide TOC on screens narrower than 768px (typical tablet/phone breakpoint) */
+@media (max-width: 768px) {
+  .sidebar-toc {
+    display: none;
+  }
+}
+</style>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {

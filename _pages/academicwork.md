@@ -57,14 +57,19 @@ permalink: /academics/
   </div>
 </div>
 
-<!-- Projects Grid -->
 <section id="projects" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:2rem; padding:4rem 2rem;">
-  {% for work in site.academics %}
+  {% assign sorted_works = site.academics | sort: "order" %}
+  {% for work in sorted_works %}
   <div class="project-card" style="background:#f7f7f7; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:transform 0.25s, box-shadow 0.25s;">
     {% if work.image %}
     <a href="{{ work.url }}">
       <img src="{{ work.image }}" alt="{{ work.title }}" style="width:100%; height:200px; object-fit:cover;">
     </a>
+    {% if work.caption %}
+    <div class="project-caption">
+      {{ work.caption }}
+    </div>
+    {% endif %}
     {% endif %}
     <div style="padding:1rem;">
       <h3 style="margin-bottom:0.5rem;">
@@ -89,6 +94,22 @@ permalink: /academics/
   /* Button hover effect */
   .read-more-btn:hover {
     background: #003f7d; /* darker shade */
+  }
+
+  /* Subtle, inconspicuous caption styling */
+  .project-caption {
+    font-size: 0.82rem;
+    color: #888;
+    background: #f5f5f5;
+    margin: 0.3rem 1rem 0.5rem 1rem;
+    padding: 0.18rem 0.6rem;
+    border-radius: 4px;
+    text-align: left;
+    font-style: normal;
+    letter-spacing: 0;
+    box-shadow: none;
+    border: none;
+    line-height: 1.3;
   }
 </style>
 

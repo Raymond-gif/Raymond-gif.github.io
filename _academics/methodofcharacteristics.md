@@ -10,6 +10,7 @@ header:
   overlay_color: "#2a4d8f"   
   hero_title: "Method of Characteristics"
   hero_excerpt: "Developed oblique shock relations, derived Prandtl–Meyer wave behavior in the weak-shock limit, and implemented a numerical Method of Characteristics for 2D compressible flow."
+order: 2
 ---
 
 <a href="/academics/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
