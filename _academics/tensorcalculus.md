@@ -17,6 +17,69 @@ toc: true
   ← Back to Academic Works Page
 </a>
 
+<div class="sidebar-toc">
+  <h3>Table of Contents</h3>
+  <ul>
+    <li><a href="#cartesian-tensors">Cartesian Tensors</a>
+      <ul>
+        <li><a href="#eigenvalues-eigenvectors">Eigenvalues and Eigenvectors of a Cartesian Tensor</a></li>
+        <li><a href="#invariants-cartesian-tensor">Invariants of a Cartesian Tensor</a></li>
+      </ul>
+    </li>
+    <li><a href="#kinematics">Kinematics</a>
+    </li>
+    <li><a href="#stress-constitutive">Stress and Constitutive Equations</a>
+    </li>
+    <li><a href="#equations-of-motion-in-cartesian-coordinates"> Equations of Motion in Cartesian Coordinates</a>
+      <ul>
+        <li><a href="#acceleration-cartesian"> Acceleration</a></li>
+        <li><a href="#continuity-cartesian">Continuity </a></li>
+        <li><a href="#momentum-eq-various-forms">Momentum Equation and Its Various Forms</a></li>
+      </ul>
+    </li>
+    <li><a href="#covariant-contravariant">Covariant and Contravariant Base Vectors</a></li>
+    <li><a href="#diff-arc-length">Differential Arc Length Element</a></li>
+    <li><a href="#physical-components">Physical Components of Vectors</a>
+      <ul>
+        <li><a href="#non-orthogonal">Non-orthogonal Coordinates</a></li>
+        <li><a href="#orthogonal">Orthogonal Coordinates</a></li>
+      </ul>
+    </li>
+    <li><a href="#examples">Examples: Cylindrical and Spherical Coordinate Systems</a>
+      <ul>
+        <li><a href="#cylindrical">Cylindrical</a></li>
+        <li><a href="#spherical">Spherical</a></li>
+      </ul>
+    </li>
+    <li><a href="#christoffel">Christoffel Symbols and Covariant Differentiation</a>
+      <ul>
+        <li><a href="#christoffel-metric">Christoffel Symbols in Terms of Metric Tensor</a></li>
+        <li><a href="#christoffel-coords">Christoffel Symbol in Orthogonal, Cylindrical, and Spherical Coordinates</a></li>
+      </ul>
+    </li>
+    <li><a href="#gradient-laplacian-divergence-curl">Gradient, Laplacian, Divergence, Curl</a>
+      <ul>
+        <li><a href="#gradient">Gradient</a></li>
+        <li><a href="#divergence">Divergence</a></li>
+        <li><a href="#scalar-laplacian">Scalar Laplacian</a>
+        </li>
+        <li><a href="#vector-laplacian">Vector Laplacian</a>
+        </li>
+        <li><a href="#curl">Curl</a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#equations-motion">Equations of Motion in Curvilinear Coordinates</a>
+      <ul>
+        <li><a href="#continuity">Continuity</a>
+        </li>
+        <li><a href = "#momentum-orthogonal"> Momentum </a></li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</div>
+
 <style>
 h2 {
   font-size: 1.6em;   /* bigger than default 1.25em */
@@ -35,7 +98,7 @@ h4 {
 }
 </style>
 
-## Cartesian Tensors
+<h2 id="cartesian-tensors">Cartesian Tensors</h2>
 
 Before delving into the general case with curvilinear coordinates, it helps to focus on the simple case: Cartesian coordinates. 
 
@@ -58,7 +121,7 @@ In general, a tensor \\( \mathbf{A} \\) of order n transforms as,
 $$\bar{A}_{pq...t} = l_{ip} l_{jq} ...l_{nt} A_{ij...n} \notag
 $$
 
-### Eigenvalues and Eigenvectors of a Cartesian Tensor
+<h3 id="eigenvalues-eigenvectors">Eigenvalues and Eigenvectors of a Cartesian Tensor</h3>
 
 $$\begin{align*}
     \mathbf{A} \cdot \mathbf{x} &= \lambda \mathbf{x} \\
@@ -115,7 +178,7 @@ $$
 
 Therefore, when changing the coordinate system so that it is aligned with the normalized eigenvectors, also known as the **principal directions** of \\( \mathbf{A}\\), the tensor is in diagonal form. 
 
-### Invariants of a Cartesian Tensor
+<h3 id="invariants-cartesian-tensor">Invariants of a Cartesian Tensor</h3>
 
 Let's evaluate \\( \det (\mathbf{A}-\lambda \mathbf{I})=0 \\). In matrix form, this is,
 
@@ -134,7 +197,7 @@ $$\begin{align*}
     \Psi &= \det \mathbf{A}
 \end{align*}$$
 
-## Kinematics
+<h2 id="kinematics">Kinematics</h2>
 
 We construct two coordinate systems: the **material coordinates** of a particle and the **spatial coordinates** of a particle. The material coordinates refer to a coordinate system that is convected with the fluid particle. We denote the material coordinates with \\( \boldsymbol{\varepsilon} \\) and the spatial coordinates with \\( \mathbf{x} \\).
 
@@ -159,7 +222,7 @@ $$\begin{align*}
     \Psi &= \det \mathbf{e}
 \end{align*}$$
 
-## Stress and Constitutive Equations
+<h2 id="stress-constitutive">Stress and Constitutive Equations</h2>
 
 We may always decompose the stress tensor into the sum of isotropic and deviatoric tensors. This amounts to separating the stress tensor into the hydrostatic pressure tensor plus the viscous stress tensor. 
 
@@ -196,23 +259,23 @@ $$\begin{equation}
     \label{divergenceofT}
 \end{equation}$$
 
-### Equations of Motion in Cartesian Coordinates
+<h2 id="equations-of-motion-in-cartesian-coordinates">Equations of Motion in Cartesian Coordinates</h2>
 
-### Acceleration
+<h3 id="acceleration-cartesian"> Acceleration </h3>
 
 $$\begin{align*}
     \mathbf{a} = \dfrac{D \mathbf{u}}{Dt} &= \dfrac{\partial \mathbf u}{\partial t} + \mathbf{u \cdot \nabla \mathbf{u}} \\
     a_i&= \dfrac{\partial u_i}{\partial t} + u_j \dfrac{\partial u_i}{\partial x_j}
 \end{align*}$$
 
-### Continuity
+<h3 id="continuity-cartesian"> Continuity </h3>
 
 $$\begin{align*}
     \dfrac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{u}) &= 0 \\
     \dfrac{\partial \rho}{\partial t} +  \dfrac{\partial}{\partial x_i} \bigg(\rho u_i \bigg) &=0
 \end{align*}$$
 
-### Momentum Equation and Its Various Forms
+<h3 id="momentum-eq-various-forms">Momentum Equation and Its Various Forms</h3>
 
 Note: for the divergence of the stress tensor, I used the boxed formula derived above in the **Stress and Constitutive Equations** section.
 
@@ -232,7 +295,7 @@ $$\rho \left( \dfrac{\partial \mathbf u}{\partial t} + \mathbf{u \cdot \nabla \m
   </div>
 </div>
 
-## Covariant and Contravariant Base Vectors
+<h2 id="covariant-contravariant">Covariant and Contravariant Base Vectors</h2>
 
 Let's define,
 
@@ -304,7 +367,7 @@ $$\begin{align*}
 
 Thus, we have derived the fact that the metric tensor has the important property that it can lower or raise indices. 
 
-## Differential Arc Length Element
+<h2 id="diff-arc-length">Differential Arc Length Element</h2>
 
 $$\begin{equation}
     \boxed{d\mathbf{y}= dx^i \dfrac{\partial \mathbf{y}}{\partial x^i}
@@ -335,13 +398,13 @@ $$\begin{equation}
     \boxed{dx^j = \mathbf{g}^{(j)} \cdot d \mathbf{y}} \label{diffarclengthcomp}
 \end{equation}$$
 
-## Physical Components of Vectors
+<h2 id="physical-components">Physical Components of Vectors</h2>
 
 $$\mathbf{A}=A^1 \mathbf{g}_{(1)} + A^2 \mathbf{g}_{(2)}+A^3 \mathbf{g}_{(3)} \notag$$
 
 $$\mathbf{e}_{(1)}=\dfrac{\mathbf{g}_{(1)}}{\sqrt{\mathbf{g}_{(1)} \cdot \mathbf{g}_{(1)}}}=\dfrac{\mathbf{g}_{(1)}}{\sqrt{g_{11}}}, \quad \mathbf{e}_{(2)}=\dfrac{\mathbf{g}_{(2)}}{\sqrt{\mathbf{g}_{(2)} \cdot \mathbf{g}_{(2)}}}=\dfrac{\mathbf{g}_{(2)}}{\sqrt{g_{22}}}, \quad \mathbf{e}_{(3)}=\dfrac{\mathbf{g}_{(3)}}{\sqrt{\mathbf{g}_{(3)} \cdot \mathbf{g}_{(3)}}}=\dfrac{\mathbf{g}_{(3)}}{\sqrt{g_{33}}} \notag$$
 
-### Non-orthogonal Coordinates
+<h4 id="non-orthogonal">Non-orthogonal Coordinates</h4>
 
 $$\begin{align*}
     \mathbf{A} &=  A^1 \sqrt{g_{11}} \mathbf{e}_1+A^2 \sqrt{g_{22}} \mathbf{e}_2+A^3 \sqrt{g_{33}} \mathbf{e}_3 \\ 
@@ -368,7 +431,8 @@ $$\begin{equation}
     \label{covariantphysicalcomponents}
 \end{equation}$$
 
-### Orthogonal Coordinates
+<h4 id="orthogonal">Orthogonal Coordinates</h4>
+
 Let us define \\( h_i=\sqrt{g_{ii}} \\) for orthogonal coordinates. In the orthogonal case, \\( g^{ii}=1/g_{jj} \\) and \\( g^{ij}=0, \ i \neq j \\), so Eqs. \ref{contravariantphysicalcomponents}-\ref{covariantphysicalcomponents} simplifies to,
 
 $$\begin{align*}
@@ -376,9 +440,9 @@ $$\begin{align*}
     A(i) &= \dfrac{A_i}{h_i}
 \end{align*}$$
 
-## Examples: Cylindrical and Spherical Coordinate Systems
+<h2 id="examples">Examples: Cylindrical and Spherical Coordinate Systems</h2>
 
-### Cylindrical
+<h4 id="cylindrical">Cylindrical</h4>
 
 $$(y^1,y^2,y^3) = (x,y,z) \quad     \longrightarrow \quad (x^1,x^2,x^3) = (r, \theta, z) \notag
 $$
@@ -398,7 +462,7 @@ $$g_{ij}=
 
 $$h_1=1, \quad h_2=x^1, \quad h_3=1 \notag$$
 
-### Spherical
+<h4 id="spherical">Spherical</h4>
 
 $$(y^1,y^2,y^3) = (x,y,z) \quad     \longrightarrow \quad (x^1,x^2,x^3) = (r, \theta, \phi) \notag$$
 
@@ -417,7 +481,7 @@ $$g_{ij}=
 
 $$h_1 = 1, \quad h_2 = x^1, \quad h_3 = x^1 \sin x^2 \notag$$
 
-## Christoffel Symbols and Covariant Differentiation
+<h2 id="christoffel">Christoffel Symbols and Covariant Differentiation</h2>
 
 <p>Suppose that we have a vector field, \( \mathbf{A}=A^i \mathbf{g}_{(i)} \). To each point \( (x^1, x^2, x^3) \) in space, we imagine a vector attached to it. As usual, we can decompose the vector into components times basis vectors. Unlikely in the Cartesian case, both \( A^i \) and \( \mathbf{g}_{(i)} \) vary in space, so taking the total derivative of \( \mathbf{A} \) requires the product rule. </p>
 
@@ -513,7 +577,7 @@ $$
   </div>
 </div>
 
-### Christoffel Symbols in Terms of Metric Tensor
+<h3 id="christoffel-metric">Christoffel Symbols in Terms of Metric Tensor</h3>
 
 Recall from Eq. \ref{christoffelsymboldef} that,
 
@@ -548,7 +612,7 @@ $$\begin{equation}
 \end{equation}$$
 
 <details class="custom-collapse" open>
-  <summary><h3>Christoffel Symbol in Orthogonal, Cylindrical, and Spherical Coordinates </h3></summary>
+  <summary><h3 id="christoffel-coords"> Christoffel Symbol in Orthogonal, Cylindrical, and Spherical Coordinates </h3></summary>
   <div class="collapse-content">
 
 Using Eq. \ref{christoffelsymbolmetrictensor} and the fact that in orthogonal coordinates, the off-diagonal components of the metric tensor are zero, with \( g_{ii}=h_i^2, \enspace g^{ii}=1/h_i^2 \)
@@ -610,11 +674,11 @@ $$\begin{align*}
   </div>
 </details>
 
-## Gradient, Laplacian, Divergence, Curl
+<h2 id="gradient-laplacian-divergence-curl">Gradient, Laplacian, Divergence, Curl</h2>
 
 Suppose we have a scalar field, \\( \phi = \phi(x^1,x^2,x^3) \\).
 
-### Gradient 
+<h3 id="gradient">Gradient</h3>
 
 $$\begin{align*}
         d \phi &= \dfrac{\partial \phi}{\partial x^i} dx^i= \dfrac{\partial \phi}{\partial x^i} \mathbf{g}^{(i)} \cdot d \mathbf{y} \\
@@ -642,7 +706,7 @@ In spherical coordinates,
 
 $$\nabla \Phi = \dfrac{\partial \Phi}{\partial r} \mathbf{e}_r + \dfrac{1}{r} \dfrac{\partial \Phi}{\partial \theta} \mathbf{e}_\theta + \dfrac{1}{r \sin \theta} \dfrac{\partial \Phi}{\partial \phi} \mathbf{e}_\phi \notag$$
 
-### Divergence
+<h3 id="divergence">Divergence</h3>
 
 $$\begin{align*}
     \nabla \cdot \mathbf{A}= A^i_{/i} &= \dfrac{\partial A^i}{\partial x^i} + \Gamma^i_{ij} A^j \\
@@ -691,7 +755,7 @@ $$
   </div>
 </div>
 
-### Scalar Laplacian
+<h3 id="scalar-laplacian">Scalar Laplacian</h3>
 
 To find the scalar Laplacian, we take the covariant derivative of the gradient with respect to \\( x^j \\). In compact notation, we write,
 
@@ -749,7 +813,7 @@ $$\nabla^2 \Phi = \dfrac{1}{r^2} \dfrac{\partial}{\partial r} \left(r^2 \dfrac{\
   </div>
 </div>
 
-### Vector Laplacian
+<h3 id="vector-laplacian">Vector Laplacian</h3>
 
 The vector laplacian is defined similarly to the scalar laplacian, except it operates on a vector (obviously). 
 
@@ -916,7 +980,7 @@ $$\nabla^2 \mathbf{u} \, \cdot \, \mathbf{e}_{\phi} =L(3) = \underbrace{\dfrac{1
   </div>
 </div>
 
-### Curl
+<h3 id="curl">Curl</h3>
 
 $$(\nabla \times \mathbf{A})^i =\varepsilon^{ijk} A_{k / j} \notag$$
 
@@ -977,9 +1041,9 @@ $$\begin{align*}
   </div>
 </div>
 
-## Equations of Motion in Curvilinear Coordinates
+<h2 id="equations-motion">Equations of Motion in Curvilinear Coordinates</h2>
 
-#### Acceleration
+<h3 id="acceleration-curvilinear"> Acceleration </h3>
 
 $$\begin{align}
     \mathbf{a} = \dfrac{D \mathbf{u}}{Dt} &= \dfrac{\partial \mathbf u}{\partial t} + \mathbf{u \cdot \nabla \mathbf{u}} \notag \\
@@ -1030,7 +1094,7 @@ $$\begin{align*}
   </div>
 </div>
 
-#### Continuity
+<h3 id="continuity">Continuity</h3>
 
 $$\begin{align*}
     \dfrac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{u}) &= 0 \\
@@ -1041,7 +1105,7 @@ $$\begin{align*}
 \end{align*}$$
 
 <div class="equation-box">
-  <h4><strong> Continuity Equation in Orthogonal Coordinates</strong></h4>
+  <h4 id="continuity-orthogonal">Continuity Equation in Orthogonal Coordinates</h4>
   <div>
 $$\dfrac{\partial \rho}{\partial t} + \sum_i \dfrac{1}{h_1 h_2 h_3} \dfrac{\partial}{\partial x^i} \left[\dfrac{h_1 h_2 h_3}{h_i} \rho u(i) \right]=0
 \notag$$
@@ -1049,7 +1113,7 @@ $$\dfrac{\partial \rho}{\partial t} + \sum_i \dfrac{1}{h_1 h_2 h_3} \dfrac{\part
 </div>
 
 <div class="equation-box">
-  <h4><strong>Continuity Equation in Cylindrical Coordinates</strong></h4>
+  <h4 id="continuity-cylindrical">Continuity Equation in Cylindrical Coordinates</h4>
   <div>
 
 $$\dfrac{\partial \rho}{\partial t} + \dfrac{1}{r} \dfrac{\partial}{\partial r}(r \rho u_r) + \dfrac{1}{r}\dfrac{\partial}{\partial \theta}(\rho u_\theta) + \dfrac{\partial}{\partial z}(\rho u_z)=0 \notag$$
@@ -1057,7 +1121,7 @@ $$\dfrac{\partial \rho}{\partial t} + \dfrac{1}{r} \dfrac{\partial}{\partial r}(
 </div>
 
 <div class="equation-box">
-  <h4><strong>Continuity Equation in Spherical Coordinates</strong></h4>
+  <h4 id="continuity-spherical">Continuity Equation in Spherical Coordinates</h4>
   <div>
 
 $$\dfrac{\partial \rho}{\partial t} + \dfrac{1}{r^2} \dfrac{\partial}{\partial r} \left(r^2 \rho u_r \right) + \dfrac{1}{r \sin \theta} \dfrac{\partial}{\partial \theta} (\sin \theta \ \rho u_\theta) + \dfrac{1}{r \sin \theta} \dfrac{\partial}{\partial \phi} (\rho u_\phi)=0 \notag$$
@@ -1065,7 +1129,7 @@ $$\dfrac{\partial \rho}{\partial t} + \dfrac{1}{r^2} \dfrac{\partial}{\partial r
   </div>
 </div>
 
-#### Momentum Equation 
+<h4 id="momentum-orthogonal">Momentum Equation</h4>
 
 $$\rho \mathbf{a} = \rho \mathbf{f} - \nabla p + (\lambda + \mu) \nabla (\nabla \cdot \mathbf{u} ) + \mu \nabla^2 \mathbf{u} \notag$$
 
@@ -1076,7 +1140,7 @@ $$\begin{equation*}
 \end{equation*}$$
 
 <div class="equation-box">
-  <h3><strong>Incompressible Navier-Stokes Equation in Cylindrical Polar Coordinates</strong></h3>
+  <h4 id="ns-cylindrical">Incompressible Navier-Stokes Equation in Cylindrical Polar Coordinates</h4>
   <div>
 In cylindrical coordinates (with \( \mathbf{f}=0 \)),
 
@@ -1098,7 +1162,7 @@ $$\begin{align*}
 </div>
 
 <div class="equation-box">
-  <h3><strong>Incompressible Navier-Stokes Equation in Spherical Polar Coordinates</strong></h3>
+  <h4 id="ns-spherical">Incompressible Navier-Stokes Equation in Spherical Polar Coordinates</h4>
   <div>
 In spherical coordinates (with \( \mathbf{f}=0 \)),
 
@@ -1122,7 +1186,7 @@ $$\begin{align*}
   </div>
 </div>
 
-## References
+<h2 id="references">References</h2>
 
 1. Rebecca M. Brannon, *Curvilinear Analysis in a Euclidean Space*, June 2004.  
 2. Rutherford Aris, *Vectors, Tensors, and the Basic Equations of Fluid Mechanics*, Dover Publications, 1989.  
@@ -1132,6 +1196,99 @@ $$\begin{align*}
   ← Back to Academic Works Page
 </a>
 
+<!-- CSS -->
+<style>
+.page-content {
+  margin-right: 270px; /* push main text to the left of sidebar */
+  max-width: 700px;
+  padding: 1rem;
+}
 
+.sidebar-toc {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 220px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  z-index: 999;
+}
 
+.sidebar-toc h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
 
+.sidebar-toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar-toc li {
+  margin: 0.4rem 0;
+}
+
+.sidebar-toc ul ul {
+  margin-left: 1rem; /* indent nested levels (for h3) */
+  font-size: 0.9rem;
+}
+
+.sidebar-toc ul ul ul {
+  margin-left: 1.2rem; /* indent further for h4 */
+  font-size: 0.85rem;
+}
+
+.sidebar-toc a {
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar-toc a:hover {
+  color: #007acc;
+}
+
+.sidebar-toc a.active {
+  font-weight: bold;
+  color: #007acc;
+}
+</style>
+
+<script>
+document.addEventListener("scroll", function () {
+  const links = document.querySelectorAll(".sidebar-toc a");
+  let current = "";
+  document.querySelectorAll("h2, h3, h4").forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - 130;
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  links.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+
+      // Auto-scroll only if out of view
+      const toc = document.querySelector(".sidebar-toc");
+      const linkRect = link.getBoundingClientRect();
+      const tocRect = toc.getBoundingClientRect();
+
+      if (linkRect.top < tocRect.top || linkRect.bottom > tocRect.bottom) {
+        link.scrollIntoView({
+          block: "center",
+          behavior: "smooth"
+        });
+      }
+    }
+  });
+});
+</script>
