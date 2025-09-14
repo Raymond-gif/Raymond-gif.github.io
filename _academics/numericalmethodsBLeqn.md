@@ -1,7 +1,6 @@
 ---
 title: "Numerical Methods in Boundary Layer Equations"
 excerpt: "Solved Falkner-Skan equation using finite difference scheme and shooting method, approximated solution to boundary layer equation by using momentum integral equation, Thwaites Method"
-collection: portfolio
 author_profile: false
 layout: splash
 image: /images/BLmain.jpg
@@ -10,7 +9,7 @@ header:
   overlay_color: "#2a4d8f" 
   hero_title: "Numerical Methods in Boundary Layer Equations"
   hero_excerpt: "Solved Falkner-Skan equation using finite difference scheme and shooting method, approximated solution to boundary layer equation by using momentum integral equation, Thwaites Method"
-order: 3
+order: 4
 ---
 
 <a href="/academics/" class="button-gradient" style="display: inline-block; margin-top: 20px;">

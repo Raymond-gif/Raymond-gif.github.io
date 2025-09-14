@@ -40,7 +40,7 @@ redirect_from:
   </h2>
   <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
     <span style="font-weight: 600; font-size: 1rem; margin-bottom: 0.5rem;">
-      University of California, Irvine — BS in Aerospace Engineering, GPA: 3.4
+      University of California, Irvine — BS in Aerospace Engineering
     </span>
     <a href="/files/AerospaceBS.pdf" class="button-gradient">
       📄 <span>Degree PDF</span>

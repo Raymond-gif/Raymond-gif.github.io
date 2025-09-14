@@ -1,7 +1,6 @@
 ---
 title: "Method of Characteristics"
 excerpt: "Developed oblique shock relations, derived Prandtl–Meyer wave behavior in the weak-shock limit, and implemented a numerical Method of Characteristics for 2D compressible flow."
-collection: portfolio
 author_profile: false
 layout: splash
 image: /images/mocmain.png

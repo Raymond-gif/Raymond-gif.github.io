@@ -1,7 +1,6 @@
 ---
 title: "Tensor Analysis in Fluid Mechanics"
 excerpt: "I use tensor calculus to formulate the governing equations of fluid motion, generalizing the results to general coordinate systems. Christoffel symbols, Covariant derivative, Metric Tensor"
-collection: portfolio
 author_profile: false
 layout: splash
 header:
@@ -1278,8 +1277,8 @@ $$\begin{align*}
   background: #888;        /* darker on hover */
 }
 
-/* Hide TOC on screens narrower than 768px (typical tablet/phone breakpoint) */
-@media (max-width: 768px) {
+/* Hide TOC on screens 769px wide or less (includes iPad portrait) */
+@media (max-width: 769px) {
   .sidebar-toc {
     display: none;
   }
