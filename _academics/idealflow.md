@@ -33,6 +33,42 @@ h4 {
   ← Back to Academic Works Page
 </a>
 
+<div class="sidebar-toc">
+  <h3>On This Page</h3>
+  <ul>
+    <li><a href="#complex-differentiation-and-cauchy-riemann-equations">Complex Differentiation and Cauchy-Riemann Equations</a>
+      <ul>
+        <li><a href="#another-way-of-deriving-the-cauchy-riemann-conditions">Another way of deriving the Cauchy-Riemann Conditions</a></li>
+        <li><a href="#conversion-to-polar-coordinates">Conversion to Polar Coordinates</a></li>
+      </ul>
+    </li>
+    <li><a href="#potential-flow-solutions">Potential Flow Solutions</a></li>
+    <li><a href="#superposition-of-potential-flow">Superposition of Potential Flow</a>
+      <ul>
+        <li><a href="#half-body">Half-Body</a></li>
+        <li><a href="#doublet">Doublet</a></li>
+        <li><a href="#cylinder-in-a-stream">Cylinder in a Stream</a></li>
+        <li><a href="#cylinder-in-a-stream-with-circulation">Cylinder in a Stream with Circulation</a></li>
+      </ul>
+    </li>
+    <li><a href="#aerodynamics">Aerodynamics</a>
+      <ul>
+        <li><a href="#kutta-joukowski-law">Kutta-Joukowski Law</a></li>
+        <li><a href="#conformal-mapping">Conformal Mapping</a>
+          <ul>
+            <li><a href="#joukowski-airfoil">Joukowski Airfoil</a>
+              <ul>
+                <li><a href="#complex-potential-of-joukowski-airfoil-in-uniform-stream">Complex Potential of Joukowski Airfoil in Uniform Stream</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</div>
+
 ## Complex Differentiation and Cauchy-Riemann Equations
 
 A complex function \\( F(z) \\) is said to be analytic in a domain \\(D\\) if \\( F(z) \\) is defined and differentiable at all points of \\(D\\). 
@@ -86,10 +122,9 @@ $$\begin{equation*}
 
 
 <details class="custom-collapse">
-  <summary><strong>Another way of deriving the Cauchy-Riemann Conditions</strong></summary>
+    <summary id="another-way-of-deriving-the-cauchy-riemann-conditions"><strong>Another way of deriving the Cauchy-Riemann Conditions</strong></summary>
   <div class="collapse-content">
     
-
 <p align="center">
   <img src="/images/conformalmap.jpg" alt="Incremental length dz vector transformed to df vector by the function f." width="60%" style="border:1px solid #000;">
 </p>
@@ -173,7 +208,7 @@ $$\begin{equation}
 \end{equation}$$
 
 <details class="custom-collapse">
-  <summary><strong>Conversion to Polar Coordinates</strong></summary>
+  <summary id="conversion-to-polar-coordinates"><strong>Conversion to Polar Coordinates</strong></summary>
   <div class="collapse-content">
     
 $$    \begin{align*}
@@ -848,3 +883,128 @@ $$C_L = 2 \pi ( \alpha + 2H) \notag $$
 <a href="/academics/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
   ← Back to Academic Works Page
 </a>
+
+<!-- CSS -->
+<style>
+.page-content {
+  margin-right: 270px; /* push main text to the left of sidebar */
+  max-width: 700px;
+  padding: 1rem;
+}
+
+.sidebar-toc {
+  position: fixed;
+  top: 70px;
+  right: 10px;
+  width: 200px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 1rem;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  z-index: 999;
+}
+
+.sidebar-toc h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.sidebar-toc ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sidebar-toc li {
+  margin: 0.4rem 0;
+}
+
+.sidebar-toc ul ul {
+  margin-left: 1rem; /* indent nested levels (for h3) */
+  font-size: 0.9rem;
+}
+
+.sidebar-toc ul ul ul {
+  margin-left: 1.2rem; /* indent further for h4 */
+  font-size: 0.85rem;
+}
+
+.sidebar-toc a {
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar-toc a:hover {
+  color: #007acc;
+}
+
+.sidebar-toc a.active {
+  font-weight: bold;
+  color: #007acc;
+}
+
+.sidebar-toc::-webkit-scrollbar {
+  width: 6px;              /* scrollbar width */
+}
+
+.sidebar-toc::-webkit-scrollbar-track {
+  background: transparent; /* track background */
+}
+
+.sidebar-toc::-webkit-scrollbar-thumb {
+  background: #bbb;        /* scrollbar color */
+  border-radius: 3px;      /* rounded edges */
+}
+
+.sidebar-toc::-webkit-scrollbar-thumb:hover {
+  background: #888;        /* darker on hover */
+}
+
+/* Hide TOC on screens 769px wide or less (includes iPad portrait) */
+@media (max-width: 769px) {
+  .sidebar-toc {
+    display: none;
+  }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("scroll", function () {
+    const links = document.querySelectorAll(".sidebar-toc a");
+    let current = "";
+    document.querySelectorAll("h2, h3, h4").forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - 130;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    links.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+
+        const toc = document.querySelector(".sidebar-toc");
+        if (toc) {
+          const linkRect = link.getBoundingClientRect();
+          const tocRect = toc.getBoundingClientRect();
+
+          if (linkRect.top < tocRect.top || linkRect.bottom > tocRect.bottom) {
+            link.scrollIntoView({
+              block: "center",
+              behavior: "smooth"
+            });
+          }
+        }
+      }
+    });
+  });
+});
+</script>
+
