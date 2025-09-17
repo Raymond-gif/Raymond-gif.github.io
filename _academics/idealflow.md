@@ -966,7 +966,7 @@ $$C_L = 2 \pi ( \alpha + 2H) \notag $$
 }
 
 /* Hide TOC on all mobile devices and tablets */
-@media (max-width: 1700px) {
+@media (max-width: 1750px) {
   .sidebar-toc {
     display: none !important;
   }
