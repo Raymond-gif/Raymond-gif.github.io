@@ -1,13 +1,29 @@
 ---
-layout: single
+layout: splash
 title: "Formula Sheet"
 permalink: /formula/
 author_profile: false
 ---
 
-<a href="/files/MAE_230C_Formula_Sheet.pdf" class="button-gradient">
-  📄 Download MAE 230C Formula Sheet
-</a>
+# <span style="font-size: 3em;">Formula Sheet</span>
+
+<div style="display: flex; gap: 1em; margin-bottom: 1em;">
+  <button id="toggleAll" class="button-toggle">Expand All</button>
+  <a href="/files/MAE_230C_Formula_Sheet.pdf" class="button-gradient">📄 Download Formula Sheet</a>
+</div>
+
+
+<script>
+  const toggleBtn = document.getElementById('toggleAll');
+
+  toggleBtn.addEventListener('click', () => {
+    const details = document.querySelectorAll('details');
+    const allOpen = Array.from(details).every(d => d.open);
+
+    details.forEach(d => d.open = !allOpen);
+    toggleBtn.textContent = allOpen ? 'Expand All' : 'Collapse All';
+  });
+</script>
 
 <style>
   /* Section styling */

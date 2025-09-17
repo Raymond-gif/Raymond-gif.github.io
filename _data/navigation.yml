@@ -10,12 +10,9 @@
 main:
   - title: "Academic Works"
     url: /academics/
-
   - title: "Portfolio"
     url: /portfolio/
-    
   - title: "Resume"
     url: /resume/
-
   - title: "About"
     url: /about/

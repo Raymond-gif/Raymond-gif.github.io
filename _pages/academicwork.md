@@ -41,19 +41,40 @@ permalink: /academics/
     ">
       A curated collection of my research projects, publications, and academic contributions in fluid mechanics and applied mathematics.
     </p>
-    <a href="#projects" style="
-        display: inline-block;
-        padding: 0.75rem 2rem;
-        background-color: #0055a5;
-        color: #fff;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    " onmouseover="this.style.backgroundColor='#003f7f'; this.style.transform='scale(1.05)'" 
-       onmouseout="this.style.backgroundColor='#0055a5'; this.style.transform='scale(1)'">
-      Explore Projects
-    </a>
+
+    <!-- CTA buttons -->
+    <div style="margin-top: 2rem; display:flex; justify-content:center; flex-wrap:wrap; gap:1rem;">
+      <!-- Primary button -->
+      <a href="#projects" style="
+          display: inline-block;
+          padding: 0.75rem 2rem;
+          background-color: #0055a5;
+          color: #fff;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+      " onmouseover="this.style.backgroundColor='#003f7f'; this.style.transform='scale(1.05)'" 
+         onmouseout="this.style.backgroundColor='#0055a5'; this.style.transform='scale(1)'">
+        Explore Projects
+      </a>
+
+      <!-- Secondary button -->
+      <a href="/formula/" style="
+          display: inline-block;
+          padding: 0.75rem 2rem;
+          background-color: #fff;
+          color: #0055a5;
+          border: 2px solid #0055a5;
+          border-radius: 8px;
+          text-decoration: none;
+          font-weight: bold;
+          transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+      " onmouseover="this.style.backgroundColor='#f0f0f0'; this.style.transform='scale(1.05)'" 
+         onmouseout="this.style.backgroundColor='#fff'; this.style.transform='scale(1)'">
+        Formula Sheet
+      </a>
+    </div>
   </div>
 </div>
 
@@ -76,7 +97,19 @@ permalink: /academics/
         <a href="{{ work.url }}" style="text-decoration:none; color:#222;">{{ work.title }}</a>
       </h3>
       <p style="font-size:0.95rem; color:#555;">{{ work.excerpt }}</p>
-      <a href="{{ work.url }}" class="read-more-btn" style="display:inline-block; margin-top:1rem; padding:0.5rem 1rem; background:#0055a5; color:#fff; border-radius:6px; text-decoration:none; font-weight:bold; transition:background 0.25s;">
+      <a href="{{ work.url }}" class="read-more-btn" style="
+          display:inline-block;
+          margin-top:1rem;
+          padding:0.5rem 1rem;
+          background:#0055a5;
+          color:#fff;
+          border-radius:6px;
+          text-decoration:none;
+          font-weight:bold;
+          transition: background 0.25s ease, transform 0.25s ease;
+      " 
+      onmouseover="this.style.backgroundColor='#003f7d'; this.style.transform='scale(1.05)'" 
+      onmouseout="this.style.backgroundColor='#0055a5'; this.style.transform='scale(1)'">
         Read More →
       </a>
     </div>
@@ -123,8 +156,32 @@ permalink: /academics/
   
   <!-- Optional button links -->
   <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-top:1rem;">
-    <a href="mailto: raymonddunn25@gmail.com" style="padding:0.75rem 1.5rem; background-color:#0055a5; color:#fff; border-radius:8px; text-decoration:none; font-weight:bold;">Email Me</a>
-    <a href="https://www.linkedin.com/in/raymond-dunn-b13362200" target="_blank" style="padding:0.75rem 1.5rem; background-color:#0a66c2; color:#fff; border-radius:8px; text-decoration:none; font-weight:bold;">LinkedIn</a>
+    <a href="mailto:raymonddunn25@gmail.com" style="
+        padding:0.75rem 1.5rem;
+        background-color:#0055a5;
+        color:#fff;
+        border-radius:8px;
+        text-decoration:none;
+        font-weight:bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    " 
+    onmouseover="this.style.backgroundColor='#003f7f'; this.style.transform='scale(1.05)'" 
+    onmouseout="this.style.backgroundColor='#0055a5'; this.style.transform='scale(1)'">
+      Email Me
+    </a>
+    <a href="https://www.linkedin.com/in/raymond-dunn-b13362200" target="_blank" style="
+        padding:0.75rem 1.5rem;
+        background-color:#0a66c2;
+        color:#fff;
+        border-radius:8px;
+        text-decoration:none;
+        font-weight:bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    " 
+    onmouseover="this.style.backgroundColor='#005582'; this.style.transform='scale(1.05)'" 
+    onmouseout="this.style.backgroundColor='#0a66c2'; this.style.transform='scale(1)'">
+      LinkedIn
+    </a>
   </div>
 </div>
 
@@ -134,4 +191,3 @@ permalink: /academics/
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 </style>
-
