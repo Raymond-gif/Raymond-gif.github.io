@@ -1277,7 +1277,8 @@ $$\begin{align*}
   background: #888;        /* darker on hover */
 }
 
-@media (max-width: 1200px) {
+/* Hide TOC on all mobile devices and tablets */
+@media (max-width: 1700px) {
   .sidebar-toc {
     display: none !important;
   }
