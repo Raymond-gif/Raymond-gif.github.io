@@ -96,7 +96,7 @@ redirect_from:
   display:inline-block;
   padding:0.55rem 1rem;
   border-radius:6px; /* matches other buttons */
-  text-decoration:none;
+  text-decoration: none !important;
   font-weight:bold;
   background:#0055a5;
   color:#fff;

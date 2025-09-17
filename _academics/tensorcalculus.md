@@ -1277,12 +1277,13 @@ $$\begin{align*}
   background: #888;        /* darker on hover */
 }
 
-/* Hide TOC on screens 769px wide or less (includes iPad portrait) */
-@media (max-width: 769px) {
+/* Hide TOC on all mobile devices and tablets */
+@media (max-width: 1024px) {
   .sidebar-toc {
-    display: none;
+    display: none !important;
   }
 }
+
 </style>
 
 <script>

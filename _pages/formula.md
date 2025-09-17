@@ -12,7 +12,6 @@ author_profile: false
   <a href="/files/MAE_230C_Formula_Sheet.pdf" class="button-gradient">📄 Download Formula Sheet</a>
 </div>
 
-
 <script>
   const toggleBtn = document.getElementById('toggleAll');
 
