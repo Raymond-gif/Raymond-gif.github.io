@@ -965,10 +965,10 @@ $$C_L = 2 \pi ( \alpha + 2H) \notag $$
   background: #888;        /* darker on hover */
 }
 
-/* Hide TOC on screens 769px wide or less (includes iPad portrait) */
-@media (max-width: 769px) {
+/* Hide TOC on all mobile devices and tablets */
+@media (max-width: 768px) {
   .sidebar-toc {
-    display: none;
+    display: none !important;
   }
 }
 </style>

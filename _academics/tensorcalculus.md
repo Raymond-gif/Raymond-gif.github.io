@@ -1278,7 +1278,7 @@ $$\begin{align*}
 }
 
 /* Hide TOC on all mobile devices and tablets */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .sidebar-toc {
     display: none !important;
   }
