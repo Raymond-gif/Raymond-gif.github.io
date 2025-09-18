@@ -101,7 +101,7 @@ author_profile: false
       \frac{D}{Dt} \int\limits_{\text{CM}}{\rho \mathbf{u} \, dV}= \frac{\partial}{\partial t}
       \int\limits_{\text{CV}} { \rho \mathbf{u}} \, dV 
       + \int\limits_{\text{CS}} \rho \mathbf{u} (\mathbf{u} \cdot \mathbf{n}) \, dS 
-      = - \int\limits_{\text{CS}} p  \mathbf{n}\, dS + \int\limits_{\text{CS}} \boldsymbol{\underline{\underline{\tau}}} \cdot \mathbf{n} \, dS \notag
+      = - \int\limits_{\text{CS}} p  \mathbf{n}\, dS + \int\limits_{\text{CS}} \boldsymbol{\tau} \cdot \mathbf{n} \, dS \notag
       $$
     </p>
     <!-- Conservation of Energy -->
@@ -113,7 +113,7 @@ author_profile: false
           = \frac{\partial}{\partial t}\int\limits_{\text{CV}} \rho e_0 \, dV 
           + \int\limits_{\text{CS}} \rho e_0 (\mathbf{u} \cdot \mathbf{n}) \, dS
           = - \int\limits_{ \text{CS}} p (\mathbf{u} \cdot \mathbf{n}) \, dS 
-          &+ \int\limits_{\text{CS}} \boldsymbol{\underline{\underline{\tau}}} \cdot \mathbf{n} \cdot \mathbf{u} \, dS \\
+          &+ \int\limits_{\text{CS}} \mathbf{n} \cdot \boldsymbol{\tau} \cdot \mathbf{u} \, dS \\
           &+ \int\limits_{\text{CV}} \nabla \cdot \mathbf{q} \, dV 
       \end{align*}
       $$
@@ -136,26 +136,26 @@ author_profile: false
     <p>
       <strong> Momentum Equation</strong><br>
       $$
-      \frac{\partial (\rho {\mathbf{u}})}{\partial t} + \nabla \cdot \left( \rho {\mathbf{u}} {\mathbf{u}} \right) = -\nabla p + \nabla \cdot \underline{\underline{\boldsymbol{\tau}}}, \quad \rho\frac{D\mathbf{u}}{Dt}=-\nabla p +\nabla \cdot \boldsymbol{\underline{\underline{\tau}}} \notag
+      \frac{\partial (\rho {\mathbf{u}})}{\partial t} + \nabla \cdot \left( \rho {\mathbf{u}} {\mathbf{u}} \right) = -\nabla p + \nabla \cdot \boldsymbol{\tau}, \quad \rho\frac{D\mathbf{u}}{Dt}=-\nabla p +\nabla \cdot \boldsymbol{\tau} \notag
       $$ 
     </p>
     <!-- Conservation of Energy -->
     <p>
       <strong>Conservation of Energy</strong><br>
       $$
-      \frac{\partial}{\partial t}(\rho e_0) + \nabla \cdot(\rho e_0 {\mathbf{u}}) = \nabla \cdot(\underline{\underline{\boldsymbol{\sigma}}} \cdot \mathbf{u}) - \nabla \cdot \mathbf{q}, \quad
-      \rho \frac{D e_0}{D t} = \nabla \cdot (\boldsymbol{\underline{\underline{\tau}}} \cdot \mathbf{u}) - \nabla \cdot (p \mathbf{u}) - \nabla \cdot \mathbf{q}
+      \frac{\partial}{\partial t}(\rho e_0) + \nabla \cdot(\rho e_0 {\mathbf{u}}) = \nabla \cdot(\boldsymbol{\sigma} \cdot \mathbf{u}) - \nabla \cdot \mathbf{q}, \quad
+      \rho \frac{D e_0}{D t} = \nabla \cdot (\boldsymbol{\tau} \cdot \mathbf{u}) - \nabla \cdot (p \mathbf{u}) - \nabla \cdot \mathbf{q}
       \notag
       $$
       $$
       \rho \frac{Dh_0}{Dt} = 
-      \nabla \cdot (\underline{\underline{\boldsymbol{\tau}}} \cdot {\boldsymbol{u}}) - 
+      \nabla \cdot (\boldsymbol{\tau} \cdot {\boldsymbol{u}}) - 
       \nabla \cdot \boldsymbol{q} + \frac{\partial p}{\partial t}, \quad
-      \rho \frac{D h}{Dt} = \frac{D p}{Dt} + \boldsymbol{\underline{\underline{\tau}}} : \nabla \boldsymbol{u} - \nabla \cdot \boldsymbol{q}
+      \rho \frac{D h}{Dt} = \frac{D p}{Dt} + \boldsymbol{\tau} : \nabla \boldsymbol{u} - \nabla \cdot \boldsymbol{q}
       \notag
       $$
       $$
-      \rho T \frac{Ds}{Dt} = \boldsymbol{\underline{\underline{\tau}}} : \nabla \boldsymbol{u}-\nabla \cdot \mathbf{q}
+      \rho T \frac{Ds}{Dt} = \boldsymbol{\tau} : \nabla \boldsymbol{u}-\nabla \cdot \mathbf{q}
       \notag
       $$
     </p>
