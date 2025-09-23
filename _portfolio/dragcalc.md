@@ -15,17 +15,15 @@ header:
 <div class="equation-box">
   <h3>Airplane Specifications</h3>
   <div>
- $$      \begin{equation*}
-        \begin{split}
-           b_{\text{wing}} = 96 \text{ ft} \\ 
-           c_{r_o,\text{wing}} = 20 \text{ ft} \\ 
-           \sigma_{\text{wing}} = 0.22 \\
-           \Lambda_{c/4} = 8^{o} \\
-           L_f = 103 \text{ ft} \\
-           D_f = 13 \text{ ft} \\
-           S_{\text{wet}_f} = 3365.274 \text{ ft}^2
-        \end{split}
-        \end{equation*}$$
+ $$      \begin{align*}
+           b_{\text{wing}} &= 96 \text{ ft} \\ 
+           c_{r_o,\text{wing}} &= 20 \text{ ft} \\ 
+           \sigma_{\text{wing}} &= 0.22 \\
+           \Lambda_{c/4} &= 8^{o} \\
+           L_f &= 103 \text{ ft} \\
+           D_f &= 13 \text{ ft} \\
+           S_{\text{wet}_f} &= 3365.274 \text{ ft}^2
+        \end{align*}$$
   </div>
 </div>
 
@@ -166,12 +164,12 @@ Here are the aircraft constants for my specific airplane:
 $$    \begin{equation} \label{my constants}
         \boxed{    
         \begin{split}
-           b_{\text{wing}} = 96 \text{ ft} \\ 
-           c_{r_o,\text{wing}} = 20 \text{ ft} \\ 
-           \sigma_{\text{wing}} = 0.22 \\
-           \Lambda_{c/4} = 8^{o} \\
-           L_f = 103 \text{ ft} \\
-           D_f = 13 \text{ ft} \\
+           b_{\text{wing}} &= 96 \text{ ft} \\ 
+           c_{r_o,\text{wing}} &= 20 \text{ ft} \\ 
+           \sigma_{\text{wing}} &= 0.22 \\
+           \Lambda_{c/4} &= 8^{o} \\
+           L_f &= 103 \text{ ft} \\
+           D_f &= 13 \text{ ft} \\
         \end{split} }
         \end{equation}$$
 
@@ -179,9 +177,9 @@ From SOLIDWORKS, the following values were also obtained for my specific aircraf
 
 $$\begin{equation*}
 \boxed{\begin{split}
-    \text{Wetted Area of Wing}& \ \ \  S_{\text{wet}_1} = 1914.679 \ \text{ft}^2 \\
-    \text{Wing Planform Area}&\ \ \ S_{\text{ref}} = 1172.890 \ \text{ft}^2 \\
-    \text{Average t/c of Wing}& \ \ \  t/c = 0.1432 \\ 
+    \text{Wetted Area of Wing}& \ \ \  S_{\text{wet}_1} &= 1914.679 \ \text{ft}^2 \\
+    \text{Wing Planform Area}&\ \ \ S_{\text{ref}} &= 1172.890 \ \text{ft}^2 \\
+    \text{Average t/c of Wing}& \ \ \  t/c &= 0.1432 \\ 
 \end{split}}
 \end{equation*}$$
 
@@ -190,21 +188,12 @@ For my calculations, I will use the following numbers to denote the specific com
 __1 = Wing, 2 = Fuselage, 3 = Horizontal Tail, 4 = Vertical Tail, 5 =
 Pylons, 6 = Nacelles__ 
 
-$$\begin{gather*}
-    C_{T,1} = (\sigma_{1}) \biggl(\underbrace{C_{r_o,1}}_{\text{centerline root chord}}\biggr) = (0.22)(20 \text{ ft}) = 4.4 \text{ ft} 
-\end{gather*}$$
-
-$$\begin{equation*}
-\begin{split}
-     \text{m.a.c.}_{\text{exposed, 1}} &= \dfrac{2}{3}\biggl(\underbrace{C_{R1}}_{\text{exposed}}+C_T-\dfrac{C_{R1}C_T}{C_{R1}+C_T} \biggr) \\ &= \dfrac{2}{3} \biggl(17.9196 + 4.4 - \dfrac{17.9196\cdot4.4}{17.9196+4.4} \biggr) \text{ ft} \\ &= 12.525 \text{ ft} \\ 
-\end{split}
-\end{equation*}$$
-
-$$\begin{equation*}
-\begin{split}
-    RN_1 = \dfrac{(\rho)(v)(\text{m.a.c.})}{\mu} &= \dfrac{\left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right) \left(12.525 \ \text{ft}\right)}{\left(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2} \right)} \\ &= 2.7728 \times 10^7
-\end{split}
-\end{equation*}$$
+$$\begin{align*}
+    C_{T,1} &= (\sigma_{1}) \biggl(\underbrace{C_{r_o,1}}_{\text{centerline root chord}}\biggr) = (0.22)(20 \text{ ft}) = 4.4 \text{ ft} \\
+     \text{m.a.c.}_{\text{exposed, 1}} &= \dfrac{2}{3}\biggl(\underbrace{C_{R1}}_{\text{exposed}}+C_T-\dfrac{C_{R1}C_T}{C_{R1}+C_T} \biggr) \\
+    &= \dfrac{2}{3} \biggl(17.9196 + 4.4 - \dfrac{17.9196\cdot4.4}{17.9196+4.4} \biggr) \text{ ft} \\ &= 12.525 \text{ ft} \\ 
+    RN_1 &= \dfrac{(\rho)(v)(\text{m.a.c.})}{\mu} = \dfrac{\left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right) \left(12.525 \ \text{ft}\right)}{\left(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2} \right)} = 2.7728 \times 10^7
+\end{align*}$$
 
 Using Fig. \ref{fig:skinfriction}, it was found that \\(C_{f,1} \approx 2.8 \times 10^{-3}\\). To find the form factor K, Fig. \ref{fig:surfaceform} was used. Using SOLIDWORKS, the average thickness-to-chord ratio is \\(t/c = 0.1433\\). Thus, the form factor K can be calculated using sweep angle and t/c, resulting in  \\( K_1 = 1.32 \\). 
 
@@ -232,27 +221,22 @@ $$\begin{gather*}
 
 Now, let's consider the horizontal tail. Similar to the wing, 
 
-$$\begin{equation*}
-\begin{split}
+$$\begin{align*}
     C_{T3} &= \sigma_3 \cdot C_{R3} = (0.35)(11.1 \ \text{ft}) = 3.885 \ \text{ft} \\
-     \text{m.a.c.}_{\text{exposed, 3}} &= \dfrac{2}{3}\biggl(C_{R3}+C_{T3}-\dfrac{C_{R3}C_{T3}}{C_{R3}+C_{T3}} \biggr) \\ &= \dfrac{2}{3} \biggl(11.1 + 3.885 - \dfrac{11.1\cdot3.885}{11.1+3.885} \biggr) \text{ ft} \\ &= 8.071 \text{ ft} \\ 
-\end{split}
-\end{equation*}$$
+   \text{m.a.c.}_{\text{exposed, 3}} &= \dfrac{2}{3}\biggl(C_{R3}+C_{T3}-\dfrac{C_{R3}C_{T3}}{C_{R3}+C_{T3}} \biggr) \\ &= \dfrac{2}{3} \biggl(11.1 + 3.885 - \dfrac{11.1\cdot3.885}{11.1+3.885} \biggr) \text{ ft} \\
+    &= 8.071 \text{ ft}  
+\end{align*}
+$$
 
 With the m.a.c. known, it is possible to calculate Reynolds number.
 
-$$\begin{equation*}
-\begin{split}
-    RN_3 = \dfrac{(\rho)(v)(\text{m.a.c.}_3)}{\mu} &= \dfrac{\left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right) \left(8.071 \ \text{ft}\right)}{\left(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2}\right)} \\ &= 1.7868 \times 10^7
-\end{split}
-\end{equation*} $$
-
-$$\begin{gather*}
-    C_{f_{3}} = 3.1 \times 10^{-3} \\
-    K_3 = 1.16 \\ 
-    S_{\text{wet}_3} = (2)(\text{exposed planform area})(\underbrace{1.02}_{\text{curvature}}) = (2)(261 \  \text{ft}^2)(1.02) = 532.44 \ \text{ft}^2 \\
-     C_{D_{p3}} = \dfrac{K_3 C_{f_{3}} S_{\text{wet}_3}}{S_{\text{ref}}} = \dfrac{(1.16)(3.1\times10^{-3})(532.44 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{1.632 \times 10^{-3}}
-\end{gather*}
+$$\begin{align*}
+    RN_3 &= \dfrac{(\rho)(v)(\text{m.a.c.}_3)}{\mu} = \dfrac{\left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right) \left(8.071 \ \text{ft}\right)}{\left(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2}\right)} = 1.7868 \times 10^7 \\
+    C_{f_{3}} &= 3.1 \times 10^{-3} \\
+    K_3 &= 1.16 \\ 
+    S_{\text{wet}_3} &= (2)(\text{exposed planform area})(\underbrace{1.02}_{\text{curvature}}) = (2)(261 \  \text{ft}^2)(1.02) = 532.44 \ \text{ft}^2 \\
+     C_{D_{p3}} &= \dfrac{K_3 C_{f_{3}} S_{\text{wet}_3}}{S_{\text{ref}}} = \dfrac{(1.16)(3.1\times10^{-3})(532.44 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{1.632 \times 10^{-3}}
+\end{align*}
 $$
 
 Now, let's consider the vertical tail. 
@@ -266,54 +250,39 @@ $$\begin{equation*}
 
 With the m.a.c. known, it is possible to calculate Reynolds number.
 
-$$\begin{equation*}
-\begin{split}
-    RN_4 = \dfrac{(\rho)(v)(\text{m.a.c.}_4)}{\mu} &= \dfrac{\left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right) \left(21.011 \ \text{ft}\right)}{ \left(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2} \right)} \\ &= 4.651 \times 10^7
-\end{split}
-\end{equation*} $$
-
-$$\begin{gather*}
-    C_{f_{4}} = 2.5 \times 10^{-3} \\
-    K_4 = 1.125 \\ 
-    S_{\text{wet}_4} = (2)(\text{exposed planform area})(\underbrace{1.02}_{\text{curvature}}) = (2)(161 \  \text{ft}^2)(1.02) = 328.44 \ \text{ft}^2 \\
-     C_{D_{p4}} = \dfrac{K_4 C_{f_{4}} S_{\text{wet}_4}}{S_{\text{ref}}} = \dfrac{(1.125)(2.5\times10^{-3})(328.44 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{7.876 \times 10^{-4}}
-\end{gather*}
+$$\begin{align*}
+    RN_4 &= \dfrac{(\rho)(v)(\text{m.a.c.}_4)}{\mu} = \dfrac{\left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right) \left(21.011 \ \text{ft}\right)}{ \left(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2} \right)} = 4.651 \times 10^7 \\
+    C_{f_{4}} &= 2.5 \times 10^{-3} \\
+    K_4 &= 1.125 \\ 
+    S_{\text{wet}_4} &= (2)(\text{exposed planform area})(\underbrace{1.02}_{\text{curvature}}) = (2)(161 \  \text{ft}^2)(1.02) = 328.44 \ \text{ft}^2 \\
+     C_{D_{p4}} &= \dfrac{K_4 C_{f_{4}} S_{\text{wet}_4}}{S_{\text{ref}}} = \dfrac{(1.125)(2.5\times10^{-3})(328.44 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{7.876 \times 10^{-4}}
+\end{align*}
 $$
 
 Now, for the pylons, 
 
-$$\begin{equation*}
-\begin{split}
-    RN_5 = \dfrac{(\rho)(v)(\text{m.a.c.}_5)}{\mu} &= \dfrac{\left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right) \left(16.2 \ \text{ft} \right)}{ \left(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2} \right)} \\ &= 3.586 \times 10^7
-\end{split}
-\end{equation*} $$
-
-$$\begin{gather*}
-    C_{f_{5}} = 2.75 \times 10^{-3} \\
-    K_5 = 1.12 \\ 
-    S_{\text{wet}_5} = 117 \ \text{ft}^2\\
-     C_{D_{p5}} = \dfrac{K_5 C_{f_{5}} S_{\text{wet}_5}}{S_{\text{ref}}} = \dfrac{(1.12)(2.75\times10^{-3})(117 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{3.072 \times 10^{-4}}
-\end{gather*}$$
+$$\begin{align*}
+    RN_5 &= \dfrac{(\rho)(v)(\text{m.a.c.}_5)}{\mu} = \dfrac{\left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right) \left(16.2 \ \text{ft} \right)}{ \left(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2} \right)} = 3.586 \times 10^7 \\
+    C_{f_{5}} &= 2.75 \times 10^{-3} \\
+    K_5 &= 1.12 \\ 
+    S_{\text{wet}_5} &= 117 \ \text{ft}^2\\
+     C_{D_{p5}} &= \dfrac{K_5 C_{f_{5}} S_{\text{wet}_5}}{S_{\text{ref}}} = \dfrac{(1.12)(2.75\times10^{-3})(117 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{3.072 \times 10^{-4}}
+\end{align*}$$
 
 Now, for the nacelles. In terms of calculation, this is similar to the fuselage case. From Fig. \ref{fig:bodyform}, \\( \underline{K_6 = 1.28} \\) corresponds to a fineness ratio of 5.0. \\(S_{\text{wet}_6} = 455\\) is given.
 
-$$\begin{equation*}
-    RN_6 = \dfrac{\rho v L_n}{\mu} = \dfrac{ \left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{\text{s}} \right) \left(16.8 \ \text{ft} \right)}{3.025\times10^{-7} \ \dfrac{\text{lb} \cdot \text{s}}{\text{ft}^2}} = 3.719 \times 10^7 
-\end{equation*}$$
-
-$$\begin{gather*}
-    C_{f_{6}} = 2.75 \times 10^{-3} \\
-    C_{D_{p6}} = \dfrac{K_6 C_{f_{6}} S_{\text{wet}_6}}{S_{\text{ref}}} = \dfrac{(1.28)(2.75\times10^{-3})(455 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{1.3655\times10^{-3}} 
-\end{gather*}$$
+$$\begin{align*}
+    RN_6 &= \dfrac{\rho v L_n}{\mu} = \dfrac{ \left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{\text{s}} \right) \left(16.8 \ \text{ft} \right)}{3.025\times10^{-7} \ \dfrac{\text{lb} \cdot \text{s}}{\text{ft}^2}} = 3.719 \times 10^7 \\
+    C_{f_{6}} &= 2.75 \times 10^{-3} \\
+    C_{D_{p6}} &= \dfrac{K_6 C_{f_{6}} S_{\text{wet}_6}}{S_{\text{ref}}} = \dfrac{(1.28)(2.75\times10^{-3})(455 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{1.3655\times10^{-3}} 
+\end{align*}$$
 
 For the total \textbf{parasite} coefficient of drag, all contributions to the drag from the various components are summed up,
 
-$$\begin{equation}
-    \begin{split}
+$$\begin{align*}
         C_{D_{p}} = \sum_{i=1}^6 {C_{D_{p,i}}} = (6.034\times10^{-3} + 6.657\times10^{-3} + 1.632\times 10^{-3} + \\ 7.876\times10^{-4} + 3.072\times10^{-4} +1.3655\times10^{-3}) \\
         = {0.0167}
-    \end{split}
-\end{equation}$$
+\end{align*}$$
 
 From the parasitic drag coefficient, the actual parasitic drag is,
 
@@ -326,13 +295,10 @@ $$\begin{equation}
 
 Now, it is time to calculate the induced drag. For that, it is assumed that the weight of aircraft is \\(98,000\\) lbs. At steady level flight, this is equal to the lift force.
 
-$$\begin{equation*}
-    C_L = \dfrac{L}{\dfrac{1}{2}\rho_a v^2 S_{\text{ref}}} = \dfrac{98000 \ \text{lbs}}{(0.5) \left(0.0008754 \  \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \dfrac{\text{ft}}{\ \text{s}} \right)^2(1172.890 \ \text{ft}^2) } = {0.3262}
-\end{equation*}$$
-
-$$\begin{equation*}
-    AR = \dfrac{b^2}{S_{\text{ref}}} = \dfrac{(96 \ \text{ft})^2}{1172.890 \ \text{ft}^2} = {7.858}
-\end{equation*}$$
+$$\begin{align*}
+    C_L &= \dfrac{L}{\dfrac{1}{2}\rho_a v^2 S_{\text{ref}}} = \dfrac{98000 \ \text{lbs}}{(0.5) \left(0.0008754 \  \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \dfrac{\text{ft}}{\ \text{s}} \right)^2(1172.890 \ \text{ft}^2) } = {0.3262} \\
+    AR &= \dfrac{b^2}{S_{\text{ref}}} = \dfrac{(96 \ \text{ft})^2}{1172.890 \ \text{ft}^2} = {7.858}
+\end{align*}$$
 
 With \\(C_L\\) and aspect ratio known, it is possible to determine the Oswald's efficiency factor, e, using Fig. \ref{fig: oswald}, which turns out to be \\(\underline{e = 0.8384}\\).
 
@@ -373,7 +339,7 @@ Now that the hand calculations are concluded, let's compare this with the MATLAB
 *Comparison of Hand Calculations and MATLAB Calculations for Flight Condition V = 765 ft/s*
 
 ###  Optimum Operating Condition
-The best operating condition for this unique airplane, according to Fig. \ref{fig:main}, is at \boxed{$V = 565 \ \text{ft/s}$}, which is when drag (and thrust required) is minimum, with \textbf{a total drag of 5708 lbs}. This is also when the parasite drag and induced drag are equal. 
+The best operating condition for this unique airplane, according to Fig. \ref{fig:main}, is at \\( \boxed{V = 565 \ \text{ft/s}} \\), which is when drag (and thrust required) is minimum, with **a total drag of 5708 lbs**. This is also when the parasite drag and induced drag are equal. 
 
 ## Conclusion
 ###  Behavior of Drag
