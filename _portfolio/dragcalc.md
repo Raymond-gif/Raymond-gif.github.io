@@ -17,13 +17,13 @@ header:
   <div>
  $$      \begin{equation*}
         \begin{split}
-           b_{wing} = 96 \text{ ft} \\ 
-           c_{r_o,wing} = 20 \text{ ft} \\ 
-           \sigma_{wing} = 0.22 \\
+           b_{\text{wing}} = 96 \text{ ft} \\ 
+           c_{r_o,\text{wing}} = 20 \text{ ft} \\ 
+           \sigma_{\text{wing}} = 0.22 \\
            \Lambda_{c/4} = 8^{o} \\
            L_f = 103 \text{ ft} \\
            D_f = 13 \text{ ft} \\
-           S_{wet_f} = 3365.274 \text{ ft}^2
+           S_{\text{wet}_f} = 3365.274 \text{ ft}^2
         \end{split}
         \end{equation*}$$
   </div>
@@ -41,7 +41,7 @@ $$\begin{align*}
     \rho &= 0.0008754 \  \dfrac{\text{slugs}}{\text{ft}^3} \\
     T &= 400^{o} \ R \\
     \mu &= 3.025\times10^{-7} \ \dfrac{\text{lb} \cdot \text{s}}{\text{ft}^2} \\
-    \text{Flight Velocity}: \ v &= 765 \text{ft/s}
+    \text{Flight Velocity}: \ v &= 765 \text{ ft/s}
 \end{align*}$$
 
 ###  Calculating Parasitic Drag
@@ -49,10 +49,10 @@ $$\begin{align*}
 The parasitic drag coefficient of the total aircraft is calculated with the following equation, with the subscript i denoting each aircraft component,
 
 $$\begin{equation} \label{parasitedragcoeff}
-    \boxed{C_{D_p} = \sum_{\text{i}}{\dfrac{K_iC_{f,i} S_{wet,i}}{S_{ref}}}}
+    \boxed{C_{D_p} = \sum_{\text{i}}{\dfrac{K_iC_{f,i} S_{\text{wet},i}}{S_{\text{ref}}}}}
 \end{equation}$$
 
-where \\(K_i\\) is the form factor accounting for pressure drag, \\(C_{f,i}\\) is the skin friction coefficient, \\(S_{wet,i}\\) is the wetted area, and \\(S_{ref}\\) is the wing planform area. \\(C_{f,i}\\) is a function of Reynolds number, and the graph is digitized in Fig. \ref{fig:skinfriction} in section \ref{plotting}. For a wing, the characteristic length is the mean aerodynamic chord or m.a.c, which is computed as, 
+where \\(K_i\\) is the form factor accounting for pressure drag, \\(C_{f,i}\\) is the skin friction coefficient, \\(S_{\text{wet},i}\\) is the wetted area, and \\(S_{\text{ref}}\\) is the wing planform area. \\(C_{f,i}\\) is a function of Reynolds number, and the graph is digitized in Fig. \ref{fig:skinfriction} in section \ref{plotting}. For a wing, the characteristic length is the mean aerodynamic chord or m.a.c, which is computed as, 
 
 $$\begin{equation} \label{mac}
     \text{m.a.c.} = \dfrac{2}{3}\biggl(C_R+C_T-\dfrac{C_RC_T}{C_R+C_T} \biggr)
@@ -66,7 +66,7 @@ $$\begin{equation} \label{induceddragcoeff}
     \boxed{C_{D_i} = \dfrac{C_L^2}{\pi \cdot AR \cdot e} }
 \end{equation},$$
 
-where \\(C_L\\) is the lift coefficient, \\(AR \equiv \dfrac{\text{span}^2}{\text{reference area}} =  b^2/S_{ref}\\), and \\(e\\) is the Oswald's efficiency factor. 
+where \\(C_L\\) is the lift coefficient, \\(AR \equiv \dfrac{\text{span}^2}{\text{reference area}} =  b^2/S_{\text{ref}}\\), and \\(e\\) is the Oswald's efficiency factor. 
 
 ###  Calculating Total Drag
 
@@ -107,7 +107,7 @@ The rest of the figures were digitized from \cite{Shevell_1983}. In particular, 
 $$\begin{equation}
 \begin{split} \label{digitaleqn}
     K &= 1 + Z(t/c) + 100(t/c)^4 \\
-    Z &= \dfrac{(2-M_0^2)cos{(\Lambda_{C/4}})}{\sqrt{1-M_0^2cos^2(\Lambda_{C/4})}}
+    Z &= \dfrac{(2-M_0^2)\cos{(\Lambda_{C/4}})}{\sqrt{1-M_0^2\cos^2(\Lambda_{C/4})}}
     \end{split}
 \end{equation}
 $$
@@ -166,9 +166,9 @@ Here are the aircraft constants for my specific airplane:
 $$    \begin{equation} \label{my constants}
         \boxed{    
         \begin{split}
-           b_{wing} = 96 \text{ ft} \\ 
-           c_{r_o,wing} = 20 \text{ ft} \\ 
-           \sigma_{wing} = 0.22 \\
+           b_{\text{wing}} = 96 \text{ ft} \\ 
+           c_{r_o,\text{wing}} = 20 \text{ ft} \\ 
+           \sigma_{\text{wing}} = 0.22 \\
            \Lambda_{c/4} = 8^{o} \\
            L_f = 103 \text{ ft} \\
            D_f = 13 \text{ ft} \\
@@ -176,18 +176,19 @@ $$    \begin{equation} \label{my constants}
         \end{equation}$$
 
 From SOLIDWORKS, the following values were also obtained for my specific aircraft. This is discussed and shown more in section \ref{solidworkssection}. 
+
 $$\begin{equation*}
 \boxed{\begin{split}
-    \text{Wetted Area of Wing}& \ \ \  S_{\text{wet1}} = 1914.679 \ \text{ft}^2 \\
-    \text{Wing Planform Area}&\ \ \ S_{ref} = 1172.890 \ \text{ft}^2 \\
+    \text{Wetted Area of Wing}& \ \ \  S_{\text{wet}_1} = 1914.679 \ \text{ft}^2 \\
+    \text{Wing Planform Area}&\ \ \ S_{\text{ref}} = 1172.890 \ \text{ft}^2 \\
     \text{Average t/c of Wing}& \ \ \  t/c = 0.1432 \\ 
 \end{split}}
 \end{equation*}$$
 
 For my calculations, I will use the following numbers to denote the specific components of the airplane. 
 
-\textbf{1 = Wing, 2 = Fuselage, 3 = Horizontal Tail, 4 = Vertical Tail, 5 =
-Pylons, 6 = Nacelles }
+__1 = Wing, 2 = Fuselage, 3 = Horizontal Tail, 4 = Vertical Tail, 5 =
+Pylons, 6 = Nacelles__ 
 
 $$\begin{gather*}
     C_{T,1} = (\sigma_{1}) \biggl(\underbrace{C_{r_o,1}}_{\text{centerline root chord}}\biggr) = (0.22)(20 \text{ ft}) = 4.4 \text{ ft} 
@@ -205,10 +206,10 @@ $$\begin{equation*}
 \end{split}
 \end{equation*}$$
 
-Using Fig. \ref{fig:skinfriction}, it was found that \\(C_{f,1} \approx 2.8 \times 10^{-3}\\). To find the form factor K, Fig. \ref{fig:surfaceform} was used. Using SOLIDWORKS, the average thickness-to-chord ratio is \\(t/c = 0.1433\\). Thus, the form factor K can be calculated using sweep angle and t/c, resulting in $K_1 = 1.32$. 
+Using Fig. \ref{fig:skinfriction}, it was found that \\(C_{f,1} \approx 2.8 \times 10^{-3}\\). To find the form factor K, Fig. \ref{fig:surfaceform} was used. Using SOLIDWORKS, the average thickness-to-chord ratio is \\(t/c = 0.1433\\). Thus, the form factor K can be calculated using sweep angle and t/c, resulting in  \\( K_1 = 1.32 \\). 
 
 $$\begin{equation*}
-    C_{D_p1} = \dfrac{K_1 C_{f1} S_{\text{wet1}}}{S_{ref}} = \dfrac{(1.32)(2.8\times10^{-3})(1914.6789) \ \text{ft}}{1172.890 \ \text{ft}} = \underline{6.034 \times 10^{-3}}
+    C_{D_{p_1}} = \dfrac{K_1 C_{f_{1}} S_{\text{wet}_1}}{S_{\text{ref}}} = \dfrac{(1.32)(2.8\times10^{-3})(1914.6789) \ \text{ft}}{1172.890 \ \text{ft}} = \underline{6.034 \times 10^{-3}}
 \end{equation*}$$
 
 Moving on to the fuselage, the length and diameter of the fuselage are obtained from my unique constants in (\ref{my constants}). The fineness ratio is then \\(L_f/D_f = 7.923\\), and from Fig. \ref{fig:bodyform}, \\(K_2 = 1.16\\).  Now, to calculate Reynolds number, 
@@ -220,13 +221,13 @@ $$\begin{equation*}
 To calculate the wetted area, the following formula is used,
 
 $$\begin{equation*}
-    S_{\text{wet2}} = (0.8\pi)(D_f)(L_f) = (0.8\pi)(13 \text{ft})(103 \ \text{ft}) = 3365.274 \  \text{ft}^2
+    S_{\text{wet}_2} = (0.8\pi)(D_f)(L_f) = (0.8\pi)(13 \text{ft})(103 \ \text{ft}) = 3365.274 \  \text{ft}^2
 \end{equation*}$$
 
-From Fig. \ref{fig:skinfriction}, \\(C_{f2} = 2\times10^{-3}\\). 
+From Fig. \ref{fig:skinfriction}, \\(C_{f_{2}} = 2\times10^{-3}\\). 
 
 $$\begin{gather*}
-    C_{Dp2} = \dfrac{K_2 C_{f2} S_{\text{wet2}}}{S_{ref}} = \dfrac{(1.16)(2\times10^{-3})(3365.274 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{6.657 \times 10^{-3}}
+    C_{D_{p2}} = \dfrac{K_2 C_{f_{2}} S_{\text{wet}_2}}{S_{\text{ref}}} = \dfrac{(1.16)(2\times10^{-3})(3365.274 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{6.657 \times 10^{-3}}
 \end{gather*}$$
 
 Now, let's consider the horizontal tail. Similar to the wing, 
@@ -242,15 +243,15 @@ With the m.a.c. known, it is possible to calculate Reynolds number.
 
 $$\begin{equation*}
 \begin{split}
-    RN_3 = \dfrac{(\rho)(v)(\text{m.a.c.}_3)}{\mu} &= \dfrac{(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3})(765 \ \dfrac{\text{ft}}{s})(8.071 \ \text{ft})}{(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2})} \\ &= 1.7868 \times 10^7
+    RN_3 = \dfrac{(\rho)(v)(\text{m.a.c.}_3)}{\mu} &= \dfrac{\left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right) \left(8.071 \ \text{ft}\right)}{\left(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2}\right)} \\ &= 1.7868 \times 10^7
 \end{split}
 \end{equation*} $$
 
 $$\begin{gather*}
-    C_{f3} = 3.1 \times 10^{-3} \\
+    C_{f_{3}} = 3.1 \times 10^{-3} \\
     K_3 = 1.16 \\ 
-    S_{\text{wet3}} = (2)(\text{exposed planform area})(\underbrace{1.02}_{\text{curvature}}) = (2)(261 \  \text{ft}^2)(1.02) = 532.44 \ \text{ft}^2 \\
-     C_{Dp3} = \dfrac{K_3 C_{f3} S_{\text{wet3}}}{S_{ref}} = \dfrac{(1.16)(3.1\times10^{-3})(532.44 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{1.632 \times 10^{-3}}
+    S_{\text{wet}_3} = (2)(\text{exposed planform area})(\underbrace{1.02}_{\text{curvature}}) = (2)(261 \  \text{ft}^2)(1.02) = 532.44 \ \text{ft}^2 \\
+     C_{D_{p3}} = \dfrac{K_3 C_{f_{3}} S_{\text{wet}_3}}{S_{\text{ref}}} = \dfrac{(1.16)(3.1\times10^{-3})(532.44 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{1.632 \times 10^{-3}}
 \end{gather*}
 $$
 
@@ -267,15 +268,15 @@ With the m.a.c. known, it is possible to calculate Reynolds number.
 
 $$\begin{equation*}
 \begin{split}
-    RN_4 = \dfrac{(\rho)(v)(\text{m.a.c.}_4)}{\mu} &= \dfrac{(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3})(765 \ \dfrac{\text{ft}}{s})(21.011 \ \text{ft})}{(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2})} \\ &= 4.651 \times 10^7
+    RN_4 = \dfrac{(\rho)(v)(\text{m.a.c.}_4)}{\mu} &= \dfrac{\left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right) \left(21.011 \ \text{ft}\right)}{ \left(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2} \right)} \\ &= 4.651 \times 10^7
 \end{split}
 \end{equation*} $$
 
 $$\begin{gather*}
-    C_{f4} = 2.5 \times 10^{-3} \\
+    C_{f_{4}} = 2.5 \times 10^{-3} \\
     K_4 = 1.125 \\ 
-    S_{\text{wet4}} = (2)(\text{exposed planform area})(\underbrace{1.02}_{\text{curvature}}) = (2)(161 \  \text{ft}^2)(1.02) = 328.44 \ \text{ft}^2 \\
-     C_{Dp4} = \dfrac{K_4 C_{f4} S_{\text{wet4}}}{S_{ref}} = \dfrac{(1.125)(2.5\times10^{-3})(328.44 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{7.876 \times 10^{-4}}
+    S_{\text{wet}_4} = (2)(\text{exposed planform area})(\underbrace{1.02}_{\text{curvature}}) = (2)(161 \  \text{ft}^2)(1.02) = 328.44 \ \text{ft}^2 \\
+     C_{D_{p4}} = \dfrac{K_4 C_{f_{4}} S_{\text{wet}_4}}{S_{\text{ref}}} = \dfrac{(1.125)(2.5\times10^{-3})(328.44 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{7.876 \times 10^{-4}}
 \end{gather*}
 $$
 
@@ -283,33 +284,33 @@ Now, for the pylons,
 
 $$\begin{equation*}
 \begin{split}
-    RN_5 = \dfrac{(\rho)(v)(\text{m.a.c.}_5)}{\mu} &= \dfrac{(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3})(765 \ \dfrac{\text{ft}}{s})(16.2 \ \text{ft})}{(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2})} \\ &= 3.586 \times 10^7
+    RN_5 = \dfrac{(\rho)(v)(\text{m.a.c.}_5)}{\mu} &= \dfrac{\left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right) \left(16.2 \ \text{ft} \right)}{ \left(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2} \right)} \\ &= 3.586 \times 10^7
 \end{split}
 \end{equation*} $$
 
 $$\begin{gather*}
-    C_{f5} = 2.75 \times 10^{-3} \\
+    C_{f_{5}} = 2.75 \times 10^{-3} \\
     K_5 = 1.12 \\ 
-    S_{\text{wet5}} = 117 \ \text{ft}^2\\
-     C_{Dp5} = \dfrac{K_5 C_{f5} S_{\text{wet5}}}{S_{ref}} = \dfrac{(1.12)(2.75\times10^{-3})(117 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{3.072 \times 10^{-4}}
+    S_{\text{wet}_5} = 117 \ \text{ft}^2\\
+     C_{D_{p5}} = \dfrac{K_5 C_{f_{5}} S_{\text{wet}_5}}{S_{\text{ref}}} = \dfrac{(1.12)(2.75\times10^{-3})(117 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{3.072 \times 10^{-4}}
 \end{gather*}$$
 
-Now, for the nacelles. In terms of calculation, this is similar to the fuselage case. From Fig. \ref{fig:bodyform}, \underline{$K_6 = 1.28$} corresponds to a fineness ratio of 5.0. \\(S_{\text{wet6}} = 455\\) is given.
+Now, for the nacelles. In terms of calculation, this is similar to the fuselage case. From Fig. \ref{fig:bodyform}, \\( \underline{K_6 = 1.28} \\) corresponds to a fineness ratio of 5.0. \\(S_{\text{wet}_6} = 455\\) is given.
 
 $$\begin{equation*}
-    RN_6 = \dfrac{\rho v L_n}{\mu} = \dfrac{(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3})(765 \ \dfrac{\text{ft}}{\text{s}})(16.8 \ \text{ft})}{3.025\times10^{-7} \ \dfrac{\text{lb} \cdot \text{s}}{\text{ft}^2}} = 3.719 \times 10^7 
+    RN_6 = \dfrac{\rho v L_n}{\mu} = \dfrac{ \left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{\text{s}} \right) \left(16.8 \ \text{ft} \right)}{3.025\times10^{-7} \ \dfrac{\text{lb} \cdot \text{s}}{\text{ft}^2}} = 3.719 \times 10^7 
 \end{equation*}$$
 
 $$\begin{gather*}
-    C_{f6} = 2.75 \times 10^{-3} \\
-    C_{Dp6} = \dfrac{K_6 C_{f6} S_{\text{wet6}}}{S_{ref}} = \dfrac{(1.28)(2.75\times10^{-3})(455 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{1.3655\times10^{-3}} 
+    C_{f_{6}} = 2.75 \times 10^{-3} \\
+    C_{D_{p6}} = \dfrac{K_6 C_{f_{6}} S_{\text{wet}_6}}{S_{\text{ref}}} = \dfrac{(1.28)(2.75\times10^{-3})(455 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{1.3655\times10^{-3}} 
 \end{gather*}$$
 
 For the total \textbf{parasite} coefficient of drag, all contributions to the drag from the various components are summed up,
 
 $$\begin{equation}
     \begin{split}
-        C_{\text{Dp}} = \sum_{i=1}^6{C_{Dp,i}} = (6.034\times10^{-3} + 6.657\times10^{-3} + 1.632\times 10^{-3} + \\ 7.876\times10^{-4} + 3.072\times10^{-4} +1.3655\times10^{-3}) \\
+        C_{D_{p}} = \sum_{i=1}^6 {C_{D_{p,i}}} = (6.034\times10^{-3} + 6.657\times10^{-3} + 1.632\times 10^{-3} + \\ 7.876\times10^{-4} + 3.072\times10^{-4} +1.3655\times10^{-3}) \\
         = {0.0167}
     \end{split}
 \end{equation}$$
@@ -319,38 +320,39 @@ From the parasitic drag coefficient, the actual parasitic drag is,
 $$\begin{equation}
 \boxed{
 \begin{split}
-    D_p = (C_{Dp}) \left(\dfrac{1}{2} \rho_a v^2 \right)(S_{ref}) = (0.0167)(0.5) \left(0.0008754 \  \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right)^2(1172.890 \ \text{ft}^2) \\ = \textbf{5017.336 lb}
+    D_p = (C_{D_{p}}) \left(\dfrac{1}{2} \rho_a v^2 \right)(S_{\text{ref}}) = (0.0167)(0.5) \left(0.0008754 \  \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right)^2(1172.890 \ \text{ft}^2) \\ = \textbf{5017.336 lb}
 \end{split} } 
 \end{equation}$$
 
 Now, it is time to calculate the induced drag. For that, it is assumed that the weight of aircraft is \\(98,000\\) lbs. At steady level flight, this is equal to the lift force.
 
 $$\begin{equation*}
-    C_L = \dfrac{L}{\dfrac{1}{2}\rho_a v^2 S_{ref}} = \dfrac{98000 \ \text{lbs}}{(0.5)(0.0008754 \  \dfrac{\text{slugs}}{\text{ft}^3})(765 \dfrac{\text{ft}}{\ \text{s}})^2(1172.890 \ \text{ft}^2) } = {0.3262}
+    C_L = \dfrac{L}{\dfrac{1}{2}\rho_a v^2 S_{\text{ref}}} = \dfrac{98000 \ \text{lbs}}{(0.5) \left(0.0008754 \  \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \dfrac{\text{ft}}{\ \text{s}} \right)^2(1172.890 \ \text{ft}^2) } = {0.3262}
 \end{equation*}$$
 
 $$\begin{equation*}
-    AR = \dfrac{b^2}{S_{ref}} = \dfrac{(96 \ \text{ft})^2}{1172.890 \ \text{ft}^2} = {7.858}
+    AR = \dfrac{b^2}{S_{\text{ref}}} = \dfrac{(96 \ \text{ft})^2}{1172.890 \ \text{ft}^2} = {7.858}
 \end{equation*}$$
 
 With \\(C_L\\) and aspect ratio known, it is possible to determine the Oswald's efficiency factor, e, using Fig. \ref{fig: oswald}, which turns out to be \\(\underline{e = 0.8384}\\).
 
 $$\begin{equation*}
-    \underbrace{C_{Di}}_{\text{induced drag}} = \ \dfrac{C_L^2}{\pi\cdot AR \cdot e} = \dfrac{(0.3262)^2}{(\pi)(7.858)(0.8384)} = {0.00514}
+    \underbrace{C_{D_{i}}}_{\text{induced drag}} = \ \dfrac{C_L^2}{\pi\cdot AR \cdot e} = \dfrac{(0.3262)^2}{(\pi)(7.858)(0.8384)} = {0.00514}
 \end{equation*}
 $$
+
 The actual induced drag is, 
 
 $$\begin{equation}
 \boxed{
 \begin{split}
-    D_{\text{induced}} &= (C_{Di})(\dfrac{1}{2} \rho_a v^2 )(S_{ref}) \\ &= (0.00514)(0.5)(0.0008754 \  \dfrac{\text{slugs}}{\text{ft}^3})(765 \ \dfrac{\text{ft}}{s})^2(1172.890 \ \text{ft}^2) \\ &= \textbf{1544.258 lb}
+    D_{\text{induced}} &= (C_{D_{i}}) \left(\dfrac{1}{2} \rho_a v^2 \right)(S_{\text{ref}}) \\ &= (0.00514)(0.5) \left(0.0008754 \  \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right)^2(1172.890 \ \text{ft}^2) \\ &= \textbf{1544.258 lb}
 \end{split} } 
 \end{equation}$$
 Now, the total drag coefficient is determined using Equation (\ref{totaldragequation}), 
 
 $$\begin{equation*}
-   {C_{\text{D,total}} = C_{Dp} + C_{D,\text{induced}} = 0.0167 + 0.00514 = 0.02184}
+   {C_{\text{D,total}} = C_{D_{p}} + C_{D,\text{induced}} = 0.0167 + 0.00514 = 0.02184}
 \end{equation*}
 $$
 
@@ -379,8 +381,8 @@ As shown in Fig. \ref{fig:main}, the behavior of total drag is approximately par
 
 $$\begin{equation}
 \begin{split} \label{totaldragexplanation}
-    C_D &= C_{Dp} + C_{Di} = \dfrac{KC_fS_{wet}}{S_{ref}} + \dfrac{C_L^2}{\pi \cdot AR \cdot e} \\ 
-    D &= qS_{ref}C_{D} = \underbrace{qKC_fS_{wet}}_{\text{parasitic}} + \underbrace{qS_{ref}\dfrac{(\dfrac{L}{qS_{ref}})^2}{\pi \cdot AR \cdot e}}_{\text{induced}}
+    C_D &= C_{D_{p}} + C_{D_{i}} = \dfrac{KC_fS_{\text{wet}}}{S_{\text{ref}}} + \dfrac{C_L^2}{\pi \cdot AR \cdot e} \\ 
+    D &= qS_{\text{ref}}C_{D} = \underbrace{qKC_fS_{\text{wet}}}_{\text{parasitic}} + \underbrace{qS_{\text{ref}}\dfrac{\left(\dfrac{L}{qS_{\text{ref}}} \right)^2}{\pi \cdot AR \cdot e}}_{\text{induced}}
 \end{split}
 \end{equation}$$
 
@@ -418,7 +420,7 @@ In the case of my unique airplane, it is advantageous to slow down because, at t
   <strong>Figure 1:</strong> (a) Isometric View of Wing and Fuselage; 
   (b) Top-Down View Displaying Wing Dimensions; 
   (c) Exposed Root Chord; 
-  (d) Wetted Area of Wing \(S_{\text{wet1}}\)
+  (d) Wetted Area of Wing \(S_{\text{wet}_1}\)
 </p>
 
 <!-- Figure: Wing Planform and Fuselage Measurements -->
@@ -438,7 +440,7 @@ In the case of my unique airplane, it is advantageous to slow down because, at t
 </p>
 
 <p align="center">
-  <strong>Figure 2:</strong> (a) Wing Planform Area \(S_{ref}\); 
+  <strong>Figure 2:</strong> (a) Wing Planform Area \(S_{\text{ref}}\); 
   (b) Average t/c ratio, located at m.a.c.; 
   (c) Measurements of the Fuselage
 </p>
