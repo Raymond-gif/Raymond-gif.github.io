@@ -1,5 +1,5 @@
 ---
-title: "Drag Calculation of Airplane Project (Work in Progress)"
+title: "Drag Calculation of Airplane Project"
 excerpt: "Drag is a fundamental aerodynamic force that acts on an airplane in flight. Determining this value is crucial for determining the thrust output required by the airplane engine in order to maintain steady flight. In this report, I calculate the total incompressible drag acting on an airplane, including the parasitic and induced drag. To calculate the drag of the entire airplane, it is necessary to calculate the drag of the individual components, such as the wing, fuselage, etc, and sum them up."
 order: 1
 layout: splash
@@ -50,7 +50,7 @@ $$\begin{equation} \label{parasitedragcoeff}
     \boxed{C_{D_p} = \sum_{\text{i}}{\dfrac{K_iC_{f,i} S_{\text{wet},i}}{S_{\text{ref}}}}}
 \end{equation}$$
 
-where \\(K_i\\) is the form factor accounting for pressure drag, \\(C_{f,i}\\) is the skin friction coefficient, \\(S_{\text{wet},i}\\) is the wetted area, and \\(S_{\text{ref}}\\) is the wing planform area. \\(C_{f,i}\\) is a function of Reynolds number, and the graph is digitized in Fig. \ref{fig:skinfriction} in section \ref{plotting}. For a wing, the characteristic length is the mean aerodynamic chord or m.a.c, which is computed as, 
+where \\(K_i\\) is the form factor accounting for pressure drag, \\(C_{f,i}\\) is the skin friction coefficient, \\(S_{\text{wet},i}\\) is the wetted area, and \\(S_{\text{ref}}\\) is the wing planform area. \\(C_{f,i}\\) is a function of Reynolds number, and the graph is digitized in Fig. 2. For a wing, the characteristic length is the mean aerodynamic chord or m.a.c, which is computed as, 
 
 $$\begin{equation} \label{mac}
     \text{m.a.c.} = \dfrac{2}{3}\biggl(C_R+C_T-\dfrac{C_RC_T}{C_R+C_T} \biggr)
@@ -76,41 +76,45 @@ Compressibility effects are ignored for the purposes of this design report.
 
 ## Results
 
-###  Plots \label{plotting}
+###  Plots 
 
-Figure \ref{fig:main} and \ref{fig:l_d} were graphed based on my original constants. The MATLAB code used to graph this is shown in section \ref{MATLABCODE}. 
+Figure 1a and 1b were graphed based on my original constants. The MATLAB code used to graph this is shown in Appendix. 
 
-<div style="display: flex; justify-content: center; gap: 1rem;">
+<figure style="display: flex; flex-direction: column; align-items: center;">
 
-  <!-- Subfigure 1 -->
-  <figure style="flex: 1; text-align: center;">
-    <img src="/images/fig1.jpg" alt="Drag as a Function of Velocity" style="width:100%;">
-    <figcaption>(a)</figcaption>
-  </figure>
+  <!-- Subfigures container -->
+  <div style="display: flex; justify-content: center; gap: 1rem; width: 100%;">
+    <!-- Subfigure 1 -->
+    <figure style="flex: 1; text-align: center; margin: 0;">
+      <img src="/images/fig1.jpg" alt="Drag as a Function of Velocity" style="width:100%;">
+      <figcaption>(a)</figcaption>
+    </figure>
 
-  <!-- Subfigure 2 -->
-  <figure style="flex: 1; text-align: center;">
-    <img src="/images/fig2.jpg" alt="Lift-To-Drag Ratio as a Function of Velocity" style="width:100%;">
-    <figcaption>(b)</figcaption>
-  </figure>
+    <!-- Subfigure 2 -->
+    <figure style="flex: 1; text-align: center; margin: 0;">
+      <img src="/images/fig2.jpg" alt="Lift-To-Drag Ratio as a Function of Velocity" style="width:100%;">
+      <figcaption>(b)</figcaption>
+    </figure>
+  </div>
 
-</div>
+  <!-- Main caption -->
+  <figcaption style="text-align:center; margin-top: 1rem; font-size: 1.1rem">
+    <strong>Figure 1: </strong> (a) Drag as a Function of Velocity; (b) Lift-To-Drag Ratio as a Function of Velocity
+  </figcaption>
+</figure>
 
-<figcaption style="text-align:center; margin-top: 1rem;">
-(a) Drag as a Function of Velocity; (b) Lift-To-Drag Ratio as a Function of Velocity
-</figcaption>
-
-The rest of the figures were digitized from \cite{Shevell_1983}. In particular, for Fig. \ref{fig:surfaceform}, equation \ref{digitaleqn} was used.
+The rest of the figures were digitized from Shevell's textbook (in references). In particular, for Fig. 3, equation \ref{digitaleqn} was used.
 
 $$\begin{equation}
-\begin{split} \label{digitaleqn}
+\begin{split} 
     K &= 1 + Z(t/c) + 100(t/c)^4 \\
     Z &= \dfrac{(2-M_0^2)\cos{(\Lambda_{C/4}})}{\sqrt{1-M_0^2\cos^2(\Lambda_{C/4})}}
     \end{split}
+  \label{digitaleqn}
 \end{equation}
 $$
 
-<!-- Figure 3 -->
+<!-- Figure 2 -->
 <p align="center">
   <img src="/images/fig3.jpg" 
        alt="Skin Friction Coefficient as a Function of RN" 
@@ -118,11 +122,11 @@ $$
 </p>
 
 <p align="center">
-  <strong>Figure 3:</strong> Skin Friction Coefficient \(C_f\) as a Function of RN. 
+  <strong>Figure 2:</strong> Skin Friction Coefficient \(C_f\) as a Function of RN. 
   Adapted from Shevell (1983).
 </p>
 
-<!-- Figure 4 -->
+<!-- Figure 3 -->
 <p align="center">
   <img src="/images/fig4.jpg" 
        alt="K as a Function of Λc/4 and t/c for Aerodynamic Surfaces" 
@@ -130,11 +134,11 @@ $$
 </p>
 
 <p align="center">
-  <strong>Figure 4:</strong> (For Aerodynamic Surfaces) K as a Function of \(\Lambda_{c/4}\) and \(t/c\). 
+  <strong>Figure 3:</strong> (For Aerodynamic Surfaces) K as a Function of \(\Lambda_{c/4}\) and \(t/c\). 
   Adapted from Shevell (1983).
 </p>
 
-<!-- Figure 5 -->
+<!-- Figure 4 -->
 <p align="center">
   <img src="/images/fig5.jpg" 
        alt="K as a Function of Fineness Ratio for Bodies" 
@@ -142,11 +146,11 @@ $$
 </p>
 
 <p align="center">
-  <strong>Figure 5:</strong> (For Bodies) K as a Function of Fineness Ratio. 
+  <strong>Figure 4:</strong> (For Bodies) K as a Function of Fineness Ratio. 
   Adapted from Shevell (1983).
 </p>
 
-<!-- Figure 6 -->
+<!-- Figure 5 -->
 <p align="center">
   <img src="/images/fig6.jpg" 
        alt="Oswald Efficiency as a Function of Aspect Ratio and Parasitic Drag Coefficient" 
@@ -154,7 +158,7 @@ $$
 </p>
 
 <p align="center">
-  <strong>Figure 6:</strong> Oswald Efficiency as a Function of Aspect Ratio and Parasitic Drag Coefficient. 
+  <strong>Figure 5:</strong> Oswald Efficiency as a Function of Aspect Ratio and Parasitic Drag Coefficient. 
   Adapted from Shevell (1983).
 </p>
 
@@ -173,7 +177,7 @@ $$    \begin{equation} \label{my constants}
         \end{split} }
         \end{equation}$$
 
-From SOLIDWORKS, the following values were also obtained for my specific aircraft. This is discussed and shown more in section \ref{solidworkssection}. 
+From SOLIDWORKS, the following values were also obtained for my specific aircraft.  
 
 $$\begin{equation*}
 \boxed{\begin{split}
@@ -195,13 +199,13 @@ $$\begin{align*}
     RN_1 &= \dfrac{(\rho)(v)(\text{m.a.c.})}{\mu} = \dfrac{\left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{s} \right) \left(12.525 \ \text{ft}\right)}{\left(3.025\times10^{-7} \dfrac{\ \text{lb} \cdot \text{s}}{\text{ft}^2} \right)} = 2.7728 \times 10^7
 \end{align*}$$
 
-Using Fig. \ref{fig:skinfriction}, it was found that \\(C_{f,1} \approx 2.8 \times 10^{-3}\\). To find the form factor K, Fig. \ref{fig:surfaceform} was used. Using SOLIDWORKS, the average thickness-to-chord ratio is \\(t/c = 0.1433\\). Thus, the form factor K can be calculated using sweep angle and t/c, resulting in  \\( K_1 = 1.32 \\). 
+Using Fig. 2, it was found that \\(C_{f,1} \approx 2.8 \times 10^{-3}\\). To find the form factor K, Fig. 3 was used. Using SOLIDWORKS, the average thickness-to-chord ratio is \\(t/c = 0.1433\\). Thus, the form factor K can be calculated using sweep angle and t/c, resulting in  \\( K_1 = 1.32 \\). 
 
 $$\begin{equation*}
     C_{D_{p_1}} = \dfrac{K_1 C_{f_{1}} S_{\text{wet}_1}}{S_{\text{ref}}} = \dfrac{(1.32)(2.8\times10^{-3})(1914.6789) \ \text{ft}}{1172.890 \ \text{ft}} = \underline{6.034 \times 10^{-3}}
 \end{equation*}$$
 
-Moving on to the fuselage, the length and diameter of the fuselage are obtained from my unique constants in (\ref{my constants}). The fineness ratio is then \\(L_f/D_f = 7.923\\), and from Fig. \ref{fig:bodyform}, \\(K_2 = 1.16\\).  Now, to calculate Reynolds number, 
+Moving on to the fuselage, the length and diameter of the fuselage are obtained from my unique constants in (\ref{my constants}). The fineness ratio is then \\(L_f/D_f = 7.923\\), and from Fig. 4, \\(K_2 = 1.16\\).  Now, to calculate Reynolds number, 
 
 $$\begin{equation*}
     RN_2 = \dfrac{\rho v L_f}{\mu} = \dfrac{\left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{\text{s}} \right) \left(103 \ \text{ft}\right)}{3.025\times10^{-7} \ \dfrac{\text{lb} \cdot \text{s}}{\text{ft}^2}} = 2.280 \times 10^8 
@@ -213,7 +217,7 @@ $$\begin{equation*}
     S_{\text{wet}_2} = (0.8\pi)(D_f)(L_f) = (0.8\pi)(13 \text{ft})(103 \ \text{ft}) = 3365.274 \  \text{ft}^2
 \end{equation*}$$
 
-From Fig. \ref{fig:skinfriction}, \\(C_{f_{2}} = 2\times10^{-3}\\). 
+From Fig. 2, \\(C_{f_{2}} = 2\times10^{-3}\\). 
 
 $$\begin{gather*}
     C_{D_{p2}} = \dfrac{K_2 C_{f_{2}} S_{\text{wet}_2}}{S_{\text{ref}}} = \dfrac{(1.16)(2\times10^{-3})(3365.274 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{6.657 \times 10^{-3}}
@@ -269,7 +273,7 @@ $$\begin{align*}
      C_{D_{p5}} &= \dfrac{K_5 C_{f_{5}} S_{\text{wet}_5}}{S_{\text{ref}}} = \dfrac{(1.12)(2.75\times10^{-3})(117 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{3.072 \times 10^{-4}}
 \end{align*}$$
 
-Now, for the nacelles. In terms of calculation, this is similar to the fuselage case. From Fig. \ref{fig:bodyform}, \\( \underline{K_6 = 1.28} \\) corresponds to a fineness ratio of 5.0. \\(S_{\text{wet}_6} = 455\\) is given.
+Now, for the nacelles. In terms of calculation, this is similar to the fuselage case. From Fig. 4, \\( \underline{K_6 = 1.28} \\) corresponds to a fineness ratio of 5.0. \\(S_{\text{wet}_6} = 455\\) is given.
 
 $$\begin{align*}
     RN_6 &= \dfrac{\rho v L_n}{\mu} = \dfrac{ \left(0.0008754 \ \dfrac{\text{slugs}}{\text{ft}^3} \right) \left(765 \ \dfrac{\text{ft}}{\text{s}} \right) \left(16.8 \ \text{ft} \right)}{3.025\times10^{-7} \ \dfrac{\text{lb} \cdot \text{s}}{\text{ft}^2}} = 3.719 \times 10^7 \\
@@ -277,7 +281,7 @@ $$\begin{align*}
     C_{D_{p6}} &= \dfrac{K_6 C_{f_{6}} S_{\text{wet}_6}}{S_{\text{ref}}} = \dfrac{(1.28)(2.75\times10^{-3})(455 \ \text{ft}^2)}{1172.890 \ \text{ft}^2} = \underline{1.3655\times10^{-3}} 
 \end{align*}$$
 
-For the total \textbf{parasite} coefficient of drag, all contributions to the drag from the various components are summed up,
+For the total **parasite** coefficient of drag, all contributions to the drag from the various components are summed up,
 
 $$\begin{align*}
         C_{D_{p}} = \sum_{i=1}^6 {C_{D_{p,i}}} = (6.034\times10^{-3} + 6.657\times10^{-3} + 1.632\times 10^{-3} + \\ 7.876\times10^{-4} + 3.072\times10^{-4} +1.3655\times10^{-3}) \\
@@ -300,7 +304,7 @@ $$\begin{align*}
     AR &= \dfrac{b^2}{S_{\text{ref}}} = \dfrac{(96 \ \text{ft})^2}{1172.890 \ \text{ft}^2} = {7.858}
 \end{align*}$$
 
-With \\(C_L\\) and aspect ratio known, it is possible to determine the Oswald's efficiency factor, e, using Fig. \ref{fig: oswald}, which turns out to be \\(\underline{e = 0.8384}\\).
+With \\(C_L\\) and aspect ratio known, it is possible to determine the Oswald's efficiency factor, e, using Fig. 5, which turns out to be \\(\underline{e = 0.8384}\\).
 
 $$\begin{equation*}
     \underbrace{C_{D_{i}}}_{\text{induced drag}} = \ \dfrac{C_L^2}{\pi\cdot AR \cdot e} = \dfrac{(0.3262)^2}{(\pi)(7.858)(0.8384)} = {0.00514}
@@ -328,7 +332,7 @@ $$\begin{equation}
 
 ###  Comparison with MATLAB Data
 
-Now that the hand calculations are concluded, let's compare this with the MATLAB calculations. The MATLAB calculation was done using Fig. \ref{fig:main}. To get the exact point when \\(V = 765 \  \text{ft/s}\\), a while loop was used, with the results shown below.
+Now that the hand calculations are concluded, let's compare this with the MATLAB calculations. The MATLAB calculation was done using Fig. 1a. To get the exact point when \\(V = 765 \  \text{ft/s}\\), a while loop was used, with the results shown below.
 
 |                         | **Hand Calculations** | **MATLAB Calculations** |
 |-------------------------|--------------------|-----------------------|
@@ -339,17 +343,18 @@ Now that the hand calculations are concluded, let's compare this with the MATLAB
 *Comparison of Hand Calculations and MATLAB Calculations for Flight Condition V = 765 ft/s*
 
 ###  Optimum Operating Condition
-The best operating condition for this unique airplane, according to Fig. \ref{fig:main}, is at \\( \boxed{V = 565 \ \text{ft/s}} \\), which is when drag (and thrust required) is minimum, with **a total drag of 5708 lbs**. This is also when the parasite drag and induced drag are equal. 
+The best operating condition for this unique airplane, according to Fig. 1a, is at \\( \boxed{V = 565 \ \text{ft/s}} \\), which is when drag (and thrust required) is minimum, with **a total drag of 5708 lbs**. This is also when the parasite drag and induced drag are equal. 
 
 ## Conclusion
 ###  Behavior of Drag
-As shown in Fig. \ref{fig:main}, the behavior of total drag is approximately parabolic with increasing velocity. As such, there is an optimum velocity to fly at, which occurs when the total drag is minimum, or when the L/D is maximum as in Fig. \ref{fig:l_d}. To see why this is, let us examine the equations for total drag, where \\(q = (1/2)\rho v^2\\),
+As shown in Fig. 1a, the behavior of total drag is approximately parabolic with increasing velocity. As such, there is an optimum velocity to fly at, which occurs when the total drag is minimum, or when the L/D is maximum as in Fig. 1b. To see why this is, let us examine the equations for total drag, where \\(q = (1/2)\rho v^2\\),
 
 $$\begin{equation}
-\begin{split} \label{totaldragexplanation}
+\begin{split} 
     C_D &= C_{D_{p}} + C_{D_{i}} = \dfrac{KC_fS_{\text{wet}}}{S_{\text{ref}}} + \dfrac{C_L^2}{\pi \cdot AR \cdot e} \\ 
     D &= qS_{\text{ref}}C_{D} = \underbrace{qKC_fS_{\text{wet}}}_{\text{parasitic}} + \underbrace{qS_{\text{ref}}\dfrac{\left(\dfrac{L}{qS_{\text{ref}}} \right)^2}{\pi \cdot AR \cdot e}}_{\text{induced}}
 \end{split}
+\label{totaldragexplanation}
 \end{equation}$$
 
 Equation (\ref{totaldragexplanation}) shows that the parasitic drag is proportional to q, and the induced drag is inversely proportional to \\(q^2\\). Since \\(q = \rho v^2 /2 \\), this is why parasitic drag increases with increasing velocity, while induced drag decreases. 
@@ -383,7 +388,7 @@ In the case of my unique airplane, it is advantageous to slow down because, at t
 </p>
 
 <p align="center">
-  <strong>Figure 1:</strong> (a) Isometric View of Wing and Fuselage; 
+  <strong>Figure 6:</strong> (a) Isometric View of Wing and Fuselage; 
   (b) Top-Down View Displaying Wing Dimensions; 
   (c) Exposed Root Chord; 
   (d) Wetted Area of Wing \(S_{\text{wet}_1}\)
@@ -406,13 +411,13 @@ In the case of my unique airplane, it is advantageous to slow down because, at t
 </p>
 
 <p align="center">
-  <strong>Figure 2:</strong> (a) Wing Planform Area \(S_{\text{ref}}\); 
+  <strong>Figure 7:</strong> (a) Wing Planform Area \(S_{\text{ref}}\); 
   (b) Average t/c ratio, located at m.a.c.; 
   (c) Measurements of the Fuselage
 </p>
 
 ###  MATLAB Code
-For the MATLAB code, there is one function, Kwing, which was used to graph Fig. \ref{fig:surfaceform}. It is simply the equation used to plot Fig. \ref{fig:surfaceform}.
+For the MATLAB code, there is one function, Kwing, which was used to graph Fig. 3. It is simply the equation used to plot Fig. 3.
 
 ```matlab
 clear, clc, close all 
@@ -628,3 +633,7 @@ Z = numZ./denZ ;
 K = 1+Z.*t_c+100.*t_c.^4 ; 
 end 
 ```
+
+## References
+
+- Shevell, R. S. (1983). *Chapter 11: Incompressible Drag*. In *Fundamentals of Flight*. Englewood Cliffs, NJ: Prentice Hall.
