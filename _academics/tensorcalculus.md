@@ -1161,6 +1161,30 @@ $$\begin{align*}
   </div>
 </div>
 
+<details class="custom-collapse" >
+  <summary><h3> Alternate Form of Incompressible Navier-Stokes Equation in Cylindrical Polar Coordinates </h3></summary>
+  <div class="collapse-content">
+
+In cylindrical coordinates (with \( \mathbf{f}=0 \)),
+
+$$\begin{align*}
+    \dfrac{\partial u_r}{\partial t} &+ u_r \dfrac{\partial u_r}{\partial r} + \dfrac{u_\theta}{r}\dfrac{\partial u_r}{\partial \theta} + u_z \dfrac{\partial u_r}{\partial z}-\dfrac{u_\theta^2}{r} = -\dfrac{1}{\rho} \dfrac{\partial p}{\partial r} \\
+    &+ \nu \bigg\{ \dfrac{\partial}{\partial r} \left[ \dfrac{1}{r} \dfrac{\partial}{\partial r} (r u_r) \right] + \dfrac{1}{r^2} \dfrac{\partial^2 u_r}{\partial \theta^2} + \dfrac{\partial^2 u_r}{\partial z^2} - \dfrac{2}{r^2} \dfrac{\partial u_\theta}{\partial \theta} \bigg\}
+\end{align*}$$
+<br>
+$$\begin{align*}
+    \dfrac{\partial u_\theta}{\partial t} &+u_r \dfrac{\partial u_\theta}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_\theta}{\partial \theta} + u_z \dfrac{\partial u_\theta}{\partial z} + \dfrac{u_r u_\theta}{r} = -\dfrac{1}{\rho r} \dfrac{\partial p}{\partial \theta} \\ 
+    &+ \nu \bigg\{ \dfrac{\partial}{\partial r} \left[ \dfrac{1}{r} \dfrac{\partial}{\partial r} (r u_\theta) \right] + \dfrac{1}{r^2} \dfrac{\partial^2 u_\theta}{\partial \theta^2} + \dfrac{\partial^2 u_\theta}{\partial z^2} + \dfrac{2}{r^2} \dfrac{\partial u_r}{\partial \theta}\bigg\}
+\end{align*}$$
+<br>
+$$\begin{align*}
+    \dfrac{\partial u_z}{\partial t} &+ u_r \dfrac{\partial u_z}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_z}{\partial \theta} + u_z\dfrac{\partial u_z}{\partial z} = - \dfrac{1}{\rho} \dfrac{\partial p}{\partial z}  \\
+    &+ \nu \bigg\{ \dfrac{1}{r} \dfrac{\partial}{\partial r} \left[ r \dfrac{\partial u_z}{\partial r}\right] + \dfrac{1}{r^2} \dfrac{\partial^2 u_z}{\partial \theta^2} + \dfrac{\partial^2 u_z}{\partial z^2}\bigg\}
+\end{align*}$$
+
+  </div>
+</details>
+
 <div class="equation-box">
   <h4 id="ns-spherical">Incompressible Navier-Stokes Equation in Spherical Polar Coordinates</h4>
   <div>
@@ -1185,6 +1209,28 @@ $$\begin{align*}
 \end{align*}$$
   </div>
 </div>
+
+<details class="custom-collapse" >
+  <summary><h3> Alternate Form of Incompressible Navier-Stokes Equation in Spherical Polar Coordinates </h3></summary>
+  <div class="collapse-content">
+In spherical coordinates (with \( \mathbf{f}=0 \)),
+
+$$\begin{align*}
+    \dfrac{\partial u_r}{\partial t} &+ u_r \dfrac{\partial u_r}{\partial r} + \dfrac{u_\theta}{r}\dfrac{\partial u_r}{\partial \theta} + \dfrac{u_\phi}{r \sin \theta} \dfrac{\partial u_r}{\partial \phi}-\dfrac{u_\theta^2+u_\phi^2}{r} = - \dfrac{1}{\rho} \dfrac{\partial p}{\partial r} \\
+    &+ \nu \bigg\{ \dfrac{\partial}{\partial r} \left[ \dfrac{1}{r^2} \dfrac{\partial}{\partial r} (r^2 u_r)\right] + \dfrac{1}{r^2 \sin \theta} \dfrac{\partial}{\partial \theta} \left( \sin \theta \dfrac{\partial u_r}{\partial \theta} \right) + \dfrac{1}{r^2 \sin^2 \theta} \dfrac{\partial^2 u_r}{\partial \phi^2}-\dfrac{2}{r^2 \sin \theta} \dfrac{\partial}{\partial \theta} (u_\theta \sin \theta) - \dfrac{2}{r^2 \sin \theta} \dfrac{\partial u_\phi}{\partial \phi}\bigg\}
+\end{align*}$$
+<br>
+$$\begin{align*}
+    \dfrac{\partial u_\theta}{\partial t} &+u_r \dfrac{\partial u_\theta}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_\theta}{\partial \theta} + \dfrac{u_\phi}{r \sin \theta} \dfrac{\partial u_\theta}{\partial \phi} + \dfrac{u_r u_\theta}{r}-\dfrac{u_\phi^2}{r}\cot \theta = -\dfrac{1}{\rho r} \dfrac{\partial p}{\partial \theta} \\
+    &+ \nu \bigg\{ \dfrac{1}{r^2} \dfrac{\partial}{\partial r} \left[ r^2 \dfrac{\partial u_\theta}{\partial r}\right]  + \dfrac{1}{r^2} \dfrac{\partial}{\partial \theta} \left[ \dfrac{1}{\sin \theta} \dfrac{\partial}{\partial \theta} (u_\theta \sin \theta)\right] + \dfrac{1}{r^2 \sin^2 \theta} \dfrac{\partial^2 u_\theta}{\partial \phi^2} + \dfrac{2}{r^2} \dfrac{\partial u_r}{\partial \theta} - \dfrac{2 \cot \theta}{r^2 \sin \theta} \dfrac{\partial u_\phi}{\partial \phi}\bigg\}
+\end{align*}$$
+<br>
+$$\begin{align*}
+    \dfrac{\partial u_\phi}{\partial t} &+ u_r \dfrac{\partial u_\phi}{\partial r} + \dfrac{u_\theta}{r} \dfrac{\partial u_\phi}{\partial \theta} + \dfrac{u_\phi}{r \sin \theta}\dfrac{\partial u_\phi}{\partial \phi} + \dfrac{u_r u_\phi}{r} + \dfrac{u_\theta u_\phi}{r} \cot \theta = -\dfrac{1}{\rho r \sin \theta} \dfrac{\partial p}{\partial \phi} \\
+    &+ \nu \bigg\{ \dfrac{1}{r^2} \dfrac{\partial}{\partial r} \left[ r^2 \dfrac{\partial u_\phi}{\partial r}\right] + \dfrac{1}{r^2} \dfrac{\partial}{\partial \theta} \left[ \dfrac{1}{\sin \theta} \dfrac{\partial}{\partial \theta} \left( u_\phi \sin \theta \right) \right] + \dfrac{1}{r^2 \sin^2 \theta} \dfrac{\partial^2 u_\phi}{\partial \phi^2} + \dfrac{2}{r^2 \sin \theta} \dfrac{\partial u_r}{\partial \phi} + \dfrac{2 \cot \theta}{r^2 \sin \theta} \dfrac{\partial u_\theta}{\partial \phi} \bigg\}
+\end{align*}$$
+  </div>
+</details>
 
 <h2 id="references">References</h2>
 
