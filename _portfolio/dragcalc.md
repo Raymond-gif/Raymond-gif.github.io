@@ -10,8 +10,6 @@ header:
   hero_excerpt: "Drag is a fundamental aerodynamic force that acts on an airplane in flight. Determining this value is crucial for determining the thrust output required by the airplane engine in order to maintain steady flight. In this report, I calculate the total incompressible drag acting on an airplane, including the parasitic and induced drag. To calculate the drag of the entire airplane, it is necessary to calculate the drag of the individual components, such as the wing, fuselage, etc, and sum them up."
 ---
 
-
-
 <div class="equation-box">
   <h3>Airplane Specifications</h3>
   <div>
