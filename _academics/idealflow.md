@@ -9,6 +9,7 @@ header:
   overlay_color: "#2a4d8f"           
   hero_title: "Ideal Flow"
   hero_excerpt: "I use complex analysis principles to investigate potential flow, starting with elementary solutions, such as sources/sinks, doublets, and moving on to superposition of solutions. Then, I talk about the use of conformal transformations to analyze flow over airfoil shapes."
+order: 2
 ---
 
 <style>

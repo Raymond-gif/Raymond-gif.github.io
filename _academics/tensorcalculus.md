@@ -10,7 +10,7 @@ header:
 image: /images/tensorsimage.png
 caption: "Photo credit: Wikipedia"
 toc: true
-order: 1 
+order: 3 
 ---
 
 <a href="/academics/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
