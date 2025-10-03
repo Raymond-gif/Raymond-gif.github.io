@@ -917,6 +917,113 @@ Solving this involves the **separation of variables** technique.
 
 **TO BE CONTINUED**
 
+## Flow in a Slot with Porous Walls
+
+<p align="center">
+  <img src="/images/porouswalls.jpg" alt="Diagram of Porous Wall" width="50%">
+  <br>
+  <em>Figure: Diagram of Porous Wall</em>
+</p>
+
+Here are all the non-dimensional variables, 
+
+$$
+x^* = \dfrac{x}{h} \qquad 
+y^* = \dfrac{y}{h} \qquad
+u^* = \dfrac{u}{U_{\text{ave}}} \qquad
+v^* = \dfrac{v}{U_{\text{ave}}}
+\notag
+$$
+
+$$
+\psi^* = \dfrac{\psi}{U_{\text{ave}}h} \qquad
+v_0^* = \dfrac{v_0}{U_{\text{ave}}} \qquad
+\text{Re} = \dfrac{U_{\text{ave}}h}{\nu} \qquad
+\alpha = v_0^* \text{Re} = \dfrac{v_0 h}{\nu}
+\notag
+$$
+
+The boundary conditions are: 
+
+$$\begin{align*}
+    u(x,0) &= 0 \longrightarrow u^*(x^*,0) = 0 \\
+    u(x,h) &= 0 \longrightarrow u^*(x^*,1) = 0 \\
+    v(x,0) &= v_0 \longrightarrow v^*(x^*,0) = v_0^* \\
+    v(x,h) &= v_0 \longrightarrow v^*(x^*,1) = v_0^*
+\end{align*}$$
+
+One way to solve this is to use the governing streamfunction equation for 2D, steady, planar incompressible flow, derived in LINK SECTION HERE, repeated below
+
+$$\begin{equation}
+    \dfrac{\partial \psi}{\partial y} \dfrac{\partial (\nabla^2 \psi)}{\partial x} - \dfrac{\partial \psi}{\partial x} \dfrac{\partial (\nabla^2\psi)}{\partial y} = \nu \nabla^4 \psi
+    \label{streamfunctiondifferentialequation}
+\end{equation}$$
+
+where 
+
+$$\begin{equation*}
+    \nabla^4 \psi = \psi_{xxxx} + 2\psi_{xxyy} + \psi_{yyyy}
+\end{equation*}$$
+
+Rewriting Eq. \ref{streamfunctiondifferentialequation} in terms of non-dimensional variables, 
+
+$$\begin{equation}
+    \text{Re} \left[ 
+    \dfrac{\partial \psi^*}{\partial y^*} \dfrac{\partial (\nabla^{*2} \psi^*)}{\partial x^*} - 
+    \dfrac{\partial \psi^*}{\partial x^*} \dfrac{\partial (\nabla^{*2} \psi^*)}{\partial y^*} 
+    \right] = \nabla^{*4} \psi^*
+    \label{nondimensionalstreamfunction}
+\end{equation}$$
+
+We assume the solution is in the form, 
+
+$$\begin{equation*}
+    \psi^* = - v_0^* x^* + F(y^*)
+\end{equation*}$$
+
+Plugging this into Eq. \ref{nondimensionalstreamfunction} and noting that \\( \alpha = v_0^*\text{Re} \\), the equation reduces to a simple fourth order ODE. 
+
+$$\begin{equation}
+    F^{(4)} = \alpha F''' 
+    \label{fourthorderODEporous}
+\end{equation}$$
+
+The boundary conditions transform to,
+
+$$\begin{align*}
+    \psi^*(0,0) = 0 &= F(0) \\
+    u^*(x^*,0) = 0 &= F'(0) \\
+    u^*(x^*,1) = 0 &= F'(1) \\
+    \psi^*(x^*,1) - \psi^*(x^*,0) = 1 &= F(1)
+\end{align*}$$
+
+Integrating Eq. \ref{fourthorderODEporous} multiple times, I end up with, 
+
+$$\begin{equation*}
+    F = C_1 \dfrac{e^{\alpha y}}{\alpha^3} + C_2 \dfrac{y^2}{2} + C_3 y + C_4
+\end{equation*}$$
+
+and the velocity,
+
+$$\begin{equation*}
+    \boxed{u^* = \dfrac{\partial \psi^*}{\partial y^*} = F' = C_1 \dfrac{e^{\alpha y }}{\alpha^2} + C_2 y + C_3}
+\end{equation*}$$
+
+With the boundary conditions, we can solve for all the constants, 
+
+$$\begin{align*}
+    C_1 &= \dfrac{2 \alpha^3}{(2-\alpha)e^\alpha-\alpha-2} \\
+    C_2 &= \dfrac{1}{\alpha^2} \left[ 1 - e^\alpha \right] C_1 \\
+    C_3 &= - \dfrac{C_1}{\alpha^2} \\
+    C_4 &= - \dfrac{C_1}{\alpha^3}
+\end{align*}$$
+
+<p align="center">
+  <img src="/images/porouswallgraph.png" alt="Velocity Distribution for Porous Wall" width="50%">
+  <br>
+  <em>Figure: Velocity Distribution for Porous Wall</em>
+</p>
+
 <a href="/academics/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
   ← Back to Academic Works Page
 </a>
