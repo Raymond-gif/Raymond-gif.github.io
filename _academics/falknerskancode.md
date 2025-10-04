@@ -18,7 +18,7 @@ order: 5
 
 <div style="background: #f5f5f5; border-left: 5px solid #007acc; padding: 1rem; border-radius: 8px;">
   📌 <strong>This is an addendum to my previous article.</strong>
-  <a href="/_academics/numericalmethodsBLeqn.md" class="button-gradient">
+    <a href="/academics/numericalmethodsBLeqn/" class="button-gradient">
     Click here
   </a>
 </div>
