@@ -217,7 +217,7 @@ kramdown:
 collections:
   academics:
     output: true
-    permalink: /:academics/:path/
+    permalink: /:academics/:name/
   teaching:
     output: true
     permalink: /:collection/:path/
