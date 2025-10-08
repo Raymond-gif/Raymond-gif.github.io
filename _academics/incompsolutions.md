@@ -835,94 +835,209 @@ $$ \begin{equation*}
     \boxed{u_\theta = \dfrac{\Gamma}{2 \pi r} \left[ 1 - e^{-\frac{r^2}{2\nu/a}}\right]}
 \end{equation*} $$
 
+
 ## Rotary Viscous Coupling
 
 <p align="center">
-  <img src="/images/rotaryviscouscoupling.jpg" alt="Diagram for Rotary Coupling" width="50%">
+  <img src="/images/rotaryviscouscoupling.jpg" alt="Diagram for Rotary Coupling" width="45%">
+  <img src="/images/rotaryviscousgraph.png" alt="Rotary Coupling Graph" width="45%">
   <br>
-  <em>Figure: Diagram for Rotary Coupling</em>
+  <em>Figure: (Left) Diagram for Rotary Coupling. (Right) Rotary Coupling Graph.</em>
 </p>
 
-$$ \begin{equation*}
+### Full Governing Equation
+
+$$\begin{equation*}
     \dfrac{\partial}{\partial r} \left[ \dfrac{1}{r} \dfrac{\partial}{\partial r} (r u_\theta)\right] + \dfrac{\partial^2 u_\theta}{\partial z^2} = 0 
-\end{equation*} $$
+\end{equation*}$$
 
 Boundary Conditions: 
 
-$$ \begin{align*}
+$$\begin{align*}
     u_\theta(r,z=0) &= 0 \\
     u_\theta(r,z=h)&= r \Omega \\
     u_\theta (r=R,z)&=0
-\end{align*} $$
+\end{align*}$$
 
 Let's introduce nondimensional variables, 
 
-$$ \begin{equation*}
+$$\begin{equation*}
     r^* = \dfrac{r}{R}, \quad z^*= \dfrac{z}{h}, \quad u_\theta^* = \dfrac{u_\theta}{R \Omega}, \quad \varepsilon = \dfrac{h}{R}
-\end{equation*} $$
+\end{equation*}$$
 
 so that the governing differential equation becomes, 
 
-$$ \begin{equation}
-    \varepsilon^2 \dfrac{\partial }{\partial r^*} \left[ \dfrac{1}{r^*} \dfrac{\partial}{\partial r^*} (r^* u_\theta^*)\right] + \dfrac{\partial^2 u_\theta^*}{\partial z^{*2}}=0
+$$\begin{equation}
+    \varepsilon^2 \dfrac{\partial }{\partial r^*} \left[ \dfrac{1}{r^*} \dfrac{\partial}{\partial r^*} (r^* u_\theta^*)\right] + \dfrac{\partial^2 u_\theta^*}{\partial z^{* 2}}=0
     \label{rotaryviscousdiffeq}
-\end{equation} $$
+\end{equation}$$
 
 and the boundary conditions transform to,
 
-$$ \begin{align*}
+$$\begin{align*}
     u_\theta^* (r^*,z^*=0) &= 0 \\
     u_\theta^* (r^*, z^*=1) &= r^* \\
     u_\theta^* (r^*=1,z^*) &= 0 
-\end{align*} $$
+\end{align*}$$
+
+### Outer Section
 
 If the gap width is small compared to the radius, then \\( \varepsilon \to 0 \\) and the first term in Eq. \ref{rotaryviscousdiffeq} disappears, leaving 
 
-$$ \begin{equation*}
+$$\begin{equation*}
     \dfrac{\partial^2 u_\theta^*}{\partial z^2} = 0
-\end{equation*} $$
+\end{equation*}$$
 
-<p>This solution can only satisfy the first two boundary conditions and is not valid for the region near the wall (where \( u_\theta^*=0 \) at \( r^*=1 \)), and thus is called the <strong>outer solution</strong>. </p>
+<p> This solution can only satisfy the first two boundary conditions and is not valid for the region near the wall (where \( u_\theta^*=0 \) at \( r^*=1 \) ), and thus is called the <strong> outer solution </strong>. </p>
 
-$$ \begin{equation*}
-    u_{\theta, \text{outer}}^* = r^* z^*
-\end{equation*} $$
+$$\begin{equation*}
+    \boxed{u_{\theta, \text{outer}}^* = r^* z^*}
+\end{equation*}$$
+
+### Inner Section
 
 For the inner solution, we scale y differently. We expect y to scale with the gap width, or \\( h \\). Basically, we are zooming in on the region near the wall. 
 
-$$ \begin{equation*}
+$$\begin{equation}
     y^* = \dfrac{y}{h} = \dfrac{R-r}{h} = \dfrac{1-r^*}{\varepsilon}
-\end{equation*} $$
+    \label{yrstarepsilon}
+\end{equation}
+$$
 
 Eq. \ref{rotaryviscousdiffeq} transforms to, 
 
-$$ \begin{equation*}
-    \dfrac{\partial}{\partial y^*} \left\{ \dfrac{1}{1 - \varepsilon y^*} \dfrac{\partial}{\partial y^*} \bigg[ (1-\varepsilon y^*) u_\theta^* \bigg]\right\} + \dfrac{\partial^2 u_\theta^*}{\partial z^{*2}}=0
-\end{equation*} $$
+$$\begin{equation*}
+    \dfrac{\partial}{\partial y^*} \left\{ \dfrac{1}{1 - \varepsilon y^*} \dfrac{\partial}{\partial y^*} \bigg[ (1-\varepsilon y^*) u_\theta^* \bigg]\right\} + \dfrac{\partial^2 u_\theta^*}{\partial z^{* 2}}=0
+\end{equation*}$$
 
 As \\( \varepsilon \to 0 \\), the differential equation for the inner solution is, 
 
-$$ \begin{equation*}
-    \dfrac{\partial^2 u_\theta^*}{\partial y^{*2}} + \dfrac{\partial^2 u_\theta^*}{\partial z^{*2}}=0
-\end{equation*} $$
+$$\begin{equation*}
+    \dfrac{\partial^2 u_\theta^*}{\partial y^{* 2}} + \dfrac{\partial^2 u_\theta^*}{\partial z^{* 2}}=0
+\end{equation*}$$
 
-$$ \begin{align*}
-    u_\theta^*(y^*, z^*=0) &= 0 \\
-    u_\theta^*(y^*, z^*=1) &= 1 \\
-    u_\theta^*(y^*=0,z^*) &= 0 \\
-    u_\theta^*(y^* \to \infty,z^*) &=u^*_{\theta, \text{outer}} (r^*=1, z^*) = z^*
-\end{align*} $$
+$$\begin{align}
+    u_\theta^*(y^*, z^*=0) &= 0 \label{utheta1}\\
+    u_\theta^*(y^*, z^*=1) &= 1 \label{utheta2}\\
+    u_\theta^*(y^*=0,z^*) &= 0 \label{utheta3}\\
+    u_\theta^*(y^* \to \infty,z^*) &=u^*_{\theta, \text{outer}} (r^*=1, z^*) = z^* \label{utheta4}
+\end{align}$$
 
 Solving this involves the **separation of variables** technique.
 
-**TO BE CONTINUED**
+$$\begin{equation*}
+    u_\theta^* = F(y^*) G(z^*)     
+\end{equation*}$$
+
+Plugging this into the differential equation, 
+
+$$\begin{align*}
+    F''(y^*) G(z^*) + F(y^*) G''(z^*) & = 0 \\
+    \dfrac{F''(y^*)}{F(y^*)} = - \dfrac{G''(z^*)}{G(z^*)} &= \lambda
+\end{align*}
+$$
+
+The problem is now separated into two ordinary differential equations. 
+
+Let's focus on \\( G \\) first. 
+
+The \\( G \\) differential equation to be solved is, 
+
+$$\begin{equation*}
+    G''(z^*) + \lambda G(z^*) = 0, \quad G(0) =0, \quad G(1) = 0
+\end{equation*}$$
+
+The general solution is, 
+
+$$\begin{equation*}
+    G(z^*) = C_1 \cos \left(z^* \sqrt{\lambda} \right) + C_2 \sin \left( z^* \sqrt{\lambda }\right) 
+\end{equation*}
+$$
+
+Plugging in the boundary conditions,
+
+$$\begin{align*}
+    G(0) &= C_1 =0 \\
+    G(1) &= C_2 \sin \left( \sqrt{\lambda}\right) = 0 
+\end{align*}$$
+
+In order for a non-trivial solution to exist, we require that \\( \sin \left( \sqrt{\lambda} \right) =0 \\) or \\( \sqrt{\lambda} = \pi n \\).
+
+The eigenfunctions are thus, 
+
+$$\begin{equation*}
+    \boxed{G_n(z^*) = \sin (\pi n z^*)}
+\end{equation*}$$
+
+Focusing on the \\( F \\) solution now. 
+
+$$\begin{equation*}
+    F''(y^*) - \lambda F(y^*) = 0
+\end{equation*}$$
+
+$$\begin{equation*}
+    F(y^*) = \cancel{C_1 e^{y^* \sqrt{\lambda}}} + C_2 e^{-y^* \sqrt{\lambda}}
+\end{equation*}$$
+
+$$\begin{equation*}
+    \boxed{F(y^*) = e^{-\pi n y^*}}
+\end{equation*}$$
+
+So right now, we have 
+
+$$\begin{equation*}
+    u_\theta^* = \sum_n^\infty C_n e^{-\pi ny^*} \sin (\pi n z^*)
+\end{equation*}
+$$
+
+To satisfy boundary condition \ref{utheta2} and \ref{utheta4}, we add \\( z^* \\) to the solution. Think of it as the particular solution. 
+
+$$\begin{equation*}
+    u_\theta^* = z^* + \sum_n^\infty C_n e^{-\pi ny^*} \sin (\pi n z^*)
+\end{equation*}$$
+
+Now, it's time to plug in boundary condition Eq. \ref{utheta3}.
+
+$$\begin{align*}
+    u_\theta^*(y^*=0,z^*) = z^* + \sum_n^\infty C_n \sin (\pi n z^*) &= 0 \\
+    \sum_n^\infty C_n \sin (\pi n z^*) &= -z^*
+\end{align*}$$
+
+Using Fourier analysis,
+
+$$\begin{align*}
+    C_n = 2 \int\limits_0^1 -z^* \sin (n \pi z^*) \, dz^* = \dfrac{2}{\pi} \dfrac{(-1)^n}{n}
+\end{align*}$$
+
+$$\begin{equation*}
+    u_{\theta, \text{ inner}}^* = z^* + \dfrac{2}{\pi}  \sum_n^\infty \dfrac{(-1)^n}{n} e^{-\pi ny^*} \sin (\pi n z^*) 
+\end{equation*}$$
+
+Substituting the equation for \\( y^* \\), Eq. \ref{yrstarepsilon},
+
+$$\begin{equation*}
+    \boxed{    u_{\theta, \text{ inner}}^* = z^* + \dfrac{2}{\pi}  \sum_n^\infty \dfrac{(-1)^n}{n} \text{exp} \left[ -{\dfrac{\pi n (1-r^*)}{\varepsilon}} \right] \sin (\pi n z^*) }
+\end{equation*}$$
+
+Form the composite solution,
+
+$$\begin{equation*}
+    u_{\theta , \text{ composite}}^* = u_{\theta, \text{ inner}}^* + u_{\theta, \text{ outer}}^* - \underbrace{u_{\theta, \text{ common}}^*}_{z^*}
+\end{equation*}$$
+
+Substituting,
+
+$$\begin{equation*}
+    \boxed{ u_{\theta , \text{ composite}}^* = r^*  z^* + \dfrac{2}{\pi}  \sum_n^\infty \dfrac{(-1)^n}{n} \text{exp} \left[ -{\dfrac{\pi n (1-r^*)}{\varepsilon}} \right] \sin (\pi n z^*) }
+\end{equation*}$$
 
 ## Flow in a Slot with Porous Walls
 
 <p align="center">
-  <img src="/images/porouswalls.jpg" alt="Diagram of Porous Wall" width="50%">
+  <img src="/images/porouswalls.jpg" alt="Diagram of Porous Wall" width="45%">
+  <img src="/images/porouswallgraph.png" alt="Velocity Distribution for Porous Wall" width="45%">
   <br>
-  <em>Figure: Diagram of Porous Wall</em>
+  <em>Figure: (Left) Diagram of Porous Wall. (Right) Velocity Distribution for Porous Wall.</em>
 </p>
 
 Here are all the non-dimensional variables, 
@@ -932,7 +1047,6 @@ x^* = \dfrac{x}{h} \qquad
 y^* = \dfrac{y}{h} \qquad
 u^* = \dfrac{u}{U_{\text{ave}}} \qquad
 v^* = \dfrac{v}{U_{\text{ave}}}
-\notag
 $$
 
 $$
@@ -940,7 +1054,6 @@ $$
 v_0^* = \dfrac{v_0}{U_{\text{ave}}} \qquad
 \text{Re} = \dfrac{U_{\text{ave}}h}{\nu} \qquad
 \alpha = v_0^* \text{Re} = \dfrac{v_0 h}{\nu}
-\notag
 $$
 
 The boundary conditions are: 
@@ -969,9 +1082,9 @@ Rewriting Eq. \ref{streamfunctiondifferentialequation} in terms of non-dimension
 
 $$\begin{equation}
     \text{Re} \left[ 
-    \dfrac{\partial \psi^*}{\partial y^*} \dfrac{\partial (\nabla^{*2} \psi^*)}{\partial x^*} - 
-    \dfrac{\partial \psi^*}{\partial x^*} \dfrac{\partial (\nabla^{*2} \psi^*)}{\partial y^*} 
-    \right] = \nabla^{*4} \psi^*
+    \dfrac{\partial \psi^*}{\partial y^*} \dfrac{\partial (\nabla^{* 2} \psi^*)}{\partial x^*} - 
+    \dfrac{\partial \psi^*}{\partial x^*} \dfrac{\partial (\nabla^{* 2} \psi^*)}{\partial y^*} 
+    \right] = \nabla^{* 4} \psi^*
     \label{nondimensionalstreamfunction}
 \end{equation}$$
 
@@ -979,12 +1092,13 @@ We assume the solution is in the form,
 
 $$\begin{equation*}
     \psi^* = - v_0^* x^* + F(y^*)
-\end{equation*}$$
+\end{equation*}
+$$
 
-Plugging this into Eq. \ref{nondimensionalstreamfunction} and noting that \\( \alpha = v_0^*\text{Re} \\), the equation reduces to a simple fourth order ODE. 
+Plugging this into Eq. \ref{nondimensionalstreamfunction} and noting that \\( \alpha = v_0^* \text{Re} \\), the equation reduces to a simple fourth order ODE. 
 
 $$\begin{equation}
-    F^{(4)} = \alpha F''' 
+    F^{(4)} (y^*) = \alpha F'''(y^*) 
     \label{fourthorderODEporous}
 \end{equation}$$
 
@@ -1000,14 +1114,15 @@ $$\begin{align*}
 Integrating Eq. \ref{fourthorderODEporous} multiple times, I end up with, 
 
 $$\begin{equation*}
-    F = C_1 \dfrac{e^{\alpha y}}{\alpha^3} + C_2 \dfrac{y^2}{2} + C_3 y + C_4
+    F(y^*) = C_1 \dfrac{e^{\alpha y^*}}{\alpha^3} + C_2 \dfrac{ y^{* 2} }{2} + C_3 y^* + C_4
 \end{equation*}$$
 
 and the velocity,
 
 $$\begin{equation*}
-    \boxed{u^* = \dfrac{\partial \psi^*}{\partial y^*} = F' = C_1 \dfrac{e^{\alpha y }}{\alpha^2} + C_2 y + C_3}
-\end{equation*}$$
+    \boxed{u^* = \dfrac{\partial \psi^*}{\partial y^*} = F' (y^*) = C_1 \dfrac{e^{\alpha y^* }}{\alpha^2} + C_2 y^* + C_3}
+\end{equation*}
+$$
 
 With the boundary conditions, we can solve for all the constants, 
 
@@ -1017,12 +1132,6 @@ $$\begin{align*}
     C_3 &= - \dfrac{C_1}{\alpha^2} \\
     C_4 &= - \dfrac{C_1}{\alpha^3}
 \end{align*}$$
-
-<p align="center">
-  <img src="/images/porouswallgraph.png" alt="Velocity Distribution for Porous Wall" width="50%">
-  <br>
-  <em>Figure: Velocity Distribution for Porous Wall</em>
-</p>
 
 <a href="/academics/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
   ← Back to Academic Works Page
