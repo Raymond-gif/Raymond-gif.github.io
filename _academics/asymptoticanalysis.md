@@ -10,6 +10,10 @@ header:
   hero_title: "Asymptotic Analysis"
 ---
 
+<a href="/academics/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
+  ← Back to Academic Works Page
+</a>
+
 ## Rotary Viscous Coupling
 
 <p align="center">
@@ -669,4 +673,6 @@ $$\boxed{\begin{aligned}
     f_{\text{exact}}(y) &= C_1 \bigg[ 1 - e^{-y/\varepsilon} \bigg] + \left(  - \dfrac{5}{2} + 3 \varepsilon^2  \right) y - \dfrac{3 \varepsilon}{2} y ^2 + \dfrac{y^3}{2}, \text{ where } \quad C_1 = \dfrac{3-3\varepsilon^2 + \dfrac{3}{2} \varepsilon}{1- e^{-1/\varepsilon}} 
 \end{aligned}}$$
 
-
+<a href="/academics/" class="button-gradient" style="display: inline-block; margin-top: 20px;">
+  ← Back to Academic Works Page
+</a>
