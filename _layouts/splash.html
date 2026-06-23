@@ -9,14 +9,28 @@ layout: default
 {% endif %}
 
 <div id="main" role="main">
-  <article class="splash" itemscope itemtype="http://schema.org/CreativeWork">
+  {% assign show_article_toc = false %}
+  {% if page.collection == "academics" or page.collection == "portfolio" %}
+    {% assign show_article_toc = true %}
+  {% endif %}
+
+  <article class="splash{% if show_article_toc %} rd-article-shell{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
     {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
 
-    <section class="page__content" itemprop="text">
-      {{ content }}
-    </section>
+    {% if show_article_toc %}
+      <aside class="rd-article-toc" aria-label="Table of contents">
+        <p class="rd-article-toc__title">On This Page</p>
+        <nav></nav>
+      </aside>
+    {% endif %}
+
+    <div class="rd-article-content">
+      <section class="page__content" itemprop="text">
+        {{ content }}
+      </section>
+    </div>
   </article>
 </div>
