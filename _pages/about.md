@@ -42,7 +42,6 @@ redirect_from:
     <div class="rd-card__body">
       <h2><a href="/academics/">Academic Work</a></h2>
       <p>Notes, coursework, research, and academic projects on applied mathematics in fluid dynamics, compressible flow, and related topics.</p>
-      <a class="rd-btn" href="/academics/">View Academic Work</a>
     </div>
   </article>
 
@@ -53,7 +52,6 @@ redirect_from:
     <div class="rd-card__body">
       <h2><a href="/portfolio/">Portfolio</a></h2>
       <p>A curated selection of projects, models, and designs that I have built.</p>
-      <a class="rd-btn" href="/portfolio/">View Portfolio</a>
     </div>
   </article>
 </section>
