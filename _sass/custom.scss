@@ -528,8 +528,7 @@ body {
   margin-bottom: 0 !important;
   padding: clamp(3rem, 7vw, 5.25rem) 0 !important;
   background:
-    linear-gradient(115deg, rgba(23, 33, 38, 0.96), rgba(36, 48, 54, 0.82) 52%, rgba(82, 111, 100, 0.74)),
-    radial-gradient(circle at 82% 18%, rgba(168, 95, 54, 0.36), transparent 34%) !important;
+    linear-gradient(115deg, rgba(23, 33, 38, 0.96), rgba(36, 48, 54, 0.82) 52%, rgba(82, 111, 100, 0.74)) !important;
   border-bottom: 1px solid #cfd8e3;
 }
 
