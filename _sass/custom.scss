@@ -93,18 +93,19 @@ body {
 }
 
 .rd-home-hero {
-  max-width: 1180px;
-  min-height: min(620px, 74vh);
-  margin: 2rem auto 3rem;
-  border: 1px solid rgba(36, 48, 54, 0.12);
-  border-radius: 10px;
-  box-shadow: 0 18px 44px rgba(23, 33, 38, 0.16);
+  width: 100vw;
+  max-width: none;
+  min-height: clamp(520px, 74vh, 720px);
+  margin: 0 calc(50% - 50vw) 4rem;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .rd-home-hero img {
   width: 100%;
-  height: min(620px, 74vh);
-  min-height: 460px;
+  height: clamp(520px, 74vh, 720px);
+  min-height: 0;
   display: block;
   object-fit: cover;
   object-position: center 10%;
@@ -215,6 +216,55 @@ body {
 }
 
 .rd-hero--academic-index .rd-hero__actions {
+  justify-content: flex-start;
+}
+
+/* Archive headers: editorial context without a competing splash image. */
+
+.rd-hero--portfolio,
+.rd-hero--academics {
+  width: 100vw;
+  min-height: 250px;
+  display: block;
+  margin-left: calc(50% - 50vw);
+  padding: 3.25rem max(1rem, calc((100vw - 1180px) / 2));
+  color: var(--rd-ink);
+  background: #eef2f3;
+  border-top: 1px solid var(--rd-line);
+  border-bottom: 1px solid var(--rd-line);
+  text-align: left;
+}
+
+.rd-hero--portfolio::after,
+.rd-hero--academics::after {
+  display: none;
+}
+
+.rd-hero--portfolio .rd-hero__content,
+.rd-hero--academics .rd-hero__content,
+.rd-hero--academic-index .rd-hero__content {
+  max-width: 760px;
+  margin: 0;
+}
+
+.rd-hero--portfolio .rd-hero__content h1,
+.rd-hero--academics .rd-hero__content h1 {
+  color: var(--rd-ink);
+  font-size: clamp(2.15rem, 4vw, 3.6rem);
+  text-shadow: none;
+}
+
+.rd-hero--portfolio .rd-hero__content p,
+.rd-hero--academics .rd-hero__content p,
+.rd-hero--academic-index .rd-hero__content p {
+  margin-right: 0;
+  margin-left: 0;
+  color: var(--rd-steel);
+  text-shadow: none;
+}
+
+.rd-hero--portfolio .rd-hero__actions,
+.rd-hero--academics .rd-hero__actions {
   justify-content: flex-start;
 }
 
