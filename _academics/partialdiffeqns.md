@@ -4,7 +4,7 @@ title: "Partial Differential Equations: My Notes"
 excerpt: "I present my notes that I took while studying partial differential equations."
 author_profile: false
 layout: splash
-image: 
+image: /images/laplaceeqncirccylinder.jpg
 caption: 
 header:
   overlay_color: "#2a4d8f"   

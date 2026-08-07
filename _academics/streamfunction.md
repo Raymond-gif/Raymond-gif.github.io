@@ -4,7 +4,7 @@ title: "Streamfunctions, Vector Potential, High-Re Flows, Low-Re Flows"
 excerpt: "I cover high-Re-number flows, low-Re-number flows, streamfunctions, vector potential."
 author_profile: false
 layout: splash
-image: 
+image: /images/streamsurfaces.jpg
 caption: 
 header:
   overlay_color: "#2a4d8f"   

@@ -3,6 +3,8 @@ layout: splash
 title: "Formula Sheet"
 permalink: /formula/
 author_profile: false
+order: 7
+hide_excerpt: true
 ---
 
 # <span style="font-size: 3em;">Formula Sheet</span>

@@ -35,13 +35,3 @@ permalink: /portfolio/
   </article>
   {% endfor %}
 </section>
-
-<section class="rd-contact-cta">
-  <p>Want to discuss a project or collaborate?</p>
-  <div class="rd-contact-cta__links">
-    <a class="rd-btn" href="mailto:raymonddunn25@gmail.com">Email Me</a>
-    <a class="rd-btn rd-btn--linkedin" href="https://www.linkedin.com/in/raymond-dunn-b13362200" target="_blank" rel="noopener">LinkedIn</a>
-  </div>
-  <p class="rd-contact-cta__meta">raymonddunn25@gmail.com</p>
-  <p class="rd-contact-cta__meta"><a href="https://www.linkedin.com/in/raymond-dunn-b13362200" target="_blank" rel="noopener">linkedin.com/in/raymond-dunn-b13362200</a></p>
-</section>

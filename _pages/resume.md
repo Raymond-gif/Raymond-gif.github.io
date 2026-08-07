@@ -15,6 +15,10 @@ redirect_from:
   }
 </style>
 
+<section class="rd-resume-title">
+  <h1>Resume</h1>
+</section>
+
 <section style="
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: none;

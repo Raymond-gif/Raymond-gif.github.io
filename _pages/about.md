@@ -7,16 +7,15 @@ redirect_from:
   - /about.html
 ---
 
-<section class="rd-home-hero">
-  <img src="/images/profile.jpg" alt="Raymond Dunn">
-  <div class="rd-home-hero__content">
+<section class="rd-home-title">
+  <div class="rd-home-title__inner">
     <h1>Raymond Dunn</h1>
     <p>Aerospace engineer focused on fluid dynamics, continuum mechanics, and computational visualization.</p>
   </div>
 </section>
 
-<section class="rd-intro rd-intro--home">
-  <div class="rd-intro__main">
+<section class="rd-home-profile">
+  <div class="rd-home-profile__bio">
     <p>Hi, I'm <strong>Raymond Dunn</strong>. I received my B.S. in Aerospace Engineering in <strong>Spring 2024</strong> and am passionate about <strong>fluid dynamics</strong> and <strong>continuum mechanics</strong>.</p>
 
     <p>I am currently exploring <strong>tensor formulations</strong> of the fundamental equations governing fluid flow. Tensors capture the physical nature of motion, independent of coordinate systems. By analyzing how coordinate transformations influence the equations of motion, I aim to deepen my understanding of the mathematical structure behind fluids.</p>
@@ -25,13 +24,6 @@ redirect_from:
 
     <p><em>Outside of research, I enjoy creating computational visualizations and exploring new ways to make fluid mechanics intuitive.</em></p>
   </div>
-
-  <aside class="rd-intro__aside" aria-label="Current work">
-    <ul class="rd-highlight-list">
-      <li><strong>Compressible Flow:</strong> Using the Method of Characteristics to analyze 2D flow through arbitrary diverging channels.</li>
-      <li><strong>Future Goals:</strong> Diving further into <strong>Computational Fluid Dynamics (CFD)</strong> and advanced simulation techniques.</li>
-    </ul>
-  </aside>
 </section>
 
 <section class="rd-cards" aria-label="Featured site sections">
@@ -56,7 +48,7 @@ redirect_from:
   </article>
 </section>
 
-<section class="rd-contact-cta">
+<section class="rd-contact-cta rd-contact-cta--home">
   <p>Interested in collaborating or learning more about my work?</p>
   <div class="rd-contact-cta__links">
     <a class="rd-btn" href="mailto:raymonddunn25@gmail.com">Email Me</a>
