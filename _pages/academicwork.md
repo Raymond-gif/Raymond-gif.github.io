@@ -8,9 +8,6 @@ permalink: /academics/
   <div class="rd-hero__content">
     <h1>Academic Works</h1>
     <p>A curated collection of research projects, notes, and academic work in fluid mechanics and applied mathematics.</p>
-    <div class="rd-hero__actions">
-      <a class="rd-btn" href="#projects">Explore Projects</a>
-    </div>
   </div>
 </section>
 

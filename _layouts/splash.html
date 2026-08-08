@@ -29,7 +29,21 @@ layout: default
 
     <div class="rd-article-content">
       <section class="page__content" itemprop="text">
+        {% if show_article_toc %}
+          {% if page.collection == "academics" %}
+            <a class="rd-article-back" href="{{ base_path }}/academics/">Back to Academic Works</a>
+          {% elsif page.collection == "portfolio" %}
+            <a class="rd-article-back" href="{{ base_path }}/portfolio/">Back to Portfolio</a>
+          {% endif %}
+        {% endif %}
         {{ content }}
+        {% if show_article_toc %}
+          {% if page.collection == "academics" %}
+            <a class="rd-article-back rd-article-back--end" href="{{ base_path }}/academics/">Back to Academic Works</a>
+          {% elsif page.collection == "portfolio" %}
+            <a class="rd-article-back rd-article-back--end" href="{{ base_path }}/portfolio/">Back to Portfolio</a>
+          {% endif %}
+        {% endif %}
       </section>
     </div>
   </article>

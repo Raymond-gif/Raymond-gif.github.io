@@ -14,6 +14,21 @@
     var toc = shell.querySelector(".rd-article-toc nav");
     if (!content || !toc) return;
 
+    content.querySelectorAll(".sidebar-toc").forEach(function (legacyToc) {
+      legacyToc.remove();
+    });
+
+    content.querySelectorAll("a.button-gradient").forEach(function (link) {
+      if (!/^Back to (Academic Works|Portfolio) Page$/i.test(link.textContent.trim().replace(/^[^A-Za-z]*/, ""))) return;
+
+      var wrapper = link.parentElement;
+      if (wrapper && wrapper.tagName === "P") {
+        wrapper.remove();
+      } else {
+        link.remove();
+      }
+    });
+
     var headings = Array.prototype.slice.call(content.querySelectorAll("h2, h3"))
       .filter(function (heading) {
         return heading.textContent.trim().length > 0;

@@ -662,9 +662,9 @@ body {
 .page__hero--overlay {
   margin-bottom: 0 !important;
   padding: clamp(3rem, 7vw, 5.25rem) 0 !important;
-  background:
-    linear-gradient(115deg, rgba(23, 33, 38, 0.96), rgba(36, 48, 54, 0.82) 52%, rgba(82, 111, 100, 0.74)) !important;
-  border-bottom: 1px solid #cfd8e3;
+  background: #eef2f3 !important;
+  border-top: 1px solid var(--rd-line);
+  border-bottom: 1px solid var(--rd-line);
 }
 
 .page__hero--overlay .wrapper {
@@ -675,21 +675,21 @@ body {
 .page__hero--overlay .page__title {
   max-width: 900px;
   margin: 0 auto 0.8rem;
-  color: #fff !important;
+  color: var(--rd-ink) !important;
   font-size: clamp(2rem, 5vw, 3.8rem) !important;
   line-height: 1.05;
   letter-spacing: 0;
-  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.28) !important;
+  text-shadow: none !important;
 }
 
 .page__hero--overlay .page__lead {
   max-width: 780px !important;
   margin-right: auto;
   margin-left: auto;
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: var(--rd-steel) !important;
   font-size: 1.08rem;
   line-height: 1.58;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.24) !important;
+  text-shadow: none !important;
 }
 
 #main {
@@ -775,6 +775,31 @@ body {
 .rd-article-toc__subitem {
   padding-left: 0.75rem;
   border-left: 2px solid #e3e9eb;
+}
+
+.rd-article-back {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  margin: clamp(1.5rem, 3vw, 2.25rem) 0 0;
+  padding: 0.58rem 0.95rem;
+  color: var(--rd-graphite) !important;
+  background: var(--rd-surface);
+  border: 1px solid var(--rd-line);
+  border-radius: 5px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none !important;
+}
+
+.rd-article-back:hover {
+  color: #fff !important;
+  background: var(--rd-graphite);
+  border-color: var(--rd-graphite);
+}
+
+.sidebar-toc {
+  display: none !important;
 }
 
 .page__hero--overlay + #main .splash .page__content > .button-gradient:first-child,

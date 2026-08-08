@@ -8,10 +8,6 @@ permalink: /portfolio/
   <div class="rd-hero__content">
     <h1>Portfolio</h1>
     <p>A showcase of my engineering projects, coding work, and creative problem-solving.</p>
-    <div class="rd-hero__actions">
-      <a class="rd-btn" href="#projects">Explore Projects</a>
-      <a class="rd-btn rd-btn--secondary" href="/academics/">Academic Works</a>
-    </div>
   </div>
 </section>
 
