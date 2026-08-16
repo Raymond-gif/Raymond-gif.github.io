@@ -40,6 +40,7 @@
     }
 
     var list = document.createElement("ol");
+    var tocLinks = [];
     headings.forEach(function (heading, index) {
       if (!heading.id) {
         heading.id = "section-" + (index + 1) + "-" + heading.textContent
@@ -55,11 +56,77 @@
       var link = document.createElement("a");
       link.href = "#" + heading.id;
       link.textContent = heading.textContent.trim();
+      tocLinks.push(link);
       item.appendChild(link);
       list.appendChild(item);
     });
 
     toc.appendChild(list);
+
+    var activeIndex = -1;
+    var scrollFrame;
+
+    function setActiveSection(index) {
+      if (index === activeIndex) return;
+
+      tocLinks.forEach(function (link, linkIndex) {
+        var isActive = linkIndex === index;
+        link.classList.toggle("is-active", isActive);
+
+        if (isActive) {
+          link.setAttribute("aria-current", "location");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+
+      activeIndex = index;
+
+      var activeLink = tocLinks[index];
+      var tocPanel = shell.querySelector(".rd-article-toc");
+      if (!activeLink || !tocPanel || tocPanel.scrollHeight <= tocPanel.clientHeight) return;
+
+      var linkTop = activeLink.offsetTop;
+      var linkBottom = linkTop + activeLink.offsetHeight;
+      if (linkTop < tocPanel.scrollTop) {
+        tocPanel.scrollTop = linkTop;
+      } else if (linkBottom > tocPanel.scrollTop + tocPanel.clientHeight) {
+        tocPanel.scrollTop = linkBottom - tocPanel.clientHeight;
+      }
+    }
+
+    function updateActiveSection() {
+      var headingOffset = Math.min(160, Math.max(96, window.innerHeight * 0.18));
+      var nextActiveIndex = 0;
+
+      headings.forEach(function (heading, index) {
+        if (heading.getBoundingClientRect().top <= headingOffset) {
+          nextActiveIndex = index;
+        }
+      });
+
+      if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+        nextActiveIndex = headings.length - 1;
+      }
+
+      setActiveSection(nextActiveIndex);
+      scrollFrame = null;
+    }
+
+    function scheduleActiveSectionUpdate() {
+      if (scrollFrame) return;
+      scrollFrame = window.requestAnimationFrame(updateActiveSection);
+    }
+
+    tocLinks.forEach(function (link, index) {
+      link.addEventListener("click", function () {
+        setActiveSection(index);
+      });
+    });
+
+    window.addEventListener("scroll", scheduleActiveSectionUpdate, { passive: true });
+    window.addEventListener("resize", scheduleActiveSectionUpdate);
+    updateActiveSection();
   });
 </script>
 
