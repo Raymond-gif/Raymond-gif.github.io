@@ -3,20 +3,37 @@
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">Homepage</a></li>
+      <nav class="rd-site-nav" aria-label="Primary navigation">
+        <a class="rd-site-nav__home" href="{{ base_path }}/">Homepage</a>
+
+        <ul class="rd-site-nav__links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
           {% endfor %}
         </ul>
-        <ul class="hidden-links hidden"></ul>
+
+        <details class="rd-site-nav__menu">
+          <summary>
+            <span class="navicon" aria-hidden="true"></span>
+            <span class="sr-only rd-site-nav__menu-label--open">Open navigation</span>
+            <span class="sr-only rd-site-nav__menu-label--close">Close navigation</span>
+          </summary>
+          <ul>
+            {% for link in site.data.navigation.main %}
+              {% if link.url contains 'http' %}
+                {% assign domain = '' %}
+              {% else %}
+                {% assign domain = base_path %}
+              {% endif %}
+              <li><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </details>
       </nav>
     </div>
   </div>
