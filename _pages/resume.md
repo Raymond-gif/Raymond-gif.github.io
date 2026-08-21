@@ -19,7 +19,7 @@ redirect_from:
   <h1>Resume</h1>
 </section>
 
-<section style="
+<section class="rd-resume-content" style="
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: none;
   margin-left: 0;
@@ -33,7 +33,7 @@ redirect_from:
   <header style="margin-bottom: 1.5rem;">
     <h1 style="margin-bottom: 0.25rem; font-weight: 700; font-size: 2rem;">Raymond Dunn</h1>
     <p style="font-size: 1rem; margin: 0;">
-      📧 <a href="mailto:raymonddunn25@gmail.com" style="color: #4a90e2; text-decoration: none;">raymonddunn25@gmail.com</a>
+      <i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:raymonddunn25@gmail.com" style="color: #4a90e2; text-decoration: none;">raymonddunn25@gmail.com</a>
     </p>
     <hr style="margin: 1.5rem 0; border-color: #ccc;">
   </header>
@@ -47,7 +47,7 @@ redirect_from:
       University of California, Irvine — BS in Aerospace Engineering
     </span>
     <a href="/files/AerospaceBS.pdf" class="button-gradient">
-      📄 <span>Degree PDF</span>
+      <i class="fas fa-file-pdf" aria-hidden="true"></i> <span>Degree PDF</span>
     </a>
   </div>
   <p style="margin-top: 0.4rem; font-style: italic; color: #555;">June 2024</p>
@@ -74,10 +74,8 @@ redirect_from:
       <h3 style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.2rem;">
         <a href="/portfolio/methodofcharacteristics"
            style="color: #4a90e2; text-decoration: underline; cursor: pointer; transition: color 0.3s ease;"
-           onmouseover="this.style.color='#1a5bb8';"
-           onmouseout="this.style.color='#4a90e2';"
         >
-          Supersonic Compressible Fluid Flow Analysis of Diverging Channel &nbsp;➔
+          Supersonic Compressible Fluid Flow Analysis of Diverging Channel &nbsp;<i class="fas fa-arrow-right" aria-hidden="true"></i>
         </a>
       </h3>
       <p style="font-style: italic; margin-top: 0; margin-bottom: 0.5rem;">September 2024 — December 2024</p>
@@ -92,10 +90,8 @@ redirect_from:
       <h3 style="font-weight: 700; font-size: 1.1rem; margin-bottom: 0.2rem;">
         <a href="/portfolio/numericalmethodsBLeqn/"
            style="color: #4a90e2; text-decoration: underline; cursor: pointer; transition: color 0.3s ease;"
-           onmouseover="this.style.color='#1a5bb8';"
-           onmouseout="this.style.color='#4a90e2';"
         >
-          Numerical Solution to Falkner-Skan Boundary Layer Equation &nbsp;➔
+          Numerical Solution to Falkner-Skan Boundary Layer Equation &nbsp;<i class="fas fa-arrow-right" aria-hidden="true"></i>
         </a>
       </h3>
       <p style="font-style: italic; margin-top: 0; margin-bottom: 0.5rem;">January 2025 — March 2025</p>
@@ -139,7 +135,7 @@ redirect_from:
   <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px;">
     <span style="font-weight: 600;">SOLIDWORKS CAD Design Associate (CSWA)</span>
     <a href="/files/CSWA_Certification.pdf" class="button-gradient">
-      📄 View
+      <i class="fas fa-file-pdf" aria-hidden="true"></i> View
     </a>
   </div>
 </section>

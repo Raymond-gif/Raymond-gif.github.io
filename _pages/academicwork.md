@@ -11,6 +11,15 @@ permalink: /academics/
   </div>
 </section>
 
+<div class="rd-project-filter">
+  <label for="academic-work-filter">Filter academic work</label>
+  <div class="rd-project-filter__control">
+    <i class="fas fa-search" aria-hidden="true"></i>
+    <input id="academic-work-filter" type="search" placeholder="Search titles and topics" autocomplete="off" data-project-filter>
+  </div>
+  <p class="rd-project-filter__empty" data-project-filter-empty hidden>No matching academic work.</p>
+</div>
+
 <section id="projects" class="rd-project-grid rd-project-grid--academic" aria-label="Academic projects">
   {% assign sorted_works = site.academics | sort: "order" %}
   {% for work in sorted_works %}
@@ -30,7 +39,7 @@ permalink: /academics/
       {% unless work.hide_excerpt %}
       <p>{{ work.excerpt }}</p>
       {% endunless %}
-      <a href="{{ work.url }}" class="rd-read-more">Read More -></a>
+      <a href="{{ work.url }}" class="rd-read-more">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
     </div>
   </article>
   {% endfor %}

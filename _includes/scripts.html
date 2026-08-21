@@ -7,6 +7,25 @@
   document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.removeAttribute("data-theme");
 
+    var projectFilter = document.querySelector("[data-project-filter]");
+    if (projectFilter) {
+      var projectCards = Array.prototype.slice.call(document.querySelectorAll(".rd-project-grid .rd-project-card"));
+      var emptyFilterMessage = document.querySelector("[data-project-filter-empty]");
+
+      projectFilter.addEventListener("input", function () {
+        var query = projectFilter.value.trim().toLowerCase();
+        var visibleCount = 0;
+
+        projectCards.forEach(function (card) {
+          var matches = !query || card.textContent.toLowerCase().indexOf(query) !== -1;
+          card.hidden = !matches;
+          if (matches) visibleCount += 1;
+        });
+
+        if (emptyFilterMessage) emptyFilterMessage.hidden = visibleCount !== 0;
+      });
+    }
+
     var shell = document.querySelector(".rd-article-shell");
     if (!shell) return;
 
@@ -41,6 +60,9 @@
 
     var list = document.createElement("ol");
     var tocLinks = [];
+    var tocItems = [];
+    var headingParentIndexes = [];
+    var currentParentIndex = -1;
     headings.forEach(function (heading, index) {
       if (!heading.id) {
         heading.id = "section-" + (index + 1) + "-" + heading.textContent
@@ -50,18 +72,54 @@
           .replace(/^-|-$/g, "");
       }
 
+      var isSubsection = heading.tagName.toLowerCase() === "h3";
+      if (!isSubsection) currentParentIndex = index;
+      headingParentIndexes[index] = currentParentIndex;
+
       var item = document.createElement("li");
-      item.className = heading.tagName.toLowerCase() === "h3" ? "rd-article-toc__subitem" : "";
+      item.className = isSubsection ? "rd-article-toc__subitem" : "";
+      item.dataset.parentIndex = String(currentParentIndex);
 
       var link = document.createElement("a");
       link.href = "#" + heading.id;
       link.textContent = heading.textContent.trim();
       tocLinks.push(link);
+      tocItems.push(item);
       item.appendChild(link);
       list.appendChild(item);
     });
 
     toc.appendChild(list);
+
+    var tocPanel = shell.querySelector(".rd-article-toc");
+    var tocToggle = shell.querySelector(".rd-article-toc__toggle");
+    var compactToc = window.matchMedia("(max-width: 980px)");
+
+    function setTocOpen(isOpen) {
+      if (!tocPanel || !tocToggle) return;
+      tocPanel.classList.toggle("is-open", isOpen);
+      tocToggle.setAttribute("aria-expanded", String(isOpen));
+    }
+
+    function syncTocLayout() {
+      if (!tocToggle) return;
+      tocToggle.disabled = !compactToc.matches;
+      setTocOpen(!compactToc.matches);
+    }
+
+    if (tocToggle) {
+      tocToggle.addEventListener("click", function () {
+        if (!compactToc.matches) return;
+        setTocOpen(!tocPanel.classList.contains("is-open"));
+      });
+    }
+
+    if (compactToc.addEventListener) {
+      compactToc.addEventListener("change", syncTocLayout);
+    } else {
+      compactToc.addListener(syncTocLayout);
+    }
+    syncTocLayout();
 
     var activeIndex = -1;
     var scrollFrame;
@@ -69,9 +127,19 @@
     function setActiveSection(index) {
       if (index === activeIndex) return;
 
+      var activeParentIndex = headingParentIndexes[index];
       tocLinks.forEach(function (link, linkIndex) {
         var isActive = linkIndex === index;
+        var isParentActive = linkIndex === activeParentIndex && linkIndex !== index;
         link.classList.toggle("is-active", isActive);
+        link.classList.toggle("is-parent-active", isParentActive);
+
+        if (tocItems[linkIndex].classList.contains("rd-article-toc__subitem")) {
+          tocItems[linkIndex].classList.toggle(
+            "is-contextual",
+            Number(tocItems[linkIndex].dataset.parentIndex) === activeParentIndex
+          );
+        }
 
         if (isActive) {
           link.setAttribute("aria-current", "location");
@@ -83,7 +151,6 @@
       activeIndex = index;
 
       var activeLink = tocLinks[index];
-      var tocPanel = shell.querySelector(".rd-article-toc");
       if (!activeLink || !tocPanel || tocPanel.scrollHeight <= tocPanel.clientHeight) return;
 
       var linkTop = activeLink.offsetTop;
@@ -121,6 +188,7 @@
     tocLinks.forEach(function (link, index) {
       link.addEventListener("click", function () {
         setActiveSection(index);
+        if (compactToc.matches) setTocOpen(false);
       });
     });
 

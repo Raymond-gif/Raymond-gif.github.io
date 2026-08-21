@@ -22,8 +22,10 @@ layout: default
 
     {% if show_article_toc %}
       <aside class="rd-article-toc" aria-label="Table of contents">
-        <p class="rd-article-toc__title">On This Page</p>
-        <nav></nav>
+        <button class="rd-article-toc__toggle" type="button" aria-expanded="false" aria-controls="rd-article-toc-list">
+          <span>On This Page</span>
+        </button>
+        <nav id="rd-article-toc-list"></nav>
       </aside>
     {% endif %}
 

@@ -26,7 +26,7 @@ permalink: /portfolio/
     <div class="rd-project-card__body">
       <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
       <p>{{ project.excerpt }}</p>
-      <a href="{{ project.url }}" class="rd-read-more">Read More -></a>
+      <a href="{{ project.url }}" class="rd-read-more">Read More <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
     </div>
   </article>
   {% endfor %}
